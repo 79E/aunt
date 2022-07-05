@@ -22,9 +22,9 @@
     "frontend",
     "react-component"
   ],
-  "homepage": "https://github.com/79W/dev-ui",
+  "homepage": "https://github.com/79E/aunt",
   "license": "MIT",
-  "author": "79W",
+  "author": "79E",
   "main": "./cjs/index.js",
   "module": "./es/index.js",
   "types": "./es/index.d.ts",
@@ -43,7 +43,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/79W/dev-ui.git",
+    "url": "git+https://github.com/79E/aunt.git",
     "branch": "master",
     "platform": "github"
   },
