@@ -1,0 +1,40 @@
+@import (reference) '../style/variables.less';
+
+.@{prefix}-mobile-previewer{
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@media @v-device-show {
+  .@{prefix}-mobile-previewer {
+    
+    &[data-inactive] {
+      cursor: pointer;
+    }
+
+    .@{prefix}-previewer-demo {
+      display: none;
+    }
+
+    .@{prefix}-previewer-desc,
+    .@{prefix}-previewer-desc:not([data-title]) + .@{prefix}-previewer-actions {
+      border-top: none;
+    }
+
+    .@{prefix}-previewer-actions button[role='source'] {
+      width: 0;
+      margin-right: -8px;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    + & {
+      margin-top: 32px;
+    }
+  }
+}

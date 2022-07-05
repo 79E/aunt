@@ -1,0 +1,206 @@
+@import '../../../styles/mixin.less';
+@class-prefix: ~'aunt';
+
+:root{
+    --aunt-button-text-default-color:  var(--aunt-text-color);
+    --aunt-button-text-primary-color:  var(--aunt-primary-color);
+    --aunt-button-text-success-color:  var(--aunt-success-color);
+    --aunt-button-text-warning-color:  var(--aunt-warning-color);
+    --aunt-button-text-danger-color:  var(--aunt-danger-color);
+
+    --aunt-button-background-default-color: var(--aunt-color-white);
+    --aunt-button-background-primary-color: var(--aunt-primary-color);
+    --aunt-button-background-success-color: var(--aunt-success-color);
+    --aunt-button-background-warning-color: var(--aunt-warning-color);
+    --aunt-button-background-danger-color: var(--aunt-danger-color);
+
+    --aunt-button-disabled-opacity: var(--aunt-disabled-opacity);
+
+    --aunt-button-border-radius:  var(--aunt-border-radius-md);
+    --aunt-button-border-width: var(--aunt-border-width-base);
+    --aunt-button-border-width-hairline: calc(0.5 * var(--aunt-hd));
+    --aunt-button-border-style:  solid;
+
+    --aunt-button-border-default-color:  var(--aunt-border-color);
+    --aunt-button-border-primary-color: var(--aunt-primary-color);
+    --aunt-button-border-success-color: var(--aunt-success-color);
+    --aunt-button-border-warning-color: var(--aunt-warning-color);
+    --aunt-button-border-danger-color: var(--aunt-danger-color);
+    
+    --aunt-button-padding-base:var(--aunt-padding-base);
+
+    --aunt-button-font-size-md: var(--aunt-font-size-md);
+    --aunt-button-font-size-lg: var(--aunt-font-size-lg);
+    --aunt-button-font-size-sm: var(--aunt-font-size-sm);
+    --aunt-button-font-size-xs: var(--aunt-font-size-xs);
+
+    --aunt-button-line-height-xs: var(--aunt-line-height-xs);
+    --aunt-button-line-height-sm: var(--aunt-line-height-sm);
+}
+
+.@{class-prefix}-button {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    height: auto;
+    margin: 0;
+    text-align: center;
+    border-width: var(--aunt-button-border-width);
+    border-style: var(--aunt-button-border-style);
+    cursor: pointer;
+    transition: opacity ease 0.15s;
+    user-select: none;
+
+    &:focus {
+        outline: none;
+    }
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(
+          calc(var(--aunt-button-border-width) * -1),
+          calc(var(--aunt-button-border-width) * -1)
+        );
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        border: var(--aunt-button-border-width) var(--aunt-button-border-style) #000;
+        border-radius: var(--aunt-button-border-radius);
+        opacity: 0;
+        content: ' ';
+        box-sizing: content-box;
+    }
+    &:active::before {
+        opacity: 0.08;
+    }
+
+    &--icon{
+        .inline-flex-center();
+        &--left{
+            margin-right: var(--aunt-button-padding-base);
+        }
+        &--right{
+            margin-left: var(--aunt-button-padding-base);
+        }
+    }
+    &--loading{
+        .inline-flex-center();
+        cursor: not-allowed;
+        &:active::before {
+            opacity:0;
+        }
+    }
+
+    &--default{
+        color: var(--aunt-button-text-default-color);
+        background-color: var(--aunt-button-background-default-color);
+        border-color: var(--aunt-button-border-default-color);
+    }
+
+    &--primary{
+        background-color: var(--aunt-button-background-primary-color);
+        color: var(--aunt-color-white);
+        border-color: var(--aunt-button-border-primary-color);
+    }
+    &--success{
+        background-color: var(--aunt-button-background-success-color);
+        color: var(--aunt-color-white);
+        border-color: var(--aunt-button-border-success-color);
+    }
+    &--warning{
+        background-color: var(--aunt-button-background-warning-color);
+        color: var(--aunt-color-white);
+        border-color: var(--aunt-button-border-warning-color);
+    }
+    &--danger{
+        background-color: var(--aunt-button-background-danger-color);
+        color: var(--aunt-color-white);
+        border-color: var(--aunt-button-border-danger-color);
+    }
+    &--plain{
+        background-color:var(--aunt-color-white);
+        
+        &.@{class-prefix}-button--primary {
+            color: var(--aunt-button-text-primary-color);
+        }
+      
+        &.@{class-prefix}-button--success {
+            color: var(--aunt-button-text-success-color);
+        }
+      
+        &.@{class-prefix}-button--danger {
+            color: var(--aunt-button-text-danger-color);
+        }
+      
+        &.@{class-prefix}-button--warning {
+            color: var(--aunt-button-text-warning-color);
+        }
+    }   
+
+    &--hairline{
+        border-width: var(--aunt-button-border-width-hairline);
+    }
+
+    &--text{
+        line-height: var(--aunt-button-line-height-xs);
+    }
+
+    &--large {
+        .@{class-prefix}-button--text{
+            font-size: var(--aunt-button-font-size-lg);
+            line-height: var(--aunt-button-line-height-sm);
+        }
+        // 14-32
+        padding: var(--aunt-padding-sm) var(--aunt-padding-xl);
+    }
+
+    &--normal {
+        .@{class-prefix}-button--text{
+            font-size: var(--aunt-button-font-size-md);
+        }
+        // 8-14
+        padding: var(--aunt-padding-xs) var(--aunt-padding-md);
+    }
+    
+    &--small {
+        .@{class-prefix}-button--text{
+            font-size: var(--aunt-button-font-size-sm);
+        }
+        // 6-12 
+        padding: calc(6*var(--aunt-hd))  var(--aunt-padding-s);
+    }
+    
+    &--mini {
+        .@{class-prefix}-button--text{
+            font-size: var(--aunt-button-font-size-xs);
+        }
+        // 4-4
+        padding: var(--aunt-padding-base) calc(6*var(--aunt-hd));
+    }
+
+    &--shape{
+        &--default{
+            border-radius: var(--aunt-button-border-radius);
+        }
+        &--square{
+            border-radius: 0;
+        }
+        &--round{
+            border-radius: var(--aunt-border-radius-max);
+        }
+    }
+    
+    &--block {
+        display: block;
+        width: 100%;
+    }
+
+    &--disabled {
+        cursor: not-allowed;
+        opacity: var(--aunt-button-disabled-opacity);
+        &::before {
+            display: none;
+        }
+    }
+}

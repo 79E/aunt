@@ -1,0 +1,39 @@
+@import './normalize.less';
+@import './variables.less';
+
+@import './animation.less';
+@import './mixin.less';
+
+
+.@{prefix}-ellipsis {
+    .ellipsis();
+}
+
+.@{prefix}-multi-ellipsis--l2 {
+    .multi-ellipsis(2);
+}
+
+.@{prefix}-multi-ellipsis--l3 {
+    .multi-ellipsis(3);
+}
+
+.@{prefix}-multi-ellipsis--l4 {
+    .multi-ellipsis(4);
+}
+
+.@{prefix}-multi-ellipsis--l5 {
+    .multi-ellipsis(5);
+}
+
+.@{prefix}-safe-area-top {
+    padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
+}
+
+.@{prefix}-safe-area-bottom {
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+
+

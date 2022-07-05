@@ -1,0 +1,13 @@
+**/*.svg
+**/*.ejs
+**/*.html
+
+package.json
+
+.umi
+.umi-production
+.umi-test
+
+/.yarn/
+/.yarnrc.yml
+*.min.js

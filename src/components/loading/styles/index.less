@@ -1,0 +1,25 @@
+@class-prefix-loading: ~'aunt-loading';
+
+.@{class-prefix-loading} {
+    
+    --aunt-loading-font-size: var(--aunt-font-size-md);
+    --aunt-loading-padding: var(--aunt-padding-xs);
+    --aunt-loading-text-color: var(--aunt-text-colo);
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    &_text{
+        font-size: var(--aunt-loading-font-size);
+        margin-left: var(--aunt-loading-padding);
+        vertical-align: middle;
+        color: var(--aunt-loading-text-color);
+    }
+    &--vertical{
+        align-items: center;
+        flex-direction: column;
+        .@{class-prefix-loading}_text{
+            margin-top: var(--aunt-loading-padding);
+        }
+    }
+}

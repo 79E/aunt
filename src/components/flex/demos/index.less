@@ -1,0 +1,24 @@
+.demo-flex{
+    min-height: 100vh;
+    &-content{
+        margin-bottom: 20px;
+        color: #fff;
+        font-size: 16px;
+        text-align: center;
+        line-height: 34px;
+        background-clip: content-box;
+        .aunt-flexitem{
+            background-clip: content-box;
+        }
+        .aunt-flexitem:nth-child(odd) {
+            height: 34px;
+            margin: 5px 0;
+            background-color: #3f45ff;
+        }
+        .aunt-flexitem:nth-child(even) {
+            height: 34px;
+            margin: 5px 0;
+            background-color: #686dff;
+        }
+    }
+}

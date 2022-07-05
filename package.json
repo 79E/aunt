@@ -1,0 +1,104 @@
+{
+  "name": "aunt",
+  "version": "0.0.0-alpha.0",
+  "description": "React Mobile UI Components base on Aunt UI",
+  "scripts": {
+    "start": "dumi dev",
+    "build:docs": "dumi build",
+    "build": "gulp",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "lint": "eslint \"src/**/*.{js,ts,tsx}\"",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "ui",
+    "react",
+    "mobile",
+    "components",
+    "component",
+    "design",
+    "framework",
+    "frontend",
+    "react-component"
+  ],
+  "homepage": "https://github.com/79W/dev-ui",
+  "license": "MIT",
+  "author": "79W",
+  "main": "./cjs/index.js",
+  "module": "./es/index.js",
+  "types": "./es/index.d.ts",
+  "typings": "./es/index.d.ts",
+  "files": [
+    "./lib"
+  ],
+  "sideEffects": [
+    "**/*.css",
+    "**/*.less",
+    "./es/index.js",
+    "./src/index.ts"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/79W/dev-ui.git",
+    "branch": "master",
+    "platform": "github"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "resolutions": {
+    "@types/react": "18",
+    "@types/react-dom": "18"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "tslib": "^2.4.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.18.2",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.0.3",
+    "@types/lodash": "^4.14.182",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "@umijs/test": "^3.0.5",
+    "commitlint": "^17.0.3",
+    "del": "^6.1.1",
+    "dumi": "^1.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "f2-touchemulator": "^0.0.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-less": "^5.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-replace": "^1.1.3",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "husky": "^8.0.1",
+    "less": "^4.1.3",
+    "lint-staged": "^13.0.0",
+    "postcss-px-multiple": "^0.1.5",
+    "qrcode.react": "^3.0.2",
+    "through2": "^4.0.2",
+    "typescript": "^4.7.3",
+    "umi-hd": "^5.0.1",
+    "yorkie": "^2.0.0"
+  },
+  "packageManager": "npm@8.1.2"
+}

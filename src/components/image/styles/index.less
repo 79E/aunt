@@ -1,0 +1,86 @@
+@class-prefix: ~'aunt';
+
+:root {
+    --aunt-image-placeholder-text-color: var(--aunt-gray-6);
+    --aunt-image-placeholder-font-size: var(--aunt-font-size-md);
+    --aunt-image-placeholder-background-color: var(--aunt-background-color);
+    --aunt-image-loading-icon-size: calc(32 * var(--aunt-hd)) ;
+    --aunt-image-loading-icon-color: var(--aunt-gray-4);
+    --aunt-image-error-icon-size: calc(32 * var(--aunt-hd));
+    --aunt-image-error-icon-color: var(--aunt-gray-4);
+  }
+
+.@{class-prefix}-image {
+    position: relative;
+    display: inline-block;
+    
+    &--block {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    
+    &--fix {
+        overflow: hidden;
+        .@{class-prefix}-image--img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    
+        &-width {
+            .@{class-prefix}-image--img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        &-height {
+            .@{class-prefix}-image--img {
+                width: auto;
+                height: 100%;
+            }
+        }
+    }
+    
+    &--round {
+        overflow: hidden;
+        border-radius: var(--aunt-border-radius-max);
+    
+        .@{class-prefix}-image--img {
+            border-radius: inherit;
+        }
+    }
+    
+    &--img,
+    &--error,
+    &--loading {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    
+    &--error,
+    &--loading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--aunt-image-placeholder-text-color);
+        font-size: var(--aunt-image-placeholder-font-size);
+        background-color: var(--aunt-image-placeholder-background-color);
+    }
+    
+    &--loading-icon {
+        color: var(--aunt-image-loading-icon-color);
+        font-size: var(--aunt-image-loading-icon-size);
+    }
+    
+    &--error-icon {
+        color: var(--aunt-image-error-icon-color);
+        font-size: var(--aunt-image-error-icon-size);
+    }      
+}

@@ -1,0 +1,122 @@
+@class-prefix: ~'aunt';
+
+:root {
+    --aunt-typography-color: var(--aunt-text-color);
+    --aunt-typography-link-color: var(--aunt-primary-color);
+    --aunt-typography-font-size: var(--aunt-font-size-md);
+    --aunt-typography-line-height: var(--aunt-line-height-md);
+    --aunt-typography-primary-color: var(--aunt-primary-color);
+    --aunt-typography-danger-color: var(--aunt-danger-color);
+    --aunt-typography-success-color: var(--aunt-success-color);
+    --aunt-typography-secondary-color: var(--aunt-gray-6);
+    --aunt-typography-warning-color: var(--aunt-warning-color);
+    --aunt-typography-disabled-color: var(--aunt-gray-5);
+    --aunt-typography-light-color: var(--aunt-color-white);
+}
+
+.@{class-prefix}-typography {
+    color: var(--aunt-typography-color);
+    word-wrap: break-word;
+
+    &--xs {
+        font-size: calc(0.8 * var(--aunt-typography-font-size));
+        line-height: calc(0.8px * var(--aunt-typography-line-height));
+    }
+    &--sm {
+        font-size: calc(0.9 * var(--aunt-typography-font-size));
+        line-height: calc(0.9 * var(--aunt-typography-line-height));
+    }
+    &--md,
+    &--5 {
+        font-size: var(--aunt-typography-font-size);
+        line-height: var(--aunt-typography-line-height);
+    }
+
+    &--lg,
+    &--l4 {
+        font-size: calc(1.2 * var(--aunt-typography-font-size));
+        line-height: calc(1.2 * var(--aunt-typography-line-height));
+    }
+    &--xl,
+    &--l3 {
+        font-size: calc(1.4 * var(--aunt-typography-font-size));
+        line-height: calc(1.4 * var(--aunt-typography-line-height));
+    }
+    &--xxl,
+    &--l2 {
+        font-size: calc(1.6 * var(--aunt-typography-font-size));
+        line-height: calc(1.6 * var(--aunt-typography-line-height));
+    }
+
+    &--primary {
+        color: var(--aunt-typography-primary-color);
+    }
+    &--danger {
+        color: var(--aunt-typography-danger-color);
+    }
+    &--success {
+        color: var(--aunt-typography-success-color);
+    }
+    &--secondary {
+        color: var(--aunt-typography-secondary-color);
+    }
+    &--light {
+        color: var(--aunt-typography-light-color);
+    }
+    &--warning {
+        color: var(--aunt-typography-warning-color);
+    }
+    &--disabled {
+        color: var(--aunt-typography-disabled-color);
+        cursor: not-allowed;
+    }
+    &--underline {
+        text-decoration: underline;
+    }
+    &--delete {
+        text-decoration: line-through;
+    }
+
+    &--text {
+        display: inline-block;
+
+        &.@{class-prefix}-ellipsis {
+            display: block;
+        }
+    }
+
+    &--title {
+        font-weight: bold;
+    }
+
+    &--l1 {
+        margin-bottom: calc(25 * var(--aunt-hd)) ;
+        font-size: calc(2 * var(--aunt-typography-font-size));
+        line-height: calc(2 * var(--aunt-typography-line-height));
+    }
+    &--l2 {
+        margin-bottom: calc(20 * var(--aunt-hd));
+    }
+    &--l3 {
+        margin-bottom: calc(15 * var(--aunt-hd));
+    }
+    &--l4 {
+        margin-bottom: calc(10 * var(--aunt-hd));
+    }
+    &--l5 {
+        margin-bottom: calc(6 * var(--aunt-hd));
+    }
+
+    &--link {
+        color: var(--aunt-typography-link-color);
+        cursor: pointer;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    &--strong {
+        font-weight: bold;
+    }
+}

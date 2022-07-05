@@ -1,0 +1,25 @@
+.demo{
+    &-space{
+        padding: 10px;
+        background-color: #fff;
+        min-height: 100vh;
+        &-title{
+            font-size: 20px;
+            color: '#333';
+            margin: 0 0 0 0;
+            display: inline-block;
+        }
+        &-content{
+            margin-bottom: 20px;
+            .aunt-space__item{
+                span{
+                    font-size: 14px;
+                }
+            }
+            
+        }
+    }
+    [data-prefers-color=dark] &-space{
+        background-color: #141414;
+    }
+}

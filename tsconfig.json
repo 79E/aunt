@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "rootDirs": ["src","config"],
+    "target": "ES6",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "allowJs": true,
+    "declaration": false,
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "downlevelIteration": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "typeRoots": ["./src/typings", "./node_modules/@types"],
+    "lib": ["ES2015", "DOM"],
+    "paths": {
+      "aunt": ["src/index.ts"],
+      "aunt/src/*": ["src/*"],
+      "aunt/es/*": ["src/*"],
+      "demos": ["src/demos/index.ts"],
+    },
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "lib", "es", "dist", ".dumi"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS",
+      "resolveJsonModule": true,
+      "noImplicitAny": false
+    }
+  }
+}

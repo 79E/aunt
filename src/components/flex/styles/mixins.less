@@ -1,0 +1,20 @@
+@import '../../../styles/var.less';
+
+.loop-flexitem-columns(@index, @class) when (@index > 0) {
+    .@{class-prefix}-flexitem@{class}--@{index} {
+        display: block;
+        flex: 0 0 percentage((@index / @grid-columns));
+        max-width: percentage((@index / @grid-columns));
+    }
+    .loop-flexitem-columns((@index - 1), @class);
+}
+
+.loop-flexitem-columns(@index, @class) when (@index = 0) {
+    .@{class-prefix}-flexitem@{class}--@{index} {
+        display: none;
+    }
+}
+
+.make-flexitem(@class: ~'') {
+    .loop-flexitem-columns(@grid-columns, @class);
+}
