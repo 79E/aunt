@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <meta name="keywords" content="rant,react,移动端,组件库,ui" />
+    <meta name="description" content="基于React的移动web端组件库。" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/3c637506-9024-4153-baa7-fa7b66c87f67.svg"
+    />
+    <style>
+      html {
+        touch-action: manipulation;
+      }
+      #root .__dumi-default-mobile-demo-layout {
+        padding: 0;
+      }
+      html {
+        min-height: 100vh;
+      }
+      #root .__dumi-default-navbar-tool .__dumi-default-locale-select {
+        display: none;
+      }
+    </style>
+    <link rel="stylesheet" href="/umi.2e982e18.css" />
+    <script>
+      window.routerBase = "/";
+    </script>
+    <script>
+      //! umi version: 3.5.27
+    </script>
+    <script>
+      !(function () {
+        var e = localStorage.getItem("dumi:prefers-color"),
+          t = window.matchMedia("(prefers-color-scheme: dark)").matches,
+          r = ["light", "dark", "auto"];
+        document.documentElement.setAttribute(
+          "data-prefers-color",
+          e === r[2] ? (t ? r[1] : r[0]) : r.indexOf(e) > -1 ? e : r[0]
+        );
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="/umi.b81d3306.js"></script>
+  </body>
+</html>
