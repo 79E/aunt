@@ -191,7 +191,7 @@ export default defineConfig({
       },
       {
         title: 'Github',
-        path: 'https://github.com/79E/Rant',
+        path: 'https://github.com/79E/aunt',
       },
     ],
     en: [
@@ -205,7 +205,7 @@ export default defineConfig({
       },
       {
         title: 'Github',
-        path: 'https://github.com/79E/Rant',
+        path: 'https://github.com/79E/aunt',
       },
     ],
   },
