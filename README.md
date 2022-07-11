@@ -28,7 +28,7 @@
 
 推荐 **锁定** 版本:
 
-```sh
+```bash
 # npm
 npm i aunt@next -S -E
 ```

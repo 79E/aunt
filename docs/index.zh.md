@@ -4,4 +4,4 @@ full: true
 gapless: true
 ---
 
-<code src="./components/home-page.tsx" inline="true"></code>
+<code src="./components/home/home-page.tsx" inline="true"></code>

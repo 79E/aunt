@@ -9,7 +9,7 @@ export default defineConfig({
   mode: 'site',
   locales: [
     ['zh', '中文'],
-    ['en', 'English'],
+    // ['en', 'English'],
   ],
   resolve: {
     includes: ['docs', 'src'],
@@ -32,7 +32,6 @@ export default defineConfig({
       min-height: 100vh;
     }
     #root .__dumi-default-navbar-tool .__dumi-default-locale-select{
-      display: none;
     }
     `,
   ],
@@ -59,12 +58,6 @@ export default defineConfig({
         path: 'index',
       },
     ],
-    '/en': [
-      {
-        title: 'Home',
-        path: 'index',
-      },
-    ],
     '/guide': [
       {
         title: '介绍',
@@ -75,7 +68,19 @@ export default defineConfig({
         path: '/guide/quick-start',
       },
       {
-        title: '开发指南',
+        title: '项目实战',
+        path: '/guide/projects',
+      },
+      {
+        title: '设计变量',
+        path: '/guide/token',
+      },
+      // {
+      //   title: '定制主题',
+      //   path: '/guide/theme',
+      // },
+      {
+        title: '贡献指南',
         path: '/guide/contribution',
       },
       {
@@ -87,22 +92,12 @@ export default defineConfig({
         path: '/guide/i18n',
       },
       {
+        title: '常见问题',
+        path: '/guide/question',
+      },
+      {
         title: '项目进度',
         path: '/guide/progress',
-      }
-    ],
-    '/en/guide': [
-      {
-        title: 'Introduce',
-        path: '/en/guide/introduce',
-      },
-      {
-        title: 'Quick Start',
-        path: '/en/guide/quick-start',
-      },
-      {
-        title: 'Progress',
-        path: '/en/guide/progress',
       }
     ],
     '/hooks': [
@@ -114,7 +109,7 @@ export default defineConfig({
     '/blog': [
       {
         title: '组件开发',
-        children:['blog/components/button']
+        children:['blog/components/button','blog/components/icon']
       },
     ],
     '/components': [
@@ -150,12 +145,6 @@ export default defineConfig({
       //   title: '业务组件',
       //   children: [],
       // },
-    ],
-    '/en/components': [
-      {
-        title: 'Basic Components',
-        children: [''],
-      },
     ],
   },
   themeConfig: {

@@ -1,10 +1,10 @@
-# 开发指南
+# 贡献指南
 
 ## 介绍
 以下是关于提交反馈或代码的指南。在提交 issue 或者 PR 之前，请先花几分钟时间阅读以下文字。
 
 ## 本地开发
-```sh
+```bash
 # 克隆仓库
 https://github.com/79E/aunt.git
 
@@ -41,8 +41,6 @@ aunt
 ```
 
 ## 提交 PR
-
-### Pull Request 规范
 如果你是第一次在 GitHub 上提 Pull Request ，可以阅读下面这两篇文章来学习：
 
 [如何优雅地在 GitHub 上贡献代码](https://segmentfault.com/a/1190000000736629)
@@ -50,17 +48,34 @@ aunt
 [第一次参与开源](https://github.com/firstcontributions/first-contributions/blob/master/translations/README.chs.md)
 
 #### 规范
-如果遇到问题，建议保持你的 PR 足够小。保证一个 PR 只解决一个问题或只添加一个功能
-当新增组件或者修改原有组件时，记得增加或者修改测试代码，保证代码的稳定
-在 PR 中请添加合适的描述，并关联相关的 Issue
+- 如果遇到问题，建议保持你的 PR 足够小。保证一个 PR 只解决一个问题或只添加一个功能
+- 当新增组件或者修改原有组件时，记得增加或者修改测试代码，保证代码的稳定
+- 在 PR 中请添加合适的描述，并关联相关的 Issue。
 
+#### Pull Request 流程
+- 请将本项目 fork 至个人空间，clone 至本地后，通过 git remote add upstream 指令添加上游库地址，参考 [Configuring a remote for a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-for-a-fork)
+- 确保 Node 版本在 12.0.0 及以上，建议升级到 16.0.0 及以上
+- 创建 feature/fix 分支，开发过程中可以使用 git fetch upstream 和 git rebase upstream/feature 来同步上游分支代码
+- 提交代码到 forked 仓库，commit message 撰写请参照 [Angular Commits](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits) 规范
+- 本地执行 npm run lint 及 npm run test 并保证结果通过，当修改了样式导致 snapshot 不一致的情况，可以通过 npm run test:update 指令来更新 snapshot 并提交上来
+- 在上游仓库中发起 PR，如有相关的 issue，请进行 [关联](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
+- 提交 PR 会触发自动化 CI 环节，如果 CI 未通过请重新在本地执行第 4 步中的测试流程
+- 我们会 CR 本次提交的代码，请及时关注 CR 评论通知信息
 
-### Pull Request 流程
-fork 主仓库，如果已经 fork 过，请同步主仓库的最新代码
-基于 fork 后仓库的 matser 分支新建一个分支，比如 feat-button_color
-在新分支上进行开发，开发完成后，提 Pull Request 到主仓库的 matser 分支
-Pull Request 会在 Review 通过后被合并到主仓库
-等待 React Aunt 发布版本
+#### 同步最新代码
+提 Pull Request 前，请依照下面的流程同步主仓库的最新代码：
+```bash
+# 添加主仓库到 remote，作为 fork 后仓库的上游仓库
+git remote add upstream https://github.com/79E/aunt.git
+
+# 拉取主仓库最新代码
+git fetch upstream
+
+# 合并主仓库代码
+git merge upstream/master
+```
+
+> 使用过程中发现任何问题都可以提 Issue 给我们
 
 ### Git 提交规范
 [使用 angular 提交规范](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits)
@@ -87,16 +102,5 @@ perf：提高性能的代码更改
 
 
 
-### 同步最新代码
-提 Pull Request 前，请依照下面的流程同步主仓库的最新代码：
-```sh
-# 添加主仓库到 remote，作为 fork 后仓库的上游仓库
-git remote add upstream https://github.com/79E/aunt.git
 
-# 拉取主仓库最新代码
-git fetch upstream
-
-# 合并主仓库代码
-git merge upstream/master
-```
 
