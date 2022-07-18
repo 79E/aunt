@@ -108,9 +108,13 @@ export default defineConfig({
     ],
     '/blog': [
       {
+        title: '构建文档',
+        children:['blog/structure/site']
+      },
+      {
         title: '组件开发',
         children:['blog/components/button','blog/components/icon']
-      },
+      }
     ],
     '/components': [
       {
