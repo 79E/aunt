@@ -1,0 +1,52 @@
+@class-prefix: ~'aunt';
+
+:root {
+    --aunt-avatar-size-large: calc(60 * var(--aunt-hd));
+    --aunt-avatar-size-normal: calc(40 * var(--aunt-hd));
+    --aunt-avatar-size-small: calc(32 * var(--aunt-hd));
+    --aunt-avatar-square-radius: var(--aunt-border-radius-md);
+}
+
+.@{class-prefix}-avatar {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    vertical-align: middle;
+    overflow: hidden;
+    position: relative;
+    flex: 0 0 auto;
+    text-align: center;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &--img{
+
+    }
+
+    &--small{
+        width: var(--aunt-avatar-size-small);
+        height: var(--aunt-avatar-size-small);
+    }
+    &--normal{
+        width: var(--aunt-avatar-size-normal);
+        height: var(--aunt-avatar-size-normal);
+    }
+    &--large{
+        width: var(--aunt-avatar-size-large);
+        height: var(--aunt-avatar-size-large);
+    }
+
+    &--square{
+        border-radius: var(--aunt-avatar-square-radius);
+    }
+    &--round{
+        border-radius: var(--aunt-border-radius-max);
+    }
+}

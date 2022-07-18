@@ -11,9 +11,25 @@ React Aunt 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范
 
 ## 更新内容
 
-### v0.1.0
-⏰`2022-07-01`
+### v0.0.1
+⏰`2022-07-18`
 
-**Bug Fixes**
+**New Component**
+- 新增 Button 按钮组件
+- 新增 Flex 布局组件
+- 新增 Space 间距组件
+- 新增 Grid 栅格组件
+- 新增 Icon 图标组件
+- 新增 Typography 文本组件
+- 新增 Image 图片组件
+- 新增 Divider 分割线组件
+- 新增 Avatar 头像组件
+- 新增 Loading 加载组件
+- 新增 Lazyload 懒加载组件
+- 新增 ConfigProvider 配置组件
 
-**Features**
+
+### v0.0.0
+⏰`2022-07-1`
+
+

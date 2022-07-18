@@ -9,6 +9,8 @@ export { default as Space } from './components/space'
 export { Typography } from './components/typography'
 export { default as Image } from './components/image'
 export { default as LazyLoad } from './components/lazy-load'
+export { default as Avatar } from './components/avatar'
+export { default as Divider } from './components/divider'
 
 
 

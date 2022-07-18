@@ -135,7 +135,7 @@ export default defineConfig({
       },
       {
         title: '展示组件',
-        children: ['components/lazy-load'],
+        children: ['components/avatar', 'components/divider', 'components/lazy-load'],
       },
       // {
       //   title: '导航组件',
