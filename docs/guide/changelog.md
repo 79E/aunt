@@ -11,7 +11,7 @@ React Aunt 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范
 
 ## 更新内容
 
-### v0.0.1
+### v0.0.2
 ⏰`2022-07-18`
 
 **New Component**
@@ -29,7 +29,8 @@ React Aunt 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范
 - 新增 ConfigProvider 配置组件
 
 
-### v0.0.0
+### v0.0.1
 ⏰`2022-07-1`
+初始化项目
 
 

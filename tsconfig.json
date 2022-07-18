@@ -17,7 +17,7 @@
       "aunt": ["src/index.ts"],
       "aunt/src/*": ["src/*"],
       "aunt/es/*": ["src/*"],
-      "demos": ["src/demos/index.ts"],
+      "demos": ["src/demos/index.ts"]
     },
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
