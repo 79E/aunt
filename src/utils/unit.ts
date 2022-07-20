@@ -22,3 +22,14 @@ export function kebabCase(str: string): string {
 export function joinTrim(arr: Array<string | number>): string{
   return arr.join(' ').trim();
 }
+
+export function getSizeStyle(originSize?: string | number) {
+  if (isDef(originSize)) {
+    const size = addUnit(originSize);
+    return {
+      width: size,
+      height: size,
+    };
+  }
+  return {};
+}
