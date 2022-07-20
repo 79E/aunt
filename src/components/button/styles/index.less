@@ -58,15 +58,15 @@
         position: absolute;
         top: 0;
         left: 0;
+        width: 100%;
+        height: 100%;
         transform: translate(
           calc(var(--aunt-button-border-width) * -1),
           calc(var(--aunt-button-border-width) * -1)
         );
-        width: 100%;
-        height: 100%;
         background-color: #000;
         border: var(--aunt-button-border-width) var(--aunt-button-border-style) #000;
-        border-radius: var(--aunt-button-border-radius);
+        border-radius: inherit;
         opacity: 0;
         content: ' ';
         box-sizing: content-box;
