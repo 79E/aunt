@@ -2,6 +2,18 @@
 .homePage {
   overflow: hidden;
   min-height:89vh;
+  .prefersDark{
+    [data-prefers-color='light'] & {
+      position: absolute;
+      top:-999999999999px;
+    }
+  }
+  .prefersLight{
+    [data-prefers-color='dark'] & {
+      position: absolute;
+      top:-999999999999px;
+    }
+  }
   a {
     text-decoration: none;
   }

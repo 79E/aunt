@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styles from './home-page.less'
-import { context, usePrefersColor} from 'dumi/theme'
+import { context } from 'dumi/theme'
 
 import headerDark from './svg/header-dark'
 import headerLight from './svg/header-light'
@@ -8,7 +8,7 @@ import headerLight from './svg/header-light'
 export default () => {
 
   const { locale } = useContext(context)
-  const [ color ] = usePrefersColor()
+
   function trans<T>(en: T, zh: T) {
     return locale === 'zh' ? zh : en
   }
@@ -34,14 +34,19 @@ export default () => {
     }
   ]
 
+
+
   return (
     <div className={styles.homePage}>
       {/* 内容部分 */}
       <div className={styles.main}>
         <div className={styles.title}>
-          {
-            color == 'dark' ? headerDark() : headerLight()
-          }
+          <div className={styles.prefersLight}>
+            {headerLight()}
+          </div>
+          <div className={styles.prefersDark}>
+            {headerDark()}
+          </div>
         </div>
         <div className={styles.describe}>
           比以往更快地构建功能齐全的可访问 Web 应用程序 - Aunt 包含 70 多个可定制的组件和挂钩，可在任何情况下满足您的开发需求。
