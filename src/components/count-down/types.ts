@@ -3,11 +3,17 @@ import { CurrentTime } from '../../hooks/use-count-down';
 import {BaseTypeProps} from '../../utils'
 
 export type CountDownInstance = {
-    /** 开始倒计时	 */
+    /** 
+     * 开始倒计时	 
+     */
     start: () => void;
-    /** 暂停倒计时	 */
+    /** 
+     * 暂停倒计时	 
+     */
     pause: () => void;
-    /** 重设倒计时，若 autoStart 为 true，重设后会自动开始倒计时	 */
+    /** 
+     * 重设倒计时，若 autoStart 为 true，重设后会自动开始倒计时	 
+     */
     reset: () => void;
 };
 
@@ -21,9 +27,13 @@ export interface CountDownProps extends Omit<BaseTypeProps, 'children'> {
     millisecond?: boolean;
     // 是否自动开始倒计时
     autoStart?: boolean;
-    /** 倒计时变化时触发	 */
+    /** 
+     * 倒计时变化时触发	 
+     */
     onChange?: (currentTime: CurrentTime) => void;
-    /** 倒计时结束时触发	*/
+    /** 
+     * 倒计时结束时触发	
+     */
     onFinish?: () => void;
     children?: (currentTime: CurrentTime) => React.ReactNode;
 }

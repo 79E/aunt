@@ -154,10 +154,17 @@ export default function useCountDown(options: UseCountDownOptions) {
   };
 
   const tick = () => {
+    console.log('millisecond:',options.millisecond)
     // 如果inBrowser不存在 不应该开始执行倒计时
     if (!inBrowser) return;
     // 判断是秒还是毫秒 然后分别运行 对应的方法
-    (options.millisecond ? microTick : macroTick)()
+    console.log('millisecond2:',options.millisecond)
+    if(options.millisecond){
+      console.log('millisecond:3',options.millisecond)
+      microTick()
+    }else{
+      macroTick()
+    }
   };
 
   // 开始

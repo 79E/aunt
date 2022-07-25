@@ -14,7 +14,8 @@ const defaultProps:CountDownProps = {
     onFinish:()=>{},
 }
 
-export const CountDown = forwardRef<CountDownInstance, CountDownProps>((props:CountDownProps,ref) => {
+export const CountDown = forwardRef<CountDownInstance, CountDownProps>((props, ref) => {
+    
     const {
         time, millisecond, format, autoStart
     } = {
@@ -34,13 +35,10 @@ export const CountDown = forwardRef<CountDownInstance, CountDownProps>((props:Co
 
     const resetTime = () => {
         reset(+time);
-    
         if (autoStart) {
           start();
         }
     };
-
-    const timeText = useMemo(() => parseFormat(format as string, current), [current]);
 
     useEffect(()=>{
         resetTime();
@@ -49,11 +47,13 @@ export const CountDown = forwardRef<CountDownInstance, CountDownProps>((props:Co
         }
     },[time])
 
+    const timeText = useMemo(() => parseFormat(format as string, current), [current]);
+
     useImperativeHandle(ref, () => ({
         start,
         pause,
         reset: resetTime,
-      }));
+    }));
 
     return <div className={`${ns.b()}`} style={props.style}>   
         {props.children ? props.children(current) : timeText}

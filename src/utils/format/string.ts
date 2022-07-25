@@ -50,7 +50,6 @@ export function parseFormat(format: string, currentTime: CurrentTime): string {
         format = format.replace('S', ms.charAt(0));
       }
     }
-  
     return format;
 }
 
