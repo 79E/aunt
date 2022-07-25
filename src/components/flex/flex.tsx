@@ -1,8 +1,9 @@
 import React, { FunctionComponent, CSSProperties, useContext, useMemo } from 'react'
 import ConfigProviderContext from '../config-provider/config-provider-context';
 import FlexContext from './flex-context';
-import { FlexProps } from './types'
 import { joinTrim } from '../../utils'
+import { useNamespace } from '../../hooks'
+import { FlexProps } from './types'
 
 const defaultProps: FlexProps = {
     direction: 'row', 
@@ -23,16 +24,16 @@ const Flex:FunctionComponent<Partial<FlexProps>> = ((props) => {
     };
 
     const { prefix } = useContext(ConfigProviderContext);
-    const classPrefix = `${prefix}-flex`
+    const ns = useNamespace('flex',prefix)
     
     const varClasses = useMemo(()=>{
         return joinTrim([
-            classPrefix,
-            `${classPrefix}--direction-${direction}`,
-            `${classPrefix}--wrap-${wrap}`,
-            `${classPrefix}--justify-${justify}`,
-            `${classPrefix}--align-${align}`,
-            `${className}`,
+            ns.b(),
+            direction ? ns.m(`direction-${direction}`) : '',
+            wrap ? ns.m(`wrap-${wrap}`) : '',
+            justify ? ns.m(`justify-${justify}`) : '',
+            align ? ns.m(`align-${align}`) : '',
+            className,
         ])
     },[direction,wrap,justify,align,className])
 

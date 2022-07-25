@@ -1,5 +1,6 @@
 import React,{ FunctionComponent, CSSProperties, useMemo, useContext } from "react";
 import ConfigProviderContext from '../config-provider/config-provider-context'
+import { useNamespace } from '../../hooks'
 import { GridItemProps } from './types'
 
 const defaultProps:GridItemProps = {
@@ -13,7 +14,7 @@ const GridItem:FunctionComponent<Partial<GridItemProps>> = (props)=>{
     }
 
     const { prefix } = useContext(ConfigProviderContext);
-    const classPrefix = `${prefix}-griditem`
+    const ns = useNamespace('griditem',prefix)
 
     const varStyles = useMemo<CSSProperties | undefined>(() => {
         const styles: CSSProperties = {}
@@ -27,7 +28,7 @@ const GridItem:FunctionComponent<Partial<GridItemProps>> = (props)=>{
     }, [row,column]);
 
     return <div
-        className={classPrefix}
+        className={ns.b()}
         style={{...varStyles}}
     >
         {children}

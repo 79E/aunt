@@ -1,5 +1,8 @@
-import { isDef } from './base'
-import { isNumeric } from './number';
+/**
+ * 单位操作
+ */
+import { isDef } from '../base'
+import { isNumeric } from '../validate/number';
 
 export function addUnit(value?: string | number): string | undefined {
     if (!isDef(value)) {
@@ -18,11 +21,6 @@ export function kebabCase(str: string): string {
     .replace(/^-/, '');
 }
 
-
-export function joinTrim(arr: Array<string | number>): string{
-  return arr.join(' ').trim();
-}
-
 export function getSizeStyle(originSize?: string | number) {
   if (isDef(originSize)) {
     const size = addUnit(originSize);
@@ -33,3 +31,4 @@ export function getSizeStyle(originSize?: string | number) {
   }
   return {};
 }
+

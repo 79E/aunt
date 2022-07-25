@@ -1,6 +1,7 @@
-import React, { CSSProperties, FunctionComponent, useMemo, useContext } from 'react'
+import React, { FunctionComponent, useMemo, useContext } from 'react'
 import { SpaceProps } from './types'
 import ConfigProviderContext from '../config-provider/config-provider-context'
+import { useNamespace } from '../../hooks'
 import { joinTrim,addUnit } from '../../utils'
 
 const defaultProps:SpaceProps = {
@@ -16,17 +17,17 @@ export const Space:FunctionComponent<Partial<SpaceProps>> = ((props) => {
     }
 
     const { prefix } = useContext(ConfigProviderContext);
-    const classPrefix = `${prefix}-space`
+    const ns = useNamespace('space',prefix)
 
     const varClasses = useMemo(()=>{
         return joinTrim([
-            classPrefix,
-            wrap ? `${classPrefix}--wrap` : '',
-            block ? `${classPrefix}--block` : '',
-            align ? `${classPrefix}--align-${align}` : '',
-            justify ? `${classPrefix}--justify-${justify}` : '',
-            direction ? `${classPrefix}--${direction}`: '',
-            `${props.className}`
+            ns.b(),
+            wrap ? ns.m('wrap') : '',
+            block ? ns.m('block') : '',
+            align ? ns.m(`align-${align}`) : '',
+            justify ? ns.m(`justify-${justify}`) : '',
+            direction ? ns.m(direction): '',
+            props.className
         ])
     },[ props.className ])
 
@@ -58,7 +59,7 @@ export const Space:FunctionComponent<Partial<SpaceProps>> = ((props) => {
                     props.children, 
                     (child) => {
                         return (
-                            child !== null && child !== undefined && <div className={`${classPrefix}__item`}>{child}</div>
+                            child !== null && child !== undefined && <div className={ns.e('item')}>{child}</div>
                         );
                     }
                 )

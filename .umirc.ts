@@ -102,8 +102,8 @@ export default defineConfig({
     ],
     '/hooks': [
       {
-        title: 'useInViewport ',
-        path: '/hooks/use-in-viewport',
+        title: 'Hooks ',
+        children: ['/hooks/use-in-viewport', './hooks/use-count-down', './hooks/use-namespace'],
       }
     ],
     '/blog': [
@@ -135,7 +135,7 @@ export default defineConfig({
       },
       {
         title: '展示组件',
-        children: ['components/avatar', 'components/divider', 'components/empty',  'components/lazy-load'],
+        children: ['components/avatar', 'components/divider', 'components/count-down', 'components/empty',  'components/lazy-load'],
       },
       // {
       //   title: '导航组件',

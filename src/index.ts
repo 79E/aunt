@@ -1,5 +1,6 @@
 import './styles/index.less'
 
+export { default as hooks } from './hooks';
 export { default as Button } from './components/button'
 export { default as Loading } from './components/loading'
 export { default as ConfigProvider } from './components/config-provider'
@@ -12,7 +13,7 @@ export { default as LazyLoad } from './components/lazy-load'
 export { default as Avatar } from './components/avatar'
 export { default as Divider } from './components/divider'
 export { default as Empty } from './components/empty'
-
+export { default as CountDown } from './components/count-down'
 
 
 

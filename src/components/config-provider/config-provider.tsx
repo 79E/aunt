@@ -1,5 +1,6 @@
 import React, { CSSProperties, FunctionComponent, useMemo } from 'react'
-import { kebabCase } from '../../utils'
+import { kebabCase, joinTrim } from '../../utils'
+import { useNamespace } from '../../hooks'
 import ConfigProviderContext, { INITIAL_STATE } from './config-provider-context';
 import { ConfigProviderProps } from './types'
 
@@ -34,7 +35,7 @@ export const ConfigProvider:FunctionComponent<ConfigProviderProps> = ((props) =>
         ...props,
     }
 
-    const classPrefix = `${INITIAL_STATE.prefix}-config-rovider`
+    const ns = useNamespace('config-rovider',INITIAL_STATE.prefix)
 
     const TagElement = tag as React.ElementType;
 
@@ -48,7 +49,7 @@ export const ConfigProvider:FunctionComponent<ConfigProviderProps> = ((props) =>
     
     return (
         <ConfigProviderContext.Provider value={{ ...INITIAL_STATE, ...props }} >
-            <TagElement className={`${classPrefix} ${className}`} style={varStyles} {...rest}>
+            <TagElement className={joinTrim([ns.b(), className])} style={varStyles} {...rest}>
                 {children}
             </TagElement>
         </ConfigProviderContext.Provider>

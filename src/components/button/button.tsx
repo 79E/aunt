@@ -2,6 +2,7 @@ import React, { CSSProperties, FunctionComponent, useContext, useMemo} from 'rea
 import {ButtonProps,} from './types'
 import Loading from '../loading';
 import ConfigProviderContext from '../config-provider/config-provider-context'
+import { useNamespace } from '../../hooks'
 import { joinTrim } from '../../utils'
 
 const defaultProps: ButtonProps = {
@@ -45,23 +46,22 @@ export const Button:FunctionComponent<Partial<ButtonProps>> = ((props) => {
     }
 
     const { prefix } = useContext(ConfigProviderContext);
-    
-    const classPrefix = `${prefix}-button`
-
+    const ns = useNamespace('button',prefix)
 
     const varClasses = useMemo(()=>{
+      console.log(ns.b(),ns.m('loading'))
       return joinTrim([
-        classPrefix,
-        type ? `${classPrefix}--${type}` : '',
-        size ? `${classPrefix}--${size}` : '',
-        shape ? `${classPrefix}--shape--${shape}` : '',
-        plain ? `${classPrefix}--plain` : '',
-        block ? `${classPrefix}--block` : '',
-        disabled ? `${classPrefix}--disabled` : '',
-        hairline ? `${classPrefix}--hairline` : '',
-        icon ? `${classPrefix}--icon` : '',
-        loading ? `${classPrefix}--loading` : '',
-        `${className}`
+        ns.b(),
+        type ? ns.m(type) : '',
+        size ? ns.m(size) : '',
+        shape ? ns.em('shape',shape) : '',
+        plain ? ns.m('plain') : '',
+        block ? ns.m('block') : '',
+        disabled ? ns.m('disabled') : '',
+        hairline ? ns.m('hairline') : '',
+        icon ? ns.e('icon') : '',
+        loading ? ns.e('loading') : '',
+        className
       ])
     },[])
 
@@ -95,7 +95,7 @@ export const Button:FunctionComponent<Partial<ButtonProps>> = ((props) => {
     
         if (text) {
           return (
-            <div className={`${classPrefix}--text`}>
+            <div className={ns.e('text')}>
               {text}
             </div>
           );
@@ -110,9 +110,7 @@ export const Button:FunctionComponent<Partial<ButtonProps>> = ((props) => {
                 size={loadingSize}
                 type={loadingType}
                 color={type === 'default' ? undefined : ''}
-                className={ `
-                    ${classPrefix}--icon--${position}
-                `}
+                className={ns.em('icon',position)}
             />
         }
         return null;
@@ -124,9 +122,7 @@ export const Button:FunctionComponent<Partial<ButtonProps>> = ((props) => {
     
         if (props.icon) {
           return React.cloneElement(props.icon, {
-            className: `
-            ${classPrefix}--icon--${position}
-            `,
+            className: ns.em('icon',position),
           });
         }
     

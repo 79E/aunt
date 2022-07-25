@@ -1,10 +1,13 @@
 import React,{FunctionComponent, useContext} from 'react';
 import ConfigProviderContext from '../config-provider/config-provider-context'
+import useNamespace, { UseNamespace } from '../../hooks/use-namespace';
+import { joinTrim } from '../../utils'
 import Lazyload from '../lazy-load'
 import AuntIconAlertCircle from '../icon/icons/alert-circle'
 import Loading from '../loading'
 import { Image } from './image'
 import { LazyImageProps } from './types'
+
 
 const defaultProps:LazyImageProps = {
     lazyload: false,
@@ -16,9 +19,9 @@ const defaultProps:LazyImageProps = {
     block: true,
 }
 
-export const getLazyImagePlaceholder = (prefix:string): React.ReactNode =>(
-    <div className={`${prefix}--loading`}>
-        <Loading type="oval" className={`${prefix}--loading-icon`} />
+export const getLazyImagePlaceholder = (ns: UseNamespace): React.ReactNode =>(
+    <div className={ns.e('loading')}>
+        <Loading type="oval" className={ns.em('loading','icon')} />
     </div>
 )
     
@@ -30,20 +33,23 @@ export const LazyImage:FunctionComponent<Partial<LazyImageProps>> = (props) => {
     }
 
     const { prefix } = useContext(ConfigProviderContext);
-    const classPrefix = `${prefix}-image`
+    const ns = useNamespace('image',prefix)
 
     const renderPlaceholder = ()=>{
-        if (typeof lazyload === 'boolean') return getLazyImagePlaceholder(classPrefix);
+        if (typeof lazyload === 'boolean') return getLazyImagePlaceholder(ns);
         if (typeof lazyload !== 'boolean' && lazyload && lazyload.placeholder) {
             return lazyload.placeholder
         }
-        return getLazyImagePlaceholder(classPrefix);
+        return getLazyImagePlaceholder(ns);
     }
 
     if (lazyload) {
         const { className, style, height, width } = imageProps;
         const attrs = {
-          className: `${className} ${ imageProps.block ? classPrefix + '--block' : '' }`,
+          className: joinTrim([
+            imageProps.block ? ns.m('block') : '',
+            className
+          ]),
           style: { ...style, height, width },
         };
         return (

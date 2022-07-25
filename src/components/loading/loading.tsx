@@ -9,7 +9,7 @@ import RingsIcon from './svg-loaders/rings'
 import SpinningIcon from './svg-loaders/spinning-circles'
 import ThreeDotsIcon from './svg-loaders/three-dots'
 import GapCircleIcon from './svg-loaders/gap-circle'
-
+import { useNamespace } from '../../hooks'
 import { addUnit,joinTrim } from '../../utils'
 import { LoadingProps } from './types'
 
@@ -49,14 +49,13 @@ export const Loading:FunctionComponent<Partial<LoadingProps>> = ((props) => {
     };
 
     const { prefix } = useContext(ConfigProviderContext);
-    
-    const classPrefix = `${prefix}-loading`
+    const ns = useNamespace('loading',prefix)
 
     const renderText = () => {
         if (children) {
           return (
             <span
-                className={`${classPrefix}_text`}
+                className={ ns.e('text')}
                 style={{
                     fontSize: addUnit(textSize),
                     color: textColor ?? color,
@@ -78,9 +77,9 @@ export const Loading:FunctionComponent<Partial<LoadingProps>> = ((props) => {
 
     const varClasses = useMemo(()=>{
         return joinTrim([
-            classPrefix,
-            vertical ? `${classPrefix}--vertical` : '',
-            `${className}`
+            ns.b(),
+            vertical ? ns.m('vertical') : '',
+            className
         ])
     },[vertical])
 

@@ -1,14 +1,15 @@
 import React, { CSSProperties, FunctionComponent, useContext, useMemo } from 'react'
 import ConfigProviderContext from '../config-provider/config-provider-context';
 import FlexContext from './flex-context';
-import { FlexItemProps, FlexType } from './types'
 import { joinTrim } from '../../utils' 
+import { useNamespace } from '../../hooks'
+import { FlexItemProps, FlexType } from './types'
 
 const defaultProps: FlexItemProps = {
-    className:''
+    className:'',
 }
 
-const FlexItem:FunctionComponent<Partial<FlexItemProps>> = ((props) => {
+const FlexItem:FunctionComponent<Partial<FlexItemProps>> = ((props = defaultProps) => {
     const {
         style, className, span, children, flex, ...rest
     } = {
@@ -17,7 +18,7 @@ const FlexItem:FunctionComponent<Partial<FlexItemProps>> = ((props) => {
     };
 
     const { prefix } = useContext(ConfigProviderContext);
-    const classPrefix = `${prefix}-flexitem`
+    const ns = useNamespace('flexitem',prefix)
 
     const getGutterStyle = (gutter : [number, number]) => {
         return {
@@ -38,9 +39,9 @@ const FlexItem:FunctionComponent<Partial<FlexItemProps>> = ((props) => {
 
     const varClasses = useMemo(()=>{
         return joinTrim([
-            classPrefix,
-            `${classPrefix}--${span}`,
-            `${className}`
+            ns.b(),
+            span ? ns.e(span) : '',
+            className
         ])
     },[span])
 

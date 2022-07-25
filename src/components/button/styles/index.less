@@ -75,7 +75,7 @@
         opacity: 0.08;
     }
 
-    &--icon{
+    &__icon{
         .inline-flex-center();
         &--left{
             margin-right: var(--aunt-button-padding-base);
@@ -84,7 +84,7 @@
             margin-left: var(--aunt-button-padding-base);
         }
     }
-    &--loading{
+    &__loading{
         .inline-flex-center();
         cursor: not-allowed;
         &:active::before {
@@ -142,12 +142,12 @@
         border-width: var(--aunt-button-border-width-hairline);
     }
 
-    &--text{
+    &__text{
         line-height: var(--aunt-button-line-height-xs);
     }
 
     &--large {
-        .@{class-prefix}-button--text{
+        .@{class-prefix}-button__text{
             font-size: var(--aunt-button-font-size-lg);
             line-height: var(--aunt-button-line-height-sm);
         }
@@ -156,7 +156,7 @@
     }
 
     &--normal {
-        .@{class-prefix}-button--text{
+        .@{class-prefix}-button__text{
             font-size: var(--aunt-button-font-size-md);
         }
         // 8-14
@@ -164,7 +164,7 @@
     }
     
     &--small {
-        .@{class-prefix}-button--text{
+        .@{class-prefix}-button__text{
             font-size: var(--aunt-button-font-size-sm);
         }
         // 6-12 
@@ -172,14 +172,14 @@
     }
     
     &--mini {
-        .@{class-prefix}-button--text{
+        .@{class-prefix}-button__text{
             font-size: var(--aunt-button-font-size-xs);
         }
         // 4-4
         padding: var(--aunt-padding-base) calc(6*var(--aunt-hd));
     }
 
-    &--shape{
+    &__shape{
         &--default{
             border-radius: var(--aunt-button-border-radius);
         }

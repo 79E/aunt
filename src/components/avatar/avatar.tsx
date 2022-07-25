@@ -1,5 +1,6 @@
 import React, { CSSProperties, FunctionComponent, useContext, useMemo } from 'react'
 import ConfigProviderContext from '../config-provider/config-provider-context'
+import { useNamespace } from '../../hooks'
 import { joinTrim } from '../../utils'
 import { AuntIconUser } from '../../index'
 import { AvatarProps } from './types'
@@ -25,15 +26,15 @@ export const Avatar:FunctionComponent<Partial<AvatarProps>> = ((props: AvatarPro
     }
 
     const { prefix } = useContext(ConfigProviderContext);
-    const classPrefix = `${prefix}-avatar`
+    const ns = useNamespace('avatar',prefix)
 
     const varClasses = useMemo(()=>{
         return joinTrim([
-            classPrefix,
-            size ? `${classPrefix}--${size}` : '',
-            shape ? `${classPrefix}--${shape}` : '',
-            url ? `${classPrefix}--img` : '',
-            props.className ? `${props.className}` : ''
+            ns.b(),
+            size ? ns.m(size) : '',
+            shape ? ns.m(shape) : '',
+            url ? ns.m('img') : '',
+            props.className
         ])
     },[size,shape,fit])
 
@@ -53,7 +54,7 @@ export const Avatar:FunctionComponent<Partial<AvatarProps>> = ((props: AvatarPro
             return <img
                 alt='img'
                 src={url} 
-                className={`${classPrefix}--img`} 
+                className={ns.m('img')} 
                 style={{
                     objectFit: fit
                 }}

@@ -1,6 +1,7 @@
 import React, { FunctionComponent, useContext, useMemo } from 'react'
 import { TypographyProps } from './types'
 import ConfigProviderContext from '../config-provider/config-provider-context'
+import { useNamespace } from '../../hooks'
 import { joinTrim } from '../../utils'
 
 const defaultProps:TypographyProps = {
@@ -29,25 +30,25 @@ export const Typography:FunctionComponent<Partial<TypographyProps> & { renderTyp
         ...props
     }
     const { prefix } = useContext(ConfigProviderContext);
-    const classPrefix = `${prefix}-typography`
+    const ns = useNamespace('typography',prefix)
 
     const elli = ellipsis === true ? 1 : (ellipsis as number);
 
     const varClasses = useMemo(()=>{
         return joinTrim([
-          classPrefix,
-          renderType ? `${classPrefix}--${renderType}` : '',
-          type ? `${classPrefix}--${type}` : '',
-          size ? `${classPrefix}--${size}` : '',
-          level && renderType === 'title' ? `${classPrefix}--l${level}` : '',
-          disabled ? `${classPrefix}--disabled` : '',
-          center ? `${classPrefix}--center` : '',
-          strong ? `${classPrefix}--strong` : '',
-          del ? `${classPrefix}--delete` : '',
-          underline ? `${classPrefix}--underline` : '',
-          elli === 1 ? 'aunt-ellipsis': '',
-          elli && elli > 1 ? `aunt-multi-ellipsis--l${elli}`: '',
-          `${className}`
+            ns.b(),
+            renderType ? ns.m(renderType) : '',
+            type ? ns.m(type) : '',
+            size ? ns.m(size) : '',
+            level && renderType === 'title' ? ns.m(`l${level}`) : '',
+            disabled ? ns.m('disabled') : '',
+            center ? ns.m('center') : '',
+            strong ? ns.m('strong') : '',
+            del ? ns.m('delete') : '',
+            underline ? ns.m('underline') : '',
+            elli === 1 ? 'aunt-ellipsis': '',
+            elli && elli > 1 ? `aunt-multi-ellipsis--l${elli}`: '',
+            className
         ])
       },[])
 

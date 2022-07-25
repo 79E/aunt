@@ -1,7 +1,8 @@
 import React, { isValidElement, FunctionComponent, useContext } from 'react'
 import ConfigProviderContext from '../config-provider/config-provider-context'
+import { getSizeStyle,joinTrim } from '../../utils'
+import { useNamespace } from '../../hooks'
 import { EmptyProps,StatusOptions } from './types'
-import { getSizeStyle } from '../../utils'
 
 const defaultProps:EmptyProps = {
     image: 'default'
@@ -24,7 +25,7 @@ export const Empty:FunctionComponent<Partial<EmptyProps>> = ((props: EmptyProps)
     }
 
     const { prefix } = useContext(ConfigProviderContext);
-    const classPrefix = `${prefix}-empty`
+    const ns = useNamespace('empty',prefix)
 
     const renderImage = ()=>{
         if(isValidElement(image)){
@@ -40,20 +41,20 @@ export const Empty:FunctionComponent<Partial<EmptyProps>> = ((props: EmptyProps)
 
     const renderDescription = () => {
         if (description) {
-            return <div className={`${classPrefix}--description`}>{description}</div>;
+            return <div className={ns.e('description')}>{description}</div>;
         }
         return null;
     };
 
     const renderBottom = () => {
         if (props.children) {
-          return <div className={`${classPrefix}--bottom`}>{props.children}</div>;
+          return <div className={ns.e('bottom')}>{props.children}</div>;
         }
         return null;
     };
 
-    return <div className={`${classPrefix} ${props.className}`} style={props.style}>
-        <div className={`${classPrefix}--image`} style={getSizeStyle(imageSize)}>
+    return <div className={joinTrim([ns.b(),props.className])} style={props.style}>
+        <div className={ns.e('image')} style={getSizeStyle(imageSize)}>
             {renderImage()}
         </div>
         {renderDescription()}

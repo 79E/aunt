@@ -1,6 +1,7 @@
 import React, { CSSProperties, FunctionComponent, useContext, useMemo } from 'react'
 import ConfigProviderContext from '../config-provider/config-provider-context'
 import { joinTrim } from '../../utils'
+import { useNamespace } from '../../hooks'
 import { DividerProps } from './types'
 
 
@@ -17,16 +18,16 @@ export const Divider:FunctionComponent<Partial<DividerProps>> = ((props:DividerP
     }
 
     const { prefix } = useContext(ConfigProviderContext);
-    const classPrefix = `${prefix}-divider`
+    const ns = useNamespace('divider',prefix)
 
     const varClasses = useMemo(()=>{
         return joinTrim([
-            classPrefix,
-            direction ? `${classPrefix}-${direction}`: '',
-            contentPosition ? `${classPrefix}--${contentPosition}` : '',
-            dashed ? `${classPrefix}--dashed` : '',
-            hairline? `${classPrefix}--hairline` : '',
-            props.className ? `${props.className}` : ''
+            ns.b(),
+            direction ? ns.m(direction) : '',
+            contentPosition ? ns.m(contentPosition) : '',
+            dashed ? ns.m('dashed') : '',
+            hairline? ns.m('hairline') : '',
+            props.className
         ])
     },[direction,contentPosition,dashed,props.className])
 
@@ -40,7 +41,7 @@ export const Divider:FunctionComponent<Partial<DividerProps>> = ((props:DividerP
             props.children 
             && 
             (
-                <div className={`${classPrefix}--content`}>{props.children}</div>
+                <div className={ns.e('content')}>{props.children}</div>
             )
         }
     </div>

@@ -1,7 +1,8 @@
 import React, { CSSProperties, FunctionComponent, useContext, useMemo, useRef, useState, useEffect } from 'react'
 import ConfigProviderContext from '../config-provider/config-provider-context'
-import { ImageProps } from './types'
 import { addUnit, isDef, joinTrim } from '../../utils'
+import { useNamespace } from '../../hooks'
+import { ImageProps } from './types'
 
 const defaultProps:ImageProps = {}
 
@@ -15,7 +16,7 @@ export const Image:FunctionComponent<Partial<ImageProps>> = ((props) => {
     }
 
     const { prefix } = useContext(ConfigProviderContext);
-    const classPrefix = `${prefix}-image`
+    const ns = useNamespace('image',prefix)
 
     const [status, setStatus] = useState({ loading: true, error: false });
     const imgRef = useRef<HTMLImageElement>(null);
@@ -41,10 +42,10 @@ export const Image:FunctionComponent<Partial<ImageProps>> = ((props) => {
 
     const varClasses = useMemo(()=>{
         return joinTrim([
-            classPrefix,
-            block ? `${classPrefix}--block` :'',
-            round ? `${classPrefix}--round` :'',
-            `${className}`
+          ns.b(),
+          block ? ns.m('block') :'',
+          round ? ns.m('round') :'',
+          className
         ])
     },[])
 
@@ -76,7 +77,7 @@ export const Image:FunctionComponent<Partial<ImageProps>> = ((props) => {
           return null;
         }
         const attrs = {
-          className: `${classPrefix}--img`,
+          className: ns.e('img'),
           style: {
             objectFit: fit,
           },
@@ -96,7 +97,7 @@ export const Image:FunctionComponent<Partial<ImageProps>> = ((props) => {
     const renderLoadingIcon = () => {
         if (loadingIcon)
           return React.cloneElement(loadingIcon as React.ReactElement, {
-            className: `${classPrefix}--loading-icon`,
+            className: ns.em('loading','icon'),
             fontSize: props.iconSize,
           });
         return null;
@@ -105,7 +106,7 @@ export const Image:FunctionComponent<Partial<ImageProps>> = ((props) => {
     const renderErrorIcon = () => {
         if (errorIcon) {
             return React.cloneElement(errorIcon as React.ReactElement, {
-                className: `${classPrefix}--error-icon`,
+                className: ns.em('error','icon'),
                 fontSize: props.iconSize,
             });
         }
@@ -115,14 +116,14 @@ export const Image:FunctionComponent<Partial<ImageProps>> = ((props) => {
     const renderPlaceholder = () => {
         if (status.loading && showLoading) {
           return (
-            <div className={`${classPrefix}--loading`} onClick={props.onClick}>
+            <div className={ns.e('loading')} onClick={props.onClick}>
               {renderLoadingIcon()}
             </div>
           );
         }
         if (status.error && showError) {
           return (
-            <div className={`${classPrefix}--error`} onClick={props.onClick}>
+            <div className={ns.e('error')} onClick={props.onClick}>
               {renderErrorIcon()}
             </div>
           );

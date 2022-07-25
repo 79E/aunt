@@ -40,6 +40,34 @@ aunt
     └─ index.ts             # 入口
 ```
 
+## CSS BEM 规范
+所有 class 需要通过 `useNamespace` Hooks 来生成
+```
+B（block）：某一块展示/功能区域，比如：.nav。
+E（element）：这块展示/功能区域里的某个元素，比如: .nav__item。
+M（modifier）：某个元素或者某个块的状态，比如：.nav--hide, .nav__item--active 等。
+```
+
+使用 `useNamespace` 生成以上的 class
+```tsx
+import { useNamespace } from '../hooks';
+const ns = useNamespace('nav')
+// 注意 默认是不带 " . " 的
+console.log(ns.b()) // .nav
+console.log(ns.e('item')) // .nav__item
+console.log(ns.m('hide')) // .nav--hide
+console.log(ns.em('item','active')) // .nav__item--active
+```
+
+### 参考文章
+[BEM官网](https://en.bem.info/)
+
+[CSS命名方式=》BEM](https://github.com/zhongxia245/blog/issues/48)
+
+[BEM 快速入门](https://github.com/woai30231/webDevDetails/tree/master/15)
+
+[BEM Quick start](https://en.bem.info/methodology/quick-start/)
+
 ## 提交 PR
 如果你是第一次在 GitHub 上提 Pull Request ，可以阅读下面这两篇文章来学习：
 

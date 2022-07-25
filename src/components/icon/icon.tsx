@@ -1,7 +1,8 @@
 import React, { forwardRef, cloneElement, useContext } from 'react'
-import { IconProps } from './types'
 import ConfigProviderContext from '../config-provider/config-provider-context'
 import {joinTrim} from '../../utils'
+import { useNamespace } from '../../hooks'
+import { IconProps } from './types'
 
 const Icon = forwardRef<SVGSVGElement,IconProps>((props,ref) => {
     const {
@@ -19,8 +20,7 @@ const Icon = forwardRef<SVGSVGElement,IconProps>((props,ref) => {
     } = props;
 
     const { prefix } = useContext(ConfigProviderContext);
-    
-    const classPrefix = `${prefix}-icon`
+    const ns = useNamespace('icon',prefix)
     
     function kebabCase(str: string): string {
         return str
@@ -54,9 +54,9 @@ const Icon = forwardRef<SVGSVGElement,IconProps>((props,ref) => {
         tabIndex: iconTabIndex,
         onClick,
         className: joinTrim([
-          kebabCaseName ? `${classPrefix}-${kebabCaseName}` : '',
-          spin ? `${classPrefix}--spin` : '',
-          `${className}`,
+          kebabCaseName ? ns.e(kebabCaseName) : '',
+          spin ? ns.m('spin') : '',
+          className,
         ]),
         width: size ? size : "24",
         height: size ? size : "24",

@@ -1,8 +1,8 @@
 import React, { FunctionComponent, useContext, useRef } from 'react'
 import ConfigProviderContext from '../config-provider/config-provider-context'
+import { useInViewport, useNamespace } from '../../hooks';
+import { joinTrim } from '../../utils';
 import { LazyLoadProps } from './types'
-import { useInViewport } from '../../hooks';
-
 
 const defaultProps:LazyLoadProps = {
     placeholder:''
@@ -16,7 +16,7 @@ export const LazyLoad:FunctionComponent<Partial<LazyLoadProps>> = ((props) => {
     };
 
     const { prefix } = useContext(ConfigProviderContext);
-    const classPrefix = `${prefix}-lazy-load`
+    const ns = useNamespace('lazy-load',prefix)
 
     const ref = useRef<HTMLDivElement>(null);
     const inViewPort = useInViewport(ref);
@@ -26,7 +26,7 @@ export const LazyLoad:FunctionComponent<Partial<LazyLoadProps>> = ((props) => {
             { children }
         </>
     ) : (
-        <div ref={ref} className={`${classPrefix} ${className}`} style={{ height, ...props.style }}>   
+        <div ref={ref} className={joinTrim([ns.b(),className])} style={{ height, ...props.style }}>   
             { placeholder }
         </div>
     )

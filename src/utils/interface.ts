@@ -1,3 +1,6 @@
+/**
+ * 基础Type类型
+ */
 import React from 'react';
 
 export interface BaseTypeProps {
