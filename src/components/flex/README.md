@@ -69,14 +69,14 @@ Flex 组件提供了24列栅格。使用单一的一组 Flex 和 Flex.Item 栅�
 | ---- | ---- | ---- | ------ |
 | direction |   项目定位方向，可选值为 row row-reverse column column-reverse   |   `row`   |    `string`    |
 | wrap | 子元素的换行方式，可选值为 nowrap wrap wrap-reverse | `nowrap` |  `string`  |
-| gutter | 列元素之间的间距。可以使用数组形式同时设置 [水平间距, 垂直间距] | `0`  | `number ｜ array` |  
+| gutter | 列元素之间的间距。可以使用数组形式同时设置 [水平间距, 垂直间距] | `0`  | `number \| array` |  
 | align | 垂直对齐方式，可选值为 start center end baseline stretch |  `start`   | `string`  |
 | justify | 水平排列方式，可选值为 start end center around between |  `start`  | `string` |
 
 ### Flex.item
 | 参数 | 说明 | 默认值 | 类型 |
 | ---- | ---- | ---- | ------ |
-| flex |   flex 布局属性   |   `-`   |    `string ｜ number`    |
+| flex |   flex 布局属性   |   `-`   |    `string \| number`    |
 | span | 栅格占位格数，为 0 时相当于 display: none | `-` |  `number`  |
 
 

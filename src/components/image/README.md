@@ -69,16 +69,16 @@ Image 组件提供了默认的加载失败提示，支持通过 errorIcon 自定
 | src         | 图片链接                  | `string`                  |- |
 | fit         | 图片填充模式              | `string`                  |-|
 | alt         | 替代文本                  | `string`                  |- |
-| width       | 宽度，默认单位为 `px`     | `number｜string`          |- |
-| height      | 高度，默认单位为 `px`     | `number｜string`          |- |
-| radius      | 圆角大小，默认单位为 `px` | `number｜string`          |-|
+| width       | 宽度，默认单位为 `px`     | `number\|string`          |- |
+| height      | 高度，默认单位为 `px`     | `number\|string`          |- |
+| radius      | 圆角大小，默认单位为 `px` | `number\|string`          |-|
 | round       | 是否显示为圆形            | `boolean`                 |`false` |
-| lazyload    | 是否开启懒加载            | `boolean｜Lazyload Props` |`false` |
+| lazyload    | 是否开启懒加载            | `boolean\|Lazyload Props` |`false` |
 | showError   | 是否展示图片加载失败提示  | `boolean`                 |- |
 | showLoading | 是否展示图片加载中提示    | `boolean`                 |- |
 | errorIcon   | 失败时提示的图标          | `ReactNode`               |- |
 | loadingIcon | 加载时提示的图标          | `ReactNode`               |- |
-| iconSize    | 加载图标和失败图标的大小  | `number｜string`          |- |
+| iconSize    | 加载图标和失败图标的大小  | `number\|string`          |- |
 
 ## 图片填充模式
 

@@ -52,12 +52,12 @@ export default () => <Avatar />;
 ## 参数
 | 参数 | 说明 | 默认值 | 类型 |
 | ---- | ---- | ---- | ------ |
-| size |   设置头像尺寸   |   `normal`   |    `'small' ｜ 'normal' ｜ 'large'`    |
-| shape | 设置头像形状 | `square` |  ` 'square'｜'round' `  |
+| size |   设置头像尺寸   |   `normal`   |    `'small' \| 'normal' \| 'large'`    |
+| shape | 设置头像形状 | `square` |  ` 'square'\|'round' `  |
 | url | 头像图片链接 | `-`  | `string` |  
 | color | 文本或图标颜色 |  `#666666`   | `string`  |
 | background | 头像背景颜色 |  `#dddddd`  | `string` |
-| fit | 图片填充模式 | `cover` | `'contain' ｜ 'cover' ｜ 'fill' ｜ 'none' ｜ 'scale-down'` |
+| fit | 图片填充模式 | `cover` | `'contain' \| 'cover' \| 'fill' \| 'none' \| 'scale-down'` |
 
 ## 事件
 | 事件名 | 说明 | 默认值 | 类型 |
@@ -70,7 +70,7 @@ export default () => <Avatar />;
 | --aunt-avatar-size-large | large尺寸 | `60px` |
 | --aunt-avatar-size-normal | normal尺寸 | `40px` |
 | --aunt-avatar-size-small | small尺寸 | `32px` |
-| --aunt-avatar-shape-square | square形状的radius大小 | `4px` |
+| --aunt-avatar-shape-square | square形状的radius大小 | `var(--aunt-border-radius-md)` |
 
 
 <code hidden="hidden" src="./demos/demo.tsx"></code>

@@ -31,5 +31,5 @@ function useInViewport(target): boolean;
 
 | 参数   | 参数           | 默认值 | 类型            |
 | ------ | -------------- | ------ | --------------- |
-| target | 需要监听的元素 | -      | `HTMLElement ｜ () => HTMLElement ｜ React.MutableRefObject ` |
+| target | 需要监听的元素 | -      | `HTMLElement \| () => HTMLElement \| React.MutableRefObject ` |
 

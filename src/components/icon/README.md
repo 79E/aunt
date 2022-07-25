@@ -47,7 +47,7 @@ Icon 的 rotate 属性用来设置图标旋转的角度。
 | 参数 | 说明 | 默认值 | 类型 |
 | ---- | ---- | ---- | ------ |
 | color| 修改svg的颜色 |   `inherit`   |    `string`    |
-| size | 图标大小，如  20px 2em | `inherit` | `number ｜ string` |
+| size | 图标大小，如  20px 2em | `inherit` | `number \| string` |
 | spin | 是否开启旋转动画 | `false` | `boolean` |
 | rotate | 图标旋转角度 | `-` | `number` |
 

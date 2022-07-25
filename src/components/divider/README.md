@@ -44,19 +44,19 @@ export default () => <Divider />;
 ## 参数
 | 参数 | 说明 | 默认值 | 类型 |
 | ---- | ---- | ---- | ------ |
-| direction |   设置分割线方向   |   `horizontal`   |    ` 'horizontal' ｜ 'vertical' `    |
-| contentPosition | 设置内容位置 | `center` |  ` 'left'｜'right'｜'center' ` |
+| direction |   设置分割线方向   |   `horizontal`   |    ` 'horizontal' \| 'vertical' `    |
+| contentPosition | 设置内容位置 | `center` |  ` 'left'\|'right'\|'center' ` |
 | dashed | 设置分割线为虚线 | `false`  | `boolean` |  
 | hairline | 设置分割线为0.5px | `false`  | `boolean` |  
 
 ## 样式变量
 | 属性名 | 说明 | 默认值 |
 | ---- | ---- | ---- |
-| --aunt-divider-text-color | 文本内容颜色 | `#86909c` |
-| --aunt-divider-border-color | 分割线颜色 | `#e5e6eb` |
-| --aunt-divider-margin | 上下间距 | `16px` |
-| --aunt-divider-padding | 内容左右间距 | `16px` |
-| --aunt-divider-font-size | 文本文字大小 | `14px` |
+| --aunt-divider-text-color | 文本内容颜色 | `var(--aunt-gray-6)` |
+| --aunt-divider-border-color | 分割线颜色 | `var(--aunt-gray-3)` |
+| --aunt-divider-margin | 上下间距 | `var(--aunt-padding-md)` |
+| --aunt-divider-padding | 内容左右间距 | `var(--aunt-padding-md)` |
+| --aunt-divider-font-size | 文本文字大小 | `var(--aunt-font-size-md)` |
 | --aunt-divider-content-left-width | 内容位置边距 | `10%` |
 | --aunt-divider-content-right-width | 内容位置边距 | `10%` |
 

@@ -148,9 +148,9 @@ countDownRef.current?.start();
 
 | 名称                          | 说明 | 默认值    | 
 | :---------------------------- | :-------- | :--- |
-| --aunt-count-down-text-color  | 文字颜色    |`#4e5969` | 
-| --aunt-count-down-font-size   | 文字大小   |`14px`    | 
-| --aunt-count-down-line-height | 文字行高   |`20px`    | 
+| --aunt-count-down-text-color  | 文字颜色    |`var(--aunt-text-color)` | 
+| --aunt-count-down-font-size   | 文字大小   |`var(--aunt-font-size-md)` | 
+| --aunt-count-down-line-height | 文字行高   |`var(--aunt-line-height-md)` | 
 
 ## 常见问题
 

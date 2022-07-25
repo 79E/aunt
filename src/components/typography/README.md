@@ -71,7 +71,7 @@ export default () => <Typography.Text>
 | type | 文本类型，可选值`danger` ` secondary` `light` `primary` `success` `warning ` | `string` | - |
 | size | 文本大小，可选值`xs` `sm` `md` `lg` `xl` `xxl` | `boolean` | `md` |
 | disabled | 禁用文本 | `boolean` | `false` |
-| ellipsis | 文本省略 | `boolean｜ number` | `false` |
+| ellipsis | 文本省略 | `boolean\| number` | `false` |
 | delete | 添加删除线样式 | `boolean` | `false` |
 | underline | 添加下划线样式 | `boolean` | `false` |
 | center | 文本居中 | `boolean` | `false` |

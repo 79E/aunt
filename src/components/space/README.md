@@ -62,10 +62,10 @@ gap 设置为数组时可以同时调整垂直方向和水平方向的间距大�
 
 | 参数 | 说明 | 默认值 | 类型 |
 | ---- | ---- | ---- | ------ |
-| gap |   间距大小   |   `8`   |    `string｜number｜[string, string]`    |
-| justify | 主轴对齐方式 | `-` |  `'start'｜ 'end'｜ 'center'｜ 'between'｜ 'around'｜ 'evenly'｜ 'stretch' `  |
-| align | 交叉轴对齐方式 | `-`  | `'start'｜ 'end'｜ 'center'｜ 'baseline'` |  
-| direction | 间距方向 |  `horizontal`   | `'vertical' ｜ 'horizontal'`  |
+| gap |   间距大小   |   `8`   |    `string\|number\|[string, string]`    |
+| justify | 主轴对齐方式 | `-` |  `'start'\| 'end'\| 'center'\| 'between'\| 'around'\| 'evenly'\| 'stretch' `  |
+| align | 交叉轴对齐方式 | `-`  | `'start'\| 'end'\| 'center'\| 'baseline'` |  
+| direction | 间距方向 |  `horizontal`   | `'vertical' \| 'horizontal'`  |
 | wrap | 是否自动换行，仅在 horizontal 时有效 |  `false`  | `boolean` |
 | block | 是否渲染为块级元素 | `false` | `boolean` |
 

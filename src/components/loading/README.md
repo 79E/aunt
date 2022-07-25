@@ -70,10 +70,10 @@ export default () => <Loading />;
 
 | 参数 | 说明 | 默认值 | 类型 |
 | ---- | ---- | ---- | ------ |
-| type |   统一设置按钮类型   |   `gap`   |    `'oval'｜'rings'｜'spinning'｜'three'｜'ball'｜'bars'｜ 'circles'｜'gap'｜'puff'`    |
-| size | 加载图标大小，默认单位为px | `30px` |  ` number ｜ string `  |
+| type |   统一设置按钮类型   |   `gap`   |    `'oval'\|'rings'\|'spinning'\|'three'\|'ball'\|'bars'\| 'circles'\|'gap'\|'puff'`    |
+| size | 加载图标大小，默认单位为px | `30px` |  ` number \| string `  |
 | color | 颜色 |  `-`   | `string`  |
-| textSize | 文字大小，默认单位为px | `14px` | `number ｜ string` |
+| textSize | 文字大小，默认单位为px | `14px` | `number \| string` |
 | textColor | 	文字颜色 |  `#4e5969`  | `string` |
 | vertical | 是否垂直排列图标和文字内容	 |  `false`  | `boolean` |
 

@@ -61,7 +61,7 @@ const imageList = [
 
 | 参数        | 说明               | 类型             | 默认值 |
 | ----------- | ------------------ | ---------------- | ------ |
-| height      | 设置占位容器高度   | `number｜string` | -      |
+| height      | 设置占位容器高度   | `number\|string` | -      |
 | placeholder | 自定义占位容器视图 | `ReactNode`      | -      |
 | style       | 占位容器样式       | `CSSProperties`  | -      |
 | className   | 占位容器类名       | `string`         | -      |

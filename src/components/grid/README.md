@@ -85,7 +85,7 @@ export default () =>(
 ### Grid
 | 参数 | 说明 | 默认值 | 类型 |
 | ---- | ---- | ---- | ------ |
-| gap | 格子之间的间隔  |   `0`   |    `number ｜ string ｜ [number ｜ string, number ｜ string]`    |
+| gap | 格子之间的间隔  |   `0`   |    `number \| string \| [number \| string, number \| string]`    |
 | column | 列数 | `4` |  `number`  |
 | row | 行数 | `-`  | `number` |  
 
