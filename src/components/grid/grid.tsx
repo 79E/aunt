@@ -1,13 +1,13 @@
-import React, { CSSProperties, FunctionComponent, useMemo, useContext } from 'react'
-import ConfigProviderContext from '../config-provider/config-provider-context'
-import { useNamespace } from '../../hooks'
-import { addUnit } from '../../utils'
-import { GridProps } from './types'
+import React, { CSSProperties, FunctionComponent, useMemo, useContext } from 'react';
+import ConfigProviderContext from '../config-provider/config-provider-context';
+import { useNamespace } from '../../hooks';
+import { addUnit } from '../../utils';
+import { GridProps } from './types';
 
 const defaultProps:GridProps = {
     column: 4,
     gap: 0,
-}
+};
 
 const Grid:FunctionComponent<Partial<GridProps>> = ((props) => {
     
@@ -16,13 +16,13 @@ const Grid:FunctionComponent<Partial<GridProps>> = ((props) => {
     } = {
         ...defaultProps,
         ...props
-    }
+    };
 
     const { prefix } = useContext(ConfigProviderContext);
-    const ns = useNamespace('grid',prefix)
+    const ns = useNamespace('grid',prefix);
 
     const varStyles = useMemo<CSSProperties | undefined>(() => {
-        const styles: CSSProperties = {}
+        const styles: CSSProperties = {};
         if(column){
             styles.gridTemplateColumns = `repeat(${column},minmax(0,1fr))`;
         }
@@ -45,8 +45,8 @@ const Grid:FunctionComponent<Partial<GridProps>> = ((props) => {
 
     return <div className={ns.b()} style={{...varStyles}}>
         {props.children}
-    </div>
-})
+    </div>;
+});
 
 
 Grid.defaultProps = defaultProps;

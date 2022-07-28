@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 import { CurrentTime } from '../../hooks/use-count-down';
-import {BaseTypeProps} from '../../utils'
+import {BaseTypeProps} from '../../utils';
 
 export type CountDownInstance = {
     /** 

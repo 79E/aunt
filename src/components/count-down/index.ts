@@ -1,5 +1,5 @@
-import './styles/index.less'
-import { CountDown } from './count-down'
+import './styles/index.less';
+import { CountDown } from './count-down';
 
 export type {
     CountDownProps,
@@ -8,6 +8,6 @@ export type {
 
 export {
     CountDown
-}
-export default CountDown
+};
+export default CountDown;
 

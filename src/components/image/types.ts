@@ -1,6 +1,6 @@
-import React from "react"
-import { BaseTypeProps } from '../../utils'
-import { LazyLoadProps } from '../lazy-load/types'
+import React from "react";
+import { BaseTypeProps } from '../../utils';
+import { LazyLoadProps } from '../lazy-load/types';
 
 
 export type ImageFit = 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';

@@ -1,5 +1,5 @@
-import React from "react"
-import { BaseTypeProps } from '../../utils'
+import React from "react";
+import { BaseTypeProps } from '../../utils';
 
 export type StatusOptions = {
     [key: string]: string;

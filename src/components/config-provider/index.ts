@@ -1,9 +1,12 @@
-import './styles/index.less'
-import { ConfigProvider } from './config-provider'
+import './styles/index.less';
+import { ConfigProvider } from './config-provider';
 
 export type {
     ConfigProviderProps
 } from './types';
 
-export default ConfigProvider
+export {
+    ConfigProvider
+};
+export default ConfigProvider;
 

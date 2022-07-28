@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const PuffIcon = (props:React.SVGProps<SVGSVGElement>)=>(
     <svg 
@@ -44,6 +44,6 @@ const PuffIcon = (props:React.SVGProps<SVGSVGElement>)=>(
             </circle>
         </g>
     </svg>
-)
+);
 
 export default PuffIcon;

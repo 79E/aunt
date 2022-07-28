@@ -1,7 +1,7 @@
 import React from "react";
-import { Empty,Button } from 'aunt'
-import { DemoBlock } from 'demos'
-import './index.less'
+import { Empty,Button } from 'aunt';
+import { DemoBlock } from 'demos';
+import './index.less';
 
 function Demo (){
     return <div className="demo-empty">
@@ -24,7 +24,7 @@ function Demo (){
                 </Button>
             </Empty>
         </DemoBlock>
-    </div>
+    </div>;
 }
 
-export default Demo
+export default Demo;

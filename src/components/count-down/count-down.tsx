@@ -1,8 +1,8 @@
-import React, { useImperativeHandle, forwardRef, useContext, useEffect, useMemo } from 'react'
-import ConfigProviderContext from '../config-provider/config-provider-context'
-import { CountDownInstance,CountDownProps } from './types'
-import { useCountDown, useNamespace } from '../../hooks'
-import { parseFormat } from '../../utils'
+import React, { useImperativeHandle, forwardRef, useContext, useEffect, useMemo } from 'react';
+import ConfigProviderContext from '../config-provider/config-provider-context';
+import { CountDownInstance,CountDownProps } from './types';
+import { useCountDown, useNamespace } from '../../hooks';
+import { parseFormat } from '../../utils';
 
 
 const defaultProps:CountDownProps = {
@@ -12,7 +12,7 @@ const defaultProps:CountDownProps = {
     millisecond: false,
     onChange:()=>{},
     onFinish:()=>{},
-}
+};
 
 export const CountDown = forwardRef<CountDownInstance, CountDownProps>((props, ref) => {
     
@@ -21,9 +21,9 @@ export const CountDown = forwardRef<CountDownInstance, CountDownProps>((props, r
     } = {
         ...defaultProps,
         ...props
-    }
+    };
     const { prefix } = useContext(ConfigProviderContext);
-    const ns = useNamespace('count-down', prefix)
+    const ns = useNamespace('count-down', prefix);
     
 
     const { start, pause, reset, current } = useCountDown({
@@ -44,8 +44,8 @@ export const CountDown = forwardRef<CountDownInstance, CountDownProps>((props, r
         resetTime();
         return ()=>{
             pause();
-        }
-    },[time])
+        };
+    },[time]);
 
     const timeText = useMemo(() => parseFormat(format as string, current), [current]);
 
@@ -57,9 +57,9 @@ export const CountDown = forwardRef<CountDownInstance, CountDownProps>((props, r
 
     return <div className={`${ns.b()}`} style={props.style}>   
         {props.children ? props.children(current) : timeText}
-    </div>
-})
+    </div>;
+});
 
 
-CountDown.defaultProps = defaultProps
-CountDown.displayName = 'AuntCountDown'
+CountDown.defaultProps = defaultProps;
+CountDown.displayName = 'AuntCountDown';

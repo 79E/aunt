@@ -1,7 +1,7 @@
 import React from "react";
-import { Divider } from 'aunt'
-import { DemoBlock } from 'demos'
-import './index.less'
+import { Divider } from 'aunt';
+import { DemoBlock } from 'demos';
+import './index.less';
 
 function Demo (){
     return <div className="demo-divider">
@@ -24,7 +24,7 @@ function Demo (){
         <DemoBlock title="垂直分割线">
             <Divider direction="vertical" />
         </DemoBlock>
-    </div>
+    </div>;
 }
 
-export default Demo
+export default Demo;

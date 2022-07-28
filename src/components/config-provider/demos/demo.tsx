@@ -1,6 +1,6 @@
 import React from "react";
-import { ConfigProvider, Button } from 'aunt'
-import { DemoBlock } from 'demos'
+import { ConfigProvider, Button } from 'aunt';
+import { DemoBlock } from 'demos';
 
 function Demo (){
     return  <div style={{
@@ -14,7 +14,7 @@ function Demo (){
                 <Button type="primary">我变身了</Button>
             </ConfigProvider>
         </DemoBlock>
-    </div>
+    </div>;
 }
 
-export default Demo
+export default Demo;

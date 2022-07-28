@@ -1,9 +1,12 @@
-import './styles/index.less'
-import { Loading } from './loading'
+import './styles/index.less';
+import { Loading } from './loading';
 
 export type {
     LoadingProps
 } from './types';
 
-export default Loading
+export {
+    Loading
+};
+export default Loading;
 

@@ -1,15 +1,15 @@
-import React, { FunctionComponent, useContext, useMemo } from 'react'
-import { TypographyProps } from './types'
-import ConfigProviderContext from '../config-provider/config-provider-context'
-import { useNamespace } from '../../hooks'
-import { joinTrim } from '../../utils'
+import React, { FunctionComponent, useContext, useMemo } from 'react';
+import { TypographyProps } from './types';
+import ConfigProviderContext from '../config-provider/config-provider-context';
+import { useNamespace } from '../../hooks';
+import { joinTrim } from '../../utils';
 
 const defaultProps:TypographyProps = {
     size: 'md',
     level: 4,    
-}
+};
 
-export const Typography:FunctionComponent<Partial<TypographyProps> & { renderType: string }> = ((props) => {
+const Typography:FunctionComponent<Partial<TypographyProps> & { renderType: string }> = ((props) => {
 
     const {
         type,
@@ -28,9 +28,9 @@ export const Typography:FunctionComponent<Partial<TypographyProps> & { renderTyp
     } = {
         ...defaultProps,
         ...props
-    }
+    };
     const { prefix } = useContext(ConfigProviderContext);
-    const ns = useNamespace('typography',prefix)
+    const ns = useNamespace('typography',prefix);
 
     const elli = ellipsis === true ? 1 : (ellipsis as number);
 
@@ -49,14 +49,16 @@ export const Typography:FunctionComponent<Partial<TypographyProps> & { renderTyp
             elli === 1 ? 'aunt-ellipsis': '',
             elli && elli > 1 ? `aunt-multi-ellipsis--l${elli}`: '',
             className
-        ])
-      },[])
+        ]);
+      },[]);
 
     return <div className={varClasses} onClick={props.onClick} {...rest}> 
         {children}
-    </div>
-})
+    </div>;
+});
 
 
-Typography.defaultProps = defaultProps
-Typography.displayName = 'AuntTypography'
+Typography.defaultProps = defaultProps;
+Typography.displayName = 'AuntTypography';
+
+export default Typography;

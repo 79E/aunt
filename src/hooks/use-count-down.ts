@@ -95,7 +95,7 @@ export default function useCountDown(options: UseCountDownOptions) {
   const currentRef = useRef<any>({});
   const current = useMemo(() => parseTime(remain), [remain]);
 
-  currentRef.current = current
+  currentRef.current = current;
 
   remainRef.current = remain;
 
@@ -154,16 +154,16 @@ export default function useCountDown(options: UseCountDownOptions) {
   };
 
   const tick = () => {
-    console.log('millisecond:',options.millisecond)
+    console.log('millisecond:',options.millisecond);
     // 如果inBrowser不存在 不应该开始执行倒计时
     if (!inBrowser) return;
     // 判断是秒还是毫秒 然后分别运行 对应的方法
-    console.log('millisecond2:',options.millisecond)
+    console.log('millisecond2:',options.millisecond);
     if(options.millisecond){
-      console.log('millisecond:3',options.millisecond)
-      microTick()
+      console.log('millisecond:3',options.millisecond);
+      microTick();
     }else{
-      macroTick()
+      macroTick();
     }
   };
 

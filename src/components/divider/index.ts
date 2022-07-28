@@ -1,9 +1,12 @@
-import './styles/index.less'
-import { Divider } from './divider'
+import './styles/index.less';
+import { Divider } from './divider';
 
 export type {
     DividerProps
 } from './types';
 
-export default Divider
+export {
+    Divider
+};
+export default Divider;
 

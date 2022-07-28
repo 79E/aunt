@@ -1,11 +1,11 @@
 import React from "react";
-import { Image,Flex,Loading, AuntIconWifiOff  } from 'aunt'
-import { DemoBlock } from 'demos'
-import './index.less'
+import { Image,Flex,Loading, AuntIconWifiOff  } from 'aunt';
+import { DemoBlock } from 'demos';
+import './index.less';
 
 function Demo (){
-    const imageSrc = 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/6a38b3ef-f40c-4e3b-ab67-f70b6066cf56.jpeg'
-    const fit = ['contain','cover','fill','none','scale-down'] as const
+    const imageSrc = 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/6a38b3ef-f40c-4e3b-ab67-f70b6066cf56.jpeg';
+    const fit = ['contain','cover','fill','none','scale-down'] as const;
     return <div className="demo-image">
         <DemoBlock title="基础用法">
             <Image lazyload radius={4} width={100} height={100} src={imageSrc}></Image>
@@ -74,7 +74,7 @@ function Demo (){
             </Flex>
         </DemoBlock>
                     
-    </div>
+    </div>;
 }
 
-export default Demo
+export default Demo;

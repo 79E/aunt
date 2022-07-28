@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const GapCircleIcon = (props:React.SVGProps<SVGSVGElement>)=>(
      <svg 
@@ -15,5 +15,5 @@ const GapCircleIcon = (props:React.SVGProps<SVGSVGElement>)=>(
           </path>
      </svg>
 
-)
-export default GapCircleIcon
+);
+export default GapCircleIcon;

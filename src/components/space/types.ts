@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import { BaseTypeProps } from '../../utils';
 
 export interface SpaceProps extends BaseTypeProps {

@@ -1,7 +1,7 @@
 import React from "react";
-import { Flex } from 'aunt'
-import { DemoBlock } from 'demos'
-import './index.less'
+import { Flex } from 'aunt';
+import { DemoBlock } from 'demos';
+import './index.less';
 
 function Demo (){
     return <div className="demo-flex">
@@ -43,7 +43,7 @@ function Demo (){
                 </Flex>
             </div>
         </DemoBlock>
-    </div>
+    </div>;
 }
 
-export default Demo
+export default Demo;

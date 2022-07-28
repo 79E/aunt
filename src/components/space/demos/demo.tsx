@@ -1,7 +1,7 @@
 import React from "react";
-import { Space, Button } from 'aunt'
-import { DemoBlock } from 'demos'
-import './index.less'
+import { Space, Button } from 'aunt';
+import { DemoBlock } from 'demos';
+import './index.less';
 
 function Demo (){
     return <div className="demo-space">
@@ -33,7 +33,7 @@ function Demo (){
                 <Button type="warning">按钮6</Button>
             </Space>
         </DemoBlock>
-    </div>
+    </div>;
 }
 
-export default Demo
+export default Demo;

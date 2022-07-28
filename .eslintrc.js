@@ -34,6 +34,7 @@ module.exports = {
     'no-inner-declarations': 'off',
     'react/no-unescaped-entities': 'off',
     '@typescript-eslint/no-var-requires':'off',
+    'semi':[2,'always'],
     '@typescript-eslint/no-unused-vars': [
       'warn',
       {
@@ -86,4 +87,4 @@ module.exports = {
       },
     },
   ],
-}
+};

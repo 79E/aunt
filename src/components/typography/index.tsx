@@ -1,6 +1,6 @@
 import React from 'react';
-import './styles/index.less'
-import { Typography } from './typography'
+import './styles/index.less';
+import _Typography from './typography';
 
 import { TypographyTextProps, TypographyTitleProps, TypographyLinkProps } from './types';
 
@@ -8,9 +8,7 @@ const Text = (props: TypographyTextProps) => <Typography renderType="text" {...p
 const Title = (props: TypographyTitleProps) => <Typography renderType="title" {...props} />;
 const Link = (props: TypographyLinkProps) => <Typography renderType="link" {...props} />;
 
-const TypographyNamespace = Object.assign(Typography, { Text, Title, Link });
-
-export { TypographyNamespace as Typography };
+const Typography = Object.assign(_Typography, { Text, Title, Link });
 
 export type {
     TypographyProps,
@@ -19,6 +17,10 @@ export type {
     TypographyTitleLevel,
 } from './types';
 
+export {
+    Typography 
+};
+export default Typography;
 
 
 

@@ -1,13 +1,13 @@
-import React, { CSSProperties, FunctionComponent, useContext, useMemo } from 'react'
+import React, { CSSProperties, FunctionComponent, useContext, useMemo } from 'react';
 import ConfigProviderContext from '../config-provider/config-provider-context';
 import FlexContext from './flex-context';
-import { joinTrim } from '../../utils' 
-import { useNamespace } from '../../hooks'
-import { FlexItemProps, FlexType } from './types'
+import { joinTrim } from '../../utils'; 
+import { useNamespace } from '../../hooks';
+import { FlexItemProps, FlexType } from './types';
 
 const defaultProps: FlexItemProps = {
     className:'',
-}
+};
 
 const FlexItem:FunctionComponent<Partial<FlexItemProps>> = ((props = defaultProps) => {
     const {
@@ -18,7 +18,7 @@ const FlexItem:FunctionComponent<Partial<FlexItemProps>> = ((props = defaultProp
     };
 
     const { prefix } = useContext(ConfigProviderContext);
-    const ns = useNamespace('flexitem',prefix)
+    const ns = useNamespace('flexitem',prefix);
 
     const getGutterStyle = (gutter : [number, number]) => {
         return {
@@ -34,16 +34,16 @@ const FlexItem:FunctionComponent<Partial<FlexItemProps>> = ((props = defaultProp
                 paddingBottom: gutter[1]! / 2,
                 }
             : {})
-        }
-    }
+        };
+    };
 
     const varClasses = useMemo(()=>{
         return joinTrim([
             ns.b(),
             span ? ns.e(span) : '',
             className
-        ])
-    },[span])
+        ]);
+    },[span]);
 
 
     const parseFlex = (_flex: FlexType): string => {
@@ -63,23 +63,23 @@ const FlexItem:FunctionComponent<Partial<FlexItemProps>> = ((props = defaultProp
             {({ gutter })=>{
                 let mergedStyle: CSSProperties = { ...style };
                 if (gutter) {
-                    const gutterStyle = getGutterStyle(gutter as [number, number])
+                    const gutterStyle = getGutterStyle(gutter as [number, number]);
                     mergedStyle = {
                         ...gutterStyle,
                         ...mergedStyle,
-                    }
+                    };
                 }
                 if (flex) {
                     mergedStyle.flex = parseFlex(flex);
                 }
                 return <div {...rest} style={mergedStyle} className={varClasses}>
                     {children}
-                </div>
+                </div>;
             }}
         </FlexContext.Consumer>
         
-    )
-})
+    );
+});
 
 FlexItem.defaultProps = defaultProps;
 FlexItem.displayName = 'AuntFlexItem';

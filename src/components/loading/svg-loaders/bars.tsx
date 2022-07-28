@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const BarsIcon = (props:React.SVGProps<SVGSVGElement>)=>(
      <svg 
@@ -61,5 +61,5 @@ const BarsIcon = (props:React.SVGProps<SVGSVGElement>)=>(
                repeatCount="indefinite" />
      </rect>
      </svg>
-)
-export default BarsIcon
+);
+export default BarsIcon;

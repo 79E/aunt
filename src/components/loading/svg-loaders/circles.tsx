@@ -28,6 +28,6 @@ const CirclesIcon = (props:React.SVGProps<SVGSVGElement>)=>(
                 repeatCount="indefinite"/>
         </path>
     </svg>
-)
+);
 
 export default CirclesIcon;

@@ -1,1 +1,1 @@
-export { DemoBlock } from './demo-block'
+export { DemoBlock } from './demo-block';

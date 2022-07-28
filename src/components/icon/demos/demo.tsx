@@ -1,7 +1,7 @@
 import React from "react";
-import {AuntIconActivity,AuntIconAlertOctagon,AuntIconLoader,AuntIconFileMinus} from 'aunt'
-import { DemoBlock } from 'demos'
-import './index.less'
+import {AuntIconActivity,AuntIconAlertOctagon,AuntIconLoader,AuntIconFileMinus} from 'aunt';
+import { DemoBlock } from 'demos';
+import './index.less';
 
 function Demo (){
     return <div className="demo-icon">
@@ -36,7 +36,7 @@ function Demo (){
                 <AuntIconFileMinus rotate={60} />
             </div>
         </DemoBlock>
-    </div>
+    </div>;
 }
 
-export default Demo
+export default Demo;

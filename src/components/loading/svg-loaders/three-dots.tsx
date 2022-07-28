@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 const ThreeDotsIcon = (props:React.SVGProps<SVGSVGElement>) => (
     <svg 
         width="120" 
@@ -40,9 +40,9 @@ const ThreeDotsIcon = (props:React.SVGProps<SVGSVGElement>) => (
                     repeatCount="indefinite" />
         </circle>
     </svg>
-)
+);
 
 
-export default ThreeDotsIcon
+export default ThreeDotsIcon;
 
 

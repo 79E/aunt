@@ -1,6 +1,6 @@
 import { createContext, Context } from 'react';
 import { zhCN as locale } from '../../locales';
-import { ConfigProviderProps } from './types'
+import { ConfigProviderProps } from './types';
 
 export const defaultPrefix = 'aunt';
 

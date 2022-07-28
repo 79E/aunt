@@ -1,7 +1,7 @@
 import React from "react";
-import { Typography } from 'aunt'
-import { DemoBlock } from 'demos'
-import './index.less'
+import { Typography } from 'aunt';
+import { DemoBlock } from 'demos';
+import './index.less';
 
 function Demo (){
     return <div className="demo-typography">
@@ -40,7 +40,7 @@ function Demo (){
         <DemoBlock title="文本链接">
             <Typography.Link>文本Link</Typography.Link>
         </DemoBlock>
-    </div>
+    </div>;
 }
 
-export default Demo
+export default Demo;

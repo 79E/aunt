@@ -1,9 +1,9 @@
-import React, { CSSProperties, FunctionComponent, useContext, useMemo} from 'react'
-import {ButtonProps,} from './types'
+import React, { CSSProperties, FunctionComponent, useContext, useMemo} from 'react';
+import {ButtonProps,} from './types';
 import Loading from '../loading';
-import ConfigProviderContext from '../config-provider/config-provider-context'
-import { useNamespace } from '../../hooks'
-import { joinTrim } from '../../utils'
+import ConfigProviderContext from '../config-provider/config-provider-context';
+import { useNamespace } from '../../hooks';
+import { joinTrim } from '../../utils';
 
 const defaultProps: ButtonProps = {
     className: '',
@@ -20,7 +20,7 @@ const defaultProps: ButtonProps = {
     iconPosition:'left',
     style: {},
     children: undefined
-}
+};
 
 export const Button:FunctionComponent<Partial<ButtonProps>> = ((props) => {
     const {
@@ -43,13 +43,13 @@ export const Button:FunctionComponent<Partial<ButtonProps>> = ((props) => {
     } = {
         ...defaultProps,
         ...props
-    }
+    };
 
     const { prefix } = useContext(ConfigProviderContext);
-    const ns = useNamespace('button',prefix)
+    const ns = useNamespace('button',prefix);
 
     const varClasses = useMemo(()=>{
-      console.log(ns.b(),ns.m('loading'))
+      console.log(ns.b(),ns.m('loading'));
       return joinTrim([
         ns.b(),
         type ? ns.m(type) : '',
@@ -62,28 +62,28 @@ export const Button:FunctionComponent<Partial<ButtonProps>> = ((props) => {
         icon ? ns.e('icon') : '',
         loading ? ns.e('loading') : '',
         className
-      ])
-    },[])
+      ]);
+    },[]);
 
     const varStyles = useMemo(()=>{
-      const styles: CSSProperties = {}
+      const styles: CSSProperties = {};
         if (color) {
           styles.color = plain ? color : '#fff';
           styles.background = !plain ? color : '#fff';
           if (color?.includes('gradient')) {
-            styles.borderWidth = 0
+            styles.borderWidth = 0;
           }else{
-            styles.borderColor = color
+            styles.borderColor = color;
           }
         }
-        return {...style, ...styles}
-    },[])
+        return {...style, ...styles};
+    },[]);
 
     const handleClick = (event: any) => {
         if (!loading && !disabled && props.onClick) {
             props.onClick(event);
         }
-    }
+    };
 
     const renderText = () => {
         let text;
@@ -111,7 +111,7 @@ export const Button:FunctionComponent<Partial<ButtonProps>> = ((props) => {
                 type={loadingType}
                 color={type === 'default' ? undefined : ''}
                 className={ns.em('icon',position)}
-            />
+            />;
         }
         return null;
     };
@@ -138,9 +138,9 @@ export const Button:FunctionComponent<Partial<ButtonProps>> = ((props) => {
         {iconPosition === 'left' && renderIcon('left')}
         {renderText()}
         {iconPosition === 'right' && renderIcon('right')}
-    </div>
-})
+    </div>;
+});
 
 
-Button.defaultProps = defaultProps
-Button.displayName = 'AuntButton'
+Button.defaultProps = defaultProps;
+Button.displayName = 'AuntButton';

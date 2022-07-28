@@ -1,14 +1,14 @@
-import React, { CSSProperties, FunctionComponent, useMemo } from 'react'
-import { kebabCase, joinTrim } from '../../utils'
-import { useNamespace } from '../../hooks'
+import React, { CSSProperties, FunctionComponent, useMemo } from 'react';
+import { kebabCase, joinTrim } from '../../utils';
+import { useNamespace } from '../../hooks';
 import ConfigProviderContext, { INITIAL_STATE } from './config-provider-context';
-import { ConfigProviderProps } from './types'
+import { ConfigProviderProps } from './types';
 
 
 
 const defaultProps: ConfigProviderProps = {
     tag : 'div',
-}
+};
 
 function mapThemeVarsToCSSVars(themeVars: Record<string, string | number>, prefix: string) {
     const cssVars: Record<string, string | number> = {};
@@ -33,9 +33,9 @@ export const ConfigProvider:FunctionComponent<ConfigProviderProps> = ((props) =>
     } = {
         ...defaultProps,
         ...props,
-    }
+    };
 
-    const ns = useNamespace('config-rovider',INITIAL_STATE.prefix)
+    const ns = useNamespace('config-rovider',INITIAL_STATE.prefix);
 
     const TagElement = tag as React.ElementType;
 
@@ -53,9 +53,9 @@ export const ConfigProvider:FunctionComponent<ConfigProviderProps> = ((props) =>
                 {children}
             </TagElement>
         </ConfigProviderContext.Provider>
-    )
-})
+    );
+});
 
 
-ConfigProvider.defaultProps = defaultProps
-ConfigProvider.displayName = 'AuntConfigProvider'
+ConfigProvider.defaultProps = defaultProps;
+ConfigProvider.displayName = 'AuntConfigProvider';

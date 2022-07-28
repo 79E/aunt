@@ -1,4 +1,4 @@
-import './styles/index.less'
+import './styles/index.less';
 import Image from './lazy-image';
 
 export type {
@@ -6,5 +6,8 @@ export type {
     ImageProps,
 } from './types';
 
-export default Image
+export {
+    Image
+};
+export default Image;
 

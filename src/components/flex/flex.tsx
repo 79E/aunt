@@ -1,9 +1,9 @@
-import React, { FunctionComponent, CSSProperties, useContext, useMemo } from 'react'
+import React, { FunctionComponent, CSSProperties, useContext, useMemo } from 'react';
 import ConfigProviderContext from '../config-provider/config-provider-context';
 import FlexContext from './flex-context';
-import { joinTrim } from '../../utils'
-import { useNamespace } from '../../hooks'
-import { FlexProps } from './types'
+import { joinTrim } from '../../utils';
+import { useNamespace } from '../../hooks';
+import { FlexProps } from './types';
 
 const defaultProps: FlexProps = {
     direction: 'row', 
@@ -12,7 +12,7 @@ const defaultProps: FlexProps = {
     align: 'start',
     gutter: 0,
     className:'',
-}
+};
 
 const Flex:FunctionComponent<Partial<FlexProps>> = ((props) => {
     const {
@@ -24,7 +24,7 @@ const Flex:FunctionComponent<Partial<FlexProps>> = ((props) => {
     };
 
     const { prefix } = useContext(ConfigProviderContext);
-    const ns = useNamespace('flex',prefix)
+    const ns = useNamespace('flex',prefix);
     
     const varClasses = useMemo(()=>{
         return joinTrim([
@@ -34,8 +34,8 @@ const Flex:FunctionComponent<Partial<FlexProps>> = ((props) => {
             justify ? ns.m(`justify-${justify}`) : '',
             align ? ns.m(`align-${align}`) : '',
             className,
-        ])
-    },[direction,wrap,justify,align,className])
+        ]);
+    },[direction,wrap,justify,align,className]);
 
     const getGutter: [number, number] = useMemo(
         () => (Array.isArray(gutter) ? gutter : [gutter, 0]) as [number, number],
@@ -57,8 +57,8 @@ const Flex:FunctionComponent<Partial<FlexProps>> = ((props) => {
             }
             : {}),
             ...style,
-        }
-    },[gutter])
+        };
+    },[gutter]);
 
     return (
         <FlexContext.Provider value={{ gutter: getGutter }}>
@@ -67,8 +67,8 @@ const Flex:FunctionComponent<Partial<FlexProps>> = ((props) => {
             </div>
         </FlexContext.Provider>
         
-    )
-})
+    );
+});
 
 Flex.defaultProps = defaultProps;
 Flex.displayName = 'AuntFlex';

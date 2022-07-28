@@ -1,5 +1,5 @@
-import React, { FunctionComponent } from 'react'
-import styles from './index.less'
+import React, { FunctionComponent } from 'react';
+import styles from './index.less';
 
 interface Props {
   title: string
@@ -22,10 +22,10 @@ export const DemoBlock: FunctionComponent<Props> = props => {
         {props.children}
       </div>
     </div>
-  )
-}
+  );
+};
 
 DemoBlock.defaultProps = {
   padding: '0px 12px',
   background: 'transparent',
-}
+};

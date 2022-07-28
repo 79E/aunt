@@ -1,5 +1,5 @@
-import React from "react"
-import { BaseTypeProps } from '../../utils'
+import React from "react";
+import { BaseTypeProps } from '../../utils';
 
 export interface FlexProps extends BaseTypeProps {
     /** 列元素之间的间距。可以使用数组形式同时设置 */

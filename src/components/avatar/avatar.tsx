@@ -1,9 +1,9 @@
-import React, { CSSProperties, FunctionComponent, useContext, useMemo } from 'react'
-import ConfigProviderContext from '../config-provider/config-provider-context'
-import { useNamespace } from '../../hooks'
-import { joinTrim } from '../../utils'
-import { AuntIconUser } from '../../index'
-import { AvatarProps } from './types'
+import React, { CSSProperties, FunctionComponent, useContext, useMemo } from 'react';
+import ConfigProviderContext from '../config-provider/config-provider-context';
+import { useNamespace } from '../../hooks';
+import { joinTrim } from '../../utils';
+import { AuntIconUser } from '../../index';
+import { AvatarProps } from './types';
 
 const defaultProps:AvatarProps = {
     fit: 'cover',
@@ -11,7 +11,7 @@ const defaultProps:AvatarProps = {
     size: 'normal',
     background:'#eee',
     color: '#666',
-}
+};
 
 export const Avatar:FunctionComponent<Partial<AvatarProps>> = ((props: AvatarProps) => {
 
@@ -23,10 +23,10 @@ export const Avatar:FunctionComponent<Partial<AvatarProps>> = ((props: AvatarPro
     } = {
         ...defaultProps,
         ...props,
-    }
+    };
 
     const { prefix } = useContext(ConfigProviderContext);
-    const ns = useNamespace('avatar',prefix)
+    const ns = useNamespace('avatar',prefix);
 
     const varClasses = useMemo(()=>{
         return joinTrim([
@@ -35,19 +35,19 @@ export const Avatar:FunctionComponent<Partial<AvatarProps>> = ((props: AvatarPro
             shape ? ns.m(shape) : '',
             url ? ns.m('img') : '',
             props.className
-        ])
-    },[size,shape,fit])
+        ]);
+    },[size,shape,fit]);
 
     const varStyles = useMemo(()=>{
-        const styles: CSSProperties = {}
+        const styles: CSSProperties = {};
         if(color){
-            styles.color = color
+            styles.color = color;
         }
         if(background){
-            styles.backgroundColor = background
+            styles.backgroundColor = background;
         }
-        return {...styles, ...props.style}
-    },[color,background])
+        return {...styles, ...props.style};
+    },[color,background]);
 
     const renderAvatar = useMemo(()=>{
         if(url){
@@ -58,13 +58,13 @@ export const Avatar:FunctionComponent<Partial<AvatarProps>> = ((props: AvatarPro
                 style={{
                     objectFit: fit
                 }}
-            />
+            />;
         }
         if(props.children){
-            return props.children
+            return props.children;
         }
         return React.cloneElement(icon);
-    },[url,icon,props.children])
+    },[url,icon,props.children]);
 
     return <div
         className={varClasses} 
@@ -72,9 +72,9 @@ export const Avatar:FunctionComponent<Partial<AvatarProps>> = ((props: AvatarPro
         onClick={props.onClick}
         {...rest}>
         {renderAvatar}
-    </div>
-})
+    </div>;
+});
 
 
-Avatar.defaultProps = defaultProps
-Avatar.displayName = 'AuntAvatar'
+Avatar.defaultProps = defaultProps;
+Avatar.displayName = 'AuntAvatar';

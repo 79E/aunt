@@ -1,7 +1,7 @@
 import React from "react";
-import { useCopy } from 'dumi/theme'
-import * as Icons from 'aunt'
-import './index.less'
+import { useCopy } from 'dumi/theme';
+import * as Icons from 'aunt';
+import './index.less';
 
 const iconsList = [
     {
@@ -2013,13 +2013,13 @@ const iconsList = [
         "cname":"AuntIconZoomOut",
         "component":<Icons.AuntIconZoomOut /> 
     }
-]
+];
 
 function Demo (){
-    const [copyCode] = useCopy()
+    const [copyCode] = useCopy();
     const handleIconClick = (name: string) => {
-        copyCode(name)
-    }
+        copyCode(name);
+    };
 
     return <div className="demo-icon">
         <p>全部图标</p>
@@ -2034,7 +2034,7 @@ function Demo (){
                         }}
                         key={item.id}
                         onClick={()=>{
-                            handleIconClick(item.cname)
+                            handleIconClick(item.cname);
                         }}
                     > 
                     { React.cloneElement(item.component,{ style:{
@@ -2044,11 +2044,11 @@ function Demo (){
                     <span style={{
                         fontSize:10,
                         paddingTop:15
-                    }}>{item.uname}</span> </div>
+                    }}>{item.uname}</span> </div>;
                 })
             }
         </div>
-    </div>
+    </div>;
 }
 
-export default Demo
+export default Demo;

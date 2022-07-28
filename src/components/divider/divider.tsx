@@ -1,24 +1,24 @@
-import React, { CSSProperties, FunctionComponent, useContext, useMemo } from 'react'
-import ConfigProviderContext from '../config-provider/config-provider-context'
-import { joinTrim } from '../../utils'
-import { useNamespace } from '../../hooks'
-import { DividerProps } from './types'
+import React, { CSSProperties, FunctionComponent, useContext, useMemo } from 'react';
+import ConfigProviderContext from '../config-provider/config-provider-context';
+import { joinTrim } from '../../utils';
+import { useNamespace } from '../../hooks';
+import { DividerProps } from './types';
 
 
 const defaultProps:DividerProps = {
     contentPosition: 'center',
     direction:'horizontal',
-}
+};
 
 export const Divider:FunctionComponent<Partial<DividerProps>> = ((props:DividerProps) => {
 
     const { direction, contentPosition, dashed, hairline, ...rest } = {
         ...defaultProps,
         ...props
-    }
+    };
 
     const { prefix } = useContext(ConfigProviderContext);
-    const ns = useNamespace('divider',prefix)
+    const ns = useNamespace('divider',prefix);
 
     const varClasses = useMemo(()=>{
         return joinTrim([
@@ -28,13 +28,13 @@ export const Divider:FunctionComponent<Partial<DividerProps>> = ((props:DividerP
             dashed ? ns.m('dashed') : '',
             hairline? ns.m('hairline') : '',
             props.className
-        ])
-    },[direction,contentPosition,dashed,props.className])
+        ]);
+    },[direction,contentPosition,dashed,props.className]);
 
     const varStyles = useMemo(()=>{
-        const styles: CSSProperties = {}
-        return {...styles, ...props.style}
-    },[props.style])
+        const styles: CSSProperties = {};
+        return {...styles, ...props.style};
+    },[props.style]);
 
     return <div className={varClasses} style={varStyles} {...rest}>
         {
@@ -44,9 +44,9 @@ export const Divider:FunctionComponent<Partial<DividerProps>> = ((props:DividerP
                 <div className={ns.e('content')}>{props.children}</div>
             )
         }
-    </div>
-})
+    </div>;
+});
 
 
-Divider.defaultProps = defaultProps
-Divider.displayName = 'AuntDivider'
+Divider.defaultProps = defaultProps;
+Divider.displayName = 'AuntDivider';

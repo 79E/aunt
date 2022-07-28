@@ -1,8 +1,8 @@
 import React,{useRef} from "react";
-import { CountDown,Button,Space } from 'aunt'
-import { DemoBlock } from 'demos'
-import type { CountDownInstance } from 'aunt'
-import './index.less'
+import { CountDown,Button,Space } from 'aunt';
+import { DemoBlock } from 'demos';
+import type { CountDownInstance } from 'aunt';
+import './index.less';
 
 function Demo (){
     
@@ -42,18 +42,18 @@ function Demo (){
             />  
             <Space style={{marginTop:10}}>
                 <Button onClick={() => {
-                    ref.current?.start()
+                    ref.current?.start();
                 }}>开始</Button>
                 <Button onClick={() => {
-                    ref.current?.pause()
+                    ref.current?.pause();
                 }}>暂停</Button>
                 <Button onClick={() => {
-                    ref.current?.reset()
+                    ref.current?.reset();
                 }}>重置</Button>
             </Space>
         </DemoBlock>
         
-    </div>
+    </div>;
 }
 
-export default Demo
+export default Demo;

@@ -1,5 +1,5 @@
-import './styles/index.less'
-import { Button } from './button'
+import './styles/index.less';
+import { Button } from './button';
 
 export type {
     ButtonProps,
@@ -8,5 +8,8 @@ export type {
     ButtonShape
 } from './types';
 
-export default Button
+export {
+    Button
+};
+export default Button;
 

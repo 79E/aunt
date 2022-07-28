@@ -1,10 +1,10 @@
-import React, { CSSProperties, FunctionComponent, useContext, useMemo, useRef, useState, useEffect } from 'react'
-import ConfigProviderContext from '../config-provider/config-provider-context'
-import { addUnit, isDef, joinTrim } from '../../utils'
-import { useNamespace } from '../../hooks'
-import { ImageProps } from './types'
+import React, { CSSProperties, FunctionComponent, useContext, useMemo, useRef, useState, useEffect } from 'react';
+import ConfigProviderContext from '../config-provider/config-provider-context';
+import { addUnit, isDef, joinTrim } from '../../utils';
+import { useNamespace } from '../../hooks';
+import { ImageProps } from './types';
 
-const defaultProps:ImageProps = {}
+const defaultProps:ImageProps = {};
 
 export const Image:FunctionComponent<Partial<ImageProps>> = ((props) => {
 
@@ -13,10 +13,10 @@ export const Image:FunctionComponent<Partial<ImageProps>> = ((props) => {
     } = {
         ...defaultProps,
         ...props
-    }
+    };
 
     const { prefix } = useContext(ConfigProviderContext);
-    const ns = useNamespace('image',prefix)
+    const ns = useNamespace('image',prefix);
 
     const [status, setStatus] = useState({ loading: true, error: false });
     const imgRef = useRef<HTMLImageElement>(null);
@@ -46,8 +46,8 @@ export const Image:FunctionComponent<Partial<ImageProps>> = ((props) => {
           block ? ns.m('block') :'',
           round ? ns.m('round') :'',
           className
-        ])
-    },[])
+        ]);
+    },[]);
 
     useEffect(() => {
         const payload = { error: false, loading: true } as typeof status;
@@ -138,9 +138,9 @@ export const Image:FunctionComponent<Partial<ImageProps>> = ((props) => {
         {renderImage()}
         {renderPlaceholder()}
         {props.children}
-    </div>
-})
+    </div>;
+});
 
 
-Image.defaultProps = defaultProps
-Image.displayName = 'AuntImage'
+Image.defaultProps = defaultProps;
+Image.displayName = 'AuntImage';

@@ -1,6 +1,6 @@
-import './styles/index.less'
-import _Grid from './grid'
-import _GridItem from './grid-item'
+import './styles/index.less';
+import _Grid from './grid';
+import _GridItem from './grid-item';
 
 export type {
     GridDirection,
@@ -10,5 +10,8 @@ export type {
 
 const Grid = Object.assign(_Grid, { Item: _GridItem });
 
-export default Grid
+export {
+    Grid
+};
+export default Grid;
 

@@ -1,7 +1,7 @@
 import React from "react";
-import { Loading } from 'aunt'
-import { DemoBlock } from 'demos'
-import './index.less'
+import { Loading } from 'aunt';
+import { DemoBlock } from 'demos';
+import './index.less';
 
 function Demo (){
     return <div className="demo-loading">
@@ -72,7 +72,7 @@ function Demo (){
                 </div>
             </div>
         </DemoBlock>
-    </div>
+    </div>;
 }
 
-export default Demo
+export default Demo;

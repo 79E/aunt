@@ -1,7 +1,7 @@
 import React from "react";
-import { Button, AuntIconAlertCircle } from 'aunt'
-import { DemoBlock } from 'demos'
-import './index.less'
+import { Button, AuntIconAlertCircle } from 'aunt';
+import { DemoBlock } from 'demos';
+import './index.less';
 
 function Demo (){
     return <>
@@ -84,7 +84,7 @@ function Demo (){
             </div>
         </DemoBlock>
         
-    </>
+    </>;
 }
 
-export default Demo
+export default Demo;

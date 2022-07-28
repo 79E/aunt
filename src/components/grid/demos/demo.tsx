@@ -1,7 +1,7 @@
 import React from "react";
-import { Grid } from 'aunt'
-import { DemoBlock } from 'demos'
-import './index.less'
+import { Grid } from 'aunt';
+import { DemoBlock } from 'demos';
+import './index.less';
 
 function Demo (){
     return <div className="demo-grid">
@@ -58,7 +58,7 @@ function Demo (){
                 </Grid>
             </div>
         </DemoBlock>
-    </div>
+    </div>;
 }
 
-export default Demo
+export default Demo;

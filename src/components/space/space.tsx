@@ -1,12 +1,12 @@
-import React, { FunctionComponent, useMemo, useContext } from 'react'
-import { SpaceProps } from './types'
-import ConfigProviderContext from '../config-provider/config-provider-context'
-import { useNamespace } from '../../hooks'
-import { joinTrim,addUnit } from '../../utils'
+import React, { FunctionComponent, useMemo, useContext } from 'react';
+import { SpaceProps } from './types';
+import ConfigProviderContext from '../config-provider/config-provider-context';
+import { useNamespace } from '../../hooks';
+import { joinTrim,addUnit } from '../../utils';
 
 const defaultProps:SpaceProps = {
     direction: 'horizontal',
-}
+};
 
 export const Space:FunctionComponent<Partial<SpaceProps>> = ((props) => {
     const {
@@ -14,10 +14,10 @@ export const Space:FunctionComponent<Partial<SpaceProps>> = ((props) => {
     } = {
         ...defaultProps,
         ...props
-    }
+    };
 
     const { prefix } = useContext(ConfigProviderContext);
-    const ns = useNamespace('space',prefix)
+    const ns = useNamespace('space',prefix);
 
     const varClasses = useMemo(()=>{
         return joinTrim([
@@ -28,8 +28,8 @@ export const Space:FunctionComponent<Partial<SpaceProps>> = ((props) => {
             justify ? ns.m(`justify-${justify}`) : '',
             direction ? ns.m(direction): '',
             props.className
-        ])
-    },[ props.className ])
+        ]);
+    },[ props.className ]);
 
     const varStyles = useMemo(()=>{
         if (gap) {
@@ -44,7 +44,7 @@ export const Space:FunctionComponent<Partial<SpaceProps>> = ((props) => {
             return { ...props.style, '--gap': addUnit(props.gap as string | number) };
           }
           return props.style;
-    },[ gap, props.style ])
+    },[ gap, props.style ]);
     
     return (
         <div 
@@ -65,9 +65,9 @@ export const Space:FunctionComponent<Partial<SpaceProps>> = ((props) => {
                 )
             }
         </div>
-    )
-})
+    );
+});
 
 
-Space.defaultProps = defaultProps
-Space.displayName = 'AuntSpace'
+Space.defaultProps = defaultProps;
+Space.displayName = 'AuntSpace';

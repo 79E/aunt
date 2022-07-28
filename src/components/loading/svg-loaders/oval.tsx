@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const AudioIcon = (props:React.SVGProps<SVGSVGElement>)=>(
     <svg 
@@ -27,6 +27,6 @@ const AudioIcon = (props:React.SVGProps<SVGSVGElement>)=>(
             <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.5s" repeatCount="indefinite"></animateTransform>
         </path>
     </svg>
-)
+);
 
 export default AudioIcon;

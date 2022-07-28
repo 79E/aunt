@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const BallTriangleIcon = (props:React.SVGProps<SVGSVGElement>)=>(
     <svg 
@@ -53,7 +53,7 @@ const BallTriangleIcon = (props:React.SVGProps<SVGSVGElement>)=>(
             </g>
         </g>
     </svg>
-)
+);
 
 
 export default BallTriangleIcon;

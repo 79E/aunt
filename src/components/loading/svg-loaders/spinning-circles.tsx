@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const SpinningIcon = (props:React.SVGProps<SVGSVGElement>)=>(
     <svg 
@@ -61,7 +61,7 @@ const SpinningIcon = (props:React.SVGProps<SVGSVGElement>)=>(
             </g>
         </g>
     </svg>
-)
+);
 
 
 export default SpinningIcon;

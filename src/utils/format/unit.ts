@@ -1,7 +1,7 @@
 /**
  * 单位操作
  */
-import { isDef } from '../base'
+import { isDef } from '../base';
 import { isNumeric } from '../validate/number';
 
 export function addUnit(value?: string | number): string | undefined {

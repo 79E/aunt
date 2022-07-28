@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const RingsIcon = (props:React.SVGProps<SVGSVGElement>)=>(
      <svg 
@@ -49,6 +49,6 @@ const RingsIcon = (props:React.SVGProps<SVGSVGElement>)=>(
              </circle>
          </g>
      </svg>
-)
+);
 
 export default RingsIcon;

@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
-import { inBrowser } from '../utils'
-import { BasicTarget,getTargetElement } from '../utils/dom/getTargetElement'
+import { useEffect, useState } from 'react';
+import { inBrowser } from '../utils';
+import { BasicTarget,getTargetElement } from '../utils/dom/getTargetElement';
 
 type InViewport = boolean | undefined;
 
@@ -49,10 +49,10 @@ function useInViewport(target: BasicTarget): InViewport {
                   return true;
                 }
                 return false;
-            })
+            });
         },{
             threshold: [0.0001],
-        })
+        });
 
         observer.observe(el as HTMLElement);
 
@@ -61,9 +61,9 @@ function useInViewport(target: BasicTarget): InViewport {
             observer.disconnect();
         };
 
-    },[ target ])
+    },[ target ]);
 
-    return inViewPort
+    return inViewPort;
 }
 
 

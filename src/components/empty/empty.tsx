@@ -1,12 +1,12 @@
-import React, { isValidElement, FunctionComponent, useContext } from 'react'
-import ConfigProviderContext from '../config-provider/config-provider-context'
-import { getSizeStyle,joinTrim } from '../../utils'
-import { useNamespace } from '../../hooks'
-import { EmptyProps,StatusOptions } from './types'
+import React, { isValidElement, FunctionComponent, useContext } from 'react';
+import ConfigProviderContext from '../config-provider/config-provider-context';
+import { getSizeStyle,joinTrim } from '../../utils';
+import { useNamespace } from '../../hooks';
+import { EmptyProps,StatusOptions } from './types';
 
 const defaultProps:EmptyProps = {
     image: 'default'
-}
+};
 
 const defaultStatus: StatusOptions = {
     default: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/9cb89e7f-1d20-4337-9688-a94441d51730.png',
@@ -22,22 +22,22 @@ export const Empty:FunctionComponent<Partial<EmptyProps>> = ((props: EmptyProps)
     } = {
         ...defaultProps,
         ...props
-    }
+    };
 
     const { prefix } = useContext(ConfigProviderContext);
-    const ns = useNamespace('empty',prefix)
+    const ns = useNamespace('empty',prefix);
 
     const renderImage = ()=>{
         if(isValidElement(image)){
-            return image
+            return image;
         }
-        let src = image
-        const status = Object.keys(defaultStatus)
+        let src = image;
+        const status = Object.keys(defaultStatus);
         if(status.includes(image as string)){
-            src = defaultStatus[image as string]
+            src = defaultStatus[image as string];
         }
         return <img src={src as string} alt="empty" />;
-    }
+    };
 
     const renderDescription = () => {
         if (description) {
@@ -59,9 +59,9 @@ export const Empty:FunctionComponent<Partial<EmptyProps>> = ((props: EmptyProps)
         </div>
         {renderDescription()}
         {renderBottom()}
-    </div>
-})
+    </div>;
+});
 
 
-Empty.defaultProps = defaultProps
-Empty.displayName = 'AuntEmpty'
+Empty.defaultProps = defaultProps;
+Empty.displayName = 'AuntEmpty';

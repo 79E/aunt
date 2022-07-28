@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import { LoadingType } from '../loading/types';
 // 定义按钮的Ref类型
 export type ButtonRef = {

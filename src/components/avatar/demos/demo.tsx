@@ -1,7 +1,7 @@
 import React from "react";
-import { Avatar,Space,AuntIconMeh } from 'aunt'
-import { DemoBlock } from 'demos'
-import './index.less'
+import { Avatar,Space,AuntIconMeh } from 'aunt';
+import { DemoBlock } from 'demos';
+import './index.less';
 
 function Demo (){
     return <div className="demo-avatar">
@@ -41,7 +41,7 @@ function Demo (){
                 <Avatar color="#165DFF">文</Avatar>
             </Space>
         </DemoBlock>
-    </div>
+    </div>;
 }
 
-export default Demo
+export default Demo;

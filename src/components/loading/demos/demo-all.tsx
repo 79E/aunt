@@ -1,6 +1,6 @@
 import React from "react";
-import { Loading } from 'aunt'
-import './index.less'
+import { Loading } from 'aunt';
+import './index.less';
 
 function Demo (){
     return <div className="demo-loading-all">
@@ -46,7 +46,7 @@ function Demo (){
             </div>
             
         </div>
-    </div>
+    </div>;
 }
 
-export default Demo
+export default Demo;

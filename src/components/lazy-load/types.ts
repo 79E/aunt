@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import { BaseTypeProps } from '../../utils';
 
 // 定义接受到的参数 类型

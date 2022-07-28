@@ -1,7 +1,7 @@
 import React from "react";
-import { Image,Space,LazyLoad,Typography } from 'aunt'
-import { DemoBlock } from 'demos'
-import './index.less'
+import { Image,Space,LazyLoad,Typography } from 'aunt';
+import { DemoBlock } from 'demos';
+import './index.less';
 
 function Demo (){
 
@@ -37,7 +37,7 @@ function Demo (){
             </div>
         </LazyLoad>
         </DemoBlock>
-    </div>
+    </div>;
 }
 
-export default Demo
+export default Demo;

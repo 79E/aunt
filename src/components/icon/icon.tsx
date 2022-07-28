@@ -1,8 +1,8 @@
-import React, { forwardRef, cloneElement, useContext } from 'react'
-import ConfigProviderContext from '../config-provider/config-provider-context'
-import {joinTrim} from '../../utils'
-import { useNamespace } from '../../hooks'
-import { IconProps } from './types'
+import React, { forwardRef, cloneElement, useContext } from 'react';
+import ConfigProviderContext from '../config-provider/config-provider-context';
+import {joinTrim} from '../../utils';
+import { useNamespace } from '../../hooks';
+import { IconProps } from './types';
 
 const Icon = forwardRef<SVGSVGElement,IconProps>((props,ref) => {
     const {
@@ -20,7 +20,7 @@ const Icon = forwardRef<SVGSVGElement,IconProps>((props,ref) => {
     } = props;
 
     const { prefix } = useContext(ConfigProviderContext);
-    const ns = useNamespace('icon',prefix)
+    const ns = useNamespace('icon',prefix);
     
     function kebabCase(str: string): string {
         return str
@@ -64,9 +64,9 @@ const Icon = forwardRef<SVGSVGElement,IconProps>((props,ref) => {
         style: { ...style, ...varStyles },
         ...restProps,
     };
-    return cloneElement(children as React.ReactElement, attrs)
-})
+    return cloneElement(children as React.ReactElement, attrs);
+});
 
-Icon.displayName = 'AuntIcon'
+Icon.displayName = 'AuntIcon';
 
 export default Icon;
