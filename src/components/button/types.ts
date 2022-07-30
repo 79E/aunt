@@ -1,5 +1,7 @@
 import React from "react";
+import { BaseTypeProps } from '../../utils';
 import { LoadingType } from '../loading/types';
+
 // 定义按钮的Ref类型
 export type ButtonRef = {
     nativeElement: HTMLButtonElement | null;
@@ -10,8 +12,7 @@ export type ButtonShape = 'default' | 'square' | 'round';
 export type IconPosition = 'left' | 'right';
 
 // 定义接受到的参数 类型
-export interface ButtonProps {
-    className?: string;
+export interface ButtonProps extends BaseTypeProps {
     // 颜色
     color?: string;
     // 形状
@@ -28,8 +29,6 @@ export interface ButtonProps {
     loadingType?: LoadingType;
     // 禁用
     disabled?: boolean;
-    // 样式
-    style?: React.CSSProperties;
     // 类型
     type?: ButtonType;
     // 大小
@@ -42,6 +41,5 @@ export interface ButtonProps {
     iconPosition: IconPosition;
     // 按钮文字
     text?: string;
-    children: any;
     onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>;
 }
