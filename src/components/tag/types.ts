@@ -6,7 +6,11 @@ export type TagShape = 'round' | 'mark-left' | 'mark-right';
 
 // 定义接受到的参数 类型
 export interface TagProps extends BaseTypeProps {
-    // 类型
+    /**
+     * @name 标签类型
+     * @default 'default'
+     * @param TagType 'default' | 'primary' | 'success' | 'warning' | 'danger'
+     */
     type?: TagType;
     // 图标
     icon?: React.ReactElement;

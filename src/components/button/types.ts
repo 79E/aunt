@@ -13,9 +13,17 @@ export type IconPosition = 'left' | 'right';
 
 // 定义接受到的参数 类型
 export interface ButtonProps extends BaseTypeProps {
-    // 颜色
+    /**
+     * @name 按钮颜色
+     * @default ''
+     * @param String
+     */
     color?: string;
-    // 形状
+    /**
+     * @name 按钮形状
+     * @default 'default'
+     * @param ButtonShape 'default' | 'square' | 'round'
+     */
     shape?: ButtonShape;
     // 镂空
     plain?: boolean;
@@ -41,5 +49,12 @@ export interface ButtonProps extends BaseTypeProps {
     iconPosition: IconPosition;
     // 按钮文字
     text?: string;
+    /**
+     * @name 按钮点击事件
+     * @desc 用户点击按钮后触发此方法
+     * @default ''
+     * @param event React.MouseEvent<HTMLButtonElement, MouseEvent>
+     * @return void | Promise<void>
+     */
     onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>;
 }

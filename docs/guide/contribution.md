@@ -68,12 +68,58 @@ console.log(ns.em('item','active')) // .nav__item--active
 
 [BEM Quick start](https://en.bem.info/methodology/quick-start/)
 
+## 组件类型规范
+每个参数都需要写好文档注释，可以分为以下三种情况
+
+[参考jsDoc](https://jsdoc.app/index.html)
+
+```tsx
+名称 --- @name
+默认值 --- @default
+参数 --- @param 
+描述 --- @desc
+返回 --- @return
+```
+### 单参数
+```tsx
+/**
+ * @name 按钮颜色
+ * @default ''
+ * @param String
+ */
+color?: String;
+```
+### 多参数
+```tsx
+/**
+ * @name 按钮形状
+ * @default 'default'
+ * @param ButtonShape 'default' | 'square' | 'round'
+ */
+shape?: ButtonShape;
+```
+### 事件方法
+```tsx
+/**
+ * @name 按钮点击事件
+ * @desc 用户点击按钮后触发此方法
+ * @default ''
+ * @param event React.MouseEvent<HTMLButtonElement, MouseEvent>
+ * @return void | Promise<void>
+ */
+onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>;
+```
+总结：就是让用户用的明明白白，一眼就知道怎么使用。
+
 ## 提交 PR
+>提交之前需要给Commit添加GPG签名，参考：https://insights.thoughtworks.cn/how-to-sign-git-commit/
+
 如果你是第一次在 GitHub 上提 Pull Request ，可以阅读下面这两篇文章来学习：
 
 [如何优雅地在 GitHub 上贡献代码](https://segmentfault.com/a/1190000000736629)
 
 [第一次参与开源](https://github.com/firstcontributions/first-contributions/blob/master/translations/README.chs.md)
+
 
 #### 规范
 - 如果遇到问题，建议保持你的 PR 足够小。保证一个 PR 只解决一个问题或只添加一个功能
