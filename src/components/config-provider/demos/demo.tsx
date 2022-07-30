@@ -3,9 +3,7 @@ import { ConfigProvider, Button } from 'aunt';
 import { DemoBlock } from 'demos';
 
 function Demo (){
-    return  <div style={{
-        minHeight:'100vh'
-    }}>
+    return  <div className="demo-config-provider">
         <DemoBlock title="自定义变量">
             <ConfigProvider theme={{
                 buttonBackgroundPrimaryColor: 'blue',

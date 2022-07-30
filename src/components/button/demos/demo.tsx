@@ -4,7 +4,7 @@ import { DemoBlock } from 'demos';
 import './index.less';
 
 function Demo (){
-    return <>
+    return <div className="demo-button">
         <DemoBlock title="按钮类型">
             <div className="demo-button">
                 <Button>默认按钮</Button>
@@ -84,7 +84,7 @@ function Demo (){
             </div>
         </DemoBlock>
         
-    </>;
+    </div>;
 }
 
 export default Demo;
