@@ -1,0 +1,93 @@
+@class-prefix: ~'aunt';
+
+:root{
+    --aunt-tag-padding: 0 var(--aunt-padding-base);
+    --aunt-tag-border-color: #E9E9E9;
+    --aunt-tag-background-color: #E9E9E9;
+    --aunt-tag-text-color: #999999;
+    --aunt-tag-text-size: var(--aunt-font-size-sm);
+    --aunt-tag-text-size-medium: var(--aunt-font-size-md);
+    --aunt-tag-text-size-large: var(--aunt-font-size-lg);
+    --aunt-tag-icon-margin: calc(2 * var(--aunt-hd));
+}
+
+.@{class-prefix}-tag {
+
+    display: inline-flex;
+    align-items: center;
+    padding: var(--aunt-tag-padding);
+    font-size: var(--aunt-tag-text-size);
+    border-radius: 2px;
+    color: var(--aunt-tag-text-color);
+    border: 1px solid var(--aunt-tag-border-color);
+    background-color: var(--aunt-tag-background-color);
+    vertical-align: middle;
+
+    &--primary{
+        color: var(--aunt-color-white);
+        border-color: var(--aunt-primary-color);
+        background-color: var(--aunt-primary-color);
+
+        &.@{class-prefix}-tag--plain{
+            color: var(--aunt-primary-color);
+        }
+    }
+    &--success{
+        color: var(--aunt-color-white);
+        border-color: var(--aunt-success-color);
+        background-color: var(--aunt-success-color);
+
+        &.@{class-prefix}-tag--plain{
+            color: var(--aunt-success-color);
+        }
+    }
+    &--warning{
+        color: var(--aunt-color-white);
+        border-color: var(--aunt-warning-color);
+        background-color: var(--aunt-warning-color);
+
+        &.@{class-prefix}-tag--plain{
+            color: var(--aunt-warning-color);
+        }
+    }
+    &--danger{
+        color: var(--aunt-color-white);
+        border-color: var(--aunt-danger-color);
+        background-color: var(--aunt-danger-color);
+
+        &.@{class-prefix}-tag--plain{
+            color: var(--aunt-danger-color);
+        }
+    }
+
+    &--plain{
+        background-color: transparent !important;
+        border-color: currentColor;
+    }
+
+    &--medium{
+        font-size: var(--aunt-tag-text-size-medium);
+    }
+    &--large{
+        font-size: var(--aunt-tag-text-size-large);
+    }
+
+    &--round{
+        border-radius: var(--aunt-border-radius-max);
+    }
+    &--mark{
+        &-left{
+            border-radius: var(--aunt-border-radius-max) 0 0 var(--aunt-border-radius-max);
+        }
+        &-right{
+            border-radius: 0 var(--aunt-border-radius-max) var(--aunt-border-radius-max) 0;
+        }
+    }
+
+    &__icon{    
+        margin-right: var(--aunt-tag-icon-margin);
+    }
+    &__close-icon{
+        margin-left: var(--aunt-tag-icon-margin);
+    }
+}
