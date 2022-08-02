@@ -4,7 +4,7 @@ import { DemoBlock } from 'demos';
 import './index.less';
 
 function Demo (){
-    const imageSrc = 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/6a38b3ef-f40c-4e3b-ab67-f70b6066cf56.jpeg';
+    const imageSrc = 'https://img.iwave.net.cn/qm/213d34355e490a97ff8e58b5c92d3e43.jpeg';
     const fit = ['contain','cover','fill','none','scale-down'] as const;
     return <div className="demo-image">
         <DemoBlock title="基础用法">
