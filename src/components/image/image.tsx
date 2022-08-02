@@ -4,16 +4,17 @@ import { addUnit, isDef, joinTrim } from '../../utils';
 import { useNamespace } from '../../hooks';
 import { ImageProps } from './types';
 
-const defaultProps:ImageProps = {};
-
-export const Image:FunctionComponent<Partial<ImageProps>> = ((props) => {
+export const Image:FunctionComponent<Partial<ImageProps>> = ((props: ImageProps) => {
 
     const {
-        fit, errorIcon, loadingIcon, showError, showLoading, block, round, className
-    } = {
-        ...defaultProps,
-        ...props
-    };
+        fit, 
+        errorIcon, 
+        loadingIcon, 
+        showError, 
+        showLoading, 
+        block, 
+        round
+    } = props;
 
     const { prefix } = useContext(ConfigProviderContext);
     const ns = useNamespace('image',prefix);
@@ -45,9 +46,9 @@ export const Image:FunctionComponent<Partial<ImageProps>> = ((props) => {
           ns.b(),
           block ? ns.m('block') :'',
           round ? ns.m('round') :'',
-          className
+          props.className
         ]);
-    },[]);
+    },[block, round, props.className]);
 
     useEffect(() => {
         const payload = { error: false, loading: true } as typeof status;
@@ -140,7 +141,3 @@ export const Image:FunctionComponent<Partial<ImageProps>> = ((props) => {
         {props.children}
     </div>;
 });
-
-
-Image.defaultProps = defaultProps;
-Image.displayName = 'AuntImage';

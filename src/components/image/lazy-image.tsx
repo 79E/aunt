@@ -8,34 +8,29 @@ import Loading from '../loading';
 import { Image } from './image';
 import { LazyImageProps } from './types';
 
-
-const defaultProps:LazyImageProps = {
-    lazyload: false,
-    fit: 'fill',
-    errorIcon: <AuntIconAlertCircle />,
-    loadingIcon: <Loading type="oval" />,
-    showError: true,
-    showLoading: true,
-    block: true,
-};
-
 export const getLazyImagePlaceholder = (ns: UseNamespace): React.ReactNode =>(
     <div className={ns.e('loading')}>
         <Loading type="oval" className={ns.em('loading','icon')} />
     </div>
 );
-    
 
-export const LazyImage:FunctionComponent<Partial<LazyImageProps>> = (props) => {
-    const { lazyload, ...imageProps  } = {
-        ...defaultProps,
-        ...props
-    };
+export const LazyImage:FunctionComponent<Partial<LazyImageProps>> = (props:LazyImageProps) => {
+    const { 
+      lazyload = false,
+      fit = 'fill',
+      errorIcon = <AuntIconAlertCircle />,
+      loadingIcon = <Loading type="oval" />,
+      showError = true,
+      showLoading = true,
+      block = true,
+      ...rest  
+    } = props;
 
     const { prefix } = useContext(ConfigProviderContext);
     const ns = useNamespace('image',prefix);
 
     const renderPlaceholder = ()=>{
+      console.log('renderPlaceholder',typeof lazyload);
         if (typeof lazyload === 'boolean') return getLazyImagePlaceholder(ns);
         if (typeof lazyload !== 'boolean' && lazyload && lazyload.placeholder) {
             return lazyload.placeholder;
@@ -43,29 +38,35 @@ export const LazyImage:FunctionComponent<Partial<LazyImageProps>> = (props) => {
         return getLazyImagePlaceholder(ns);
     };
 
+    const renderImage = ()=> (
+        <Image 
+          fit={fit} 
+          errorIcon={errorIcon} 
+          loadingIcon={loadingIcon} 
+          showError={showError} 
+          showLoading={showLoading}
+          {...rest} 
+        />
+    );
+
     if (lazyload) {
-        const { className, style, height, width } = imageProps;
+        const { height, width } = rest;
         const attrs = {
           className: joinTrim([
-            imageProps.block ? ns.m('block') : '',
-            className
+            block ? ns.m('block') : '',
+            rest.className
           ]),
-          style: { ...style, height, width },
+          style: { ...rest.style, height, width },
         };
         return (
           <Lazyload {...attrs} placeholder={renderPlaceholder()}>
-            <Image {...imageProps} />
+            { renderImage() }
           </Lazyload>
         );
-      }
-    return <Image {...imageProps} />;
+    }
+    return (
+      renderImage()
+    );
 };
 
-
-LazyImage.defaultProps = defaultProps;
-LazyImage.displayName = 'AuntLazyImage';
-
-
-
 export default LazyImage;
-
