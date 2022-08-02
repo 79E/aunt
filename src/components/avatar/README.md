@@ -13,15 +13,15 @@ export default () => <Avatar />;
 ### 头像尺寸
 通过设置 size 属性来控制头像的尺寸，有三个尺寸可以选择 small、normal、large
 ```tsx
-<Avatar size="small" url="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/099247.jpg"></Avatar>
-<Avatar size="normal" url="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/099247.jpg"></Avatar>
-<Avatar size="large" url="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/099247.jpg"></Avatar>
+<Avatar size="small" url="https://fakeimg.pl/300/"></Avatar>
+<Avatar size="normal" url="https://fakeimg.pl/300/"></Avatar>
+<Avatar size="large" url="https://fakeimg.pl/300/"></Avatar>
 ```
 ### 头像形状
 通过设置 shape 属性来设置形状 square、round
 ```tsx
-<Avatar shape="square" url="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/099247.jpg"></Avatar>
-<Avatar shape="round" url="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/099247.jpg"></Avatar>
+<Avatar shape="square" url="https://fakeimg.pl/300/"></Avatar>
+<Avatar shape="round" url="https://fakeimg.pl/300/"></Avatar>
 ```
 ### 头像类型
 支持三种类型：图片、Icon 以及字符
@@ -31,16 +31,16 @@ export default () => <Avatar />;
 <Avatar></Avatar>
 <Avatar icon={<AuntIconMeh />}></Avatar>
 <Avatar>头</Avatar>
-<Avatar url="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/099247.jpg"></Avatar>
+<Avatar url="https://fakeimg.pl/300/"></Avatar>
 ```
 ### 图片填充模式
 通过设置 fit 属性来设置图片的填充模式
 ```tsx
-<Avatar fit="contain" url="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/WechatIMG675.jpeg"></Avatar>
-<Avatar fit="cover" url="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/WechatIMG675.jpeg"></Avatar>
-<Avatar fit="fill" url="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/WechatIMG675.jpeg"></Avatar>
-<Avatar fit="none" url="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/WechatIMG675.jpeg"></Avatar>
-<Avatar fit="scale-down" url="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/WechatIMG675.jpeg"></Avatar>
+<Avatar fit="contain" url="https://fakeimg.pl/300/400/"></Avatar>
+<Avatar fit="cover" url="https://fakeimg.pl/300/400/"></Avatar>
+<Avatar fit="fill" url="https://fakeimg.pl/300/400/"></Avatar>
+<Avatar fit="none" url="https://fakeimg.pl/300/400/"></Avatar>
+<Avatar fit="scale-down" url="https://fakeimg.pl/300/400/"></Avatar>
 ```
 ### 颜色相关
 可设置 background 和 color 控制头像的背景颜色和文本图标颜色
