@@ -8,7 +8,7 @@
 import React from "react";
 import { Image } from "aunt";
 
-export default () => <Image width="100" height="100" src={src} />;
+export default () => <Image width="100px" height="100px" src={src} />;
 ```
 ### 基础用法
 基础用法与原生 img 标签一致，可以设置 src、width、height、alt 等原生属性。

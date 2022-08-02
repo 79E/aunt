@@ -16,7 +16,7 @@ function Demo (){
                     fit.map((item)=>(
                         <Flex.Item key={item} span={8} >
                             <div className="demo-image-card">
-                                <Image radius={4} fit={item}  height="100px" src={imageSrc} />
+                                <Image radius={4} fit={item} width={100} height={100}  src={imageSrc} />
                                 <span className="demo-image-title">{item}</span>
                             </div>
                         </Flex.Item>
@@ -31,7 +31,7 @@ function Demo (){
                     fit.map((item)=>(
                         <Flex.Item key={item} span={8} >
                             <div className="demo-image-card">
-                                <Image round fit={item}  height="100px" src={imageSrc} />
+                                <Image round fit={item} width={100} height={100} src={imageSrc} />
                                 <span className="demo-image-title">{item}</span>
                             </div>
                         </Flex.Item>
@@ -44,13 +44,13 @@ function Demo (){
             <Flex wrap="wrap" gutter={20}>
                 <Flex.Item span={8}>
                     <div className="demo-image-card">
-                        <Image radius={4} height="100px" />
+                        <Image radius={4} width="100px" height="100px" />
                         <span className="demo-image-title">默认提示</span>
                     </div>
                 </Flex.Item>
                 <Flex.Item span={8}>
                     <div className="demo-image-card">
-                        <Image radius={4} loadingIcon={<Loading type="ball" />}  height="100px" />
+                        <Image radius={4} loadingIcon={<Loading type="ball" />} width="100px"  height="100px" />
                         <span className="demo-image-title">自定义提示</span>
                     </div>
                 </Flex.Item>
@@ -67,7 +67,7 @@ function Demo (){
                 </Flex.Item>
                 <Flex.Item span={8}>
                     <div className="demo-image-card">
-                        <Image radius={4} errorIcon={<AuntIconWifiOff />}  height="100px" src="aunt.png" />
+                        <Image radius={4} errorIcon={<AuntIconWifiOff />} width="100px" height="100px" src="aunt.png" />
                         <span className="demo-image-title">自定义提示</span>
                     </div>
                 </Flex.Item>
