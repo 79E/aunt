@@ -67,6 +67,4 @@ const Icon = forwardRef<SVGSVGElement,IconProps>((props,ref) => {
     return cloneElement(children as React.ReactElement, attrs);
 });
 
-Icon.displayName = 'AuntIcon';
-
 export default Icon;

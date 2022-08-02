@@ -4,31 +4,22 @@ import ConfigProviderContext from '../config-provider/config-provider-context';
 import { useNamespace } from '../../hooks';
 import { joinTrim } from '../../utils';
 
-const defaultProps:TypographyProps = {
-    size: 'md',
-    level: 4,    
-};
-
 const Typography:FunctionComponent<Partial<TypographyProps> & { renderType: string }> = ((props) => {
 
     const {
         type,
-        size,
-        level,
+        size = 'md',
+        level = 4,
         center,
         ellipsis,
-        className,
-        children,
         strong,
         underline,
         disabled,
         renderType,
         delete: del,
         ...rest
-    } = {
-        ...defaultProps,
-        ...props
-    };
+    } = props;
+
     const { prefix } = useContext(ConfigProviderContext);
     const ns = useNamespace('typography',prefix);
 
@@ -48,17 +39,13 @@ const Typography:FunctionComponent<Partial<TypographyProps> & { renderType: stri
             underline ? ns.m('underline') : '',
             elli === 1 ? 'aunt-ellipsis': '',
             elli && elli > 1 ? `aunt-multi-ellipsis--l${elli}`: '',
-            className
+            props.className
         ]);
-      },[]);
+      },[size, type, renderType,level, disabled, center, strong, del, underline, elli, props.className]);
 
     return <div className={varClasses} onClick={props.onClick} {...rest}> 
-        {children}
+        {props.children}
     </div>;
 });
-
-
-Typography.defaultProps = defaultProps;
-Typography.displayName = 'AuntTypography';
 
 export default Typography;

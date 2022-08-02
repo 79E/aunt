@@ -4,16 +4,9 @@ import { useInViewport, useNamespace } from '../../hooks';
 import { joinTrim } from '../../utils';
 import { LazyLoadProps } from './types';
 
-const defaultProps:LazyLoadProps = {
-    placeholder:''
-};
+export const LazyLoad:FunctionComponent<Partial<LazyLoadProps>> = ((props: LazyLoadProps) => {
 
-export const LazyLoad:FunctionComponent<Partial<LazyLoadProps>> = ((props) => {
-
-    const { height, placeholder, children, className } = {
-        ...defaultProps,
-        ...props
-    };
+    const { height, placeholder, children, className } = props;
 
     const { prefix } = useContext(ConfigProviderContext);
     const ns = useNamespace('lazy-load',prefix);
@@ -31,7 +24,3 @@ export const LazyLoad:FunctionComponent<Partial<LazyLoadProps>> = ((props) => {
         </div>
     );
 });
-
-
-LazyLoad.defaultProps = defaultProps;
-LazyLoad.displayName = 'AuntLazyLoad';

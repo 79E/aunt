@@ -4,19 +4,11 @@ import { useNamespace } from '../../hooks';
 import { addUnit } from '../../utils';
 import { GridProps } from './types';
 
-const defaultProps:GridProps = {
-    column: 4,
-    gap: 0,
-};
-
-const Grid:FunctionComponent<Partial<GridProps>> = ((props) => {
+const Grid:FunctionComponent<Partial<GridProps>> = ((props: GridProps) => {
     
     const {
-        gap, column, style,row
-    } = {
-        ...defaultProps,
-        ...props
-    };
+        gap = 0, column = 4, style,row
+    } = props;
 
     const { prefix } = useContext(ConfigProviderContext);
     const ns = useNamespace('grid',prefix);
@@ -47,10 +39,5 @@ const Grid:FunctionComponent<Partial<GridProps>> = ((props) => {
         {props.children}
     </div>;
 });
-
-
-Grid.defaultProps = defaultProps;
-Grid.displayName = 'AuntGrid';
-
 
 export default Grid;

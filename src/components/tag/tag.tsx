@@ -5,19 +5,11 @@ import { useNamespace } from '../../hooks';
 import { joinTrim } from '../../utils';
 import { TagProps } from './types';
 
-const defaultProps:TagProps = {
-    type: 'default',
-    size: 'small'
-};
-
 export const Tag:FunctionComponent<Partial<TagProps>> = ((props) => {
 
     const {
-        type, size, plain, shape, color, textColor, closeable
-    } = {
-        ...defaultProps,
-        ...props,
-    };
+        type = 'default', size = 'small', plain, shape, color, textColor, closeable
+    } = props;
 
     const { prefix } = useContext(ConfigProviderContext);
     const ns = useNamespace('tag',prefix);
@@ -74,7 +66,3 @@ export const Tag:FunctionComponent<Partial<TagProps>> = ((props) => {
         { renderCloseIcon }
     </div>;
 });
-
-
-Tag.defaultProps = defaultProps;
-Tag.displayName = 'AuntTag';

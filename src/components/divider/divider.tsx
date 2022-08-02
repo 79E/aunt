@@ -4,18 +4,15 @@ import { joinTrim } from '../../utils';
 import { useNamespace } from '../../hooks';
 import { DividerProps } from './types';
 
-
-const defaultProps:DividerProps = {
-    contentPosition: 'center',
-    direction:'horizontal',
-};
-
 export const Divider:FunctionComponent<Partial<DividerProps>> = ((props:DividerProps) => {
 
-    const { direction, contentPosition, dashed, hairline, ...rest } = {
-        ...defaultProps,
-        ...props
-    };
+    const { 
+        direction = 'horizontal', 
+        contentPosition = 'center', 
+        dashed, 
+        hairline, 
+        ...rest 
+    } = props;
 
     const { prefix } = useContext(ConfigProviderContext);
     const ns = useNamespace('divider',prefix);
@@ -46,7 +43,3 @@ export const Divider:FunctionComponent<Partial<DividerProps>> = ((props:DividerP
         }
     </div>;
 });
-
-
-Divider.defaultProps = defaultProps;
-Divider.displayName = 'AuntDivider';

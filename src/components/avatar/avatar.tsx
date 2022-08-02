@@ -5,25 +5,18 @@ import { joinTrim } from '../../utils';
 import { AuntIconUser } from '../../index';
 import { AvatarProps } from './types';
 
-const defaultProps:AvatarProps = {
-    fit: 'cover',
-    shape: 'square',
-    size: 'normal',
-    background:'#eee',
-    color: '#666',
-};
-
 export const Avatar:FunctionComponent<Partial<AvatarProps>> = ((props: AvatarProps) => {
 
     const {
-        fit, url, size, shape, 
+        fit = 'cover', 
+        url, 
+        size = 'normal', 
+        shape = 'square', 
         icon = <AuntIconUser />, 
-        color, background,
+        color = '#666', 
+        background = '#eee',
         ...rest
-    } = {
-        ...defaultProps,
-        ...props,
-    };
+    } = props;
 
     const { prefix } = useContext(ConfigProviderContext);
     const ns = useNamespace('avatar',prefix);
@@ -74,7 +67,3 @@ export const Avatar:FunctionComponent<Partial<AvatarProps>> = ((props: AvatarPro
         {renderAvatar}
     </div>;
 });
-
-
-Avatar.defaultProps = defaultProps;
-Avatar.displayName = 'AuntAvatar';

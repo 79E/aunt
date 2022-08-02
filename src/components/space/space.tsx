@@ -4,17 +4,10 @@ import ConfigProviderContext from '../config-provider/config-provider-context';
 import { useNamespace } from '../../hooks';
 import { joinTrim,addUnit } from '../../utils';
 
-const defaultProps:SpaceProps = {
-    direction: 'horizontal',
-};
-
 export const Space:FunctionComponent<Partial<SpaceProps>> = ((props) => {
     const {
-        gap, direction, align, justify, wrap, block
-    } = {
-        ...defaultProps,
-        ...props
-    };
+        gap, direction = 'horizontal', align, justify, wrap, block
+    } = props;
 
     const { prefix } = useContext(ConfigProviderContext);
     const ns = useNamespace('space',prefix);
@@ -67,7 +60,3 @@ export const Space:FunctionComponent<Partial<SpaceProps>> = ((props) => {
         </div>
     );
 });
-
-
-Space.defaultProps = defaultProps;
-Space.displayName = 'AuntSpace';

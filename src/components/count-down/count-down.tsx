@@ -5,23 +5,12 @@ import { useCountDown, useNamespace } from '../../hooks';
 import { parseFormat } from '../../utils';
 
 
-const defaultProps:CountDownProps = {
-    autoStart: true,
-    time: 0,
-    format: 'HH:mm:ss',
-    millisecond: false,
-    onChange:()=>{},
-    onFinish:()=>{},
-};
-
 export const CountDown = forwardRef<CountDownInstance, CountDownProps>((props, ref) => {
     
     const {
-        time, millisecond, format, autoStart
-    } = {
-        ...defaultProps,
-        ...props
-    };
+        time = 0, millisecond = false, format = 'HH:mm:ss', autoStart = true
+    } = props;
+
     const { prefix } = useContext(ConfigProviderContext);
     const ns = useNamespace('count-down', prefix);
     
@@ -59,7 +48,3 @@ export const CountDown = forwardRef<CountDownInstance, CountDownProps>((props, r
         {props.children ? props.children(current) : timeText}
     </div>;
 });
-
-
-CountDown.defaultProps = defaultProps;
-CountDown.displayName = 'AuntCountDown';

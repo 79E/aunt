@@ -4,12 +4,6 @@ import { useNamespace } from '../../hooks';
 import ConfigProviderContext, { INITIAL_STATE } from './config-provider-context';
 import { ConfigProviderProps } from './types';
 
-
-
-const defaultProps: ConfigProviderProps = {
-    tag : 'div',
-};
-
 function mapThemeVarsToCSSVars(themeVars: Record<string, string | number>, prefix: string) {
     const cssVars: Record<string, string | number> = {};
     Object.keys(themeVars).forEach((key) => {
@@ -27,13 +21,10 @@ export const ConfigProvider:FunctionComponent<ConfigProviderProps> = ((props) =>
         className,
         style,
         theme,
-        tag,
+        tag = 'div',
         children,
         ...rest
-    } = {
-        ...defaultProps,
-        ...props,
-    };
+    } = props;
 
     const ns = useNamespace('config-rovider',INITIAL_STATE.prefix);
 
@@ -55,7 +46,3 @@ export const ConfigProvider:FunctionComponent<ConfigProviderProps> = ((props) =>
         </ConfigProviderContext.Provider>
     );
 });
-
-
-ConfigProvider.defaultProps = defaultProps;
-ConfigProvider.displayName = 'AuntConfigProvider';

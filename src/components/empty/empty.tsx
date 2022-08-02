@@ -4,10 +4,6 @@ import { getSizeStyle,joinTrim } from '../../utils';
 import { useNamespace } from '../../hooks';
 import { EmptyProps,StatusOptions } from './types';
 
-const defaultProps:EmptyProps = {
-    image: 'default'
-};
-
 const defaultStatus: StatusOptions = {
     default: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/9cb89e7f-1d20-4337-9688-a94441d51730.png',
     search: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/9cf3b34d-dfb1-474c-9800-85057ed00e14.png',
@@ -18,11 +14,8 @@ const defaultStatus: StatusOptions = {
 export const Empty:FunctionComponent<Partial<EmptyProps>> = ((props: EmptyProps) => {
 
     const {
-        image, imageSize, description
-    } = {
-        ...defaultProps,
-        ...props
-    };
+        image = 'default', imageSize, description
+    } = props;
 
     const { prefix } = useContext(ConfigProviderContext);
     const ns = useNamespace('empty',prefix);
@@ -61,7 +54,3 @@ export const Empty:FunctionComponent<Partial<EmptyProps>> = ((props: EmptyProps)
         {renderBottom()}
     </div>;
 });
-
-
-Empty.defaultProps = defaultProps;
-Empty.displayName = 'AuntEmpty';

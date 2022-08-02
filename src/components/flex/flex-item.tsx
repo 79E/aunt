@@ -5,17 +5,10 @@ import { joinTrim } from '../../utils';
 import { useNamespace } from '../../hooks';
 import { FlexItemProps, FlexType } from './types';
 
-const defaultProps: FlexItemProps = {
-    className:'',
-};
-
-const FlexItem:FunctionComponent<Partial<FlexItemProps>> = ((props = defaultProps) => {
+const FlexItem:FunctionComponent<Partial<FlexItemProps>> = ((props: FlexItemProps) => {
     const {
         style, className, span, children, flex, ...rest
-    } = {
-        ...defaultProps,
-        ...props
-    };
+    } = props;
 
     const { prefix } = useContext(ConfigProviderContext);
     const ns = useNamespace('flexitem',prefix);
@@ -80,8 +73,5 @@ const FlexItem:FunctionComponent<Partial<FlexItemProps>> = ((props = defaultProp
         
     );
 });
-
-FlexItem.defaultProps = defaultProps;
-FlexItem.displayName = 'AuntFlexItem';
 
 export default FlexItem;

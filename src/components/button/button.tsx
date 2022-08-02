@@ -5,45 +5,25 @@ import ConfigProviderContext from '../config-provider/config-provider-context';
 import { useNamespace } from '../../hooks';
 import { joinTrim } from '../../utils';
 
-const defaultProps: ButtonProps = {
-    className: '',
-    color: '',
-    shape: 'default',
-    plain: false,
-    hairline: false,
-    loading: false,
-    disabled: false,
-    type: 'default',
-    size: 'normal',
-    loadingText:'',
-    block: false,
-    iconPosition:'left',
-    style: {},
-    children: undefined
-};
-
 export const Button:FunctionComponent<Partial<ButtonProps>> = ((props) => {
     const {
         color,
-        shape,
-        plain,
-        hairline,
-        loading,
-        disabled,
-        type,
-        size,
-        block,
+        shape = 'default',
+        plain = false,
+        hairline = false,
+        loading = false,
+        disabled = false,
+        type = 'default',
+        size = 'normal',
+        block = false,
         children,
-        iconPosition,
+        iconPosition = 'left',
         icon,
         className,
         style,
         loadingText,
         ...rest
-    } = {
-        ...defaultProps,
-        ...props
-    };
+    } = props;
 
     const { prefix } = useContext(ConfigProviderContext);
     const ns = useNamespace('button',prefix);
@@ -140,7 +120,3 @@ export const Button:FunctionComponent<Partial<ButtonProps>> = ((props) => {
         {iconPosition === 'right' && renderIcon('right')}
     </div>;
 });
-
-
-Button.defaultProps = defaultProps;
-Button.displayName = 'AuntButton';

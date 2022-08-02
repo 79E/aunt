@@ -13,13 +13,6 @@ import { useNamespace } from '../../hooks';
 import { addUnit,joinTrim } from '../../utils';
 import { LoadingProps } from './types';
 
-const defaultProps: LoadingProps = {
-    type: 'gap',
-    vertical: false,
-    textSize: '14px',
-};
-
-
 const Icon = () => ({
     oval: <OvalIcon />,
     rings: <RingsIcon />,
@@ -35,24 +28,19 @@ const Icon = () => ({
 
 export const Loading:FunctionComponent<Partial<LoadingProps>> = ((props) => {
     const { 
-        type, 
-        vertical, 
+        type = 'gap',
+        vertical = false,
         color, 
         size, 
         textColor, 
-        children, 
-        textSize,
-        className
-    } = {
-        ...defaultProps,
-        ...props
-    };
+        textSize = '14px',
+    } = props;
 
     const { prefix } = useContext(ConfigProviderContext);
     const ns = useNamespace('loading',prefix);
 
     const renderText = () => {
-        if (children) {
+        if (props.children) {
           return (
             <span
                 className={ ns.e('text')}
@@ -61,7 +49,7 @@ export const Loading:FunctionComponent<Partial<LoadingProps>> = ((props) => {
                     color: textColor ?? color,
                 }}
             >
-              {children}
+              {props.children}
             </span>
           );
         }
@@ -79,9 +67,9 @@ export const Loading:FunctionComponent<Partial<LoadingProps>> = ((props) => {
         return joinTrim([
             ns.b(),
             vertical ? ns.m('vertical') : '',
-            className
+            props.className
         ]);
-    },[vertical]);
+    },[vertical, props.className]);
 
     return (
         <div className={varClasses}>
@@ -90,7 +78,3 @@ export const Loading:FunctionComponent<Partial<LoadingProps>> = ((props) => {
         </div>
     );
 });
-
-
-Loading.defaultProps = defaultProps;
-Loading.displayName = 'AuntLoading';
