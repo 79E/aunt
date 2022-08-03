@@ -16,6 +16,7 @@ export * from './components/divider';
 export * from './components/empty';
 export * from './components/count-down';
 export * from './components/tag';
+export * from './components/transition';
 
 
 

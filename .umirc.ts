@@ -143,7 +143,7 @@ export default defineConfig({
       // },
       {
         title: '其他组件',
-        children: ['components/config-provider'],
+        children: ['components/config-provider','components/transition'],
       },
       // {
       //   title: '业务组件',
