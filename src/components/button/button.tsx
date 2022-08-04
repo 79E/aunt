@@ -29,7 +29,6 @@ export const Button:FunctionComponent<Partial<ButtonProps>> = ((props) => {
     const ns = useNamespace('button',prefix);
 
     const varClasses = useMemo(()=>{
-      console.log(ns.b(),ns.m('loading'));
       return joinTrim([
         ns.b(),
         type ? ns.m(type) : '',

@@ -30,7 +30,6 @@ export const LazyImage:FunctionComponent<Partial<LazyImageProps>> = (props:LazyI
     const ns = useNamespace('image',prefix);
 
     const renderPlaceholder = ()=>{
-      console.log('renderPlaceholder',typeof lazyload);
         if (typeof lazyload === 'boolean') return getLazyImagePlaceholder(ns);
         if (typeof lazyload !== 'boolean' && lazyload && lazyload.placeholder) {
             return lazyload.placeholder;
