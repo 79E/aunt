@@ -15,8 +15,7 @@ const Badge:FunctionComponent<BadgeProps> = ((props) => {
         maxCount = 99,
         bordered = false,
         color,
-        offset = [0, 0],
-        type
+        offset = [0, 0]
     } = props;
 
     const { prefix } = useContext(ConfigProviderContext);
@@ -25,7 +24,7 @@ const Badge:FunctionComponent<BadgeProps> = ((props) => {
     const varClasses = useMemo(()=>{
         return joinTrim([
             ns.e('content'),
-            ns.m('fixed'),
+            props.children ? ns.m('fixed') : '',
             bordered ? ns.m('bordered') : '',
             dot ? ns.m('dot') : '',
             props.className
@@ -52,7 +51,7 @@ const Badge:FunctionComponent<BadgeProps> = ((props) => {
 
     return (
         <div className={ ns.b() }>
-            <Transition in={visible} timeout={timeout} type={type ? type : ns.m('scale')}>
+            <Transition in={visible} timeout={timeout} type={ns.m(props.children?'scale-translate':'scale')}>
                 <div
                     className={ varClasses }
                     style={ varStyles }

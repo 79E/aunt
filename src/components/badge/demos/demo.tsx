@@ -70,14 +70,24 @@ function Demo (){
                     <div className="demo-badge-card"></div>
                 </Badge>
             </Space>
-            <div style={{
-                marginTop:10,
-            }}>
-                <Button block onClick={()=>{
-                    setVisible(!visible);
-                }}>显示或隐藏</Button>
-            </div>
         </DemoBlock>
+
+        <DemoBlock title="单独使用">
+            <Space gap={30}>
+                <Badge content={52} visible={visible}></Badge>
+                <Badge content="Aunt" visible={visible}></Badge>
+                <Badge content={<AuntIconBox size={14}/>} visible={visible}></Badge>
+                <Badge dot visible={visible}></Badge>
+            </Space>
+        </DemoBlock>
+
+        <div style={{
+                margin:10,
+            }}>
+            <Button block onClick={()=>{
+                setVisible(!visible);
+            }}>显示或隐藏</Button>
+        </div>
     </div>;
 }
 

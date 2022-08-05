@@ -10,7 +10,6 @@ export interface BadgeProps extends BaseTypeProps {
       content?: string | number | React.ReactNode;
       visible?: boolean;
       timeout?: number | { appear?: number; enter?: number; exit?: number; };
-      type?: string;
      /**
       * 显示为一个小红点
       * @en show as a red dot

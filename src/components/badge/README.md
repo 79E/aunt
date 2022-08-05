@@ -89,6 +89,15 @@ const [visible,setVisible] = useState(true);
 <Button block onClick={()=>{setVisible(!visible);}}>显示或隐藏</Button>
 ```
 
+### 单独使用
+当 Badge 没有子元素时，会作为一个独立的元素进行展示。
+```tsx
+<Badge content={52}></Badge>
+<Badge content="Aunt" ></Badge>
+<Badge content={<AuntIconBox size={14}/>} ></Badge>
+<Badge dot ></Badge>
+```
+
 ## 参数
 
 | 参数 | 说明 | 默认值 | 类型 |
@@ -96,7 +105,6 @@ const [visible,setVisible] = useState(true);
 | content |   徽标内容   |   `-`   |    `string \| number \| React.ReactNode`    |
 | visible | 显示或隐藏状态 | `true` |  `boolean`  |
 | timeout | 动画时间（毫秒） | `300`  | `number \| { appear?: number; enter?: number; exit?: number; }lean` |  
-| type | 动画类前缀 |  `-`   | `string`  |
 | dot | 显示为一个小红点 |  `false`  | `boolean` |
 | maxCount | 最大完整展示数字，超出后将展示 + | `99` | `number` |
 | bordered | 是否有白色边框 |  `false`  | `boolean` |
