@@ -3,40 +3,49 @@ import { BaseTypeProps } from '../../utils';
 
 // 定义接受到的参数 类型
 export interface BadgeProps extends BaseTypeProps {
-     /**
-      * 徽标内容
-      * @en badge content
-      */
+      /**
+       * @name 徽标内容
+       * @default ''
+       */
       content?: string | number | React.ReactNode;
+      /**
+       * @name 显隐状态
+       * @desc 控制徽标显示或隐藏
+       * @default true
+       */
       visible?: boolean;
+      /**
+       * @name 动画持续时间
+       * @desc 徽标显示或隐藏动画持续时间
+       * @default 300
+       */
       timeout?: number | { appear?: number; enter?: number; exit?: number; };
      /**
-      * 显示为一个小红点
-      * @en show as a red dot
+      * @name 是否为红点
+      * @desc 徽标将显示为一个小红点样式
       * @default false
       */
      dot?: boolean;
      /**
-      * 最大完整展示数字，超出后将展示 +
-      * @en Maximum full impression number, it will be displayed "+" beyond the number
+      * @name 最大数
+      * @desc 最大完整展示数字，超出后将展示 +
       * @default 99
       */
       maxCount?: number;
      /**
-      * 徽标位置偏移量
-      * @en 
-      * 
+      * @name 偏移量
+      * @desc 用来设置徽标所在的位置
+      * @default [0,0]
       */
     offset?: [number | string, number | string];
      /**
-      * 是否有白色边框
-      * @en Whether the badge has a white border
+      * @name 是否有白色边框
       * @default false
       */
      bordered?: boolean;
      /**
-      * 背景颜色
-      * @en Background color
+      * @name 背景颜色
+      * @default ''
       */
      color?: string;
  }

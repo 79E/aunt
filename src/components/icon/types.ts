@@ -1,19 +1,35 @@
 // 定义接受到的参数 类型
 export interface IconProps extends React.SVGProps<SVGSVGElement> {
-    // 层级
+    /**
+     * @name 层级
+     * @default ''
+     */
     tabIndex?: number;
-    // 背景颜色
+    /**
+     * @name 背景颜色
+     * @default ''
+     */
     color?: string;
-    // 大小
+    /**
+     * @name 图标大小
+     * @default '24px'
+     */
     size?: string | number;
-    // 是否开启旋转动画
+    /**
+     * @name 是否开启旋转动画
+     * @default false
+     */
     spin?: boolean;
-    // 图标旋转角度
+    /**
+     * @name 图标旋转角度
+     * @default 0
+     */
     rotate?: number;
-    // 自定义图标名
+    /**
+     * @name 自定义图标名
+     * @default ''
+     */
     name?: string;
-    // 自定义样式
     style?: React.CSSProperties;
-    // clss 名
     className?: string;
 }

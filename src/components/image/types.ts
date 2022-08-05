@@ -5,49 +5,88 @@ import { LazyLoadProps } from '../lazy-load/types';
 
 export type ImageFit = 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
 export interface ImageProps extends BaseTypeProps {
-  /** 图片链接	 */
+  /**
+   * @name 图片链接
+   * @default ''
+   */
   src?: string;
-  /** 替代文本	 */
+  /**
+   * @name 替代文本
+   * @default 'img'
+   */
   alt?: string;
-  /**  图片填充模式	 */
+  /**
+   * @name 图片填充模式
+   * @default 'fill'
+   */
   fit?: ImageFit;
-  /** 是否显示为圆形	 */
+  /**
+   * @name 是否显示为圆形
+   * @default false
+   */
   round?: boolean;
-  /** 是否为块级元素 */
+  /**
+   * @name 是否为块级元素
+   * @default true
+   */
   block?: boolean;
-  /** 宽度，默认单位为 px	 */
+  /**
+   * @name 宽度
+   * @default auto
+   */
   width?: number | string;
-  /** 高度，默认单位为 px	 */
+  /**
+   * @name 高度
+   * @default auto
+   */
   height?: number | string;
-  /** 圆角大小，默认单位为 px	 */
+  /**
+   * @name 圆角大小
+   * @default ''
+   */
   radius?: number | string;
-  /** 加载图标和失败图标的大小	 */
+  /**
+   * @name 加载图标和失败图标的大小
+   * @default ''
+   */
   iconSize?: number | string;
   /**
-   * 是否展示图片加载失败提示
+   * @name 是否展示图片加载失败提示
    * @default true
    */
   showError?: boolean;
   /**
-   * 是否展示图片加载中提示
+   * @name 是否展示图片加载中提示
    * @default true
    */
   showLoading?: boolean;
   /**
-   * 失败时提示的图标名称或图片链接
-   * @default 'photo-fail'
+   * @name 失败时提示的图标名称或图片链接
+   * @default <AuntIconAlertCircle />
    */
   errorIcon?: React.ReactNode;
   /**
-   * 加载时提示的图标名称或图片链接
-   * @default 'photo'
+   * @name 加载时提示的图标名称或图片链接
+   * @default <Loading type="oval" />
    */
   loadingIcon?: React.ReactNode;
-  /** 图片加载完毕时触发	 */
+  /**
+   * @name 图片加载完毕时触发
+   * @param e React.MouseEvent<HTMLImageElement>
+   * @return void
+   */
   onLoad?: (e: React.MouseEvent<HTMLImageElement>) => void;
-  /** 图片加载失败时触发	 */
+  /**
+   * @name 图片加载完毕时触发
+   * @param e React.MouseEvent<HTMLImageElement>
+   * @return void
+   */
   onError?: (e: React.MouseEvent<HTMLImageElement>) => void;
-  /** 点击图片时触发	 */
+   /**
+   * @name 点击图片时触发
+   * @param e React.MouseEvent<HTMLImageElement>
+   * @return void
+   */
   onClick?: (e: React.MouseEvent<HTMLImageElement>) => void;
 }
 
@@ -55,6 +94,9 @@ export interface ImageProps extends BaseTypeProps {
 export type LazyImageType = boolean | Pick<LazyLoadProps, 'placeholder'>;
 
 export interface LazyImageProps extends ImageProps {
-  /** 是否开启图片懒加载 */
+  /**
+   * @name 是否开启图片懒加载
+   * @default false
+   */
   lazyload?: LazyImageType;
 }

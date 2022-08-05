@@ -3,36 +3,59 @@ import { CurrentTime } from '../../hooks/use-count-down';
 import {BaseTypeProps} from '../../utils';
 
 export type CountDownInstance = {
-    /** 
-     * 开始倒计时	 
+    /**
+     * @name 开始倒计时
+     * @default () => void
+     * @return void
      */
     start: () => void;
-    /** 
-     * 暂停倒计时	 
+    /**
+     * @name 暂停倒计时
+     * @default () => void
+     * @return void
      */
     pause: () => void;
-    /** 
-     * 重设倒计时，若 autoStart 为 true，重设后会自动开始倒计时	 
+    /**
+     * @name 重设倒计时
+     * @decs 重设倒计时，若 autoStart 为 true，重设后会自动开始倒计时	 
+     * @default () => void
+     * @return void
      */
     reset: () => void;
 };
 
 // 定义接受到的参数 类型
 export interface CountDownProps extends Omit<BaseTypeProps, 'children'> {
-    // 倒计时时长，单位毫秒
+    /**
+     * @name 倒计时时长，单位毫秒
+     * @default 0
+     */
     time: number;
-    // 时间格式
+    /**
+     * @name 时间格式
+     * @default 'HH:mm:ss'
+     */
     format?: string;
-    // 是否开启毫秒级渲染
+    /**
+     * @name 是否开启毫秒级渲染
+     * @default false
+     */
     millisecond?: boolean;
-    // 是否自动开始倒计时
+    /**
+     * @name 是否自动开始倒计时
+     * @default true
+     */
     autoStart?: boolean;
-    /** 
-     * 倒计时变化时触发	 
+    /**
+     * @name 倒计时变化时触发
+     * @default (currentTime: CurrentTime) => void
+     * @return void
      */
     onChange?: (currentTime: CurrentTime) => void;
-    /** 
-     * 倒计时结束时触发	
+    /**
+     * @name 倒计时结束时触发
+     * @default () => void
+     * @return void
      */
     onFinish?: () => void;
     children?: (currentTime: CurrentTime) => React.ReactNode;

@@ -84,20 +84,12 @@ console.log(ns.em('item','active')) // .nav__item--active
 ```tsx
 /**
  * @name 按钮颜色
+ * @desc 用来控制按钮的颜色
  * @default ''
- * @param String
  */
 color?: String;
 ```
-### 多参数
-```tsx
-/**
- * @name 按钮形状
- * @default 'default'
- * @param ButtonShape 'default' | 'square' | 'round'
- */
-shape?: ButtonShape;
-```
+
 ### 事件方法
 ```tsx
 /**

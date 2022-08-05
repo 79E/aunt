@@ -3,15 +3,8 @@ import ConfigProviderContext from '../config-provider/config-provider-context';
 import { useNamespace } from '../../hooks';
 import { GridItemProps } from './types';
 
-const defaultProps:GridItemProps = {
-
-};
-
 const GridItem:FunctionComponent<Partial<GridItemProps>> = (props)=>{
-    const { column, row, children, style } = {
-        ...defaultProps,
-        ...props
-    };
+    const { column, row, children, style } = props;
 
     const { prefix } = useContext(ConfigProviderContext);
     const ns = useNamespace('griditem',prefix);
@@ -34,9 +27,5 @@ const GridItem:FunctionComponent<Partial<GridItemProps>> = (props)=>{
         {children}
     </div>;
 };
-
-GridItem.defaultProps = defaultProps;
-GridItem.displayName = 'AuntGridItem';
-
 
 export default GridItem;

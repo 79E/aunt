@@ -3,15 +3,34 @@ export type LoadingType = 'oval' | 'rings' | 'ball' | 'bars' | 'circles' | 'puff
 // 定义接受到的参数 类型
 export interface LoadingProps {
     className?: string;
-    // loading 颜色
+    /**
+     * @name 颜色
+     * @default ''
+     */
     color?: string;
-    // 选择图形
+    /**
+     * @name 选择加载类型
+     * @default 'gap'
+     */
     type: LoadingType;
-    // 大小
+    /**
+     * @name 图标大小
+     * @default ''
+     */
     size?: string | number;
-    // 字体大小
+    /**
+     * @name 字体大小
+     * @default '14px'
+     */
     textSize?: string | number;
-    // 字体颜色
+    /**
+     * @name 字体颜色
+     * @default ''
+     */
     textColor?: string;
+    /**
+     * @name 是否垂直排列图标和文字内容
+     * @default false
+     */
     vertical?: boolean;
 }

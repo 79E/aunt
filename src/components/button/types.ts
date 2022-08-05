@@ -16,38 +16,78 @@ export interface ButtonProps extends BaseTypeProps {
     /**
      * @name 按钮颜色
      * @default ''
-     * @param String
      */
     color?: string;
     /**
      * @name 按钮形状
      * @default 'default'
-     * @param ButtonShape 'default' | 'square' | 'round'
      */
     shape?: ButtonShape;
-    // 镂空
+    /**
+     * @name 镂空状态
+     * @default false
+     */
     plain?: boolean;
-    // 细边
+    /**
+     * @name 细边样式
+     * @default false
+     */
     hairline?: boolean;
-    // 加载
+    /**
+     * @name 加载状态
+     * @default false
+     */
     loading?: boolean;
-    // 加载文案
+    /**
+     * @name 加载文案
+     * @desc 在加载状态是所显示的文案
+     * @default ''
+     */
     loadingText?: string;
+    /**
+     * @name 加载文案大小
+     * @default ''
+     */
     loadingSize?: string | number;
+    /**
+     * @name 加载图标类型
+     * @default ''
+     */
     loadingType?: LoadingType;
-    // 禁用
+    /**
+     * @name 禁用状态
+     * @default false
+     */
     disabled?: boolean;
-    // 类型
+    /**
+     * @name 按钮类型
+     * @default 'default'
+     */
     type?: ButtonType;
-    // 大小
+    /**
+     * @name 按钮大小
+     * @default 'normal'
+     */
     size?: ButtonSize;
-    // 块
+    /**
+     * @name 按钮块元素
+     * @default false
+     */
     block?: boolean;
-    // 图标
+    /**
+     * @name 按钮图标
+     * @default ''
+     */
     icon?: React.ReactElement;
-    // 图标位置
+    /**
+     * @name 按钮图标位置
+     * @default 'left'
+     */
     iconPosition: IconPosition;
-    // 按钮文字
+    /**
+     * @name 按钮文字
+     * @default ''
+     */
     text?: string;
     /**
      * @name 按钮点击事件

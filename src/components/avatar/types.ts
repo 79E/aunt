@@ -1,22 +1,47 @@
 import React from "react";
 import { BaseTypeProps } from '../../utils';
 
-// 定义接受到的参数 类型
 export type ImageFit = 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
 export interface AvatarProps extends BaseTypeProps {
-    // 大小
+    /**
+     * @name 头像大小尺寸
+     * @default 'normal'
+     */
     size?: 'small' | 'normal' | 'large';
-    // 形状
+    /**
+     * @name 头像形状
+     * @default 'square'
+     */
     shape?: 'square' | 'round';
-    // 图片链接
+    /**
+     * @name 头像链接
+     * @default ''
+     */
     url?: string;
-    // 图标
+    /**
+     * @name 图标
+     * @default <AuntIconUser />
+     */
     icon?: React.ReactElement;
-    // 文字颜色
+    /**
+     * @name 文字颜色
+     * @default '#666666'
+     */
     color?: string;
-    // 背景颜色
+    /**
+     * @name 背景颜色
+     * @default '#eeeeee'
+     */
     background?: string;
-    // 图片占位模式
+    /**
+     * @name 图片占位模式
+     * @default 'cover'
+     */
     fit?: ImageFit,
+    /**
+     * @name 头像点击事件
+     * @default () => void
+     * @return void
+     */
     onClick?: () => void
 }

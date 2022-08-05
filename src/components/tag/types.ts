@@ -9,31 +9,53 @@ export interface TagProps extends BaseTypeProps {
     /**
      * @name 标签类型
      * @default 'default'
-     * @param TagType 'default' | 'primary' | 'success' | 'warning' | 'danger'
      */
     type?: TagType;
-    // 图标
+    /**
+     * @name 图标
+     * @default ''
+     */
     icon?: React.ReactElement;
-    // 大小
+    /**
+     * @name 大小
+     * @default 'small'
+     */
     size?: TagSize;
-    // 背景色 和边框色
+    /**
+     * @name 背景色和边框色
+     * @default ''
+     */
     color?: string;
-    // 是否为空心
+    /**
+     * @name 是否为镂空
+     * @default false
+     */
     plain?: boolean;
-    // 是否为圆角
+    /**
+     * @name 是否为圆角
+     * @default false
+     */
     shape?: TagShape;
-    // 文字颜色
+    /**
+     * @name 文字颜色
+     * @default ''
+     */
     textColor?: string;
-    // 是否展示关闭按钮
+    /**
+     * @name 是否展示关闭按钮
+     * @default false
+     */
     closeable?: boolean;
     /**
-     * 点击关闭按钮回调
-     * @en Callback when clicking the close button
+     * @name 点击关闭按钮回调
+     * @param e React.MouseEvent<Element, MouseEvent>
+     * @return void
      */
      onClose?: (e: React.MouseEvent<Element, MouseEvent>) => void;
     /**
-     * 点击标签回调
-     * @en Callback when clicking the tag
+     * @name 点击标签回调
+     * @param e React.MouseEvent<Element, MouseEvent>
+     * @return void
      */
     onClick?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 };

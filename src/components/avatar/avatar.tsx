@@ -30,7 +30,7 @@ export const Avatar:FunctionComponent<Partial<AvatarProps>> = ((props: AvatarPro
             props.className
         ]);
     },[size,shape,fit]);
-
+    
     const varStyles = useMemo(()=>{
         const styles: CSSProperties = {};
         if(color){
