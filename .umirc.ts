@@ -94,10 +94,6 @@ export default defineConfig({
       {
         title: '常见问题',
         path: '/guide/question',
-      },
-      {
-        title: '项目进度',
-        path: '/guide/progress',
       }
     ],
     '/hooks': [
