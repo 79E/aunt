@@ -1,7 +1,7 @@
 import React, { CSSProperties, FunctionComponent, useContext, useMemo } from 'react';
 import ConfigProviderContext from '../config-provider/config-provider-context';
 import { useNamespace } from '../../hooks';
-import { joinTrim } from '../../utils';
+import { isString, joinTrim } from '../../utils';
 import { AuntIconUser } from '../../index';
 import { AvatarProps } from './types';
 
@@ -54,6 +54,9 @@ export const Avatar:FunctionComponent<Partial<AvatarProps>> = ((props: AvatarPro
             />;
         }
         if(props.children){
+            if(isString(props.children)) {
+                return (props.children as string).charAt(0);
+            }
             return props.children;
         }
         return React.cloneElement(icon);

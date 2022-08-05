@@ -27,6 +27,8 @@ export default () => <Avatar />;
 支持三种类型：图片、Icon 以及字符
 
 优先级：图片 => 文本 => Icon(默认`<AuntIconUser />`)
+
+**字符类型会默认截取第一位**
 ```tsx
 <Avatar></Avatar>
 <Avatar icon={<AuntIconMeh />}></Avatar>
