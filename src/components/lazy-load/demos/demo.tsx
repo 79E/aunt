@@ -21,7 +21,9 @@ function Demo (){
                 {
                     imageList.map(
                         (img) => (
-                            <Image lazyload radius={10} src={img} key={img} />
+                            <div key={img} style={{height:220}}>
+                                <Image lazyload radius={10} src={img} />
+                            </div>
                         )   
                     )
                 }
