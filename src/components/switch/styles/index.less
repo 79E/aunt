@@ -1,0 +1,76 @@
+@class-prefix: ~'aunt';
+:root {
+    --aunt-switch-width: 2em;
+    --aunt-switch-height: 1em;
+    --aunt-switch-size: calc(30 * var(--aunt-hd));
+    --aunt-switch-padding: calc(var(--aunt-padding-base) / 2);
+    --aunt-switch-disabled-opacity: var(--aunt-disabled-opacity);
+    --aunt-switch-background-color: rgba(120, 120, 128, .16);
+    --aunt-switch-checked-background-color: var(--aunt-brand-color);
+    --aunt-switch-border-radius-round: var(--aunt-border-radius-max);
+    --aunt-switch-border-radius-square: var(--aunt-border-radius-md);
+    --aunt-switch-transition-duration: var(--aunt-animation-duration-base);
+    --aunt-switch-node-background-color: var(--aunt-color-white);
+    --aunt-switch-node-size: 1em;
+    --aunt-switch-node-box-shadow: 0 calc(3 * var(--aunt-hd)) calc(1 * var(--aunt-hd)) 0 rgba(0, 0, 0, 0.05),
+    0 calc(2 * var(--aunt-hd)) calc(2 * var(--aunt-hd)) 0 rgba(0, 0, 0, 0.1), 0 calc(3 * var(--aunt-hd)) calc(3 * var(--aunt-hd)) 0 rgba(0, 0, 0, 0.05);
+
+}
+
+.@{class-prefix}-switch {
+    position: relative;
+    display: inline-block;
+    box-sizing: content-box;
+    width: var(--aunt-switch-width);
+    height: var(--aunt-switch-height);
+    font-size: var(--aunt-switch-size);
+    background-color: var(--aunt-switch-background-color);
+    padding: var(--aunt-switch-padding);
+    cursor: pointer;
+    transition: background-color var(--aunt-switch-transition-duration);
+
+    &__node {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: var(--aunt-switch-node-size);
+        height: var(--aunt-switch-node-size);
+        background-color: var(--aunt-switch-node-background-color);
+        box-shadow: var(--aunt-switch-node-box-shadow);
+        transition: transform var(--aunt-switch-transition-duration) cubic-bezier(0.3, 1.05, 0.4, 1.05);
+    }
+
+    &__loading {
+        position: absolute;
+        color: var(--aunt-switch-background-color);
+    }
+
+    &--checked{
+        background-color: var(--aunt-switch-checked-background-color);
+
+        .@{class-prefix}-switch__node {
+            transform: translateX(calc(2em - 1em));
+        }
+        .@{class-prefix}-switch__loading {
+            color: var(--aunt-switch-checked-background-color);
+        }
+    }
+    &--shape{
+        &-round{
+            border-radius: var(--aunt-switch-border-radius-round);
+            .@{class-prefix}-switch__node{
+                border-radius: var(--aunt-switch-border-radius-round);
+            }
+        }
+        &-square{
+            border-radius: var(--aunt-switch-border-radius-square);
+            .@{class-prefix}-switch__node{
+                border-radius: var(--aunt-switch-border-radius-square);
+            }
+        }
+    }
+    &--disabled{
+        cursor: not-allowed;
+        opacity: var(--aunt-switch-disabled-opacity);
+    }
+}

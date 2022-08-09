@@ -121,10 +121,10 @@ export default defineConfig({
         title: '基础组件',
         children: ['components/button','components/icon','components/typography','components/image'],
       },
-      // {
-      //   title: '表单组件',
-      //   children: [],
-      // },
+      {
+        title: '表单组件',
+        children: ['components/switch'],
+      },
       {
         title: '反馈组件',
         children: ['components/loading'],

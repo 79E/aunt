@@ -18,6 +18,7 @@ export * from './components/count-down';
 export * from './components/tag';
 export * from './components/transition';
 export * from './components/badge';
+export * from './components/switch';
 
 
 
