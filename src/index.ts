@@ -19,6 +19,7 @@ export * from './components/tag';
 export * from './components/transition';
 export * from './components/badge';
 export * from './components/switch';
+export * from './components/card';
 
 
 

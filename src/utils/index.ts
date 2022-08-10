@@ -4,3 +4,4 @@ export * from './validate/number';
 export * from './validate/string';
 export * from './base';
 export * from './interface';
+export * from './constant';
