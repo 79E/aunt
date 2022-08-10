@@ -2,7 +2,11 @@ import './styles/index.less';
 import _Card, { CardHeader, CardBody, CardFooter, CardCover } from './card';
 
 export type {
-    CardProps
+    CardProps,
+    CardBodyProps,
+    CardCoverProps,
+    CardFooterProps,
+    CardHeaderProps
 } from './types';
 
 const Card = Object.assign(_Card, {
