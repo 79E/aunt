@@ -22,7 +22,7 @@ const [ isIn, setIsin ] = useState(false);
 <Button onClick={()=>{setIsin(!isIn)}}>显示或隐藏</Button>
 
 <Transition type="fade" in={isin} timeout={500}>
-    <div className="demo-card"></div>
+    <div className="demo-transition__card"></div>
 </Transition>
 ```
 
@@ -32,14 +32,12 @@ const [ isIn, setIsin ] = useState(false);
 以上面的演示代码为例，Less样式代码为：
 ```less
 // 内容样式
-.demo{
-    &-card{
-        width: 100px; 
-        height: 100px;
-        margin: 10px 0;
-        border-radius:10px;
-        background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-    }
+.demo-transition__card{
+    width: 100px; 
+    height: 100px;
+    margin: 10px 0;
+    border-radius:10px;
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 
 // 动画样式

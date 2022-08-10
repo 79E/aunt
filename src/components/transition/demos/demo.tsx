@@ -6,11 +6,11 @@ import './index.less';
 function Demo (){
     const [ isIn, setIsin ] = useState(false);
 
-    return <div className="demo">
+    return <div className="demo-transition">
         <DemoBlock title="动画使用">
             <Button onClick={()=>{setIsin(!isIn);}}>显示或隐藏</Button>
             <Transition type="fade" in={isIn} timeout={500}>
-                <div className="demo-card"></div>
+                <div className="demo-transition__card"></div>
             </Transition>
         </DemoBlock>
     </div>;
