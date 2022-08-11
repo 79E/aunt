@@ -1,6 +1,16 @@
 @import (reference) '../style/variables.less';
 
-.@{prefix}-mobile-previewer{
+
+.markdown{
+  .@{prefix}-code-block{
+    border-radius: 10px;
+    .token-line{
+      line-height: 2;
+    }
+  }
+}
+
+.@{prefix}-previewer--hidden{
   position: absolute;
   z-index: 1;
   opacity: 0;
@@ -9,28 +19,33 @@
   overflow: hidden;
 }
 
+.__dumi-default-previewer {
+  border-radius: 8px;
+}
+
+.@{prefix}-previewer-demo {
+  display: none;
+}
+.@{prefix}-previewer-actions button[role='source'] {
+  display: none;
+  width: 0;
+  margin-right: -8px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 @media @v-device-show {
+  
   .@{prefix}-mobile-previewer {
     
     &[data-inactive] {
       cursor: pointer;
     }
 
-    .@{prefix}-previewer-demo {
-      display: none;
-    }
-
     .@{prefix}-previewer-desc,
     .@{prefix}-previewer-desc:not([data-title]) + .@{prefix}-previewer-actions {
       border-top: none;
-    }
-
-    .@{prefix}-previewer-actions button[role='source'] {
-      width: 0;
-      margin-right: -8px;
-      overflow: hidden;
-      opacity: 0;
-      pointer-events: none;
     }
 
     + & {
