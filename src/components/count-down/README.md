@@ -1,4 +1,5 @@
 # CountDown 倒计时
+<code hidden="hidden" src="./demos/demo.tsx"></code>
 
 ## 介绍
 用于实时展示倒计时数值，支持毫秒精度。
@@ -77,12 +78,12 @@ const ref = useRef<CountDownInstance>(null);
 
 ## 参数
 
-| 参数        | 说明                 |     默认值         |  类型      |
+| 参数        | 说明                 |       类型      |默认值         |
 | ----------- | -------------------- | ------------------ | ---------- |
-| time        | 倒计时时长，单位毫秒  | `0`        | `number \| string` |
-| format      | 时间格式             | `HH:mm:ss` | `string`          | 
-| autoStart   | 是否自动开始倒计时   | `true`     | `boolean`          | 
-| millisecond | 是否开启毫秒级渲染   | `false`    | `boolean`          | 
+| time        | 倒计时时长，单位毫秒  | `number \| string` |`0`        | 
+| format      | 时间格式             |  `string`          | `HH:mm:ss` |
+| autoStart   | 是否自动开始倒计时   | `boolean`          |  `true`     |
+| millisecond | 是否开启毫秒级渲染   |  `boolean`          | `false`    |
 
 ### format 格式
 | 格式 | 说明         |
@@ -97,10 +98,10 @@ const ref = useRef<CountDownInstance>(null);
 
 ## 事件
 
-| 事件名   | 说明             | 默认值 | 类型                        |
+| 事件名   | 说明             |  类型                        |默认值 |
 | -------- | ---------------- | ------ | --------------------------- |
-| onFinish | 倒计时结束时触发 | `-`    | `-`                         |
-| onChange | 倒计时变化时触发 | `-`    | ` currentTime: CurrentTime` |
+| onFinish | 倒计时结束时触发 |  `-`                         |`-`    | 
+| onChange | 倒计时变化时触发 | ` currentTime: CurrentTime` |`-`    | 
 
 ### CurrentTime 格式
 
@@ -118,7 +119,7 @@ const ref = useRef<CountDownInstance>(null);
 通过 ref 可以获取到 CountDown 实例并调用实例方法
 
 | 方法名 | 说明                                                         | 参数 | 返回值 |
-| :----- | :----------------------------------------------------------- | :--- | :----- |
+| ----- | ----------------------------------------------------------- | --- | ----- |
 | start  | 开始倒计时                                                   | -    | -      |
 | pause  | 暂停倒计时                                                   | -    | -      |
 | reset  | 重设倒计时，若 `autoStart` 为 `true`，重设后会自动开始倒计时 | -    | -      |
@@ -147,7 +148,7 @@ countDownRef.current?.start();
 组件提供了下列 CSS 变量，可用于自定义样式。
 
 | 名称                          | 说明 | 默认值    | 
-| :---------------------------- | :-------- | :--- |
+| ---------------------------- | -------- | --- |
 | --aunt-count-down-text-color  | 文字颜色    |`var(--aunt-text-color)` | 
 | --aunt-count-down-font-size   | 文字大小   |`var(--aunt-font-size-md)` | 
 | --aunt-count-down-line-height | 文字行高   |`var(--aunt-line-height-md)` | 
@@ -159,6 +160,3 @@ countDownRef.current?.start();
 如果你遇到了在 iOS 上倒计时不生效的问题，请确认在创建 Date 对象时没有使用`new Date('2020-01-01')`这样的写法，iOS 不支持以中划线分隔的日期格式，正确写法是`new Date('2020/01/01')`。
 
 对此问题的详细解释：[stackoverflow](https://stackoverflow.com/questions/13363673/javascript-date-is-invalid-on-ios)。
-
-
-<code hidden="hidden" src="./demos/demo.tsx"></code>

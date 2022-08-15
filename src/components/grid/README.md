@@ -1,4 +1,5 @@
 # Grid 栅格 
+<code hidden="hidden" src="./demos/demo.tsx"></code>
 
 ## 介绍
 用于业务中多个子功能的导航，在具有推荐性质较强的页面中作为功能入口使用。
@@ -83,16 +84,15 @@ export default () =>(
 
 ## 参数
 ### Grid
-| 参数 | 说明 | 默认值 | 类型 |
+| 参数 | 说明 |  类型 |默认值 |
 | ---- | ---- | ---- | ------ |
-| gap | 格子之间的间隔  |   `0`   |    `number \| string \| [number \| string, number \| string]`    |
-| column | 列数 | `4` |  `number`  |
-| row | 行数 | `-`  | `number` |  
+| gap | 格子之间的间隔  |      `number \| string \| [number \| string, number \| string]`    |`0`   | 
+| column | 列数 |   `number`  |`4` |
+| row | 行数 |`number` |   `-`  | 
 
 ### Grid.item
-| 参数 | 说明 | 默认值 | 类型 |
+| 参数 | 说明 |  类型 |默认值 |
 | ---- | ---- | ---- | ------ |
-| column |   横向跨度  |   `-`   |    `number`    |
-| row | 竖向跨度 | `-` |  `number`  |
+| column |   横向跨度  |       `number`    |`-`   |
+| row | 竖向跨度 |   `number`  |`-`   |
 
-<code hidden="hidden" src="./demos/demo.tsx"></code>

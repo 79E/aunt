@@ -1,4 +1,5 @@
 # Button 按钮
+<code hidden="hidden" src="./demos/demo.tsx"></code>
 
 ## 介绍
 按钮用于触发一个操作，如提交表单。
@@ -98,21 +99,21 @@ export default () => <Button>默认按钮</Button>;
 
 ## 参数
 
-| 参数 | 说明 | 默认值 | 类型 |
+| 参数 | 说明 |  类型 |默认值 |
 | ---- | ---- | ---- | ------ |
-| type |   统一设置按钮类型   |   `default`   |    `'default'\|'primary'\|'success'\|'warning'\|'danger'`    |
-| size | 统一设置按钮尺寸 | `normal` |  ` 'large'\|'normal'\|'small'\|'mini' `  |
-| block | 是否是块级元素 | `false`  | `boolean` |  
-| color | 按钮颜色，支持传入 linear-gradient 渐变色 |  `-`   | `string`  |
-| disabled | 是否禁用 |  `false`  | `boolean` |
-| shape | 按钮的形状 | `default` | `'default' \| 'square' \| 'round'` |
-| plain | 是否为朴素按钮 |  `false`  | `boolean` |
-| hairline | 是否使用 0.5px 边框	 |  `false`  | `boolean` |
+| type |   统一设置按钮类型   |       `'default'\|'primary'\|'success'\|'warning'\|'danger'`    |`default`   |
+| size | 统一设置按钮尺寸 |   ` 'large'\|'normal'\|'small'\|'mini' `  |`normal` |
+| block | 是否是块级元素 |  `boolean` |  `false`  |
+| color | 按钮颜色，支持传入 linear-gradient 渐变色 |    `string`  |`-`  |
+| disabled | 是否禁用 |  `boolean` | `false`  |
+| shape | 按钮的形状 |  `'default' \| 'square' \| 'round'` |`default` |
+| plain | 是否为朴素按钮 |   `boolean` |`false`  |
+| hairline | 是否使用 0.5px 边框	 |   `boolean` |`false`  |
 
 ## 事件
-| 事件名 | 说明 | 默认值 | 类型 |
+| 事件名 | 说明 |  类型 |默认值 |
 | ---- | ---- | ---- | ------ |
-|onClick|点击图标时触发| `-` | `(event:React.MouseEvent<HTMLButtonElement, MouseEvent>) => void \| Promise<void> ` |
+|onClick|点击图标时触发|  `(event:React.MouseEvent<HTMLButtonElement, MouseEvent>) => void \| Promise<void> ` |`-` |
 
 ## 样式变量
 F12打开控制台（检查）选择 `Elements` 的样式即可看到 root 全局样式变量 
@@ -138,4 +139,3 @@ F12打开控制台（检查）选择 `Elements` 的样式即可看到 root 全�
 |--aunt-button-text-warning-color|文字颜色| `var(--aunt-danger-color);` |
 
 
-<code hidden="hidden" src="./demos/demo.tsx"></code>

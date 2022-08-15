@@ -1,4 +1,5 @@
 # Switch 开关
+<code hidden="hidden" src="./demos/demo.tsx"></code>
 
 ## 介绍
 用于在打开和关闭状态之间进行切换。
@@ -74,25 +75,25 @@ const [loading, setLoading] = useState(false);
 
 
 ## 参数
-| 参数 | 说明 | 默认值 | 类型 |
+| 参数 | 说明 |  类型 |默认值 |
 | ---- | ---- | ---- | ------ |
-| checked |   开关状态   |   `-`   |    `boolean`    |
-| defaultChecked | 默认开关状态 |  `-`   | `boolean`  |
-| size |   设置开关尺寸   |   `-`   |    `number \| string`    |
-| loading | 加载状态 | `false` |  `boolean`  |
-| disabled | 禁用状态 | `false`  | `boolean` |  
-| shape | 设置开关形状 | `round` |  ` 'square' \| 'round' `  |
-| activeColor | 打开时的背景色 | `-` | `string` |
-| inactiveColor | 关闭时的背景色 | `-` | `string` |
-| activeValue | 打开时对应的值 | `-` | `any` |
-| inactiveValue | 关闭时对应的值 | `-` | `any` |
+| checked |   开关状态   | `boolean`    |`-`   |
+| defaultChecked | 默认开关状态 |  `boolean`  |`-`   |
+| size |   设置开关尺寸   | `number \| string`    |`-`   |
+| loading | 加载状态 |   `boolean`  |`false` |
+| disabled | 禁用状态 |  `boolean` |  `false` |
+| shape | 设置开关形状 |   ` 'square' \| 'round' `  |`round` |
+| activeColor | 打开时的背景色 |  `string` |`-` |
+| inactiveColor | 关闭时的背景色 | `string` |`-` |
+| activeValue | 打开时对应的值 | `any` |`-` |
+| inactiveValue | 关闭时对应的值 | `any` |`-` |
 
 ## 事件
 设置 `onClick` 后 `onChange` 将失效。
-| 事件名 | 说明 | 默认值 | 类型 |
+| 事件名 | 说明 |  类型 |默认值 |
 | ---- | ---- | ---- | ------ |
-|onClick|点击开关时候触发| `-` | `(e: React.MouseEvent) => void` |
-|onChange|开关状态切换时触发| `-` | `(val: any) => void` |
+|onClick|点击开关时候触发|  `(e: React.MouseEvent) => void` |`-` |
+|onChange|开关状态切换时触发|  `(val: any) => void` |`-` |
 
 ## 样式变量
 | 属性名 | 说明 | 默认值 |
@@ -117,9 +118,3 @@ const [loading, setLoading] = useState(false);
     0 calc(2 * var(--aunt-hd)) calc(2 * var(--aunt-hd)) 0 rgba(0, 0, 0, 0.1), 
     0 calc(3 * var(--aunt-hd)) calc(3 * var(--aunt-hd)) 0 rgba(0, 0, 0, 0.05);
 ```
-
-
-
-
-
-<code hidden="hidden" src="./demos/demo.tsx"></code>

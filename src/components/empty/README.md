@@ -1,4 +1,5 @@
 # Empty 空状态
+<code hidden="hidden" src="./demos/demo.tsx"></code>
 
 ## 介绍
 用于于信息为空时的占位提示。
@@ -47,10 +48,10 @@ export default () => <Empty />;
 
 
 ## 参数
-| 参数 | 说明 | 默认值 | 类型 |
+| 参数 | 说明 |  类型 |默认值 |
 | ---- | ---- | ---- | ------ |
-| image |图片类型，可选值为 error network search，支持传入图片 URL|`default`|    `'string'\|'ReactNode'`|
-| description | 图片下方的描述文字 | `-` |  `'string'\|'ReactNode'` |
+| image |图片类型，可选值为 error network search，支持传入图片 URL|    `'string'\|'ReactNode'`|`default`|
+| description | 图片下方的描述文字 |   `'string'\|'ReactNode'` |`-` |
 
 ## 样式变量
 | 属性名 | 说明 | 默认值 |
@@ -63,8 +64,3 @@ export default () => <Empty />;
 | --aunt-empty-description-padding | 描述文字内边距 | `0 60px` |
 | --aunt-empty-description-margin-top | 描述文字距上外边距 | `var(--aunt-padding-md)` |
 | --aunt-empty-bottom-margin-top | 底部内容距上外边距 | `var(--aunt-padding-md)` |
-
-
-
-
-<code hidden="hidden" src="./demos/demo.tsx"></code>

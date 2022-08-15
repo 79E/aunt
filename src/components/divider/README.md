@@ -1,4 +1,5 @@
 # Divider 分割线 
+<code hidden="hidden" src="./demos/demo.tsx"></code>
 
 ## 介绍
 区隔内容的分割线。
@@ -42,12 +43,12 @@ export default () => <Divider />;
 ```
 
 ## 参数
-| 参数 | 说明 | 默认值 | 类型 |
+| 参数 | 说明 |  类型 |默认值 |
 | ---- | ---- | ---- | ------ |
-| direction |   设置分割线方向   |   `horizontal`   |    ` 'horizontal' \| 'vertical' `    |
-| contentPosition | 设置内容位置 | `center` |  ` 'left'\|'right'\|'center' ` |
-| dashed | 设置分割线为虚线 | `false`  | `boolean` |  
-| hairline | 设置分割线为0.5px | `false`  | `boolean` |  
+| direction |   设置分割线方向   | ` 'horizontal' \| 'vertical' `    |`horizontal`   |
+| contentPosition | 设置内容位置 |   ` 'left'\|'right'\|'center' ` |`center` |
+| dashed | 设置分割线为虚线 |  | `boolean` |  `false` 
+| hairline | 设置分割线为0.5px |  | `boolean` |  `false` 
 
 ## 样式变量
 | 属性名 | 说明 | 默认值 |
@@ -61,4 +62,3 @@ export default () => <Divider />;
 | --aunt-divider-content-right-width | 内容位置边距 | `10%` |
 
 
-<code hidden="hidden" src="./demos/demo.tsx"></code>

@@ -1,8 +1,5 @@
----
-mobile: true
----
-
 # Icon 图标
+<code  src="./demos/demo.tsx" hidden >
 
 ## 介绍
 语义化的矢量图形(SVG)
@@ -16,8 +13,6 @@ export default () => <AuntIconActivity />;
 ```
 > 主流的构建工具会自动做 Tree-Shaking，所以最终被打包进来的只有你用到的那些图标，不必担心包体积问题。
 >
-
-
 
 <code src="./demos/demo-all.tsx" inline >
 
@@ -44,19 +39,14 @@ Icon 的 rotate 属性用来设置图标旋转的角度。
 ```
 
 ## 参数
-| 参数 | 说明 | 默认值 | 类型 |
+| 参数 | 说明 |  类型 |默认值 |
 | ---- | ---- | ---- | ------ |
-| color| 修改svg的颜色 |   `inherit`   |    `string`    |
-| size | 图标大小，如  20px 2em | `inherit` | `number \| string` |
-| spin | 是否开启旋转动画 | `false` | `boolean` |
-| rotate | 图标旋转角度 | `-` | `number` |
+| color| 修改svg的颜色 |       `string`    |`inherit`   |
+| size | 图标大小，如  20px 2em |  `number \| string` |`inherit` |
+| spin | 是否开启旋转动画 | `boolean` |`false` | 
+| rotate | 图标旋转角度 |  `number` |`-` |
 
 ## 事件
-| 事件名 | 说明 | 默认值 | 类型 |
+| 事件名 | 说明 |  类型 |默认值 |
 | ---- | ---- | ---- | ------ |
-|onClick|点击图标时触发| `-` | `() => void` |
-
-
-
-<code  src="./demos/demo.tsx" hidden >
-<!-- <API src="./index.ts"></API> -->
+|onClick|点击图标时触发|  `() => void` |`-` |

@@ -1,4 +1,5 @@
 # Badge 徽标 
+<code hidden="hidden" src="./demos/demo.tsx"></code>
 
 ## 介绍
 在右上角展示数字、文字、小红点。
@@ -100,16 +101,16 @@ const [visible,setVisible] = useState(true);
 
 ## 参数
 
-| 参数 | 说明 | 默认值 | 类型 |
+| 参数 | 说明 |  类型 |默认值 |
 | ---- | ---- | ---- | ------ |
-| content |   徽标内容   |   `-`   |    `string \| number \| React.ReactNode`    |
-| visible | 显示或隐藏状态 | `true` |  `boolean`  |
-| timeout | 动画时间（毫秒） | `300`  | `number \| { appear?: number; enter?: number; exit?: number; }lean` |  
-| dot | 显示为一个小红点 |  `false`  | `boolean` |
-| maxCount | 最大完整展示数字，超出后将展示 + | `99` | `number` |
-| bordered | 是否有白色边框 |  `false`  | `boolean` |
-| color | 徽标背景颜色	 |  `-`  | `string` |
-| offset | 徽标位置偏移量	 |  `-`  | `[number \| string, number \| string]` |
+| content |   徽标内容   |       `string \| number \| React.ReactNode`    |`-`   |
+| visible | 显示或隐藏状态 |   `boolean`  |`true` |
+| timeout | 动画时间（毫秒） |  `number \| { appear?: number; enter?: number; exit?: number; }lean` |  `300`  |
+| dot | 显示为一个小红点 |   `boolean` |`false`  |
+| maxCount | 最大完整展示数字，超出后将展示 + | `number` |`99` | 
+| bordered | 是否有白色边框 |  `boolean` | `false`  |
+| color | 徽标背景颜色	 |   `string` |`-`  |
+| offset | 徽标位置偏移量	 |  `[number \| string, number \| string]` |`-`  | 
 
 ## 样式变量
 | 属性名 | 说明 | 默认值 |
@@ -126,4 +127,3 @@ const [visible,setVisible] = useState(true);
 |--aunt-badge-dot-color|圆点背景颜色| `var(--aunt-red);` |
 
 
-<code hidden="hidden" src="./demos/demo.tsx"></code>

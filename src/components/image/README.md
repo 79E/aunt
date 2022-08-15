@@ -1,4 +1,5 @@
 # Image 图片
+<code hidden="hidden" src="./demos/demo.tsx"></code>
 
 ## 介绍
 增强版的 img 标签，提供多种图片填充模式，支持图片懒加载、加载中提示、加载失败提示。
@@ -66,19 +67,19 @@ Image 组件提供了默认的加载失败提示，支持通过 errorIcon 自定
 
 | 参数        | 说明                      | 类型                      | 默认值 |
 | ----------- | ------------------------- | ------------------------- | -------- |
-| src         | 图片链接                  | `string`                  |- |
-| fit         | 图片填充模式              | `string`                  |-|
-| alt         | 替代文本                  | `string`                  |- |
-| width       | 宽度，默认单位为 `px`     | `number\|string`          |- |
-| height      | 高度，默认单位为 `px`     | `number\|string`          |- |
-| radius      | 圆角大小，默认单位为 `px` | `number\|string`          |-|
+| src         | 图片链接                  | `string`                  |`-` |
+| fit         | 图片填充模式              | `string`                  |`-`|
+| alt         | 替代文本                  | `string`                  |`-` |
+| width       | 宽度，默认单位为 `px`     | `number\|string`          |`-` |
+| height      | 高度，默认单位为 `px`     | `number\|string`          |`-` |
+| radius      | 圆角大小，默认单位为 `px` | `number\|string`          |`-`|
 | round       | 是否显示为圆形            | `boolean`                 |`false` |
 | lazyload    | 是否开启懒加载            | `boolean\|Lazyload Props` |`false` |
-| showError   | 是否展示图片加载失败提示  | `boolean`                 |- |
-| showLoading | 是否展示图片加载中提示    | `boolean`                 |- |
-| errorIcon   | 失败时提示的图标          | `ReactNode`               |- |
-| loadingIcon | 加载时提示的图标          | `ReactNode`               |- |
-| iconSize    | 加载图标和失败图标的大小  | `number\|string`          |- |
+| showError   | 是否展示图片加载失败提示  | `boolean`                 |`-` |
+| showLoading | 是否展示图片加载中提示    | `boolean`                 |`-` |
+| errorIcon   | 失败时提示的图标          | `ReactNode`               |`-` |
+| loadingIcon | 加载时提示的图标          | `ReactNode`               |`-` |
+| iconSize    | 加载图标和失败图标的大小  | `number\|string`          |`-` |
 
 ## 图片填充模式
 
@@ -114,4 +115,3 @@ Image 组件提供了默认的加载失败提示，支持通过 errorIcon 自定
 
 
 
-<code hidden="hidden" src="./demos/demo.tsx"></code>

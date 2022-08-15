@@ -1,4 +1,5 @@
 # Avatar 头像
+<code hidden="hidden" src="./demos/demo.tsx"></code>
 
 ## 介绍
 用来代表用户或事物，支持图片、图标或字符展示。
@@ -52,19 +53,19 @@ export default () => <Avatar />;
 ```
 
 ## 参数
-| 参数 | 说明 | 默认值 | 类型 |
+| 参数 | 说明 |  类型 |默认值 |
 | ---- | ---- | ---- | ------ |
-| size |   设置头像尺寸   |   `normal`   |    `'small' \| 'normal' \| 'large'`    |
-| shape | 设置头像形状 | `square` |  ` 'square'\|'round' `  |
-| url | 头像图片链接 | `-`  | `string` |  
-| color | 文本或图标颜色 |  `#666666`   | `string`  |
-| background | 头像背景颜色 |  `#dddddd`  | `string` |
-| fit | 图片填充模式 | `cover` | `'contain' \| 'cover' \| 'fill' \| 'none' \| 'scale-down'` |
+| size |   设置头像尺寸   |       `'small' \| 'normal' \| 'large'`    |`normal`   |
+| shape | 设置头像形状 |  ` 'square'\|'round' `  |`square` | 
+| url | 头像图片链接 | `string` |  `-`  | 
+| color | 文本或图标颜色 |   `string`  |`#666666`   |
+| background | 头像背景颜色 |   `string` |`#dddddd`  |
+| fit | 图片填充模式 | `'contain' \| 'cover' \| 'fill' \| 'none' \| 'scale-down'` |`cover` | 
 
 ## 事件
-| 事件名 | 说明 | 默认值 | 类型 |
+| 事件名 | 说明 |  类型 |默认值 |
 | ---- | ---- | ---- | ------ |
-|onClick|点击头像时触发| `-` | `() => void` |
+|onClick|点击头像时触发|  `() => void` |`-` |
 
 ## 样式变量
 | 属性名 | 说明 | 默认值 |
@@ -75,4 +76,3 @@ export default () => <Avatar />;
 | --aunt-avatar-shape-square | square形状的radius大小 | `var(--aunt-border-radius-md)` |
 
 
-<code hidden="hidden" src="./demos/demo.tsx"></code>

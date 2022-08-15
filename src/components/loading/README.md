@@ -1,4 +1,5 @@
 # Loading 加载
+<code src="./demos/demo.tsx" hidden></code>
 
 ## 介绍
 加载图标，用于表示加载中的过渡状态。
@@ -68,13 +69,12 @@ export default () => <Loading />;
 
 ## 参数
 
-| 参数 | 说明 | 默认值 | 类型 |
+| 参数 | 说明 |  类型 |默认值 |
 | ---- | ---- | ---- | ------ |
-| type |   统一设置按钮类型   |   `gap`   |    `'oval'\|'rings'\|'spinning'\|'three'\|'ball'\|'bars'\| 'circles'\|'gap'\|'puff'`    |
-| size | 加载图标大小，默认单位为px | `30px` |  ` number \| string `  |
-| color | 颜色 |  `-`   | `string`  |
-| textSize | 文字大小，默认单位为px | `14px` | `number \| string` |
-| textColor | 	文字颜色 |  `#4e5969`  | `string` |
-| vertical | 是否垂直排列图标和文字内容	 |  `false`  | `boolean` |
+| type |   统一设置按钮类型   |       `'oval'\|'rings'\|'spinning'\|'three'\|'ball'\|'bars'\| 'circles'\|'gap'\|'puff'`    |`gap`   |
+| size | 加载图标大小，默认单位为px |   ` number \| string `  |`30px` |
+| color | 颜色 |  `string`  |`-`   | 
+| textSize | 文字大小，默认单位为px | `number \| string` |`14px` | 
+| textColor | 	文字颜色 |  `string` |`#4e5969`  | 
+| vertical | 是否垂直排列图标和文字内容	 |   `boolean` |`false`  |
 
-<code src="./demos/demo.tsx" hidden></code>

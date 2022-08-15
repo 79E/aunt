@@ -1,4 +1,5 @@
 # ConfigProvider 配置
+<code hidden="hidden" src="./demos/demo.tsx"></code>
 
 ## 介绍
 
@@ -183,10 +184,9 @@ React Aunt 中的 CSS 变量分为 基础变量 和 组件变量。组件变量�
 
 
 ## 参数
-| 参数 | 说明 | 默认值 | 类型 |
+| 参数 | 说明 |  类型 |默认值 |
 | ---- | ---- | ---- | ------ |
-| theme | 自定义主题变量 |   `-`   |    `object`    |
-| locale | 自定义语言 | `zhCN` | `object` |
-| tag | ConfigProdiver对应的 HTML 节点标签名 | `div` | `string` |
+| theme | 自定义主题变量 |     `object`    |`-`   |  
+| locale | 自定义语言 | `object` |`zhCN` | 
+| tag | ConfigProdiver对应的 HTML 节点标签名 |  `string` |`div` |
 
-<code hidden="hidden" src="./demos/demo.tsx"></code>

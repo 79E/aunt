@@ -1,4 +1,5 @@
 # Card 卡片 
+<code hidden="hidden" src="./demos/demo.tsx"></code>
 
 ## 介绍
 最基础的卡片容器，可承载文字、列表、图片、段落等，便于用户浏览内容。
@@ -142,48 +143,48 @@ export default () => {
 ### Card Props
 
 | 参数      | 说明         | 类型                      | 默认值  |
-| :-------- | :----------- | :------------------------ | :------ |
+| -------- | ----------- | ------------------------ | ------ |
 | round     | 开启圆角     | `boolean`                 | `false` |
 | border    | 显示边框     | `boolean`                 | `false` |
-| className | css 类名     | `string`                  | -       |
-| style     | css 样式     | `CSSProperties`           | -       |
-| onClick   | 卡片点击事件 | `(e: MouseEvent) => void` | -       |
+| className | css 类名     | `string`                  | `-`       |
+| style     | css 样式     | `CSSProperties`           | `-`       |
+| onClick   | 卡片点击事件 | `(e: MouseEvent) => void` | `-`       |
 
 ### Card.Header Props
 
 | 参数      | 说明           | 类型                      | 默认值 |
-| :-------- | :------------- | :------------------------ | :----- |
-| extra     | 右侧内容       | `ReactNode`               | -      |
-| border    | 是否显示下边框 | `boolean`                 | -      |
-| className | css 类名       | `string`                  | -      |
-| style     | css 样式       | `CSSProperties`           | -      |
-| onClick   | 点击事件       | `(e: MouseEvent) => void` | -      |
+| -------- | ------------- | ------------------------ | ----- |
+| extra     | 右侧内容       | `ReactNode`               | `-`      |
+| border    | 是否显示下边框 | `boolean`                 | `-`      |
+| className | css 类名       | `string`                  | `-`      |
+| style     | css 样式       | `CSSProperties`           | `-`      |
+| onClick   | 点击事件       | `(e: MouseEvent) => void` | `-`      |
 
 ### Card.Body Props
 
 | 参数      | 说明     | 类型                      | 默认值 |
-| :-------- | :------- | :------------------------ | :----- |
-| className | css 类名 | `string`                  | -      |
-| style     | css 样式 | `CSSProperties`           | -      |
-| onClick   | 点击事件 | `(e: MouseEvent) => void` | -      |
+| -------- | ------- | ------------------------ | ----- |
+| className | css 类名 | `string`                  | `-`      |
+| style     | css 样式 | `CSSProperties`           | `-`      |
+| onClick   | 点击事件 | `(e: MouseEvent) => void` | `-`      |
 
 ### Card.Footer Props
 
 | 参数      | 说明           | 类型                      | 默认值 |
-| :-------- | :------------- | :------------------------ | :----- |
-| border    | 是否显示下边框 | `boolean`                 | -      |
-| compact   | 不需要内边距   | `boolean`                 | -      |
-| className | css 类名       | `string`                  | -      |
-| style     | css 样式       | `CSSProperties`           | -      |
-| onClick   | 点击事件       | `(e: MouseEvent) => void` | -      |
+| -------- | ------------- | ------------------------ | ----- |
+| border    | 是否显示下边框 | `boolean`                 | `-`      |
+| compact   | 不需要内边距   | `boolean`                 | `-`      |
+| className | css 类名       | `string`                  | `-`      |
+| style     | css 样式       | `CSSProperties`           | `-`      |
+| onClick   | 点击事件       | `(e: MouseEvent) => void` | `-`      |
 
 ### Card.Cover Props
 
 | 参数      | 说明     | 类型                      | 默认值 |
 | -------- | ------- | ------------------------ | ----- |
-| className | css 类名 | `string`                  | -      |
-| style     | css 样式 | `CSSProperties`           | -      |
-| onClick   | 点击事件 | `(e: MouseEvent) => void` | -      |
+| className | css 类名 | `string`                  | `-`      |
+| style     | css 样式 | `CSSProperties`           | `-`      |
+| onClick   | 点击事件 | `(e: MouseEvent) => void` | `-`      |
 
 ## 样式变量
 
@@ -202,4 +203,3 @@ export default () => {
 | --rv-card-footer-padding   | -    |`var(--aunt-padding-sm) var(--aunt-padding-md)` | 
 
 
-<code hidden="hidden" src="./demos/demo.tsx"></code>

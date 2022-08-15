@@ -1,4 +1,5 @@
 # Transition 动画过渡
+<code hidden src="./demos/demo.tsx" ></code>
 
 ## 介绍
 `react-transition-group` 是 React 官方实现的，用于操作过渡效果的组件库。
@@ -80,26 +81,23 @@ const [ isIn, setIsin ] = useState(false);
 ## 参数
 > 其他更多参数请参考 [react-transition-group](https://reactcommunity.org/react-transition-group/transition)
 
-| 参数 | 说明 | 默认值 | 类型 |
+| 参数 | 说明 | 类型 | 默认值 | 
 | ---- | ---- | ---- | ------ |
-| type |   待执行动画css类名前缀   |   `必填`   |    `string`    |
-| in | 内容是否可见 | `必填` |  `boolean`  |
-| timeout | 执行动画时间(毫秒) |  `必填`   | `number \| { appear?: number; enter?: number; exit?: number; }`  |
-| mountOnEnter | 是否在打开时再加载内容 |  `true`  | `boolean` |
-| unmountOnExit | 是否在退出时卸载内容 | `true` | `boolean` |
+| type |   待执行动画css类名前缀   |       `string`    |`必填`   |
+| in | 内容是否可见 |   `boolean`  |`必填` |
+| timeout | 执行动画时间(毫秒) |     `number \| { appear?: number; enter?: number; exit?: number; }`  |`必填` |
+| mountOnEnter | 是否在打开时再加载内容 |   `boolean` |`true` |
+| unmountOnExit | 是否在退出时卸载内容 |   `boolean` |`true`|
 
 
 ## 事件
 > 动画事件参考 [css-transition event](https://reactcommunity.org/react-transition-group/css-transition#CSSTransition-prop-onEnter)
 
-| 事件名 | 说明 | 默认值 | 类型 |
+| 事件名 | 说明 |  类型 | 默认值 |
 | ---- | ---- | ---- | ------ |
-|onEnter|在应用“Enter“或“出现“类后立即触发回调| `()=>{}` | `(node: HtmlElement, isAppearing: bool) => void` |
-|onEntering|在应用“Enter-Active“或“出现-活动“类后立即触发回调| `()=>{}` | `(node: HtmlElement, isAppearing: bool) => void` |
-|onEntered|在“Enter”或“出现”类之后立即触发回调移除而done类添加到DOM节点| `()=>{}` | `(node: HtmlElement, isAppearing: bool) => void` |
-|onExit|在应用“Exit”类后立即触发回调| `()=>{}` | `(node: HtmlElement) => void` |
-|onExiting|在应用“Exit-Active”之后立即触发回调| `()=>{}` | `(node: HtmlElement) => void` |
-|onExited|在“退出”类之后立即触发回调。移除而exit-done类添加到DOM节点| `()=>{}` | `(node: HtmlElement) => void` |
-
-
-<code src="./demos/demo.tsx" ></code>
+|onEnter|在应用“Enter“或“出现“类后立即触发回调|  `(node: HtmlElement, isAppearing: bool) => void` | `()=>{}` |
+|onEntering|在应用“Enter-Active“或“出现-活动“类后立即触发回调|  `(node: HtmlElement, isAppearing: bool) => void` |`()=>{}` |
+|onEntered|在“Enter”或“出现”类之后立即触发回调移除而done类添加到DOM节点|  `(node: HtmlElement, isAppearing: bool) => void` |`()=>{}` |
+|onExit|在应用“Exit”类后立即触发回调|  `(node: HtmlElement) => void` |`()=>{}` |
+|onExiting|在应用“Exit-Active”之后立即触发回调|  `(node: HtmlElement) => void` |`()=>{}` |
+|onExited|在“退出”类之后立即触发回调。移除而exit-done类添加到DOM节点|  `(node: HtmlElement) => void` |`()=>{}` |
