@@ -6,96 +6,49 @@
 ## 使用
 
 ```tsx
-import React from "react";
 import { Button } from "aunt";
-
-export default () => <Button>默认按钮</Button>;
 ```
 
 ### 按钮类型
 按钮支持 default、primary、success、warning、danger 五种类型，默认为 default。
-```jsx
-
-<Button type="default">默认按钮</Button>
-<Button type="primary">主要按钮</Button>
-<Button type="success">成功按钮</Button>
-<Button type="warning">警告按钮</Button>
-<Button type="danger">危险按钮</Button>
-
-```
+<code src="./demos/demo-type.tsx"></code>
 
 ### 朴素按钮
 通过 plain 属性将按钮设置为朴素按钮，朴素按钮的文字为按钮颜色，背景为白色。
-
-```tsx
-<Button plain type="primary">朴素按钮</Button>
-<Button plain type="success">朴素按钮</Button>
-```
+<code src="./demos/demo-plain.tsx"></code>
 
 ### 细边按钮
 设置 hairline 属性可以展示 0.5px 的细边框。
-
-```tsx
-<Button plain hairline type="primary">细边按钮</Button>
-<Button plain hairline type="success">细边按钮</Button>
-```
+<code src="./demos/demo-hairline.tsx"></code>
 
 ### 图标按钮
 通过 icon 属性设置按钮图标，支持 Icon 组件里的所有图标。
-
-```tsx
-<Button type="primary" icon={<AuntIconAlertCircle size={18} />}>图标按钮</Button>
-<Button type="success" icon={<AuntIconAlertCircle size={18} />} iconPosition="right">图标按钮</Button>
-```
+<code src="./demos/demo-icon.tsx"></code>
 
 ### 禁用状态
 通过 disabled 属性来禁用按钮，禁用状态下按钮不可点击。
-
-```tsx
-<Button disabled type="primary">禁用按钮</Button>
-<Button plain disabled type="success">禁用按钮</Button>
-```
-
+<code src="./demos/demo-disabled.tsx"></code>
 
 ### 加载状态
-通过 disabled 属性来禁用按钮，禁用状态下按钮不可点击。
-
-```tsx
-<Button type="primary" loading>加载状态</Button>
-<Button loading type="success" loadingText="加载中..." >加载状态</Button>
-```
+通过 loading 属性来显示加载状态，加载状态下按钮不可点击。
+<code src="./demos/demo-loading.tsx"></code>
 
 ### 按钮形状
 通过 shape 设置按钮的形状 default 默认按钮带圆角 square 方形按钮 round 圆形按钮
-
-```tsx
-<Button shape="default" type="primary">圆角按钮</Button>
-<Button shape="square" type="success">方形按钮</Button>
-<Button shape="round" type="success">圆形按钮</Button>
-```
+<code src="./demos/demo-shape.tsx"></code>
 
 ### 按钮尺寸
 支持 large、normal、small、mini 四种尺寸，默认为 normal。
+<code src="./demos/demo-size.tsx"></code>
 
-```tsx
-<Button shape="large" type="primary">大号按钮</Button>
-<Button shape="normal" type="success">默认按钮</Button>
-<Button shape="small" type="success">小号按钮</Button>
-<Button shape="mini" type="success">迷你按钮</Button>
-```
 ### 块级按钮
 按钮在默认情况下为行内块级元素，通过 block 属性可以将按钮的元素类型设置为块级元素。
+<code src="./demos/demo-block.tsx"></code>
 
-```tsx
-<Button block type="primary">块级按钮</Button>
-```
 ### 自定义颜色
 通过 color 属性可以自定义按钮的颜色。
-```tsx
-<Button color="#7232dd">单色按钮</Button>
-<Button color="#7232dd" plain>单色按钮</Button>
-<Button color="linear-gradient(to right, #ff6034, #ee0a24)">渐变色按钮</Button>
-```
+<code src="./demos/demo-color.tsx"></code>
+
 
 ## 参数
 
