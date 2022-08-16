@@ -6,51 +6,31 @@
 
 ## 使用
 ```tsx
-import React from "react";
 import { Avatar } from "aunt";
-
-export default () => <Avatar />;
 ```
 ### 头像尺寸
 通过设置 size 属性来控制头像的尺寸，有三个尺寸可以选择 small、normal、large
-```tsx
-<Avatar size="small" url="https://fakeimg.pl/300/"></Avatar>
-<Avatar size="normal" url="https://fakeimg.pl/300/"></Avatar>
-<Avatar size="large" url="https://fakeimg.pl/300/"></Avatar>
-```
+<code src="./demos/demo-size.tsx"></code>
+
 ### 头像形状
 通过设置 shape 属性来设置形状 square、round
-```tsx
-<Avatar shape="square" url="https://fakeimg.pl/300/"></Avatar>
-<Avatar shape="round" url="https://fakeimg.pl/300/"></Avatar>
-```
+<code src="./demos/demo-shape.tsx"></code>
+
 ### 头像类型
 支持三种类型：图片、Icon 以及字符
 
 优先级：图片 => 文本 => Icon(默认`<AuntIconUser />`)
 
 **字符类型会默认截取第一位**
-```tsx
-<Avatar></Avatar>
-<Avatar icon={<AuntIconMeh />}></Avatar>
-<Avatar>头</Avatar>
-<Avatar url="https://fakeimg.pl/300/"></Avatar>
-```
+<code src="./demos/demo-type.tsx"></code>
+
 ### 图片填充模式
 通过设置 fit 属性来设置图片的填充模式
-```tsx
-<Avatar fit="contain" url="https://fakeimg.pl/300/400/"></Avatar>
-<Avatar fit="cover" url="https://fakeimg.pl/300/400/"></Avatar>
-<Avatar fit="fill" url="https://fakeimg.pl/300/400/"></Avatar>
-<Avatar fit="none" url="https://fakeimg.pl/300/400/"></Avatar>
-<Avatar fit="scale-down" url="https://fakeimg.pl/300/400/"></Avatar>
-```
+<code src="./demos/demo-fit.tsx"></code>
+
 ### 颜色相关
 可设置 background 和 color 控制头像的背景颜色和文本图标颜色
-```tsx
-<Avatar icon={<AuntIconMeh />} background="#FF7D00" color="#fff"></Avatar>
-<Avatar color="#165DFF">文</Avatar>
-```
+<code src="./demos/demo-color.tsx"></code>
 
 ## 参数
 | 参数 | 说明 |  类型 |默认值 |
