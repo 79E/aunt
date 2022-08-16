@@ -1,93 +1,35 @@
-import React, { useState } from "react";
-import { Badge, Button, Space, AuntIconBox } from 'aunt';
+import React from "react";
 import { DemoBlock } from 'demos';
+import DemoBadge from './demo-badge';
+import DemoBase from './demo-base';
+import DemoDot from './demo-dot';
+import DemoMaxcount from './demo-maxcount';
+import DemoOffsetColor from './demo-offset-color';
+import DemoVisible from './demo-visible';
+
 import './index.less';
 
 function Demo (){
-    const [visible,setVisible] = useState(true);
+    
     return <div className="demo-badge">
         <DemoBlock title="基本用法">
-            <Space gap={30}>
-                <Badge content={52} >
-                    <div className="demo-badge-card"></div>
-                </Badge>
-                <Badge content="Aunt" >
-                    <div className="demo-badge-card"></div>
-                </Badge>
-                <Badge content={<AuntIconBox size={14}/>} >
-                    <div className="demo-badge-card"></div>
-                </Badge>
-            </Space>
+            <DemoBase />
         </DemoBlock>
         <DemoBlock title="最大值">
-            <Space gap={30}>
-                <Badge content={99} >
-                    <div className="demo-badge-card"></div>
-                </Badge>
-                <Badge content={100} >
-                    <div className="demo-badge-card"></div>
-                </Badge>
-                <Badge content={60} maxCount={50} >
-                    <div className="demo-badge-card"></div>
-                </Badge>
-            </Space>
+            <DemoMaxcount />
         </DemoBlock>
         <DemoBlock title="圆点样式">
-            <Space gap={30}>
-                <Badge dot>
-                    <div className="demo-badge-card"></div>
-                </Badge>
-            </Space>
+            <DemoDot />
         </DemoBlock>
         <DemoBlock title="自定义颜色和偏移量">
-            <Space gap={30}>
-                <Badge color="#27C346" dot offset={[0,0]}>
-                    <div className="demo-badge-card"></div>
-                </Badge>
-                <Badge color="#FF7D00" dot offset={[0,'100%']}>
-                    <div className="demo-badge-card"></div>
-                </Badge>
-                <Badge color="#3491FA" dot offset={['100%',0]}>
-                    <div className="demo-badge-card"></div>
-                </Badge>
-                <Badge color="#722ED1" dot offset={['100%','100%']}>
-                    <div className="demo-badge-card"></div>
-                </Badge>
-            </Space>
+            <DemoOffsetColor />
+        </DemoBlock>
+        <DemoBlock title="单独使用">
+            <DemoBadge />
         </DemoBlock>
         <DemoBlock title="使用动画">
-            <Space gap={30}>
-                <Badge content={52} visible={visible}>
-                    <div className="demo-badge-card"></div>
-                </Badge>
-                <Badge content="Aunt" visible={visible}>
-                    <div className="demo-badge-card"></div>
-                </Badge>
-                <Badge content={<AuntIconBox size={14}/>} visible={visible}>
-                    <div className="demo-badge-card"></div>
-                </Badge>
-                <Badge dot visible={visible}>
-                    <div className="demo-badge-card"></div>
-                </Badge>
-            </Space>
+            <DemoVisible />
         </DemoBlock>
-
-        <DemoBlock title="单独使用">
-            <Space gap={30}>
-                <Badge content={52} visible={visible}></Badge>
-                <Badge content="Aunt" visible={visible}></Badge>
-                <Badge content={<AuntIconBox size={14}/>} visible={visible}></Badge>
-                <Badge dot visible={visible}></Badge>
-            </Space>
-        </DemoBlock>
-
-        <div style={{
-                margin:10,
-            }}>
-            <Button block onClick={()=>{
-                setVisible(!visible);
-            }}>显示或隐藏</Button>
-        </div>
     </div>;
 }
 
