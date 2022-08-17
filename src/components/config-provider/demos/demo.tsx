@@ -1,16 +1,11 @@
 import React from "react";
-import { ConfigProvider, Button } from 'aunt';
 import { DemoBlock } from 'demos';
+import DemoTheme from './demo-theme';
 
 function Demo (){
     return  <div className="demo-config-provider">
         <DemoBlock title="自定义变量">
-            <ConfigProvider theme={{
-                buttonBackgroundPrimaryColor: 'blue',
-                ButtonBorderPrimaryColor: 'red'
-            }}>
-                <Button type="primary">我变身了</Button>
-            </ConfigProvider>
+            <DemoTheme />
         </DemoBlock>
     </div>;
 }

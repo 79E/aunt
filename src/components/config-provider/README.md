@@ -12,29 +12,14 @@ ConfigProvider 使用 React 的 context 特性，只需在应用外围包裹一�
 也可以应用在某个组件上，单独生效不影响其他组件。
 
 ```tsx
-import React from "react";
-import { ButConfigProviderton } from "aunt";
-
-export default () => <ConfigProvider>
-    <App />
-</ConfigProvider>;
+import { ConfigProvider } from "aunt";
 ```
 
 
 ## 定制主题
 ConfigProvider 组件提供了覆盖 CSS 变量的能力，你需要在根节点包裹一个 ConfigProvider 组件，并通过 theme 属性来配置一些主题变量。
+<code src="./demos/demo-theme.tsx"></code>
 
-```tsx
-import React from "react";
-import { ButConfigProviderton, Button } from "aunt";
-
-export default () => <ConfigProvider theme={{
-    buttonBackgroundPrimaryColor:'blue',
-    ButtonBorderPrimaryColor:'red'
-}}>
-    <Button type="primary">我变身了</Button>
-</ConfigProvider>;
-```
 > 注意：ConfigProvider 仅影响它的子组件的样式，不影响全局 root 节点。
 
 
