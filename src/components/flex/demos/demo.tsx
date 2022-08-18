@@ -1,20 +1,19 @@
 import React from "react";
 import { DemoBlock } from 'demos';
-import Base from './demo-base';
-import Gutter from './demo-gutter';
-import Direction from './demo-direction';
+import DemoBase from './demo-base';
+import DemoGutter from './demo-gutter';
+import DemoDirection from './demo-direction';
 
 export default () => {
     return <>
         <DemoBlock title="基础用法" padding="0">
-            <Base />
+            <DemoBase />
         </DemoBlock>
         <DemoBlock title="区域间隔" padding="0">
-            <Gutter />
+            <DemoGutter />
         </DemoBlock>
-
         <DemoBlock title="方向用法" padding="0">
-            <Direction />
+            <DemoDirection />
         </DemoBlock>
     </>;
 };
