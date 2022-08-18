@@ -6,81 +6,30 @@
 
 ## 使用
 ```tsx
-import React from "react";
 import { Grid } from "aunt";
-
-export default () =>(
-    <Grid gap={10} column={3}>
-        <Grid.Item>1</Grid.Item>
-        <Grid.Item>2</Grid.Item>
-        <Grid.Item>3</Grid.Item>
-    </Grid>
-);
 ```
 
 ### 基础用法
+<code src="./demos/demo-base.tsx"></code>
 
-```tsx
-<Grid gap={10} column={3}>
-    <Grid.Item>1</Grid.Item>
-    <Grid.Item>2</Grid.Item>
-    <Grid.Item>3</Grid.Item>
-</Grid>
-
-<Grid gap={10} column={3} row={3}>
-    <Grid.Item row={2} column={2}>1</Grid.Item>
-    <Grid.Item>2</Grid.Item>
-    <Grid.Item>3</Grid.Item>
-    <Grid.Item>4</Grid.Item>
-    <Grid.Item column={2}>5</Grid.Item>
-</Grid>
-```
 
 ### 间隔用法
 使用 Grid 的 gap 参数来规定间距也可用[]来规定行和列的间隔。
-```tsx
-<Grid gap={4}>
-    <Grid.Item>1</Grid.Item>
-    <Grid.Item>2</Grid.Item>
-    <Grid.Item>3</Grid.Item>
-    <Grid.Item>4</Grid.Item>
-</Grid>
-```
+<code src="./demos/demo-gap.tsx"></code>
 
 ### 列数用法
 使用 Grid 的 column 参数来规定列数。
-```tsx
-<Grid gap={4} column={2}>
-    <Grid.Item>1</Grid.Item>
-    <Grid.Item>2</Grid.Item>
-    <Grid.Item>3</Grid.Item>
-    <Grid.Item>4</Grid.Item>
-</Grid>
-```
+<code src="./demos/demo-column.tsx"></code>
 
 
 ### 行数用法*
 使用 Grid 的 row 参数来规定列数, 这里如果不和 GridItem 组件中的行跨度 row 参数组合使用可能看不出效果。
-```tsx
-<Grid gap={4} column={2} row={3}>
-    <Grid.Item row={3}>1</Grid.Item>
-    <Grid.Item>2</Grid.Item>
-    <Grid.Item>3</Grid.Item>
-    <Grid.Item>4</Grid.Item>
-</Grid>
-```
+<code src="./demos/demo-row.tsx"></code>
 
 ### 列跨度
 使用 GridItem 的 column 参数规定列跨度数。
-```tsx
-<Grid gap={4}>
-    <Grid.Item column={2}>1</Grid.Item>
-    <Grid.Item>2</Grid.Item>
-    <Grid.Item>3</Grid.Item>
-    <Grid.Item>4</Grid.Item>
-    <Grid.Item column={3}>5</Grid.Item>
-</Grid>
-```
+<code src="./demos/demo-item-column.tsx"></code>
+
 
 ## 参数
 ### Grid
