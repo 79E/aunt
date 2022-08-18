@@ -6,74 +6,32 @@
 
 ## 使用
 ```tsx
-import React from "react";
 import { CountDown } from "aunt";
-
-export default () => <CountDown time={24 * 60 * 60 * 1000} />;
 ```
 
 ### 基础用法
 time 属性表示倒计时总时长，单位为毫秒。
-```tsx
-<CountDown time={24 * 60 * 60 * 1000} />
-```
+<code src="./demos/demo-base.tsx"></code>
+
 
 ### 自定义格式
 通过 format 属性设置倒计时文本的内容。
-```tsx
-<CountDown time={30 * 60 * 60 * 1000} format="DD 天 HH 时 mm 分 ss 秒" />
-```
+<code src="./demos/demo-format.tsx"></code>
+
 
 ### 毫秒级渲染
 倒计时默认每秒渲染一次，设置 millisecond 属性可以开启毫秒级渲染。
-```tsx
-<CountDown time={24 * 60 * 60 * 1000} millisecond format="DD:HH:mm:ss:SSS"/>
-```
+<code src="./demos/demo-millisecond.tsx"></code>
+
 
 ### 自定义样式
 通过children自定义倒计时的样式，[react render prop](https://reactjs.org/docs/render-props.html)文档。
-```tsx
-<CountDown time={24 * 60 * 60 * 1000} millisecond format="DD:HH:mm:ss">
-{(timeData) => (
-    <>
-        <span className="demo-count-down__block">{timeData.hours}</span>
-        <span>:</span>
-        <span className="demo-count-down__block">{timeData.minutes}</span>
-        <span>:</span>
-        <span className="demo-count-down__block">{timeData.seconds}</span>
-    </>
-)}
-</CountDown>
-```
+<code src="./demos/demo-children.tsx"></code>
+
 
 ### 手动控制
 通过 ref 获取到组件实例后，可以调用 start、pause、reset 方法。
-```tsx
-const ref = useRef<CountDownInstance>(null);
-
-<CountDown
-    ref={ref}
-    time={100000}
-    millisecond
-    format="mm:ss:SSS"
-    autoStart={false}
-    onFinish={() => {
-        console.log("Finished CountDown");
-    }}
-/>  
-
-<Space style={{marginTop:10}}>
-    <Button onClick={() => {
-        ref.current?.start()
-    }}>开始</Button>
-    <Button onClick={() => {
-        ref.current?.pause()
-    }}>暂停</Button>
-    <Button onClick={() => {
-        ref.current?.reset()
-    }}>重置</Button>
-</Space>
-```
+<code src="./demos/demo-ref.tsx"></code>
 
 
 ## 参数
