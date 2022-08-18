@@ -6,45 +6,26 @@
 
 ## 使用
 ```tsx
-import React from "react";
 import { Empty } from "aunt";
-
-export default () => <Empty />;
 ```
+
+### 基础使用
+可通过设置image属性来设置，可传入error network search。
+<code src="./demos/demo-base.tsx"></code>
 
 ### 图片类型
-可通过设置image属性来设置，可传入error network search
-```tsx
-<Empty image="error" description="error类型" />
-<Empty image="network" description="network类型" />
-<Empty image="search" description="search类型" />
-```
-
+可通过设置image属性来设置，可传入error network search。
+<code src="./demos/demo-type.tsx"></code>
 
 ### 自定义图片
-可通过设置image属性来设置，可传入图片链接或者组件
-```tsx
-<Empty
-    image="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/fcfa6d32-e40b-480e-92a9-e2d2b4c34b15.png" 
-    description="自定义图片"
-/>
-<Empty 
-    image={
-        <img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/61075960-54e6-4e36-bf37-54087449d748.png" />
-    } 
-    description="自定组件图" 
-/>
-```
+可通过设置image属性来设置，可传入图片链接或者组件。
+<code src="./demos/demo-image.tsx"></code>
+
 
 ### 底部内容
 通过 children 可以在 Empty 组件的下方插入内容。
-```tsx
-<Empty description="描述文字">
-    <Button shape="round" type="primary">
-        按钮
-    </Button>
-</Empty>
-```
+<code src="./demos/demo-children.tsx"></code>
+
 
 
 ## 参数
