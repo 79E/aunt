@@ -1,7 +1,8 @@
+import { BaseTypeProps } from '../../utils';
 export type LoadingType = 'oval' | 'rings' | 'ball' | 'bars' | 'circles' | 'puff' | 'spinning' | 'three' | 'gap';
 
 // 定义接受到的参数 类型
-export interface LoadingProps {
+export interface LoadingProps extends BaseTypeProps{
     className?: string;
     /**
      * @name 颜色
