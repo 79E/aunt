@@ -6,64 +6,38 @@
 ## 使用
 
 ```tsx
-import React from "react";
 import { Loading } from "aunt";
-
-export default () => <Loading />;
 ```
 
 ### 加载类型
 通过 type 属性可以设置加载图标的类型，默认为 gap，可选值为 oval，rings，ball，bars，circles，puff，spinning，three，gap。
-
-```tsx
-<Loading type="rings" />
-<Loading type="oval" />
-<Loading type="ball" />
-```
+<code src="./demos/demo-type.tsx" ></code>
 
 ### 自定义颜色
 通过 color 属性设置加载图标的颜色。
-
-```tsx
-<Loading color="#3f45ff"  />
-<Loading type="ball" color="#3f45ff" />
-```
+<code src="./demos/demo-color.tsx" ></code>
 
 ### 自定义大小
 通过 size 属性设置加载图标的大小，默认单位为 px。
+<code src="./demos/demo-size.tsx" ></code>
 
-```tsx
-<Loading size="50"  />
-<Loading type="ball" size="24px" />
-```
 
 ### 加载文案
 通过 size 属性设置加载图标的大小，默认单位为 px。
-
-```tsx
-<Loading>加载中...</Loading>
-```
+<code src="./demos/demo-text.tsx" ></code>
 
 ### 垂直排列
 通过 size 属性设置加载图标的大小，默认单位为 px。
+<code src="./demos/demo-vertical.tsx" ></code>
 
-```tsx
-<Loading vertical>加载中...</Loading>
-```
 ### 自定义文本颜色
 通过 textColor 属性，可以自定义文本颜色。
-
-```tsx
-<Loading vertical textColor="#3f45ff">加载中...</Loading>
-```
+<code src="./demos/demo-textColor.tsx" ></code>
 
 ### 自定义文本大小
 通过 textSize 属性，可以自定义文本大小。
+<code src="./demos/demo-textSize.tsx" ></code>
 
-```tsx
-<Loading vertical textSize='22'>加载中...</Loading>
-<Loading vertical textColor="#3f45ff" textSize='10px'>加载中...</Loading>
-```
 
 <code src="./demos/demo-all.tsx" inline></code>
 
