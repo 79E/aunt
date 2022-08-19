@@ -1,15 +1,12 @@
 # Icon 图标
-<code  src="./demos/demo.tsx" hidden >
+<code hidden src="./demos/demo.tsx" >
 
 ## 介绍
 语义化的矢量图形(SVG)
 ## 使用
 直接引入你所需要的图标即可 无需在安装其他包：
 ```tsx
-import React from "react";
 import { AuntIconActivity } from "aunt";
-
-export default () => <AuntIconActivity />;
 ```
 > 主流的构建工具会自动做 Tree-Shaking，所以最终被打包进来的只有你用到的那些图标，不必担心包体积问题。
 >
@@ -18,25 +15,16 @@ export default () => <AuntIconActivity />;
 
 ### 图标颜色
 Icon 的 color 属性用来设置图标的颜色。
-```tsx
-<AuntIconActivity color="#f44336" />
-<AuntIconAlertOctagon color="#3f45ff" />
-```
+<code src="./demos/demo-color.tsx" >
 
 ### 图标旋转
 Icon 的 spin 属性用来设置图标旋转，默认单位为 false。
-```tsx
-<AuntIconLoader spin />
-<AuntIconFileMinus spin />
-```
+<code src="./demos/demo-spin.tsx" >
 
 
 ### 图标旋转角度
 Icon 的 rotate 属性用来设置图标旋转的角度。
-```tsx
-<AuntIconLoader rotate={20} />
-<AuntIconFileMinus rotate={60} />
-```
+<code src="./demos/demo-rotate.tsx" >
 
 ## 参数
 | 参数 | 说明 |  类型 |默认值 |
