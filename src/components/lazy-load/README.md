@@ -1,4 +1,5 @@
 # LazyLoad 懒加载
+
 <code hidden="hidden" src="./demos/demo.tsx"></code>
 
 ## 介绍
@@ -7,56 +8,18 @@
 
 ## 使用
 ```tsx
-import React from 'react';
 import { LazyLoad } from 'aunt';
-
-export default () => {
-  return (
-    <LazyLoad>
-        <span>懒加载</span>
-    </LazyLoad>
-  );
-};
-
 ```
 
 ### 图片懒加载
 将 Image 组件的 lazyload 属性设为 true 即可开启懒加载功能。
-```tsx
+<code src="./demos/demo-images.tsx"></code>
 
-const imageList = [
-  'https://tu.eebk.com/item/62c294295be16ec74a16ee09.jpg',
-  'https://tu.eebk.com/item/62c294315be16ec74a16f884.jpg',
-  'https://tu.eebk.com/item/62c294355be16ec74a16fedc.jpg',
-  'https://tu.eebk.com/item/62c2943a5be16ec74a1706de.jpg',
-  'https://tu.eebk.com/item/62c2948f5be16ec74a177628.jpg',
-  'https://tu.eebk.com/item/62c294955be16ec74a177d22.jpg',
-  'https://tu.eebk.com/item/62c294995be16ec74a178273.jpg',
-];
-
-<>
-    {
-        imageList.map(
-            (img) => (
-                <Image lazyload src={img} key={img} />
-            )   
-        )
-    }
-</>
-```
 
 ### 组件懒加载
 将需要懒加载的组件放在 Lazyload 组件中，即可实现组件懒加载。
-```tsx
-<LazyLoad>
-    <div>
-        <Image src="https://tu.eebk.com/item/62c294295be16ec74a16ee09.jpg" />
-        <Typography.Text>
-            当页面需要加载大量内容时，使用懒加载可以实现延迟加载页面可视区域外的内容，从而使页面加载更流畅。
-        </Typography.Text>
-    </div>
-</LazyLoad>
-```
+<code src="./demos/demo-components.tsx"></code>
+
 
 ## 参数
 
