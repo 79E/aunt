@@ -6,61 +6,29 @@
 
 ## 使用
 ```tsx
-import React from "react";
 import { Image } from "aunt";
-
-export default () => <Image width="100px" height="100px" src={src} />;
 ```
 ### 基础用法
 基础用法与原生 img 标签一致，可以设置 src、width、height、alt 等原生属性。
-
-```tsx
-<Image width={100} height={100} src="https://fakeimg.pl/300/" />
-```
+<code src="./demos/demo-base.tsx"></code>
 
 ### 填充模式
 通过 fit 属性可以设置图片填充模式，可以设置 contain、cover、fill、none、scale-down 属性。
-```tsx
-<Image fit="contain" width={100} height={100} src="https://fakeimg.pl/400x200/" />
-<Image fit="cover" width={100} height={100} src="https://fakeimg.pl/400x200/" />
-<Image fit="fill" width={100} height={100} src="https://fakeimg.pl/400x200/" />
-<Image fit="none" width={100} height={100} src="https://fakeimg.pl/400x200/" />
-<Image fit="scale-down" width={100} height={100} src="https://fakeimg.pl/400x200/" />
-```
+<code src="./demos/demo-fit.tsx"></code>
 
 ### 圆形图片
 通过 round 属性可以设置图片变圆，注意当图片宽高不相等且 fit 为 contain 或 scale-down 时，将无法填充一个完整的圆形。
-```tsx
-<Image round fit="contain" width={100} height={100} src="https://fakeimg.pl/400x200/" />
-<Image round fit="cover" width={100} height={100} src="https://fakeimg.pl/400x200/" />
-<Image round fit="fill" width={100} height={100} src="https://fakeimg.pl/400x200/" />
-<Image round fit="none" width={100} height={100} src="https://fakeimg.pl/400x200/" />
-<Image round fit="scale-down" width={100} height={100} src="https://fakeimg.pl/400x200/" />
-```
+<code src="./demos/demo-round.tsx"></code>
 
 ### 加载中提示
 Image 组件提供了默认的加载中提示，支持通过 loadingIcon 自定义内容。
-```tsx
-// 默认提示
-<Image width="100px" height="100px" />
-// 自定义提示
-<Image loadingIcon={<Loading type="ball" />}  width="100px"  height="100px" />
-```
+<code src="./demos/demo-loading.tsx"></code>
+
 
 
 ### 加载失败提示
 Image 组件提供了默认的加载失败提示，支持通过 errorIcon 自定义内容。
-```tsx
-// 默认提示
-<Image width="100px" height="100px" src="aunt.png" />
-// 自定义提示
-<Image
-    width="100px" 
-    height="100px"
-    src="aunt.png"
-    errorIcon={<AuntIconWifiOff />}
-/>
-```
+<code src="./demos/demo-error.tsx"></code>
 
 
 ## 参数

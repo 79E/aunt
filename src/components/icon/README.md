@@ -21,7 +21,6 @@ Icon 的 color 属性用来设置图标的颜色。
 Icon 的 spin 属性用来设置图标旋转，默认单位为 false。
 <code src="./demos/demo-spin.tsx" >
 
-
 ### 图标旋转角度
 Icon 的 rotate 属性用来设置图标旋转的角度。
 <code src="./demos/demo-rotate.tsx" >
