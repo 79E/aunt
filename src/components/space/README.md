@@ -6,58 +6,26 @@
 
 ## 使用
 ```tsx
-import React from "react";
 import { Space } from "aunt";
-
-export default () =>(
-    <Space>
-        <span>space:1</span>
-        <span>space:2</span>
-    </Space>
-);
 ```
 
 ### 基础用法
 相邻组件水平间距。
-```tsx
-<Space>
-    <Button type="primary" plain>按钮1</Button>
-    <Button type="success" plain>按钮2</Button>
-</Space>
-```
+<code src="./demos/demo-base.tsx"></code>
 
 ### 垂直间距
 相邻组件垂直间距，可以设置 width: 100% 独占一行。
-```tsx
-<Space direction="vertical">
-    <Button type="primary" plain>按钮1</Button>
-    <Button type="success" plain>按钮2</Button>
-</Space>
-```
+<code src="./demos/demo-direction.tsx"></code>
 
 ### 间距大小
 通过 gap 属性可以调整间距大小。
 
 gap 设置为数组时可以同时调整垂直方向和水平方向的间距大小
-```tsx
-<Space gap={30}>
-    <Button type="primary" plain>按钮1</Button>
-    <Button type="success" plain>按钮2</Button>
-</Space>
-```
+<code src="./demos/demo-gap.tsx"></code>
 
 ### 自动换行
 超出宽度后会自动移到下一行。
-```tsx
-<Space wrap>
-    <Button type="primary" >按钮1</Button>
-    <Button type="success" plain>按钮2</Button>
-    <Button type="warning" plain>按钮3</Button>
-    <Button type="danger" plain>按钮4</Button>
-    <Button plain>按钮5</Button>
-    <Button type="warning">按钮6</Button>
-</Space>
-```
+<code src="./demos/demo-wrap.tsx"></code>
 
 ## 参数
 
