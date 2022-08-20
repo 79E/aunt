@@ -15,22 +15,13 @@
 
 `timeout` 为动画所需要的时间
 
-```tsx
-import { Transition, Button, Image } from 'aunt';
-
-const [ isIn, setIsin ] = useState(false);
-
-<Button onClick={()=>{setIsin(!isIn)}}>显示或隐藏</Button>
-
-<Transition type="fade" in={isin} timeout={500}>
-    <div className="demo-transition__card"></div>
-</Transition>
-```
+<code src="./demos/demo-base.tsx" ></code>
 
 ### type 属性
 `type` 属性为控制内部动画的 className 名称
 
 以上面的演示代码为例，Less样式代码为：
+
 ```less
 // 内容样式
 .demo-transition__card{
