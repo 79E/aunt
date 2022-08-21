@@ -1,58 +1,36 @@
-import React,{ useState } from "react";
-import { Switch, Space } from 'aunt';
+import React from "react";
 import { DemoBlock } from 'demos';
+import DemoBase from './demo-base';
+import DemoAsync from './demo-async';
+import DemoColor from './demo-color';
+import DemoDisabled from './demo-disabled';
+import DemoLoading from './demo-loading';
+import DemoShape from './demo-shape';
+import DemoSize from './demo-size';
 import './index.less';
 
 function Demo (){
-    const [checked, setChecked] = useState(false);
-    const [loading, setLoading] = useState(false);
     return <div className="demo">
         <DemoBlock title="基础用法">
-            <Switch defaultChecked />
+            <DemoBase />
         </DemoBlock>
         <DemoBlock title="禁用状态">
-            <Space>
-                <Switch defaultChecked disabled></Switch>
-                <Switch disabled></Switch>
-            </Space>
+            <DemoDisabled />
         </DemoBlock>
         <DemoBlock title="加载状态">
-            <Space>
-                <Switch loading></Switch>
-                <Switch disabled loading></Switch>
-                <Switch defaultChecked loading></Switch>
-                <Switch defaultChecked disabled loading></Switch>
-            </Space>
+            <DemoLoading />
         </DemoBlock>
         <DemoBlock title="开关形状">
-            <Space>
-                <Switch shape='round'></Switch>
-                <Switch shape='square'></Switch>
-            </Space>
+            <DemoShape />
         </DemoBlock>
         <DemoBlock title="自定义大小">
-            <Space>
-                <Switch size={20}></Switch>
-                <Switch size={26}></Switch>
-                <Switch size={30}></Switch>
-            </Space>
+            <DemoSize />
         </DemoBlock>
         <DemoBlock title="自定义颜色">
-            <Space>
-                <Switch activeColor="#27C346" defaultChecked></Switch>
-                <Switch inactiveColor="#FF7D00" activeColor="#14C9C9"></Switch>
-            </Space>
+            <DemoColor />
         </DemoBlock>
         <DemoBlock title="异步控制">
-            <Space>
-                <Switch checked={checked} loading={loading} onClick={()=>{
-                    setLoading(true);
-                    setTimeout(()=>{
-                        setLoading(false);
-                        setChecked(!checked);
-                    },2000);
-                }}></Switch>
-            </Space>
+            <DemoAsync />
         </DemoBlock>
     </div>;
 }
