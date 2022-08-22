@@ -1,6 +1,6 @@
 {
   "name": "aunt",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "React Mobile UI Components base on Aunt UI",
   "scripts": {
     "start": "dumi dev",
@@ -60,9 +60,7 @@
     "@types/react-dom": "18"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
-    "react-transition-group": "^4.4.5",
-    "tslib": "^2.4.0"
+    "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.18.2",
@@ -71,7 +69,6 @@
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.3",
-    "@types/lodash": "^4.14.182",
     "@types/react-transition-group": "^4.4.5",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",

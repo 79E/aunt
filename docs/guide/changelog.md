@@ -10,6 +10,23 @@ React Aunt 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范
 
 
 ## 更新内容
+### v0.1.0
+⏰`2022-08-22`
+
+**Docs**
+- 整体重新修正Aunt文档和演示Demo展示结构。
+
+**New Component**
+- 新增 Card 卡片组件
+- 新增 Switch 开关组件
+- 新增 Badge 徽标组件
+- 新增 Transition 动画过渡组件
+
+**Bug Fixes**
+- Loading: 修补加载状态组件基础类型
+- Avatar: 修补头像文字类型文字超出截取问题
+- Badge: 修复Badge 徽标在没有子元素下位置偏移和动画闪跳问题
+
 ### v0.0.3
 ⏰`2022-07-31`
 **New Component**
