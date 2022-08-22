@@ -10,6 +10,12 @@ React Aunt 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范
 
 
 ## 更新内容
+### v0.1.1
+⏰`2022-08-22`
+
+**Bug Fixes**
+- tslib: 修复 package.json 缺少相关依赖问题
+
 ### v0.1.0
 ⏰`2022-08-22`
 
