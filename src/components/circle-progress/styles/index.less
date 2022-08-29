@@ -1,0 +1,52 @@
+@class-prefix: ~'aunt';
+
+:root{
+    --aunt-circle-progress-size: calc(80 * var(--aunt-hd));
+    --aunt-circle-progress-color: var(--aunt-brand-color);
+    --aunt-circle-progress-track-color: var(--aunt-gray-2);
+    --aunt-circle-progress-text-font-weight: var(--aunt-font-weight-bold);
+    --aunt-circle-progress-text-font-size: var(--aunt-font-size-md);
+    
+}
+
+.@{class-prefix}-circle-progress {
+    width: var(--aunt-circle-progress-size);
+    height: var(--aunt-circle-progress-size);
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__track{
+        stroke: var(--aunt-circle-progress-track-color);
+    }
+
+    &__hover {
+        fill: none;
+        stroke-linecap: round;
+        stroke: var(--aunt-circle-progress-color);
+    }
+
+    &--middle{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    &__text {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 var(--aunt-padding-base);
+        color: var(--aunt-circle-progress-color);
+        font-weight: var(--aunt-circle-progress-text-font-weight);
+        font-size: var(--aunt-circle-progress-text-font-size);
+    }
+}
