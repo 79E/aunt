@@ -1,0 +1,70 @@
+@class-prefix: ~'aunt';
+
+:root{
+    --aunt-skeleton-padding: 0 var(--aunt-padding-md);
+    --aunt-skeleton-avatar-size: calc(32 * var(--aunt-hd));
+    --aunt-skeleton-avatar-background-color: var(--aunt-active-color);
+    --aunt-skeleton-border-radius: var(--aunt-border-radius-m);
+    
+    --aunt-skeleton-title-width: 40%;
+
+    --aunt-skeleton-row-height: calc(16 * var(--aunt-hd));
+    --aunt-skeleton-row-background-color: var(--aunt-active-color);
+    --aunt-skeleton-row-margin-top: var(--aunt-padding-sm);
+
+    --aunt-skeleton-animation-duration: 1.2s;
+}
+
+.@{class-prefix}-skeleton {
+    display: flex;
+    padding: var(--aunt-skeleton-padding);
+
+    &__avatar{
+        flex-shrink: 0;
+        width: var(--aunt-skeleton-avatar-size);
+        height: var(--aunt-skeleton-avatar-size);
+        margin-right: var(--aunt-padding-md);
+        background-color: var(--aunt-skeleton-avatar-background-color);
+    }
+
+    &__content {
+        width: 100%;
+    }
+    
+    &__title{
+        width: var(--aunt-skeleton-title-width);
+        margin: 0;
+    }
+
+    &__row,
+    &__title{
+        height: var(--aunt-skeleton-row-height);
+        background-color: var(--aunt-skeleton-row-background-color);
+    }
+
+    &__row {
+        // 除了第一个 剩下的全部 10px top
+        &:not(:first-child) {
+            margin-top: calc(10 * var(--aunt-hd));
+        }
+    }
+
+    &--animate {
+        animation: aunt-skeleton-blink var(--aunt-skeleton-animation-duration) ease-in-out infinite;
+    }
+
+    &--square{
+        border-radius: var(--aunt-skeleton-border-radius);
+    }
+
+    &--round{
+        border-radius: var(--aunt-border-radius-max);
+    }
+}
+
+
+@keyframes aunt-skeleton-blink {
+    50% {
+      opacity: 0.6;
+    }
+}

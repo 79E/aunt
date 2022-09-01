@@ -22,6 +22,7 @@ export * from './components/switch';
 export * from './components/card';
 export * from './components/progress';
 export * from './components/circle-progress';
+export * from './components/skeleton';
 
 
 
