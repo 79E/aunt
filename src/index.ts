@@ -23,6 +23,7 @@ export * from './components/card';
 export * from './components/progress';
 export * from './components/circle-progress';
 export * from './components/skeleton';
+export * from './components/rate';
 
 
 

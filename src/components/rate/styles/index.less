@@ -1,0 +1,41 @@
+@class-prefix: ~'aunt';
+
+:root{
+    --aunt-rate-color: var(--aunt-gray-3);
+    --aunt-rate-color-active: var(--aunt-red);
+    --aunt-rate-padding: var(--aunt-padding-base);
+}
+
+.@{class-prefix}-rate {
+    display: inline-flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    user-select: none;
+
+    &__item {
+        position: relative;
+    }
+
+    &__icon{
+        padding: var(--aunt-rate-padding);
+        color: var(--aunt-rate-color);
+        text-align: center;
+        overflow: hidden;
+        cursor: pointer;
+        box-sizing: border-box;
+        transition: color var(--aunt-animation-duration-base);
+        &--half {
+            padding-right: 0;
+            width: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        &--active {
+            color: var(--aunt-rate-color-active);
+        }
+        &--readonly, &--disabled {
+            cursor: not-allowed;
+        }
+    }
+}
