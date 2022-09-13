@@ -44,9 +44,7 @@ export const Rate:FunctionComponent<RateProps> = ((props) => {
             className={joinTrim([
                 ns.e('icon'),
                 half ? ns.em('icon','half') :'',
-                selectIcon ? ns.em('icon','active') :'',
-                props.disabled ? ns.em('icon','disabled') : '',
-                props.readonly ? ns.em('icon','readonly') : ''
+                selectIcon ? ns.em('icon','active') :''
             ])} 
             style={iconStyles}
             onClick={() => {
@@ -67,7 +65,12 @@ export const Rate:FunctionComponent<RateProps> = ((props) => {
 
     return <div className={ns.b()}>   
         {starList.map((_, i) => (
-            <div key={i} className={ns.e('item')}>
+            <div key={i} className={
+                joinTrim([
+                    ns.e('item'),
+                    props.disabled ? ns.m('disabled') : '',
+                    props.readonly ? ns.m('readonly') : ''
+                ])}>
                 { allowHalf && renderIcon(i + 0.5, true) }
                 { renderIcon(i + 1, false) }
             </div>
