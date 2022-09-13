@@ -16,6 +16,20 @@
         position: relative;
     }
 
+    &--readonly, &--disabled {
+        .@{class-prefix}-rate__icon{
+            cursor: not-allowed;
+        }
+    }
+
+    &--disabled {
+        .@{class-prefix}-rate__icon{
+            &--active {
+                color: var(--aunt-gray-4);
+            }
+        }
+    }
+
     &__icon{
         padding: var(--aunt-rate-padding);
         color: var(--aunt-rate-color);
@@ -33,9 +47,6 @@
         }
         &--active {
             color: var(--aunt-rate-color-active);
-        }
-        &--readonly, &--disabled {
-            cursor: not-allowed;
         }
     }
 }

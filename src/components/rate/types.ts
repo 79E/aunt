@@ -44,11 +44,11 @@ export interface RateProps extends BaseTypeProps {
    */
   onChange?: (value: number) => void;
   /**
-   * 选中时的图标名称或图片链接
+   * 选中时的图标或图片
    */
   icon?: React.ReactNode;
   /**
-   * 未选中时的图标名称或图片链接
+   * 未选中时的图标或图片
    */
   voidIcon?: React.ReactNode;
   /**
