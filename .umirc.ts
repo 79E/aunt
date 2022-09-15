@@ -123,7 +123,7 @@ export default defineConfig({
       },
       {
         title: '表单组件',
-        children: ['components/switch', 'components/rate'],
+        children: ['components/switch','components/checkbox', 'components/rate'],
       },
       {
         title: '反馈组件',

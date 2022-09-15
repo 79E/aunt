@@ -1,0 +1,61 @@
+@class-prefix: ~'aunt';
+
+.@{class-prefix}-checkbox {
+    display: flex;
+    margin: 0 0 8px 0;
+    cursor: pointer;
+    user-select: none;
+    align-items: center;
+    &__icon{
+        width: 19px;
+        height: 19px;
+        border: 1px solid #999;
+        color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color, border-color, background-color 0.3s;
+
+        &--round{
+            border-radius: 999px;
+        }
+
+        &--active{
+            border-color: var(--aunt-brand-color);
+            background-color: var(--aunt-brand-color);
+            color: #fff;
+        }
+    }
+
+    &__label{
+        font-size: 16px;
+        margin:0 8px;
+        color: #333;
+    }
+
+    &--disabled{
+        cursor: not-allowed;
+        .@{class-prefix}-checkbox__icon{
+            background-color: #ebedf0;
+            border-color: #c8c9cc;
+            &--active{
+                color: #c8c9cc;
+            }
+        }
+        .@{class-prefix}-checkbox__label{
+            color: #c8c9cc;
+        }
+    }
+
+
+    &-group{
+        display: flex;
+        flex-wrap: wrap;
+        &--vertical{
+            flex-direction: column;
+        }
+        &--horizontal{
+            flex-direction: row;
+        }
+    }
+}
