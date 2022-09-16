@@ -11,7 +11,9 @@ const Checkbox = forwardRef<CheckboxInstance, CheckboxProps>((props, ref) => {
     const { prefix } = useContext(ConfigProviderContext);
     const ns = useNamespace('checkbox',prefix);
 
-    const { shape = 'round',bindGroup = true } = props;
+    const { bindGroup = true } = props;
+
+    
 
     const { parent, ...context } = useContext(CheckBoxContext);
     const [checked, setChecked] = useMergedState<boolean>({
@@ -20,6 +22,8 @@ const Checkbox = forwardRef<CheckboxInstance, CheckboxProps>((props, ref) => {
     });
     
     const disabled = props.disabled || parent?.props.disabled;
+    
+    const shape = props.shape || parent?.props.shape || 'round';
 
     const varClasses = useMemo(()=>{
         return joinTrim([

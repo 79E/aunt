@@ -42,6 +42,10 @@ export interface CheckboxGroupProps extends BaseTypeProps {
    * 当绑定值变化时触发的事件	 
    */
   onChange?: (name: any[]) => void;
+  /** 
+   * 形状，可选值为 square	 
+   */
+   shape?: Shape;
 }
 
 type IconRenderParams = {

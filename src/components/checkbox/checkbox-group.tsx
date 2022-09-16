@@ -7,7 +7,7 @@ import { useMergedState,useNamespace } from '../../hooks';
 
 const CheckBoxGroup:FunctionComponent<CheckboxGroupProps> = ((props) => {
   
-  const { defaultValue = [], direction='vertical' } = props;
+  const { defaultValue = [], direction='vertical', shape = 'square' } = props;
 
   const { prefix } = useContext(ConfigProviderContext);
   const ns = useNamespace('checkbox-group',prefix);
@@ -23,7 +23,7 @@ const CheckBoxGroup:FunctionComponent<CheckboxGroupProps> = ((props) => {
   };
 
   return (
-    <CheckBoxContext.Provider value={{ parent: { props }, toggle, checked }}>
+    <CheckBoxContext.Provider value={{ parent: { props:{...props, shape} }, toggle, checked }}>
       <div className={joinTrim([
         ns.b(),
         ns.m(direction),
