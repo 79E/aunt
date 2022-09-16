@@ -21,7 +21,7 @@ const Checkbox = forwardRef<CheckboxInstance, CheckboxProps>((props, ref) => {
         defaultValue: props.defaultChecked,
     });
     
-    const disabled = props.disabled || parent?.props.disabled;
+    const disabled = props.disabled || parent?.props.disabled || false;
     
     const shape = props.shape || parent?.props.shape || 'round';
 
@@ -37,7 +37,7 @@ const Checkbox = forwardRef<CheckboxInstance, CheckboxProps>((props, ref) => {
     },[props.style]);
 
     const renderIcon = ()=>{
-
+        
         const iconStyles = useMemo(()=>{
             const styles:CSSProperties = {
                 width:addUnit(props.iconSize || parent?.props.iconSize),
@@ -50,6 +50,11 @@ const Checkbox = forwardRef<CheckboxInstance, CheckboxProps>((props, ref) => {
             }
             return { ...styles };
         },[props.iconSize,parent,checked]);
+        
+        const iconRender = props.iconRender || parent?.props.iconRender;
+        if(iconRender){
+            return iconRender({ checked, disabled });
+        }
 
         return <div
             className={joinTrim([
@@ -59,7 +64,7 @@ const Checkbox = forwardRef<CheckboxInstance, CheckboxProps>((props, ref) => {
             ])}
             style={iconStyles}
         >
-            <AuntIconCheck />
+             <AuntIconCheck />
         </div>;
     };
     const renderChildren = ()=>{
