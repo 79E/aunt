@@ -4,6 +4,17 @@ import { BaseTypeProps } from '../../utils';
 type Shape = 'round' | 'square';
 type Direction = 'horizontal' | 'vertical';
 
+type IconRenderParams = {
+    /** 
+     * 是否选中 
+     */
+    checked: boolean;
+    /** 
+     * 是否禁用 
+     */
+    disabled: boolean;
+};
+
 export interface CheckboxGroupProps extends BaseTypeProps {
   /**
    * 最大可选数，0 为无限制
@@ -29,7 +40,7 @@ export interface CheckboxGroupProps extends BaseTypeProps {
   /** 
    * 自定义图标	 
    */
-  iconRender?: ({ checked, disabled }: { checked: boolean; disabled: boolean }) => React.ReactNode;
+  iconRender?: (params: IconRenderParams) => React.ReactNode;
   /** 
    * 排列方向，可选值为 horizontal	 
    */
@@ -48,16 +59,7 @@ export interface CheckboxGroupProps extends BaseTypeProps {
    shape?: Shape;
 }
 
-type IconRenderParams = {
-  /** 
-   * 是否选中 
-   */
-  checked: boolean;
-  /** 
-   * 是否禁用 
-   */
-  disabled: boolean;
-};
+
 
 export interface CheckerProps<T> extends BaseTypeProps {
   /** 
