@@ -86,16 +86,16 @@ import { Checkbox } from 'aunt';
 
 | 属性名 | 说明 | 默认值 |
 | ---- | ---- | ---- |
-|--aunt-checkbox-margin|外边距| `0 0 var(--aunt-padding-xs) 0;` |
-|--aunt-checkbox-size|大小 | `var(--aunt-font-size-xxl);` |
-|--aunt-checkbox-border-width|边框大小| `var(--aunt-border-width-base);` |
-|--aunt-checkbox-border-style|边框类型| `solid;` |
-|--aunt-checkbox-border-color|边框颜色| `var(--aunt-gray-5);` |
-|--aunt-checkbox-square-radius|方形圆角| `var(--aunt-border-radius-md);` |
-|--aunt-checkbox-active-color|活跃颜色| `var(--aunt-brand-color);` |
-|--aunt-checkbox-label-color|内容文字颜色| `var(--aunt-text-color);` |
-|--aunt-checkbox-label-font-size|内容文字大小| `var(--aunt-font-size-lg);` |
-|--aunt-checkbox-label-margin|内容外边距| `0 var(--aunt-padding-xs);` |
-|--aunt-checkbox-disabled-color|禁用状态文字边框等颜色| `var(--aunt-gray-4);` |
-|--aunt-checkbox-disabled-background-color|禁用状态背景颜色| `var(--aunt-gray-3);` |
+|--aunt-checker-margin|外边距| `0 0 var(--aunt-padding-xs) 0;` |
+|--aunt-checker-size|大小 | `var(--aunt-font-size-xxl);` |
+|--aunt-checker-border-width|边框大小| `var(--aunt-border-width-base);` |
+|--aunt-checker-border-style|边框类型| `solid;` |
+|--aunt-checker-border-color|边框颜色| `var(--aunt-gray-5);` |
+|--aunt-checker-square-radius|方形圆角| `var(--aunt-border-radius-md);` |
+|--aunt-checker-active-color|活跃颜色| `var(--aunt-brand-color);` |
+|--aunt-checker-label-color|内容文字颜色| `var(--aunt-text-color);` |
+|--aunt-checker-label-font-size|内容文字大小| `var(--aunt-font-size-lg);` |
+|--aunt-checker-label-margin|内容外边距| `0 var(--aunt-padding-xs);` |
+|--aunt-checker-disabled-color|禁用状态文字边框等颜色| `var(--aunt-gray-4);` |
+|--aunt-checker-disabled-background-color|禁用状态背景颜色| `var(--aunt-gray-3);` |
 
