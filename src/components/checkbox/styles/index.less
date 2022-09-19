@@ -1,32 +1,32 @@
 @class-prefix: ~'aunt';
 
 :root{
-    --aunt-checkbox-margin: 0 0 var(--aunt-padding-xs) 0;
-    --aunt-checkbox-size: var(--aunt-font-size-xxl);
-    --aunt-checkbox-border-width: var(--aunt-border-width-base);
-    --aunt-checkbox-border-style: solid;
-    --aunt-checkbox-border-color: var(--aunt-gray-5);
-    --aunt-checkbox-square-radius: var(--aunt-border-radius-md);
-    --aunt-checkbox-active-color: var(--aunt-brand-color);
-    --aunt-checkbox-label-color: var(--aunt-text-color);
-    --aunt-checkbox-label-font-size: var(--aunt-font-size-lg);
-    --aunt-checkbox-label-margin: 0 var(--aunt-padding-xs);
-    --aunt-checkbox-disabled-color: var(--aunt-gray-4);
-    --aunt-checkbox-disabled-background-color: var(--aunt-gray-3);
+    --aunt-checker-margin: 0 0 var(--aunt-padding-xs) 0;
+    --aunt-checker-size: var(--aunt-font-size-xxl);
+    --aunt-checker-border-width: var(--aunt-border-width-base);
+    --aunt-checker-border-style: solid;
+    --aunt-checker-border-color: var(--aunt-gray-5);
+    --aunt-checker-square-radius: var(--aunt-border-radius-md);
+    --aunt-checker-active-color: var(--aunt-brand-color);
+    --aunt-checker-label-color: var(--aunt-text-color);
+    --aunt-checker-label-font-size: var(--aunt-font-size-lg);
+    --aunt-checker-label-margin: 0 var(--aunt-padding-xs);
+    --aunt-checker-disabled-color: var(--aunt-gray-4);
+    --aunt-checker-disabled-background-color: var(--aunt-gray-3);
 }
 
-.@{class-prefix}-checkbox {
+.@{class-prefix}-checker {
     display: flex;
-    margin: var(--aunt-checkbox-margin);
+    margin: var(--aunt-checker-margin);
     cursor: pointer;
     user-select: none;
     align-items: center;
     &__icon{
-        width: var(--aunt-checkbox-size);
-        height: var(--aunt-checkbox-size);
-        border-width: var(--aunt-checkbox-border-width);
-        border-style: var(--aunt-checkbox-border-style);
-        border-color: var(--aunt-checkbox-border-color);
+        width: var(--aunt-checker-size);
+        height: var(--aunt-checker-size);
+        border-width: var(--aunt-checker-border-width);
+        border-style: var(--aunt-checker-border-style);
+        border-color: var(--aunt-checker-border-color);
         color: transparent;
         display: flex;
         align-items: center;
@@ -37,37 +37,35 @@
             border-radius: var(--aunt-border-radius-max);
         }
         &--square{
-            border-radius: var(--aunt-checkbox-square-radius);
+            border-radius: var(--aunt-checker-square-radius);
         }
 
         &--active{
-            border-color: var(--aunt-checkbox-active-color);
-            background-color: var(--aunt-checkbox-active-color);
+            border-color: var(--aunt-checker-active-color);
+            background-color: var(--aunt-checker-active-color);
             color: var(--aunt-color-white);
         }
     }
 
     &__label{
-        font-size: var(--aunt-checkbox-label-font-size);
-        margin:var(--aunt-checkbox-label-margin);
-        color: var(--aunt-checkbox-label-color);
+        font-size: var(--aunt-checker-label-font-size);
+        margin:var(--aunt-checker-label-margin);
+        color: var(--aunt-checker-label-color);
     }
 
     &--disabled{
         cursor: not-allowed;
-        .@{class-prefix}-checkbox__icon{
-            background-color: var(--aunt-checkbox-disabled-background-color);
-            border-color: var(--aunt-checkbox-disabled-color);
+        .@{class-prefix}-checker__icon{
+            background-color: var(--aunt-checker-disabled-background-color);
+            border-color: var(--aunt-checker-disabled-color);
             &--active{
-                color: var(--aunt-checkbox-disabled-color);
+                color: var(--aunt-checker-disabled-color);
             }
         }
-        .@{class-prefix}-checkbox__label{
-            color: var(--aunt-checkbox-disabled-color);
+        .@{class-prefix}-checker__label{
+            color: var(--aunt-checker-disabled-color);
         }
     }
-
-
     &-group{
         display: flex;
         flex-wrap: wrap;

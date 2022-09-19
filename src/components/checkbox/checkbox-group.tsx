@@ -10,7 +10,7 @@ const CheckBoxGroup:FunctionComponent<CheckboxGroupProps> = ((props) => {
   const { defaultValue = [], direction='vertical', shape = 'square' } = props;
 
   const { prefix } = useContext(ConfigProviderContext);
-  const ns = useNamespace('checkbox-group',prefix);
+  const ns = useNamespace('checker-group',prefix);
 
   const [checked, setChecked] = useMergedState({
     value: props.value,

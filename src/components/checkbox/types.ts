@@ -1,10 +1,10 @@
 import React from 'react';
 import { BaseTypeProps } from '../../utils';
 
-type Shape = 'round' | 'square';
-type Direction = 'horizontal' | 'vertical';
+export type Shape = 'round' | 'square';
+export type Direction = 'horizontal' | 'vertical';
 
-type IconRenderParams = {
+export type IconRenderParams = {
     /** 
      * 是否选中 
      */
@@ -104,6 +104,8 @@ export interface CheckerProps<T> extends BaseTypeProps {
    * 当绑定值变化时触发的事件	 
    */
   onChange?: (checked: boolean) => void;
+   /** 切换选择状态时触发 */
+   onToggle?: () => void;
   /** 
    * @private  
    */
