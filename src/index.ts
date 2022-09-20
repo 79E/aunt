@@ -25,6 +25,7 @@ export * from './components/circle-progress';
 export * from './components/skeleton';
 export * from './components/rate';
 export * from './components/checkbox';
+export * from './components/radio';
 
 
 
