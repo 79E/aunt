@@ -1,0 +1,70 @@
+@class-prefix: ~'aunt';
+
+:root{
+    --aunt-segmented-color: var(--aunt-gray-8);
+    --aunt-segmented-disabled-color: var(--aunt-gray-5);
+
+    --aunt-segmented-small-line-height: var(--aunt-line-height-xxl);
+    --aunt-segmented-small-font-size: var(--aunt-font-size-sm);
+    --aunt-segmented-small-padding:0 var(--aunt-padding-s);
+
+    --aunt-segmented-middle-line-height: calc(30 * var(--aunt-hd));
+    --aunt-segmented-middle-font-size: var(--aunt-font-size-md);
+    --aunt-segmented-middle-padding: 0 var(--aunt-padding-sm);
+
+    --aunt-segmented-large-line-height: calc(34 * var(--aunt-hd));
+    --aunt-segmented-large-font-size: var(--aunt-font-size-lg);
+    --aunt-segmented-large-padding:0 var(--aunt-padding-m);
+    
+    --aunt-segmented-selected-background-color: var(--aunt-color-white);
+    --aunt-segmented-selected-border-radius: var(--aunt-border-radius-md);
+
+
+    --aunt-segmented-group-padding: var(--aunt-padding-base);
+    --aunt-segmented-group-border-radius: var(--aunt-border-radius-md);
+    --aunt-segmented-group-background-color: var(--aunt-gray-2);
+}
+
+.@{class-prefix}-segmented {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    color: var(--aunt-segmented-color);
+    user-select: none;
+
+    &--selected{
+        background-color: var(--aunt-segmented-selected-background-color);
+        position: absolute;
+        border-radius: var(--aunt-segmented-selected-border-radius);
+        transition: all var(--aunt-animation-duration-base);
+    }
+    &--disabled{
+        cursor: not-allowed;
+        color: var(--aunt-segmented-disabled-color);
+    }
+    &--small{
+        line-height: var(--aunt-segmented-small-line-height);
+        font-size: var(--aunt-segmented-small-font-size);
+        padding: var(--aunt-segmented-small-padding);
+    }
+    &--middle{
+        line-height: var(--aunt-segmented-middle-line-height);
+        font-size: var(--aunt-segmented-middle-font-size);
+        padding: var(--aunt-segmented-middle-padding);
+    }
+    &--large{
+        line-height: var(--aunt-segmented-large-line-height);
+        font-size: var(--aunt-segmented-large-font-size);
+        padding: var(--aunt-segmented-large-padding);
+    }
+
+    &-group{
+        padding: var(--aunt-segmented-group-padding);
+        position: relative;
+        background-color: var(--aunt-segmented-group-background-color);
+        border-radius: var(--aunt-segmented-group-border-radius);
+        box-sizing: border-box;
+        display: inline-block;
+        z-index: 1;
+    }
+}
