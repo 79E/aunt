@@ -10,6 +10,22 @@ React Aunt 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范
 
 
 ## 更新内容
+### v0.2.0
+⏰`2022-09-22`
+
+**Bug Fixes**
+- Rate: 修改评分禁用和只读状态class层级问题
+- Segmented: 修复在自定义内容下的选中状态高度不适应问题
+
+**New Component**
+- 新增Progress 进度条组件
+- 新增CircleProgress 环形进度条组件
+- 新增Skeleton 骨架屏组件
+- 新增Rate 评分组件
+- 新增Checkbox 复选框组件
+- 新增Radio 单选框组件
+- 新增Segmented 分段控制器组件
+
 ### v0.1.1
 ⏰`2022-08-22`
 

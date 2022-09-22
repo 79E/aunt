@@ -1,6 +1,6 @@
 {
   "name": "aunt",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "React Mobile UI Components base on Aunt UI",
   "scripts": {
     "start": "dumi dev",
