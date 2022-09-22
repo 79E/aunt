@@ -42,7 +42,6 @@ export const SegmentedGroup:FunctionComponent<SegmentedGroupProps> = ((props) =>
     const varSelectedStyles = useMemo(()=>{
         const styles:CSSProperties = {
             width: selected.width,
-            height: selected.height,
             left: selected.offsetLeft
         };
         return {

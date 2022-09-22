@@ -33,6 +33,9 @@
     user-select: none;
     transition: color var(--aunt-animation-duration-base);
     &--selected{
+        top: 0;
+        bottom: 0;
+        margin: var(--aunt-segmented-group-padding) 0;
         background-color: var(--aunt-segmented-selected-background-color);
         position: absolute;
         border-radius: var(--aunt-segmented-selected-border-radius);
@@ -63,8 +66,8 @@
         position: relative;
         background-color: var(--aunt-segmented-group-background-color);
         border-radius: var(--aunt-segmented-group-border-radius);
-        box-sizing: border-box;
         display: inline-block;
+        box-sizing: border-box;
         z-index: 1;
     }
 }
