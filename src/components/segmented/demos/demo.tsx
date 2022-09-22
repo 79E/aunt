@@ -1,39 +1,32 @@
-import React, { useState } from "react";
-import { Segmented, Space } from 'aunt';
+import React from "react";
 import { DemoBlock } from 'demos';
+import DemoBase from './demo-base';
+import DemoDisabled from './demo-disabled';
+import DemoSize from './demo-size';
+import DemoColor from './demo-color';
+import DemoChildren from './demo-children';
+import DemoChange from './demo-change';
 import './index.less';
 
 function Demo (){
-    const [v,sv] = useState('4');
     return <div className="demo">
         <DemoBlock title="基础用法">
-            <Space direction='vertical'>
-                <Segmented.Group size='small' value={v} onChange={(r)=>{
-                    console.log(r);
-                    sv(r);
-                }}>
-                    <Segmented value='2'>你好2</Segmented>
-                    <Segmented value='3'>你好3</Segmented>
-                    <Segmented value='4'>你好4</Segmented>
-                    <Segmented value='5'>你好5</Segmented>
-                </Segmented.Group>
-                <Segmented.Group size='middle' value={v} onChange={(r)=>{
-                    // console.log(r);
-                }}>
-                    <Segmented value='2'>
-                        你好
-                    </Segmented>
-                    <Segmented value='3' disabled={true}>你好3</Segmented>
-                    <Segmented value='4'>你好4</Segmented>
-                    <Segmented value='5' disabled={true}>你好5</Segmented>
-                </Segmented.Group>
-                <Segmented.Group size='large' value={v}>
-                    <Segmented value='2'>你好2</Segmented>
-                    <Segmented value='3'>你好3</Segmented>
-                    <Segmented value='4'>你好4</Segmented>
-                    <Segmented value='5'>你好5</Segmented>
-                </Segmented.Group>
-            </Space>
+            <DemoBase />
+        </DemoBlock>
+        <DemoBlock title="禁用模式">
+            <DemoDisabled />
+        </DemoBlock>
+        <DemoBlock title="组件尺寸">
+            <DemoSize />
+        </DemoBlock>
+        <DemoBlock title="自定义颜色">
+            <DemoColor />
+        </DemoBlock>
+        <DemoBlock title="自定义内容">
+            <DemoChildren />
+        </DemoBlock>
+        <DemoBlock title="受控模式">
+            <DemoChange />
         </DemoBlock>
     </div>;
 }
