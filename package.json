@@ -76,7 +76,7 @@
     "@umijs/test": "^3.0.5",
     "commitlint": "^17.0.3",
     "del": "^6.1.1",
-    "dumi": "^1.1.0",
+    "dumi": "^1.1.48",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
