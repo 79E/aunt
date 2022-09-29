@@ -27,6 +27,7 @@ export * from './components/rate';
 export * from './components/checkbox';
 export * from './components/radio';
 export * from './components/segmented';
+export * from './components/water-mark';
 
 
 
