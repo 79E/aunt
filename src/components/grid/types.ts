@@ -1,13 +1,14 @@
 import { BaseTypeProps } from '../../utils';
 
 export type GridDirection = 'horizontal' | 'vertical';
+export type Gap = number | string | [number | string, number | string]
 
 export interface GridProps extends BaseTypeProps {
     /**
      * @name 格子之间的间距
      * @default 0
      */
-    gap?: number | string | [number | string, number | string];
+    gap?: Gap;
     /**
      * @name 格子列数
      * @default 4
