@@ -1,0 +1,50 @@
+@class-prefix: ~'aunt';
+
+:root{
+    --aunt-selector-font-size: var(--aunt-font-size-md);
+    --aunt-selector-padding: var(--aunt-padding-xs) var(--aunt-padding-md);
+    --aunt-selector-border-radius: var(--aunt-border-radius-md);
+    --aunt-selector-description-font-size: var(--aunt-font-size-sm);
+    --aunt-selector-active-background-color: var(--aunt-arcoblue-1);
+    --aunt-selector-active-color: var(--aunt-brand-color);
+    --aunt-selector-background-color: var(--aunt-background-color);
+    --aunt-selector-color: var(--aunt-text-color);
+    --aunt-selector-disabled-opacity: var(--aunt-disabled-opacity);
+    --aunt-selector-description-color: var(--aunt-gray-5);
+}
+
+.@{class-prefix}-selector {
+    overflow: hidden;
+    font-size: var(--aunt-selector-font-size);
+    &__item{
+        padding: var(--aunt-selector-padding);
+        position: relative;
+        background-color: var(--aunt-selector-background-color);
+        border-radius: var(--aunt-selector-border-radius);
+        color: var(--aunt-selector-color);
+        opacity: 1;
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+        overflow: hidden;
+        vertical-align: top;
+        &--disabled{
+            cursor: not-allowed;
+            opacity: var(--aunt-selector-disabled-opacity);
+        }
+        &--active{
+            background-color:var(--aunt-selector-active-background-color);
+            color: var(--aunt-selector-active-color);
+        }
+    }
+    &__description{
+        margin: 0;
+        font-size: var(--aunt-selector-description-font-size);
+        color: var(--aunt-selector-description-color);
+    }
+    &__mark{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
