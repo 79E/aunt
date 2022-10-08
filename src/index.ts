@@ -29,6 +29,7 @@ export * from './components/radio';
 export * from './components/segmented';
 export * from './components/water-mark';
 export * from './components/selector';
+export * from './components/overlay';
 
 
 
