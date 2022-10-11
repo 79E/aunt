@@ -8,7 +8,7 @@ export interface BaseTypeProps {
   * @name 自定义样式
   * @en Custom stylesheet
   */
-  style?: React.CSSProperties | any;
+  style?: React.CSSProperties;
   /**
   * @name 自定义类名
   * @en Custom classname

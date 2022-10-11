@@ -30,6 +30,7 @@ export * from './components/segmented';
 export * from './components/water-mark';
 export * from './components/selector';
 export * from './components/overlay';
+export * from './components/nav-bar';
 
 
 
