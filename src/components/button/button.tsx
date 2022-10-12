@@ -42,7 +42,7 @@ export const Button:FunctionComponent<Partial<ButtonProps>> = ((props) => {
         loading ? ns.e('loading') : '',
         className
       ]);
-    },[]);
+    },[type,size,shape,plain,block,disabled,hairline,icon,loading,className]);
 
     const varStyles = useMemo(()=>{
       const styles: CSSProperties = {};
@@ -56,7 +56,7 @@ export const Button:FunctionComponent<Partial<ButtonProps>> = ((props) => {
           }
         }
         return {...style, ...styles};
-    },[]);
+    },[plain, color, style]);
 
     const handleClick = (event: any) => {
         if (!loading && !disabled && props.onClick) {
