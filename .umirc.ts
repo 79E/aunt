@@ -135,7 +135,7 @@ export default defineConfig({
       },
       {
         title: '导航组件',
-        children: ['components/nav-bar'],
+        children: ['components/nav-bar','components/pagination'],
       },
       {
         title: '其他组件',
