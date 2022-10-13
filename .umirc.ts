@@ -131,7 +131,7 @@ export default defineConfig({
       },
       {
         title: '展示组件',
-        children: ['components/badge' ,'components/avatar', 'components/divider', 'components/count-down', 'components/empty', 'components/tag', 'components/card', 'components/progress','components/circle-progress', 'components/lazy-load', 'components/skeleton', 'components/segmented', 'components/water-mark'],
+        children: ['components/badge' ,'components/avatar', 'components/divider', 'components/count-down', 'components/empty', 'components/tag', 'components/card', 'components/progress','components/circle-progress', 'components/steps', 'components/lazy-load', 'components/skeleton', 'components/segmented', 'components/water-mark'],
       },
       {
         title: '导航组件',
