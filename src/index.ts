@@ -33,6 +33,7 @@ export * from './components/overlay';
 export * from './components/nav-bar';
 export * from './components/pagination';
 export * from './components/steps';
+export * from './components/tabbar';
 
 
 

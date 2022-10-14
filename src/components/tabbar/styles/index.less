@@ -1,0 +1,37 @@
+@class-prefix: ~'aunt';
+
+:root{
+    --aunt-tabbar-z-index: 1000;
+    --aunt-tabbar-min-height: calc(44 * var(--aunt-hd));
+    --aunt-tabbar-background-color: var(--aunt-color-white);
+    --aunt-tabbar-item-padding: var(--aunt-padding-base);
+    --aunt-tabbar-item-color: var(--aunt-gray-6);
+    --aunt-tabbar-item-font-size: var(--aunt-font-size-sm);
+}
+
+.@{class-prefix}-tabbar {
+    z-index: var(--aunt-tabbar-z-index);
+    display: flex;
+    box-sizing: content-box;
+    width: 100%;
+    background-color: var(--aunt-tabbar-background-color);
+    min-height: var(--aunt-tabbar-min-height);
+    
+    &--fixed {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+
+    &-item{
+        margin:var(--aunt-tabbar-item-padding);
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--aunt-tabbar-item-color);
+        font-size: var(--aunt-tabbar-item-font-size);
+        cursor: pointer;
+    }
+}
