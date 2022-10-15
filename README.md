@@ -9,13 +9,12 @@
 
 - 🚀 组件平均体积小于 1KB（min+gzip）.
 - 💎 70+ 个高质量组件，覆盖移动端主流场景.
+- 🛞 30+ 个高质量业务组件和页面.
 - 💪 使用 TypeScript 编写，提供完整的类型定义.
 - 📝 提供完善的文档和组件示例.
 - 🎨 支持主题定制，内置 700+ 个主题变量.
 - 😎 支持按需引入和 Tree Shaking.
-- ⚡️ 支持 [Vite](https://github.com/3lang3/react-vant-template/tree/main/template/vite)和 Parcel@2.
 - 🌵 现代浏览器
-- 🌝 支持 SSR([nextjs](https://github.com/3lang3/react-vant-template/tree/main/next/nextjs), [remix](https://github.com/3lang3/react-vant-template/tree/main/next/remix)).
 
 ## 🖥 环境支持
 
@@ -25,17 +24,19 @@
 支持现代浏览器和 Chrome >= 51，iOS >= 10.0。
 
 ## 📦 安装
-
-推荐 **锁定** 版本:
+目前为高速迭代期间，可实时关注变化并进行更新。
 
 ```bash
 # npm
-npm i aunt@next -S -E
+npm i aunt
+
+# yarn
+yarn add aunt
 ```
 
 ## 🚀 快速开始
 
-以下是 aunt 的一些代码示例：
+以下是 `aunt` 的一些代码示例：
 
 #### 代码片段:
 
@@ -51,6 +52,23 @@ ReactDOM.render(<App />, mountNode);
 ```
 
 更多信息请参考[快速开始](https://aunt.design/guide/quick-start).
+
+内置从零搭建项目流程可参考[项目实战](https://aunt.design/guide/projects)
+
+## 🛠 本地开发
+
+先将本项目克隆到本地并安装相关依赖。
+
+```bash
+# 克隆项目
+git clone https://github.com/79E/aunt.git
+
+# 安装依赖
+cd aunt && npm install
+
+# 进入开发模式，浏览器访问 http://localhost:8000
+npm start
+```
 
 ## 🤝 贡献
 

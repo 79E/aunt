@@ -99,7 +99,7 @@ export default defineConfig({
     '/hooks': [
       {
         title: 'Hooks ',
-        children: ['/hooks/use-in-viewport', './hooks/use-count-down', './hooks/use-namespace', './hooks/use-merged-state','./hooks/use-event-listener'],
+        children: ['/hooks/use-in-viewport', './hooks/use-count-down', './hooks/use-namespace', './hooks/use-merged-state','./hooks/use-event-listener','./hooks/use-rect'],
       }
     ],
     '/blog': [
