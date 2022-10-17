@@ -7,4 +7,5 @@ export * from './interface';
 export * from './constant';
 export * from './dom/event';
 export * from './dom/getRect';
+export * from './dom/getScroll';
 

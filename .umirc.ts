@@ -127,7 +127,7 @@ export default defineConfig({
       },
       {
         title: '反馈组件',
-        children: ['components/loading','components/overlay'],
+        children: ['components/loading', 'components/overlay', 'components/back-top'],
       },
       {
         title: '展示组件',

@@ -6,3 +6,7 @@ export function isObject(val: unknown): val is Record<any, any> {
 }
 
 export const inBrowser = typeof window !== 'undefined';
+
+export function isWindow(obj: any): obj is Window {
+    return obj !== null && obj !== undefined && obj === obj.window;
+}

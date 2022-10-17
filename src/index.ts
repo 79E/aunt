@@ -34,6 +34,7 @@ export * from './components/nav-bar';
 export * from './components/pagination';
 export * from './components/steps';
 export * from './components/tabbar';
+export * from './components/back-top';
 
 
 

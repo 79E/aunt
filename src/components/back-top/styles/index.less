@@ -1,0 +1,30 @@
+@class-prefix: ~'aunt';
+
+:root{
+    --aunt-back-top-size: calc(40 * var(--aunt-hd));
+    --aunt-back-top-background-color: var(--aunt-background-color);
+    --aunt-back-top-color: var(--aunt-text-color);
+    --aunt-back-square-radius: var(--aunt-border-radius-lg);
+}
+
+.@{class-prefix}-back-top {
+    position: fixed;
+    cursor: pointer;
+    
+    &__content{
+        width: var(--aunt-back-top-size);
+        height: var(--aunt-back-top-size);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--aunt-back-top-background-color);
+        color: var(--aunt-back-top-color);
+    }
+
+    &--square{
+        border-radius: var(--aunt-back-square-radius);
+    }
+    &--round{
+        border-radius: var(--aunt-border-radius-max);
+    }
+}
