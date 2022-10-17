@@ -6,9 +6,9 @@ export const Transition:FunctionComponent<TransitionProps> = ((props) => {
 
     const {
         children = <div />,
-        type,
+        type = 'aunt-transition-fade',
         in: transIn,
-        timeout = 300,
+        timeout = 500,
         mountOnEnter = true,
         unmountOnExit = true,
         ...rest

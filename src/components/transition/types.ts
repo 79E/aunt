@@ -7,7 +7,7 @@ export interface TransitionProps extends  BaseTypeProps, Omit<CSSTransitionProps
      * @name 待执行动画css类名
      * @en Css classname of the animation to be executed
      */
-    type: string;
+    type?: string;
     /**
      * @name 内容是否可见
      * @en Whether the content is visible
@@ -18,7 +18,7 @@ export interface TransitionProps extends  BaseTypeProps, Omit<CSSTransitionProps
      * @en Execute animation time
      * @default 300
      */
-    timeout: number | { appear?: number; enter?: number; exit?: number };
+    timeout?: number | { appear?: number; enter?: number; exit?: number };
     /**
      * @name 是否在打开时再加载内容
      * @en Whether to reload content when it is opened

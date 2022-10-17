@@ -8,7 +8,7 @@ function Demo (){
     return (
         <div className="demo-transition">
             <Button onClick={()=>{setIsin(!isIn);}}>显示或隐藏</Button>
-            <Transition type="fade" in={isIn} timeout={500}>
+            <Transition in={isIn} timeout={500}>
                 <div className="demo-transition__card"></div>
             </Transition>
         </div>
