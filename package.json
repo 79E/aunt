@@ -8,7 +8,9 @@
     "build": "gulp",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
-    "lint": "eslint \"src/**/*.{js,ts,tsx}\"",
+    "lint": "npm run lint:prettier && npm run lint:es",
+    "lint:prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint:es": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky install"
   },
   "keywords": [
@@ -48,8 +50,13 @@
     "platform": "github"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --parser=typescript --write"
     ]
   },
   "peerDependencies": {
