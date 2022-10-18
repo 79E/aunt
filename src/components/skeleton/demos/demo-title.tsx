@@ -1,6 +1,4 @@
-import React from "react";
+import React from 'react';
 import { Skeleton } from 'aunt';
 
-export default ()=>(
-    <Skeleton title></Skeleton>
-);
+export default () => <Skeleton title></Skeleton>;

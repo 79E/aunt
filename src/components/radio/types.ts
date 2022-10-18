@@ -1,6 +1,6 @@
 import React from 'react';
 import { BaseTypeProps } from '../../utils';
-import { CheckerProps,Direction ,Shape, IconRenderParams} from '../checkbox/types';
+import { CheckerProps, Direction, Shape, IconRenderParams } from '../checkbox/types';
 
 export type RadioValueType = number | string;
 
@@ -13,12 +13,12 @@ export interface RadioGroupProps<T = RadioValueType> extends BaseTypeProps {
   direction?: Direction;
   /** 选中状态颜色	 */
   checkedColor?: string;
-  /** 
-   * 形状，可选值为 square	 
+  /**
+   * 形状，可选值为 square
    */
-   shape?: Shape;
-   /** 
-   * 自定义图标	 
+  shape?: Shape;
+  /**
+   * 自定义图标
    */
   iconRender?: (params: IconRenderParams) => React.ReactNode;
   /** 当前值 */

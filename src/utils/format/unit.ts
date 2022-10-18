@@ -5,14 +5,13 @@ import { isDef } from '../base';
 import { isNumeric } from '../validate/number';
 
 export function addUnit(value?: string | number): string | undefined {
-    if (!isDef(value)) {
-      return undefined;
-    }
-    
-    value = String(value);
-    return isNumeric(value) ? `${value}px` : value;
-}
+  if (!isDef(value)) {
+    return undefined;
+  }
 
+  value = String(value);
+  return isNumeric(value) ? `${value}px` : value;
+}
 
 export function kebabCase(str: string): string {
   return str
@@ -39,4 +38,3 @@ export function getZIndexStyle(zIndex?: string | number) {
   }
   return style;
 }
-

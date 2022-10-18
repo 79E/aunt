@@ -1,12 +1,7 @@
 import './styles/index.less';
 import Badge from './badge';
 
-export type {
+export type {} from './types';
 
-} from './types';
-
-export {
-    Badge
-};
+export { Badge };
 export default Badge;
-

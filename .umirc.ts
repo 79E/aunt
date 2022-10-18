@@ -1,10 +1,11 @@
-import { defineConfig } from 'dumi'
+import { defineConfig } from 'dumi';
 
 export default defineConfig({
   title: 'Aunt Design',
   favicon:
     'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/3c637506-9024-4153-baa7-fa7b66c87f67.svg',
-  logo: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/3c637506-9024-4153-baa7-fa7b66c87f67.svg',
+  logo:
+    'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/3c637506-9024-4153-baa7-fa7b66c87f67.svg',
   outputPath: 'docs-dist',
   mode: 'site',
   locales: [
@@ -94,36 +95,54 @@ export default defineConfig({
       {
         title: '常见问题',
         path: '/guide/question',
-      }
+      },
     ],
     '/hooks': [
       {
         title: 'Hooks ',
-        children: ['/hooks/use-in-viewport', './hooks/use-count-down', './hooks/use-namespace', './hooks/use-merged-state','./hooks/use-event-listener','./hooks/use-rect'],
-      }
+        children: [
+          '/hooks/use-in-viewport',
+          './hooks/use-count-down',
+          './hooks/use-namespace',
+          './hooks/use-merged-state',
+          './hooks/use-event-listener',
+          './hooks/use-rect',
+        ],
+      },
     ],
     '/blog': [
       {
         title: '构建文档',
-        children:['blog/structure/site']
+        children: ['blog/structure/site'],
       },
       {
         title: '组件开发',
-        children:['blog/components/button','blog/components/icon']
-      }
+        children: ['blog/components/button', 'blog/components/icon'],
+      },
     ],
     '/components': [
       {
         title: '布局组件',
-        children: ['components/flex','components/grid','components/space'],
+        children: ['components/flex', 'components/grid', 'components/space'],
       },
       {
         title: '基础组件',
-        children: ['components/button','components/icon','components/typography','components/image'],
+        children: [
+          'components/button',
+          'components/icon',
+          'components/typography',
+          'components/image',
+        ],
       },
       {
         title: '表单组件',
-        children: ['components/switch','components/checkbox','components/radio', 'components/rate', 'components/selector'],
+        children: [
+          'components/switch',
+          'components/checkbox',
+          'components/radio',
+          'components/rate',
+          'components/selector',
+        ],
       },
       {
         title: '反馈组件',
@@ -131,7 +150,22 @@ export default defineConfig({
       },
       {
         title: '展示组件',
-        children: ['components/badge' ,'components/avatar', 'components/divider', 'components/count-down', 'components/empty', 'components/tag', 'components/card', 'components/progress','components/circle-progress', 'components/steps', 'components/lazy-load', 'components/skeleton', 'components/segmented', 'components/water-mark'],
+        children: [
+          'components/badge',
+          'components/avatar',
+          'components/divider',
+          'components/count-down',
+          'components/empty',
+          'components/tag',
+          'components/card',
+          'components/progress',
+          'components/circle-progress',
+          'components/steps',
+          'components/lazy-load',
+          'components/skeleton',
+          'components/segmented',
+          'components/water-mark',
+        ],
       },
       {
         title: '导航组件',
@@ -139,7 +173,7 @@ export default defineConfig({
       },
       {
         title: '其他组件',
-        children: ['components/config-provider','components/transition'],
+        children: ['components/config-provider', 'components/transition'],
       },
       // {
       //   title: '业务组件',
@@ -158,7 +192,7 @@ export default defineConfig({
       // 更多 rule 配置访问 https://github.com/umijs/dumi/blob/master/packages/theme-mobile/src/typings/config.d.ts#L7
     },
     carrier: 'Aunt',
-    time: '10:12'
+    time: '10:12',
   },
   navs: {
     zh: [
@@ -198,4 +232,4 @@ export default defineConfig({
       },
     ],
   },
-})
+});

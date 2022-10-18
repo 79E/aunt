@@ -1,29 +1,21 @@
-import React, {
-  useRef,
-  useEffect,
-  useState,
-  useContext,
-  useCallback,
-} from 'react'
-import { context } from 'dumi/theme'
-import type { IPreviewerProps } from 'dumi-theme-default/es/builtins/Previewer'
-import Previewer from 'dumi-theme-default/es/builtins/Previewer'
-import './Previewer.less'
+import React, { useRef, useEffect, useState, useContext, useCallback } from 'react';
+import { context } from 'dumi/theme';
+import type { IPreviewerProps } from 'dumi-theme-default/es/builtins/Previewer';
+import Previewer from 'dumi-theme-default/es/builtins/Previewer';
+import './Previewer.less';
 
-export const ACTIVE_MSG_TYPE = 'dumi:scroll-into-demo'
+export const ACTIVE_MSG_TYPE = 'dumi:scroll-into-demo';
 
 export default (props: IPreviewerProps) => {
-  const ref = useRef<HTMLDivElement>()
-  const { meta } = useContext(context)
-  const [previewerProps, setPreviewerProps] = useState<null | IPreviewerProps>(
-    null
-  )
-  const [isActive, setIsActive] = useState(false)
-  const isInactive = meta.mobile !== false && !isActive
-  const isHidden = props.hidden == true ? true : false
-  
+  const ref = useRef<HTMLDivElement>();
+  const { meta } = useContext(context);
+  const [previewerProps, setPreviewerProps] = useState<null | IPreviewerProps>(null);
+  const [isActive, setIsActive] = useState(false);
+  const isInactive = meta.mobile !== false && !isActive;
+  const isHidden = props.hidden == true ? true : false;
+
   const activeSelf = useCallback(() => {
-    if(!isHidden) return
+    if (!isHidden) return;
     window.postMessage(
       {
         type: ACTIVE_MSG_TYPE,
@@ -31,30 +23,29 @@ export default (props: IPreviewerProps) => {
           identifier: props.identifier,
           demoUrl: props.demoUrl,
           simulator: props.simulator,
-          hidden: isHidden
+          hidden: isHidden,
         }),
       },
       '*'
-    )
-    setIsActive(true)
-  }, [props])
+    );
+    setIsActive(true);
+  }, [props]);
 
   useEffect(() => {
     // skip if page not loaded
     /* istanbul ignore next */
-    if (!meta.title) return
+    if (!meta.title) return;
 
-    if(isHidden){
-      activeSelf()
+    if (isHidden) {
+      activeSelf();
     }
-    
+
     if (
       // only render mobile phone when screen max than 960px
       window?.outerWidth > 960 &&
       // do not disable mobile simulator
       meta.mobile !== false
     ) {
-
       setPreviewerProps(
         Object.assign({}, props, {
           // omit iframe
@@ -64,17 +55,15 @@ export default (props: IPreviewerProps) => {
           // show source code
           defaultShowCode: true,
           // hide external action
-          hideActions: ['EXTERNAL' as IPreviewerProps['hideActions'][0]].concat(
-            props.hideActions
-          ),
+          hideActions: ['EXTERNAL' as IPreviewerProps['hideActions'][0]].concat(props.hideActions),
         })
-      )
+      );
     } else {
       // use standard mode if screen min than 960px
-      setPreviewerProps(props)
+      setPreviewerProps(props);
     }
-    return () => {}
-  }, [props, meta])
+    return () => {};
+  }, [props, meta]);
 
   useEffect(() => {
     const handler = ev => {
@@ -83,23 +72,25 @@ export default (props: IPreviewerProps) => {
         isActive &&
         JSON.parse(ev.data.value).identifier !== props.identifier
       ) {
-        setIsActive(false)
+        setIsActive(false);
       }
-    }
+    };
 
-    window.addEventListener('message', handler)
-  
-    return () => window.removeEventListener('message', handler)
-  })
+    window.addEventListener('message', handler);
+
+    return () => window.removeEventListener('message', handler);
+  });
 
   return (
     <div
       className={`
-      ${meta.mobile !== false ? '__dumi-default-mobile-previewer' : null} ${isHidden ? '__dumi-default-previewer--hidden' : ''}
+      ${meta.mobile !== false ? '__dumi-default-mobile-previewer' : null} ${
+        isHidden ? '__dumi-default-previewer--hidden' : ''
+      }
       `}
       onClick={() => {
         if (isInactive) {
-          activeSelf()
+          activeSelf();
         }
       }}
       data-inactive={isInactive || undefined}
@@ -112,5 +103,5 @@ export default (props: IPreviewerProps) => {
         />
       )}
     </div>
-  )
-}
+  );
+};

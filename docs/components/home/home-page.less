@@ -1,17 +1,16 @@
-
 .homePage {
   overflow: hidden;
-  min-height:89vh;
-  .prefersDark{
+  min-height: 89vh;
+  .prefersDark {
     [data-prefers-color='light'] & {
       position: absolute;
-      top:-999999999999px;
+      top: -999999999999px;
     }
   }
-  .prefersLight{
+  .prefersLight {
     [data-prefers-color='dark'] & {
       position: absolute;
-      top:-999999999999px;
+      top: -999999999999px;
     }
   }
   a {
@@ -22,13 +21,13 @@
     box-sizing: content-box;
     max-width: 1100px;
     margin: 0 auto;
-    .title{
+    .title {
       width: 100%;
-      svg{
+      svg {
         width: 100%;
       }
     }
-    .describe{
+    .describe {
       text-decoration: none;
       margin-top: 36px;
       font-size: 24px;
@@ -39,19 +38,17 @@
         color: #ddd;
       }
     }
-    .simple{
+    .simple {
       display: flex;
       align-items: center;
       justify-content: space-between;
       max-width: 800px;
       margin-top: 40px;
 
-      
-
-      &Card{
+      &Card {
         display: flex;
         flex-direction: column;
-        h2{
+        h2 {
           font-size: 16px;
           line-height: 1;
           -webkit-text-decoration: none;
@@ -62,24 +59,22 @@
             color: #fff;
           }
         }
-        
-        span{
+
+        span {
           max-width: 220px;
           color: #868e96;
           font-size: 14px;
           line-height: 1.55;
           -webkit-text-decoration: none;
           text-decoration: none;
-
         }
       }
-      
     }
-    .button{
+    .button {
       display: flex;
       align-items: center;
       margin-top: 40px;
-      &Full{
+      &Full {
         height: 64px;
         padding-left: 46px;
         padding-right: 46px;
@@ -91,11 +86,11 @@
         color: #fff;
         white-space: nowrap;
         background-image: linear-gradient(52deg, #27cdfe 3%, #328ef4 97%);
-        &:hover{
+        &:hover {
           opacity: 0.8;
         }
       }
-      &Ghost{
+      &Ghost {
         margin-left: 40px;
         height: 60px;
         padding-left: 46px;
@@ -110,9 +105,9 @@
         border: 2px solid #333;
         [data-prefers-color='dark'] & {
           color: #fff;
-          border-color:#ddd;
+          border-color: #ddd;
         }
-        &:hover{
+        &:hover {
           opacity: 0.8;
         }
       }
@@ -120,29 +115,29 @@
 
     @media only screen and (max-width: 880px) {
       padding-top: 60px;
-      .simple{
+      .simple {
         flex-direction: column;
         align-items: flex-start;
         margin-top: 10px;
-        &Card{
+        &Card {
           margin: 10px 0;
-          span{
+          span {
             max-width: 100%;
           }
         }
       }
-      .describe{
+      .describe {
         margin-top: 30px;
         font-size: 22px;
       }
-      .button{
+      .button {
         margin-top: 20px;
-        &Full{
+        &Full {
           padding-left: 36px;
           padding-right: 36px;
           flex: 1;
         }
-        &Ghost{
+        &Ghost {
           padding-left: 36px;
           padding-right: 36px;
           flex: 1;
@@ -151,27 +146,27 @@
     }
     @media only screen and (max-width: 600px) {
       padding-top: 30px;
-      .simple{
-        &Card{
+      .simple {
+        &Card {
           margin: 5px 0;
-          span{
+          span {
             max-width: 100%;
           }
         }
       }
-      .describe{
+      .describe {
         margin-top: 20px;
         font-size: 18px;
       }
-      .button{
+      .button {
         margin-top: 20px;
-        &Full{
+        &Full {
           height: 54px;
           padding-left: 26px;
           padding-right: 26px;
           flex: 1;
         }
-        &Ghost{
+        &Ghost {
           height: 50px;
           margin-left: 10px;
           padding-left: 26px;
@@ -190,5 +185,5 @@
       line-height: 22px;
       text-align: center;
     }
-  }  
+  }
 }

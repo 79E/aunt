@@ -1,12 +1,7 @@
 import './styles/index.less';
 import { Progress } from './progress';
 
-export type {
-    ProgressProps
-} from './types';
+export type { ProgressProps } from './types';
 
-export {
-    Progress
-};
+export { Progress };
 export default Progress;
-

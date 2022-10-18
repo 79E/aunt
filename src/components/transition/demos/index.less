@@ -1,33 +1,33 @@
 // 内容样式
-.demo{
-    &-transition{
-        &__card{
-            width: 100px; 
-            height: 100px;
-            margin: 10px 0;
-            border-radius:10px;
-            background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-        }
+.demo {
+  &-transition {
+    &__card {
+      width: 100px;
+      height: 100px;
+      margin: 10px 0;
+      border-radius: 10px;
+      background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
     }
+  }
 }
 
 // 动画样式
 .fade {
-    &-enter {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    &-enter-active {
-        opacity: 1;
-        transform: translateX(0);
-        transition: opacity 500ms, transform 500ms;
-    }
-    &-exit {
-        opacity: 1;
-    }
-    &-exit-active {
-        opacity: 0;
-        transform: scale(0.9);
-        transition: opacity 500ms, transform 500ms;
-    }
+  &-enter {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  &-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 500ms, transform 500ms;
+  }
+  &-exit {
+    opacity: 1;
+  }
+  &-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 500ms, transform 500ms;
+  }
 }

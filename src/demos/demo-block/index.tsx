@@ -2,10 +2,10 @@ import React, { FunctionComponent } from 'react';
 import styles from './index.less';
 
 interface Props {
-  title: string
-  padding?: string
-  background?: string
-  children?: React.ReactNode
+  title: string;
+  padding?: string;
+  background?: string;
+  children?: React.ReactNode;
 }
 
 export const DemoBlock: FunctionComponent<Props> = props => {

@@ -9,7 +9,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier'
+    'prettier',
   ],
   'parser': '@typescript-eslint/parser',
   'parserOptions': {
@@ -33,8 +33,8 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 'off',
     'no-inner-declarations': 'off',
     'react/no-unescaped-entities': 'off',
-    '@typescript-eslint/no-var-requires':'off',
-    'semi':[2,'always'],
+    '@typescript-eslint/no-var-requires': 'off',
+    'semi': [2, 'always'],
     '@typescript-eslint/no-unused-vars': [
       'warn',
       {

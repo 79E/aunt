@@ -1,4 +1,3 @@
-
 type Parameter = string | number;
 
 export type UseNamespace = {
@@ -21,18 +20,19 @@ function createBem(namespace: string, element?: Parameter, modifier?: Parameter)
 
 /**
  * useNamespace
- * 
+ *
  * @param block current block name
  * @param needDot Do you need a dot prefix (defalut: false)
  * @returns UseNamespace
  */
 function useNamespace(block: string, prefix: string = '', needDot: boolean = false): UseNamespace {
   const prefixblock = prefix ? `${prefix}-${block}` : block;
-  const namespace = needDot ?  `.${prefixblock}` : `${prefixblock}`;
+  const namespace = needDot ? `.${prefixblock}` : `${prefixblock}`;
   const b = () => createBem(namespace);
   const e = (element: Parameter) => (element ? createBem(namespace, element) : '');
   const m = (modifier: Parameter) => (modifier ? createBem(namespace, '', modifier) : '');
-  const em = (element: Parameter, modifier: Parameter) => (element && modifier ? createBem(namespace, element, modifier) : '');
+  const em = (element: Parameter, modifier: Parameter) =>
+    element && modifier ? createBem(namespace, element, modifier) : '';
   return {
     b,
     e,

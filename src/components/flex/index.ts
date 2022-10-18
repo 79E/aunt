@@ -4,12 +4,7 @@ import _FlexItem from './flex-item';
 
 const Flex = Object.assign(_Flex, { Item: _FlexItem });
 
-export type {
-    FlexProps, FlexItemProps
-} from './types';
+export type { FlexProps, FlexItemProps } from './types';
 
-export {
-    Flex
-};
+export { Flex };
 export default Flex;
-

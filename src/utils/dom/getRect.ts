@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 import { useRect } from '../../hooks';
 
-type Key = "top" | "left" | "right" | "bottom" | "width" | "height";
+type Key = 'top' | 'left' | 'right' | 'bottom' | 'width' | 'height';
 
 interface Rect {
-    top: number;
-    left: number;
-    right: number;
-    bottom: number;
-    width: number;
-    height: number;
+  top: number;
+  left: number;
+  right: number;
+  bottom: number;
+  width: number;
+  height: number;
 }
 
 export const getRect = (element: { current: Element | undefined | null }): Rect => {
@@ -24,7 +24,7 @@ export const getRect = (element: { current: Element | undefined | null }): Rect 
 
   useEffect(() => {
     if (element.current) {
-        setRect(useRect(element.current));
+      setRect(useRect(element.current));
     }
   }, [element.current]);
 

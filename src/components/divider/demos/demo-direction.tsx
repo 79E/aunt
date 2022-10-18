@@ -1,6 +1,4 @@
-import React from "react";
+import React from 'react';
 import { Divider } from 'aunt';
 
-export default ()=>(
-    <Divider direction="vertical" />
-);
+export default () => <Divider direction='vertical' />;

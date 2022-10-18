@@ -1,10 +1,10 @@
 declare module '*.less' {
   const value: {
-    [key: string]: string
+    [key: string]: string;
   };
-  export = value
+  export = value;
 }
 
-declare module '*.png'
+declare module '*.png';
 
-declare module '*.svg'
+declare module '*.svg';

@@ -2,12 +2,12 @@ import React from 'react';
 import { BaseTypeProps } from '../../utils';
 
 export interface CardProps extends BaseTypeProps {
-  /** 
-   * @name 圆角卡片 
+  /**
+   * @name 圆角卡片
    */
   round?: boolean;
-  /** 
-   * @name 是否显示边框 
+  /**
+   * @name 是否显示边框
    */
   border?: boolean;
   children?: React.ReactNode;
@@ -15,13 +15,13 @@ export interface CardProps extends BaseTypeProps {
 }
 
 export interface CardHeaderProps extends BaseTypeProps {
-  /** 
-   * @name 头部额外内容 
+  /**
+   * @name 头部额外内容
    */
   extra?: React.ReactNode;
   children?: React.ReactNode;
-  /** 
-   * @name 显示下边框 
+  /**
+   * @name 显示下边框
    */
   border?: boolean;
   onClick?: (event: React.MouseEvent) => void;
@@ -34,12 +34,12 @@ export interface CardBodyProps extends BaseTypeProps {
 
 export interface CardFooterProps extends BaseTypeProps {
   children?: React.ReactNode;
-  /** 
-   * @name 显示上边框 
+  /**
+   * @name 显示上边框
    */
   border?: boolean;
-  /** 
-   * @name 不需要内边距 
+  /**
+   * @name 不需要内边距
    */
   compact?: boolean;
   onClick?: (event: React.MouseEvent) => void;

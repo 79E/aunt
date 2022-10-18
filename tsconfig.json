@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "rootDirs": ["src","config"],
+    "rootDirs": ["src", "config"],
     "target": "ES6",
     "moduleResolution": "node",
     "jsx": "react",

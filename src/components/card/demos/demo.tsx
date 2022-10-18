@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { Card } from 'aunt';
 import { DemoBlock } from 'demos';
 import DemoRound from './demo-round';
@@ -10,27 +10,29 @@ import DemoBase from './demo-base';
 
 import './index.less';
 
-function Demo (){
-    return <div className="demo-card">
-        <DemoBlock title="基础用法">
-            <DemoBase />
-        </DemoBlock>
-        <DemoBlock title="圆角卡片">
-            <DemoRound />
-        </DemoBlock>
-        <DemoBlock title="底部内容">
-            <DemoFooter />
-        </DemoBlock>
-        <DemoBlock title="封面展示">
-            <DemoCover />
-        </DemoBlock>
-        <DemoBlock title="展示边框">
-            <DemoBorder />
-        </DemoBlock>
-        <DemoBlock title="自定义卡片样式">
-            <DemoCustom />
-        </DemoBlock>
-    </div>;
+function Demo() {
+  return (
+    <div className='demo-card'>
+      <DemoBlock title='基础用法'>
+        <DemoBase />
+      </DemoBlock>
+      <DemoBlock title='圆角卡片'>
+        <DemoRound />
+      </DemoBlock>
+      <DemoBlock title='底部内容'>
+        <DemoFooter />
+      </DemoBlock>
+      <DemoBlock title='封面展示'>
+        <DemoCover />
+      </DemoBlock>
+      <DemoBlock title='展示边框'>
+        <DemoBorder />
+      </DemoBlock>
+      <DemoBlock title='自定义卡片样式'>
+        <DemoCustom />
+      </DemoBlock>
+    </div>
+  );
 }
 
 export default Demo;

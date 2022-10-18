@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState, useRef } from 'react';
 import { inBrowser } from '../utils';
 
-const root = (inBrowser ? window : global) as unknown as Window;
+const root = ((inBrowser ? window : global) as unknown) as Window;
 
 let prev = Date.now();
 
@@ -157,9 +157,9 @@ export default function useCountDown(options: UseCountDownOptions) {
     // 如果inBrowser不存在 不应该开始执行倒计时
     if (!inBrowser) return;
     // 判断是秒还是毫秒 然后分别运行 对应的方法
-    if(options.millisecond){
+    if (options.millisecond) {
       microTick();
-    }else{
+    } else {
       macroTick();
     }
   };

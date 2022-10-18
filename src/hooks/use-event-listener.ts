@@ -13,7 +13,7 @@ if (inBrowser) {
         supportsPassive = true;
       },
     });
-    window.addEventListener('test-passive', ()=>{}, opts);
+    window.addEventListener('test-passive', () => {}, opts);
     // eslint-disable-next-line no-empty
   } catch (e) {}
 }
@@ -30,7 +30,7 @@ export type UseEventListenerOptions = {
 function useEventListener(
   type: string,
   listener: EventListener,
-  options: UseEventListenerOptions = {},
+  options: UseEventListenerOptions = {}
 ): void {
   if (!inBrowser) {
     return;

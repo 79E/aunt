@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { DemoBlock } from 'demos';
 import DemoBase from './demo-base';
 import DemoFit from './demo-fit';
@@ -8,29 +8,29 @@ import DemoLoading from './demo-loading';
 
 import './index.less';
 
-function Demo (){
+function Demo() {
+  return (
+    <div className='demo-image'>
+      <DemoBlock title='基础用法'>
+        <DemoBase />
+      </DemoBlock>
+      <DemoBlock title='填充模式'>
+        <DemoFit />
+      </DemoBlock>
 
-    return <div className="demo-image">
-        <DemoBlock title="基础用法">
-            <DemoBase />
-        </DemoBlock>
-        <DemoBlock title="填充模式">
-            <DemoFit />
-        </DemoBlock>
+      <DemoBlock title='圆形图片'>
+        <DemoRound />
+      </DemoBlock>
 
-        <DemoBlock title="圆形图片">
-            <DemoRound />
-        </DemoBlock>
+      <DemoBlock title='加载中提示'>
+        <DemoLoading />
+      </DemoBlock>
 
-        <DemoBlock title="加载中提示">
-            <DemoLoading />
-        </DemoBlock>
-
-        <DemoBlock title="加载失败提示">
-            <DemoError />
-        </DemoBlock>
-                    
-    </div>;
+      <DemoBlock title='加载失败提示'>
+        <DemoError />
+      </DemoBlock>
+    </div>
+  );
 }
 
 export default Demo;

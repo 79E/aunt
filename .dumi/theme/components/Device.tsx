@@ -1,53 +1,50 @@
-import React, { useState, useContext, useEffect, useRef } from 'react'
-import QRCode from 'qrcode.react'
-import { context, usePrefersColor } from 'dumi/theme'
-import { ROUTE_MSG_TYPE } from '../layouts/demo'
-import './Device.less'
-import type { FC } from 'react'
+import React, { useState, useContext, useEffect, useRef } from 'react';
+import QRCode from 'qrcode.react';
+import { context, usePrefersColor } from 'dumi/theme';
+import { ROUTE_MSG_TYPE } from '../layouts/demo';
+import './Device.less';
+import type { FC } from 'react';
 
 interface IDeviceProps {
-  className?: string
-  url: string
+  className?: string;
+  url: string;
 }
 
 const Device: FC<IDeviceProps> = ({ url, className }) => {
-  const iframeRef = useRef<HTMLIFrameElement>()
-  const [iframeSrc, setIframeSrc] = useState<string>()
-  const [renderKey, setRenderKey] = useState(Math.random())
-  const [color] = usePrefersColor()
+  const iframeRef = useRef<HTMLIFrameElement>();
+  const [iframeSrc, setIframeSrc] = useState<string>();
+  const [renderKey, setRenderKey] = useState(Math.random());
+  const [color] = usePrefersColor();
   const {
     config: { mode, theme },
-  } = useContext(context)
+  } = useContext(context);
 
-  const carrier = theme?.carrier || 'dumi'
-  const time = theme?.time || '10:24'
+  const carrier = theme?.carrier || 'dumi';
+  const time = theme?.time || '10:24';
 
   // re-render iframe if prefers color changed
   useEffect(() => {
-    setRenderKey(Math.random())
-  }, [color])
+    setRenderKey(Math.random());
+  }, [color]);
 
   // control iframe page update
   useEffect(() => {
-    const { origin } = window.location
+    const { origin } = window.location;
 
     if (!iframeSrc || !url?.startsWith(origin)) {
       // set iframe src directly if it is the first render or custom url
-      setIframeSrc(url)
+      setIframeSrc(url);
     } else {
       const pathname = url
         // discard origin prefix
         .replace(origin, '')
         // discard router base
-        .replace(`${(window as any)?.routerBase || ''}`.replace(/\/$/, ''), '')
+        .replace(`${(window as any)?.routerBase || ''}`.replace(/\/$/, ''), '');
 
       // update iframe page route via postmessage, to avoid page refresh
-      iframeRef.current?.contentWindow.postMessage(
-        { type: ROUTE_MSG_TYPE, value: pathname },
-        '*'
-      )
+      iframeRef.current?.contentWindow.postMessage({ type: ROUTE_MSG_TYPE, value: pathname }, '*');
     }
-  }, [url])
+  }, [url]);
 
   return (
     <div
@@ -60,12 +57,7 @@ const Device: FC<IDeviceProps> = ({ url, className }) => {
         <span className='__dumi-default-device-status-carrier'>{carrier}</span>
         <span>{time}</span>
       </div>
-      <iframe
-        ref={iframeRef}
-        title='dumi-previewer'
-        src={iframeSrc}
-        key={renderKey}
-      />
+      <iframe ref={iframeRef} title='dumi-previewer' src={iframeSrc} key={renderKey} />
       <div className='__dumi-default-device-action'>
         <button
           className='__dumi-default-icon'
@@ -84,7 +76,7 @@ const Device: FC<IDeviceProps> = ({ url, className }) => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Device
+export default Device;

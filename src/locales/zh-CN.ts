@@ -7,10 +7,10 @@ type DeepPartial<T> = {
 
 export type PartialLocale = DeepPartial<Locale>;
 
-const zhCN = Object.assign({...base}, {});
+const zhCN = Object.assign({ ...base }, {});
 
 const mergeLocale = (baseLocal: Locale, mergeLocal: PartialLocale): Locale => {
-  return Object.assign({...baseLocal}, {...mergeLocal}) as Locale;
+  return Object.assign({ ...baseLocal }, { ...mergeLocal }) as Locale;
 };
 
 export { mergeLocale };

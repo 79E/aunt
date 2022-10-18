@@ -14,9 +14,9 @@
 
 ![image-20220706161607829](https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/image-20220706161607829.png)
 
-这是一个基本的按钮我们只实现这个样式 
+这是一个基本的按钮我们只实现这个样式
 
-我们采用div+span 来组成这个按钮的结构
+我们采用 div+span 来组成这个按钮的结构
 
 ```tsx
 <div className='aunt-button'>
@@ -24,7 +24,7 @@
 </div>
 ```
 
-下面就开始编写css就可以了 考虑一下这里采用`padding`来撑起宽高的；
+下面就开始编写 css 就可以了 考虑一下这里采用`padding`来撑起宽高的；
 
 我们可以这样写
 
@@ -50,7 +50,7 @@
     height: 100%;
     background-color: #000;
     opacity: 0;
-    content: ' ';	
+    content: ' ';
     box-sizing: content-box;
 }
 .aunt-button:active::before {
@@ -79,9 +79,9 @@
 }
 ```
 
-以此类推 朴素按钮 细边按钮 禁用状态 按钮尺寸，都是有对应的`className`来设置css变量
+以此类推 朴素按钮 细边按钮 禁用状态 按钮尺寸，都是有对应的`className`来设置 css 变量
 
-#### 加载状态 
+#### 加载状态
 
 这里主要是将加载的`Loading`组件放置了进来 我们编写一个方法来判断是否来展示这个`Loading`并且加上相应的`Loading className`来设置当加载状态下禁止点击
 
@@ -102,7 +102,7 @@ const renderLoadingIcon = (position:string) => {
 };
 ```
 
-这里的css采用Less进行处理有些变量和命名结构可以更加方便更加简洁
+这里的 css 采用 Less 进行处理有些变量和命名结构可以更加方便更加简洁
 
 最后在处理一些细节的东西就可以了～
 

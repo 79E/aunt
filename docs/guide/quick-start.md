@@ -1,13 +1,14 @@
 # 快速开始
 
 ## 安装
+
 ```bash
 # 通过 npm 安装
 $ npm install --save aunt
 
 # 通过 yarn 安装
 $ yarn add aunt
-````
+```
 
 ## 引入
 
@@ -27,10 +28,11 @@ function Demo (){
 export default Demo;
 ```
 
-
 ## 按需加载
+
 主流的构建工具会自动做 Tree-Shaking，所以最终被打包进来的只有你用到的那些图标，不必担心包体积问题。
-> 可以初始化一个新项目只引入一个Button组件后运行 `npm run build` 可以看到打包后的css中只有Button相关的css样式其他未使用的组件是不会打包进来的。
+
+> 可以初始化一个新项目只引入一个 Button 组件后运行 `npm run build` 可以看到打包后的 css 中只有 Button 相关的 css 样式其他未使用的组件是不会打包进来的。
 
 ## 兼容性
 
@@ -59,4 +61,3 @@ export default Demo;
 对于 React，我们兼容的版本是 `^16.8.0` `^17.0.0` `^18.0.0`。
 
 **注意： iOS 9 并不支持 CSS 变量。**
-

@@ -1,9 +1,9 @@
 name: Doc Site
 on:
   release:
-    types: [ published ]
+    types: [published]
   push:
-    branches: [ master ]
+    branches: [master]
   workflow_dispatch:
 jobs:
   deploy:

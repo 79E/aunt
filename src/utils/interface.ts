@@ -5,19 +5,19 @@ import React from 'react';
 
 export interface BaseTypeProps {
   /**
-  * @name 自定义样式
-  * @en Custom stylesheet
-  */
+   * @name 自定义样式
+   * @en Custom stylesheet
+   */
   style?: React.CSSProperties;
   /**
-  * @name 自定义类名
-  * @en Custom classname
-  */
+   * @name 自定义类名
+   * @en Custom classname
+   */
   className?: string;
   /**
-  * @name 自定义内容
-  * @en Custom content
-  */
+   * @name 自定义内容
+   * @en Custom content
+   */
   children?: React.ReactNode;
 }
 

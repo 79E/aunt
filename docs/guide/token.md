@@ -1,22 +1,22 @@
 # 设计变量
+
 组件库的全局 Token，可以在此查看组件库内置的设计变量以及默认值
 
 <code src="../components/token/token-page.tsx" inline="true"></code>
 
 ## 其他颜色
 
-| 颜色                | 变量名                  | 变量值   | CSS变量                       | 描述         |
-| -----------------------| ----------------------- | -------- | ----------------------------- | ------------|
-|<div style="width: 40px;height: 20px;background-color: #4e5969;border-radius: 2px; margin:auto;"></div>| @text-color             | \#4e5969 | --aunt-text-color             | 默认文字颜色 |
-|<div style="width: 40px;height: 20px;background-color: #f2f3f5;border-radius: 2px; margin:auto;"></div>| @active-color           | \#f2f3f5  | --aunt-active-color          | 活跃文字颜色 |
-|<div style="width: 40px;height: 20px;background-color: #f7f8fa;border-radius: 2px; margin:auto;"></div>| @background-color       | \#f7f8fa | --aunt-background-color       | 默认背景颜色 |
-|<div style="width: 40px;height: 20px;background-color: #fafafa;border-radius: 2px;margin:auto;"></div>| @background-color-light | \#fafafa | --aunt-background-color-light | 默认白色背景 |
-|<div style="width: 40px;height: 20px;background-color: #3491FA;border-radius: 2px; margin:auto;"></div>| @text-link-color        | \#3491FA | --aunt-text-link-color        | 默认链接颜色 |
-
+| 颜色                                                                                                    | 变量名                  | 变量值   | CSS 变量                      | 描述         |
+| ------------------------------------------------------------------------------------------------------- | ----------------------- | -------- | ----------------------------- | ------------ |
+| <div style="width: 40px;height: 20px;background-color: #4e5969;border-radius: 2px; margin:auto;"></div> | @text-color             | \#4e5969 | --aunt-text-color             | 默认文字颜色 |
+| <div style="width: 40px;height: 20px;background-color: #f2f3f5;border-radius: 2px; margin:auto;"></div> | @active-color           | \#f2f3f5 | --aunt-active-color           | 活跃文字颜色 |
+| <div style="width: 40px;height: 20px;background-color: #f7f8fa;border-radius: 2px; margin:auto;"></div> | @background-color       | \#f7f8fa | --aunt-background-color       | 默认背景颜色 |
+| <div style="width: 40px;height: 20px;background-color: #fafafa;border-radius: 2px;margin:auto;"></div>  | @background-color-light | \#fafafa | --aunt-background-color-light | 默认白色背景 |
+| <div style="width: 40px;height: 20px;background-color: #3491FA;border-radius: 2px; margin:auto;"></div> | @text-link-color        | \#3491FA | --aunt-text-link-color        | 默认链接颜色 |
 
 ## 文字大小相关
 
-| 变量名            | 变量值 | CSS变量                 | 描述 |
+| 变量名            | 变量值 | CSS 变量                | 描述 |
 | ----------------- | ------ | ----------------------- | ---- |
 | @font-size-xs     | 10px   | --aunt-font-size-xs     |      |
 | @font-size-sm     | 12px   | --aunt-font-size-sm     |      |
@@ -35,7 +35,8 @@
 | @line-height-xxxl | 32px   | --aunt-line-height-xxxl |      |
 
 ## Padding 大小
-| 变量名        | 变量值 | CSS变量             | 描述 |
+
+| 变量名        | 变量值 | CSS 变量            | 描述 |
 | ------------- | ------ | ------------------- | ---- |
 | @padding-base | 4px    | --aunt-padding-base |      |
 | @padding-xs   | 8px    | --aunt-padding-xs   |      |
