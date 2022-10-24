@@ -10,7 +10,8 @@
     "lint": "npm run lint:prettier && npm run lint:es",
     "lint:prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint:es": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "cli:create": "node ./cli/component.js"
   },
   "keywords": [
     "ui",
