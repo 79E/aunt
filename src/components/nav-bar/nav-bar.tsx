@@ -1,11 +1,4 @@
-import React, {
-  useRef,
-  FunctionComponent,
-  useContext,
-  useMemo,
-  useCallback,
-  useEffect,
-} from 'react';
+import React, { useRef, FunctionComponent, useContext, useMemo } from 'react';
 import ConfigProviderContext from '../config-provider/config-provider-context';
 import { AuntIconChevronLeft } from '../icon/icons';
 import { useNamespace } from '../../hooks';
@@ -64,23 +57,32 @@ export const NavBar: FunctionComponent<NavBarProps> = props => {
     return null;
   };
 
+  const varClasses = useMemo(() => {
+    return joinTrim([
+      ns.b(),
+      props.safeAreaInsetTop ? ns.m('safe-area-inset-top') : '',
+      bottomLine ? ns.m('border') : '',
+      props.fixed ? ns.m('fixed') : '',
+      props.className,
+    ]);
+  }, [props.safeAreaInsetTop, bottomLine, props.fixed, props.className]);
+
+  const varStyles = useMemo(() => {
+    const styles: React.CSSProperties = {};
+    if (props.statusBarHeight) {
+      styles.paddingTop = addUnit(props.statusBarHeight);
+    }
+
+    return {
+      ...styles,
+      ...props.style,
+    };
+  }, [props.style, props.statusBarHeight]);
+
   return (
     <>
       {renderPlaceholder()}
-      <div
-        ref={navBarRef}
-        className={joinTrim([
-          ns.b(),
-          props.safeAreaInsetTop ? ns.m('safe-area-inset-top') : '',
-          bottomLine ? ns.m('border') : '',
-          props.fixed ? ns.m('fixed') : '',
-          props.className,
-        ])}
-        style={{
-          paddingTop: addUnit(props.statusBarHeight),
-          ...props.style,
-        }}
-      >
+      <div ref={navBarRef} className={varClasses} style={varStyles}>
         {renderLeft()}
         {renderTitle()}
         {renderRight()}
