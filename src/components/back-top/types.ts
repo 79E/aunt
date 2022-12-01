@@ -32,10 +32,6 @@ export interface BackTopProps extends BaseTypeProps {
    */
   offset?: number | string | [number | string, number | string];
   /**
-   * 设置动画样式 可参考 transition 组件
-   */
-  transitionType?: string;
-  /**
    * 点击按钮的回调函数
    */
   onClick?: (event: React.MouseEvent) => void;

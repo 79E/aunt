@@ -81,7 +81,7 @@ export const BackTop: FunctionComponent<BackTopProps> = props => {
   };
 
   return (
-    <Transition type={props.transitionType} in={visible} timeout={duration}>
+    <Transition in={visible} timeout={duration}>
       <div className={joinTrim([ns.b(), props.className])} style={varStyle} onClick={scrollToTop}>
         {renderContent()}
       </div>

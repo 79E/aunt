@@ -26,7 +26,6 @@ import { BackTop } from 'aunt';
 | duration         | 回到顶部所需时间（ms）             | `number`                                                   | `400`                 |
 | shape            | 设置形状                           | `'square' \| 'round'`                                      | `square`              |
 | offset           | BackTop 按钮偏移量                 | `number \| string \| [number \| string, number \| string]` | `[20,40]`             |
-| transitionType   | 置动画样式 可参考 transition 组件  | `string`                                                   | `-`                   |
 
 ## 事件
 
