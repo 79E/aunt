@@ -22,9 +22,11 @@
 
 ### transitionStyles 属性
 
+> 💡**注意：如果为`React`组件如 `<Card />` 则内部必须要接收`style`属性，并设置在需要的位置上。**
+
 `transitionStyles` 属性为设置动画时机所展示的CSS样式
 
-以上面的演示代码为例，Less 样式代码为：
+以上面的演示代码为例，动画样式代码为：
 
 ```js
 const transitionStyles = {

@@ -43,15 +43,18 @@ export const Transition: FunctionComponent<TransitionProps> = props => {
       unmountOnExit={unmountOnExit}
       {...rest}
     >
-      {state => (
-        <div
-          style={{
-            ...varTransitionStyles[state],
-          }}
-        >
-          {children}
-        </div>
-      )}
+      {state =>
+        React.Children.map(children, chil => {
+          if (!React.isValidElement(chil))
+            return <span style={varTransitionStyles[state]}>{chil}</span>;
+          return React.cloneElement(chil as React.ReactElement, {
+            style: {
+              ...chil.props.style,
+              ...varTransitionStyles[state],
+            },
+          });
+        })
+      }
     </ReactTransition>
   );
 };
