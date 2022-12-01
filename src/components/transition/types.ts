@@ -1,18 +1,26 @@
-import { CSSTransitionProps } from 'react-transition-group/CSSTransition';
+import React from 'react';
+import {
+  TransitionProps as ReactTransitionProps,
+  TransitionStatus,
+} from 'react-transition-group/Transition';
 import { BaseTypeProps } from '../../utils';
 
+// 传入的css样式对象
+export type TransitionStyles = {
+  [key in TransitionStatus]: React.CSSProperties;
+};
+
 // 定义接受到的参数 类型
-export interface TransitionProps extends BaseTypeProps, Omit<CSSTransitionProps, 'timeout'> {
+export interface TransitionProps extends BaseTypeProps, Omit<ReactTransitionProps, 'timeout'> {
   /**
-   * @name 待执行动画css类名
-   * @en Css classname of the animation to be executed
+   * @name 执行动画的css样式
    */
-  type?: string;
+  transitionStyles?: TransitionStyles;
   /**
    * @name 内容是否可见
    * @en Whether the content is visible
    */
-  in: boolean;
+  in?: boolean;
   /**
    * @name 执行动画时间
    * @en Execute animation time
