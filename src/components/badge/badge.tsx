@@ -50,11 +50,7 @@ const Badge: FunctionComponent<BadgeProps> = props => {
 
   return (
     <div className={ns.b()}>
-      <Transition
-        in={visible}
-        timeout={timeout}
-        type={ns.m(props.children ? 'scale-translate' : 'scale')}
-      >
+      <Transition in={visible} timeout={timeout} transitionStyles={props.transitionStyles}>
         <div className={varClasses} style={varStyles}>
           {!dot && <>{Number(content) && Number(content) > maxCount ? `${maxCount}+` : content}</>}
         </div>

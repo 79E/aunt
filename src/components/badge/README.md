@@ -55,6 +55,7 @@ import { Badge } from "aunt";
 | bordered | 是否有白色边框                   | `boolean`                                                           | `false` |
 | color    | 徽标背景颜色                     | `string`                                                            | `-`     |
 | offset   | 徽标位置偏移量                   | `[number \| string, number \| string]`                              | `-`     |
+| transitionStyles   | Transition 组件动画样式 | `TransitionStyles` | `-` |
 
 ## 样式变量
 

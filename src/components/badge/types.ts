@@ -1,4 +1,5 @@
 import React from 'react';
+import { TransitionStyles } from '../transition';
 import { BaseTypeProps } from '../../utils';
 
 // 定义接受到的参数 类型
@@ -48,4 +49,8 @@ export interface BadgeProps extends BaseTypeProps {
    * @default ''
    */
   color?: string;
+  /**
+   * @name Transition 组件动画样式设定
+   */
+  transitionStyles?: TransitionStyles;
 }
