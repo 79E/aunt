@@ -50,6 +50,7 @@ export const Transition: FunctionComponent<TransitionProps> = props => {
           return React.cloneElement(chil as React.ReactElement, {
             style: {
               ...chil.props.style,
+              ...varTransitionStyles['unmounted'],
               ...varTransitionStyles[state],
             },
           });
