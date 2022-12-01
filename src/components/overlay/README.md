@@ -23,13 +23,12 @@ import { Overlay } from 'aunt';
 
 ## 参数
 
-| 参数        | 说明                                             | 类型               | 默认值    |
-| ----------- | ------------------------------------------------ | ------------------ | --------- |
-| visible     | 是否展示遮罩层                                   | `string`           | `inherit` |
-| zIndex      | z-index 层级                                     | `number \| string` | `1`       |
-| duration    | 动画时长，单位毫秒                               | `number \| string` | `500`     |
-| customStyle | 自定义样式                                       | `object`           | `-`       |
-| lockScroll  | 是否锁定背景滚动，锁定时蒙层里的内容也将无法滚动 | `boolean`          | `true`    |
+| 参数  | 说明 | 类型   | 默认值    |
+| ----------- | -------- | -------- | --------- |
+| visible     | 是否展示遮罩层 | `string`           | `inherit` |
+| zIndex      | z-index 层级   | `number \| string` | `1`       |
+| duration    | 动画时长，单位毫秒 | `number \| string` | `500`     |
+| lockScroll  | 是否锁定背景滚动，锁定时蒙层里的内容也将无法滚动 | `boolean`  | `true`    |
 
 ## 事件
 

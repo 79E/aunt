@@ -12,10 +12,6 @@ export interface OverlayProps extends BaseTypeProps {
    */
   zIndex?: number;
   /**
-   * 自定义样式
-   */
-  customStyle?: React.CSSProperties;
-  /**
    * 动画时长，单位`ms`，设置为 0 可以禁用动画
    */
   duration?: number;

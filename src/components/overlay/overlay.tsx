@@ -2,7 +2,7 @@ import React, { FunctionComponent, useContext, useRef, CSSProperties, useEffect 
 import ConfigProviderContext from '../config-provider/config-provider-context';
 import Transition from '../transition';
 import { useNamespace } from '../../hooks';
-import { isDef, joinTrim } from '../../utils';
+import { joinTrim } from '../../utils';
 import { OverlayProps } from './types';
 
 export const Overlay: FunctionComponent<OverlayProps> = props => {
@@ -18,12 +18,7 @@ export const Overlay: FunctionComponent<OverlayProps> = props => {
       zIndex: props.zIndex !== undefined ? +props.zIndex : undefined,
       touchAction: lockScroll ? 'none' : undefined,
       ...props.style,
-      ...props.customStyle,
     };
-
-    if (isDef(duration)) {
-      styles.animationDuration = `${duration}ms`;
-    }
 
     return (
       <div
@@ -46,14 +41,7 @@ export const Overlay: FunctionComponent<OverlayProps> = props => {
   };
 
   return (
-    <Transition
-      type={ns.m('vanish')}
-      in={visible}
-      timeout={duration}
-      nodeRef={nodeRef}
-      mountOnEnter
-      unmountOnExit
-    >
+    <Transition in={visible} timeout={duration} nodeRef={nodeRef} mountOnEnter unmountOnExit>
       {renderOverlay()}
     </Transition>
   );
