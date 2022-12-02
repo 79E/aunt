@@ -34,7 +34,7 @@ const createComponentTemplate = ({ name, upperCaseName }) => `\
 import React, { useMemo, FunctionComponent, useContext } from 'react';
 import ConfigProviderContext from '../config-provider/config-provider-context';
 import { useNamespace } from '../../hooks';
-import { ${upperCaseName}Props } from './types';
+import type { ${upperCaseName}Props } from './types';
 
 export const ${upperCaseName}: FunctionComponent<${upperCaseName}Props> = props => {
     const { prefix } = useContext(ConfigProviderContext);
@@ -57,7 +57,7 @@ const createComponentLessTemplate = ({ name }) => `\
 
 const createTypesTemplate = ({ upperCaseName }) => `\
 import React from 'react';
-import { BaseTypeProps } from '../../utils';
+import type { BaseTypeProps } from '../../utils';
 
 export interface ${upperCaseName}Props extends BaseTypeProps {
 
