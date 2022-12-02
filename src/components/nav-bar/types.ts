@@ -1,5 +1,6 @@
 import React from 'react';
-import { BaseTypeProps } from '../../utils';
+import type { BaseTypeProps } from '../../utils';
+import type { Rect } from '../../utils/dom/getRect';
 
 export interface NavBarProps extends BaseTypeProps {
   /**
@@ -36,4 +37,9 @@ export interface NavBarProps extends BaseTypeProps {
   placeholder?: boolean;
   onClickLeft?: (e: React.MouseEvent) => void;
   onClickRight?: (e: React.MouseEvent) => void;
+  /**
+   * 回调导航栏的相关数据
+   * @param rect （"top" | "left" | "right" | "bottom" | "width" | "height"）
+   */
+  callbackRect?: (rect: Rect) => void;
 }

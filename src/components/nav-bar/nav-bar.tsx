@@ -13,7 +13,7 @@ export const NavBar: FunctionComponent<NavBarProps> = props => {
 
   const navBarRef = useRef(null);
 
-  const navBarHeight = getRect(navBarRef).height;
+  const navBarRect = getRect(navBarRef);
 
   const renderLeft = () => {
     return (
@@ -50,7 +50,7 @@ export const NavBar: FunctionComponent<NavBarProps> = props => {
       return (
         <div
           className={ns.e('placeholder')}
-          style={{ height: navBarHeight ? `${navBarHeight}px` : undefined }}
+          style={{ height: navBarRect.height ? `${navBarRect.height}px` : undefined }}
         />
       );
     }
@@ -78,6 +78,10 @@ export const NavBar: FunctionComponent<NavBarProps> = props => {
       ...props.style,
     };
   }, [props.style, props.statusBarHeight]);
+
+  React.useLayoutEffect(() => {
+    props.callbackRect?.(navBarRect);
+  }, [navBarRect]);
 
   return (
     <>

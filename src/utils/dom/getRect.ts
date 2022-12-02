@@ -1,16 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useRect } from '../../hooks';
 
-type Key = 'top' | 'left' | 'right' | 'bottom' | 'width' | 'height';
-
-interface Rect {
-  top: number;
-  left: number;
-  right: number;
-  bottom: number;
-  width: number;
-  height: number;
-}
+type RectKey = 'top' | 'left' | 'right' | 'bottom' | 'width' | 'height';
+export type Rect = {
+  [key in RectKey]: number;
+};
 
 export const getRect = (element: { current: Element | undefined | null }): Rect => {
   const [rect, setRect] = useState({

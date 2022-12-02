@@ -58,6 +58,14 @@ import { NavBar } from 'aunt';
 | ------------ | ------------ | -------------------------------- | ------ |
 | onClickLeft  | 点击左侧按钮 | `(e: React.MouseEvent) => void;` | `-`    |
 | onClickRight | 点击右侧按钮 | `(e: React.MouseEvent) => void;` | `-`    |
+| callbackRect | 回调返回导航的相关数据 | `(rect: Rect) => void` | `-`    |
+
+```ts
+type RectKey = "top" | "left" | "right" | "bottom" | "width" | "height";
+export type Rect = {
+  [key in RectKey]: number
+}
+```
 
 ## 样式变量
 
