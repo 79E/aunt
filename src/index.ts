@@ -35,3 +35,4 @@ export * from './components/pagination';
 export * from './components/steps';
 export * from './components/tabbar';
 export * from './components/back-top';
+export * from './components/notify';

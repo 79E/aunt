@@ -146,7 +146,12 @@ export default defineConfig({
       },
       {
         title: '反馈组件',
-        children: ['components/loading', 'components/overlay', 'components/back-top'],
+        children: [
+          'components/loading',
+          'components/overlay',
+          'components/back-top',
+          'components/notify',
+        ],
       },
       {
         title: '展示组件',

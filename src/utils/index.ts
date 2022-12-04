@@ -8,3 +8,5 @@ export * from './constant';
 export * from './dom/event';
 export * from './dom/getRect';
 export * from './dom/getScroll';
+export * from './dom/render';
+export * from './dom/version';

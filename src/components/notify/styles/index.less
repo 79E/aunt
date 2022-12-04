@@ -1,0 +1,76 @@
+@class-prefix: ~'aunt';
+
+:root{
+    --aunt-notify-card-margin: 0 var(--aunt-padding-l);
+    --aunt-notify-card-padding: var(--aunt-padding-s) var(--aunt-padding-m);
+    --aunt-notify-card-border-radius: calc(2 * var(--aunt-border-radius-lg));
+    --aunt-notify-card-background-color: var(--aunt-color-white);
+    --aunt-notify-card-title-color: var(--aunt-text-color);
+    --aunt-notify-card-describe-color: var(--aunt-gray-8);
+    --aunt-notify-card-box-shadow: var(--aunt-shadow3-center);
+    --aunt-notify-card-icon-size: calc(36 * var(--aunt-hd));
+    --aunt-notify-card-icon-margin: var(--aunt-padding-xs);
+}
+
+.@{class-prefix}-notify {
+    &__type{
+        padding: var(--aunt-padding-xs) var(--aunt-padding-md);
+        font-size: var(--aunt-font-size-md);
+        text-align: center;
+        box-sizing: border-box;
+        white-space: pre-wrap;
+        text-align: center;
+        word-wrap: break-word;
+        color: var(--aunt-color-white);
+        
+        &--success{
+            background-color: var(--aunt-success-color);
+        }
+        &--danger{
+            background-color: var(--aunt-danger-color);
+        }
+        &--warning{
+            background-color: var(--aunt-warning-color);
+        }
+        &--primary{
+            background-color: var(--aunt-primary-color);
+        }
+    }
+
+
+
+    // 通知消息卡片
+    &-card{
+        padding:var(--aunt-notify-card-padding);
+        margin: var(--aunt-notify-card-margin); 
+        border-radius: var(--aunt-notify-card-border-radius);
+        background-color: var(--aunt-notify-card-background-color);
+        box-shadow: var(--aunt-notify-card-box-shadow);
+        box-sizing: border-box;
+
+        &__icon{
+            width: var(--aunt-notify-card-icon-size);
+            height: var(--aunt-notify-card-icon-size);
+            &--left{
+                float: left;
+                margin-right: var(--aunt-notify-card-icon-margin);
+            }
+            &--right{
+                float: right;
+                margin-left: var(--aunt-notify-card-icon-margin);
+            }
+        }
+        &__content{
+            box-sizing: border-box;
+            display: inline-block;
+            &--title{
+                font-size: var(--aunt-font-size-md);
+                color: var(--aunt-notify-card-title-color);
+            }
+            &--describe{
+                font-size: var(--aunt-font-size-sm);
+                color: var(--aunt-notify-card-describe-color);
+            } 
+        }
+    }
+}

@@ -62,10 +62,7 @@
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
-  "resolutions": {
-    "@types/react": "18",
-    "@types/react-dom": "18"
-  },
+  "resolutions": {},
   "dependencies": {
     "react-transition-group": "^4.4.5",
     "tslib": "^2.4.0"
@@ -77,6 +74,8 @@
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.3",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
     "@types/react-transition-group": "^4.4.5",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
