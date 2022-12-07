@@ -1,4 +1,5 @@
 import { BaseTypeProps } from '../../utils';
+
 export type LoadingType =
   | 'oval'
   | 'rings'
