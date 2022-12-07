@@ -60,7 +60,6 @@ const show = (p: string | NotifyOptions) => {
 
     useEffect(() => {
       setVisible(true);
-      syncClear();
       notifyArray.push(internalOnClosed);
 
       if (duration && +duration > 0) {
