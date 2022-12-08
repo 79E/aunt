@@ -40,5 +40,5 @@ import { Overlay } from 'aunt';
 
 | 属性名                          | 说明     | 默认值              |
 | ------------------------------- | -------- | ------------------- |
-| --aunt-overlay-z-index          | 层级     | `1000`              |
+| --aunt-overlay-z-index          | 层级     | `var(--aunt-z-index-full-screen);`              |
 | --aunt-overlay-background-color | 背景颜色 | `rgba(0, 0, 0, .7)` |

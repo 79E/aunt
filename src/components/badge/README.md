@@ -61,13 +61,13 @@ import { Badge } from "aunt";
 
 | 属性名                     | 说明         | 默认值                           |
 | -------------------------- | ------------ | -------------------------------- |
-| --aunt-badge-border-radius | 圆角大小     | `var(--aunt-color-white);`       |
+| --aunt-badge-border-radius | 圆角大小     | `var(--aunt-white-color);`       |
 | --aunt-badge-font-size     | 内容文字大小 | `var(--aunt-font-size-sm);`      |
 | --aunt-badge-font-weight   | 内容字重     | `var(--aunt-font-weight-bold);`  |
 | --aunt-badge-padding       | 徽标内边距   | `0 var(--aunt-padding-base);`    |
 | --aunt-badge-border-width  | 边框大小     | `var(--aunt-border-width-base);` |
 | --aunt-badge-border-style  | 边框样式     | `solid;`                         |
-| --aunt-badge-border-color  | 边框颜色     | `var(--aunt-color-white);`       |
+| --aunt-badge-border-color  | 边框颜色     | `var(--aunt-white-color);`       |
 | --aunt-badge-color         | 徽标颜色     | `var(--aunt-red);`               |
 | --aunt-badge-dot-size      | 圆点大小     | `calc(6 * var(--aunt-hd));`      |
 | --aunt-badge-dot-color     | 圆点背景颜色 | `var(--aunt-red);`               |

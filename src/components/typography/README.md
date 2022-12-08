@@ -72,4 +72,4 @@ import { Typography } from "aunt";
 | --aunt-typography-warning-color   | 警告文本颜色 | `var(--aunt-warning-color)`   |
 | --aunt-typography-secondary-color | 次要文本颜色 | `var(--aunt-gray-6);`         |
 | --aunt-typography-disabled-color  | 禁用文本颜色 | `var(--aunt-gray-5);`         |
-| --aunt-typography-light-color     | 白色字       | `var(--aunt-color-white);`    |
+| --aunt-typography-light-color     | 白色字       | `var(--aunt-white-color);`    |

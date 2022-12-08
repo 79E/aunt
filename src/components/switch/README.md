@@ -83,7 +83,7 @@ activeColor 属性表示打开时的背景色，inactiveColor 表示关闭时的
 | --aunt-switch-border-radius-round      | 开关圆角圆形       | `var(--aunt-border-radius-max)`       |
 | --aunt-switch-border-radius-square     | 开关圆角方形       | `var(--aunt-border-radius-md)`        |
 | --aunt-switch-transition-duration      | 开关动画时间       | `var(--aunt-animation-duration-base)` |
-| --aunt-switch-node-background-color    | 开关内容颜色       | `var(--aunt-color-white)`             |
+| --aunt-switch-node-background-color    | 开关内容颜色       | `var(--aunt-white-color)`             |
 | --aunt-switch-node-size                | 开关内容大小       | `1em`                                 |
 | --aunt-switch-node-box-shadow          | 开关内容阴影       | `-`                                   |
 

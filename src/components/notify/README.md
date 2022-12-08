@@ -100,7 +100,7 @@ export interface NotifyOptions extends Omit<NotifyProps, 'visible'> {
 | --aunt-notify-card-margin  | 消息卡片外边距  | `0 var(--aunt-padding-l);`  |
 | --aunt-notify-card-padding | 消息卡片内边距 | `var(--aunt-padding-s) var(--aunt-padding-m);` |
 | --aunt-notify-card-border-radius | 消息卡片圆角 | `calc(2 * var(--aunt-border-radius-lg));` |
-| --aunt-notify-card-background-color | 消息卡片背景色 | `var(--aunt-color-white);` |
+| --aunt-notify-card-background-color | 消息卡片背景色 | `var(--aunt-white-color);` |
 | --aunt-notify-card-title-color | 消息卡片标题字体颜色 | `var(--aunt-text-color);` |
 | --aunt-notify-card-describe-color | 消息卡片描述字体颜色 | `var(--aunt-gray-8);` |
 | --aunt-notify-card-box-shadow | 消息卡片阴影 | `var(--aunt-shadow3-center);` |

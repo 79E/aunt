@@ -97,7 +97,7 @@ import { Card } from 'aunt';
 | -------------------------- | ---- | ----------------------------------------------- |
 | --rv-card-size             | -    | `var(--aunt-font-size-md)`                      |
 | --rv-card-color            | -    | `var(--aunt-text-color)`                        |
-| --rv-card-background-color | -    | `var(--aunt-color-white)`                       |
+| --rv-card-background-color | -    | `var(--aunt-white-color)`                       |
 | --rv-card-radius           | -    | `var(--aunt-border-radius-lg)`                  |
 | --rv-card-body-padding     | -    | `0 var(--aunt-padding-md)`                      |
 | --rv-card-header-padding   | -    | `var(--aunt-padding-sm) var(--aunt-padding-md)` |

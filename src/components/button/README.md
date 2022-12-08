@@ -86,7 +86,7 @@ import { Button } from "aunt";
 F12 打开控制台（检查）选择 `Elements` 的样式即可看到 root 全局样式变量
 | 属性名 | 说明 | 默认值 |
 | ---- | ---- | ---- |
-|--aunt-button-background-default-color|背景颜色| `var(--aunt-color-white);` |
+|--aunt-button-background-default-color|背景颜色| `var(--aunt-white-color);` |
 |--aunt-button-background-primary-color|背景颜色| `var(--aunt-primary-color);` |
 |--aunt-button-background-success-color|背景颜色| `var(--aunt-success-color);` |
 |--aunt-button-background-warning-color|背景颜色| `var(--aunt-warning-color);` |

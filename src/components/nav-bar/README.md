@@ -72,8 +72,8 @@ export type Rect = {
 | 属性名                           | 说明         | 默认值                          |
 | -------------------------------- | ------------ | ------------------------------- |
 | --aunt-nav-bar-height            | 高度         | `calc(44 * var(--aunt-hd));`    |
-| --aunt-nav-bar-background        | 北京颜色     | `var(--aunt-color-white);`      |
-| --aunt-nav-bar-z-index           | 层级         | `1000`                          |
+| --aunt-nav-bar-background        | 北京颜色     | `var(--aunt-white-color);`      |
+| --aunt-nav-bar-z-index           | 层级         | `var(--aunt-z-index-fixed);`                          |
 | --aunt-nav-bar-color             | 文字颜色     | `var(--aunt-text-color);`       |
 | --aunt-nav-bar-border-color      | 底部边框颜色 | `var(--aunt-gray-1);`           |
 | --aunt-nav-bar-title-font-size   | 标题字号     | `var(--aunt-font-size-lg);`     |

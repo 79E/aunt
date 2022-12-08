@@ -35,7 +35,7 @@ React Aunt 组件通过丰富的 CSS 变量 来组织样式，通过覆盖这些
 
 .aunt-button--primary {
     background-color: var(--aunt-button-background-primary-color);
-    color: var(--aunt-color-white);
+    color: var(--aunt-white-color);
     border-color: var(--aunt-button-border-primary-color);
 }
 
@@ -45,7 +45,7 @@ React Aunt 组件通过丰富的 CSS 变量 来组织样式，通过覆盖这些
 
 ```css
 :root {
-  --aunt-color-white: #fff;
+  --aunt-white-color: #fff;
   --aunt-button-background-primary-color: var(--aunt-primary-color);
   --aunt-button-border-primary-color: var(--aunt-primary-color);
 }
@@ -98,8 +98,8 @@ React Aunt 中的 CSS 变量分为 基础变量 和 组件变量。组件变量�
 
   --aunt-brand-color: @brand-color;
   // Color Palette
-  --aunt-color-black: @black;
-  --aunt-color-white: @white;
+  --aunt-black-color: @black;
+  --aunt-white-color: @white;
 
   --aunt-gray-1: @gray-1;
   --aunt-gray-2: @gray-2;

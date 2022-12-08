@@ -55,7 +55,7 @@ import { Tabbar } from 'aunt';
 | defaultValue        | 默认选中标签的名称或索引值                         | `number \| string` | `0`       |
 | fixed               | 是否固定在底部                                     | `boolean`          | `true`    |
 | border              | 是否显示外边框                                     | `boolean`          | `true`    |
-| zIndex              | 元素 z-index                                       | `number`           | `1000`    |
+| zIndex              | 元素 z-index                                       | `number`           | `var(--aunt-z-index-fixed);`    |
 | activeColor         | 选中标签的颜色                                     | `string`           | `#165DFF` |
 | inactiveColor       | 选中标签的颜色                                     | `string`           | `-`       |
 | placeholder         | 固定在底部时，是否在标签位置生成一个等高的占位元素 | `boolean`          | `false`   |
@@ -95,7 +95,7 @@ type T = number | string
 | ------------------------------ | ------------ | ---------------------------- |
 | --aunt-tabbar-z-index          | 层级         | `1000`                       |
 | --aunt-tabbar-min-height       | 最小高度     | `calc(44 * var(--aunt-hd));` |
-| --aunt-tabbar-background-color | 背景颜色     | `var(--aunt-color-white);`   |
+| --aunt-tabbar-background-color | 背景颜色     | `var(--aunt-white-color);`   |
 | --aunt-tabbar-item-padding     | 标签内边距   | `var(--aunt-padding-base);`  |
 | --aunt-tabbar-item-color       | 标签颜色     | `var(--aunt-gray-6);`        |
 | --aunt-tabbar-item-font-size   | 标签文字大小 | `var(--aunt-font-size-sm);`  |

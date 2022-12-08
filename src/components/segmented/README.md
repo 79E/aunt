@@ -87,7 +87,7 @@ import { Segmented } from 'aunt';
 | --aunt-segmented-large-line-height         | 内容行高         | `calc(34 * var(--aunt-hd));`    |
 | --aunt-segmented-large-font-size           | 内容文字大小     | `var(--aunt-font-size-lg);`     |
 | --aunt-segmented-large-padding             | 内容内边距       | `0 var(--aunt-padding-m);`      |
-| --aunt-segmented-selected-background-color | 选择块背景颜色   | `var(--aunt-color-white);`      |
+| --aunt-segmented-selected-background-color | 选择块背景颜色   | `var(--aunt-white-color);`      |
 | --aunt-segmented-selected-border-radius    | 选择块圆角       | `var(--aunt-border-radius-md);` |
 | --aunt-segmented-group-padding             | 内边距           | `var(--aunt-padding-base);`     |
 | --aunt-segmented-group-border-radius       | 圆角             | `var(--aunt-border-radius-md);` |
