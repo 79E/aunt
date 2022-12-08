@@ -1,0 +1,72 @@
+@class-prefix: ~'aunt';
+
+:root{
+    --aunt-toast-z-index: var(--aunt-z-index-full-screen);
+    --aunt-toast-content-background-color: rgba(0,0,0,.8);
+    --aunt-toast-content-padding: var(--aunt-padding-base) var(--aunt-padding-s);
+    --aunt-toast-content-border-radius: var(--aunt-border-radius-md);
+    --aunt-toast-content-color: var(--aunt-white-color);
+    --aunt-toast-content-top: 20%;
+    --aunt-toast-content-bottom: 20%;
+    --aunt-toast-content-text-size: var(--aunt-font-size-sm);
+    --aunt-toast-content-text-margin-left: var(--aunt-padding-base);
+}
+
+.@{class-prefix}-toast {
+    z-index: var(--aunt-toast-z-index);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    box-sizing: border-box;
+    &--pointer{
+        pointer-events: none;
+    }
+
+    &__content{
+        position: absolute;
+        display: inline-flex;
+        background-color: var(--aunt-toast-content-background-color);
+        padding: var(--aunt-toast-content-padding);
+        border-radius: var(--aunt-toast-content-border-radius);
+        align-items: center;
+        justify-content: center;
+        color: var(--aunt-toast-content-color);
+
+        &--vertical{
+            flex-direction: column;
+        }
+        &--horizontal{
+            flex-direction: row;
+        }
+
+        &--center{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        &--top{
+            top: var(--aunt-toast-content-top);
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        &--bottom{
+            bottom: var(--aunt-toast-content-bottom);
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        &--spacing{
+            .@{class-prefix}-toast__content--text{
+                margin-left: var(--aunt-toast-content-text-margin-left);
+            }
+        }
+        &--text{
+            white-space: pre-wrap;
+            text-align: center;
+            word-wrap: break-word;
+            text-align: center;
+            font-size: var(--aunt-toast-content-text-size);
+        }
+    }
+}

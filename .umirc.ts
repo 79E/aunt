@@ -151,6 +151,7 @@ export default defineConfig({
           'components/overlay',
           'components/back-top',
           'components/notify',
+          'components/toast',
         ],
       },
       {
