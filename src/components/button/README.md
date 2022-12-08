@@ -79,7 +79,7 @@ import { Button } from "aunt";
 
 | 事件名  | 说明           | 类型                                                                                | 默认值 |
 | ------- | -------------- | ----------------------------------------------------------------------------------- | ------ |
-| onClick | 点击图标时触发 | `(event:React.MouseEvent<HTMLButtonElement, MouseEvent>) => void \| Promise<void> ` | `-`    |
+| onClick | 点击图标时触发 | `(event:React.MouseEvent<HTMLButtonElement, MouseEvent>) => void ` | `-`    |
 
 ## 样式变量
 

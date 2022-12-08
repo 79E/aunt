@@ -96,5 +96,5 @@ export interface ButtonProps extends BaseTypeProps {
    * @param event React.MouseEvent<HTMLButtonElement, MouseEvent>
    * @return void | Promise<void>
    */
-  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }

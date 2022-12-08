@@ -109,9 +109,9 @@ color?: String;
  * @desc 用户点击按钮后触发此方法
  * @default ''
  * @param event React.MouseEvent<HTMLButtonElement, MouseEvent>
- * @return void | Promise<void>
+ * @return void
  */
-onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>;
+onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 ```
 
 总结：就是让用户用的明明白白，一眼就知道怎么使用。
