@@ -29,7 +29,9 @@ const Icon = forwardRef<SVGSVGElement, IconProps>((props, ref) => {
       .replace(/^-/, '');
   }
 
-  const varStyles = {} as React.CSSProperties;
+  const varStyles = {
+    display: 'block',
+  } as React.CSSProperties;
 
   if (rotate) {
     varStyles.msTransform = `rotate(${rotate}deg)`;
@@ -61,7 +63,7 @@ const Icon = forwardRef<SVGSVGElement, IconProps>((props, ref) => {
     width: size ? size : '24',
     height: size ? size : '24',
     stroke: color ? color : 'currentColor',
-    style: { ...style, ...varStyles },
+    style: { ...varStyles, ...style },
     ...restProps,
   };
   return cloneElement(children as React.ReactElement, attrs);
