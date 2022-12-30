@@ -171,6 +171,7 @@ export default defineConfig({
           'components/skeleton',
           'components/segmented',
           'components/water-mark',
+          'components/notice-bar',
         ],
       },
       {

@@ -1,0 +1,34 @@
+@class-prefix: ~'aunt';
+:root{
+    --aunt-notice-bar-background-color: var(--aunt-orange-1);
+    --aunt-notice-bar-color: var(--aunt-orange);
+    --aunt-notice-bar-font-size: var(--aunt-font-size-md);
+    --aunt-notice-bar-padding: var(--aunt-padding-xs);
+    --aunt-notice-bar-item-margin: var(--aunt-padding-xs);
+}
+
+.@{class-prefix}-notice-bar {
+    padding: var(--aunt-notice-bar-padding);
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--aunt-notice-bar-background-color);
+    color: var(--aunt-notice-bar-color);
+    font-size: var(--aunt-notice-bar-font-size);
+
+    &--left{
+        margin-right: var(--aunt-notice-bar-item-margin);
+    }
+    &--right{
+        margin-left: var(--aunt-notice-bar-item-margin);
+    }
+    &__box{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        word-break: break-all;
+        p{
+            display: inline-block;
+            transition-timing-function: linear;
+        }
+    }
+}

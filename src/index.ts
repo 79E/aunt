@@ -37,3 +37,4 @@ export * from './components/tabbar';
 export * from './components/back-top';
 export * from './components/notify';
 export * from './components/toast';
+export * from './components/notice-bar';
