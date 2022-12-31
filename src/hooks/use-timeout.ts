@@ -1,17 +1,17 @@
 import { useRef, useCallback } from 'react';
 
-interface IUseTimeoutReturn {
+type UseTimeoutReturn = {
   /** 启动计时器，入参为延时到期的回调函数 */
   startTimer: (callback: () => void, delay?: number) => void;
   /** 清楚计时器 */
   clearTimer: {};
-}
+};
 
 /**
  * 延迟调用
  * @returns 返回开始定时器和清楚定时器的方法
  */
-const useTimeout = (): IUseTimeoutReturn => {
+export const useTimeout = (): UseTimeoutReturn => {
   const timerRef = useRef<any>(null);
 
   const clearTimer = useCallback(() => {
