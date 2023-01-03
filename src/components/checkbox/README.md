@@ -94,7 +94,6 @@ import { Checkbox } from 'aunt';
 
 | 属性名                                   | 说明                   | 默认值                           |
 | ---------------------------------------- | ---------------------- | -------------------------------- |
-| --aunt-checker-margin                    | 外边距                 | `0 0 var(--aunt-padding-xs) 0;`  |
 | --aunt-checker-size                      | 大小                   | `var(--aunt-font-size-xxl);`     |
 | --aunt-checker-border-width              | 边框大小               | `var(--aunt-border-width-base);` |
 | --aunt-checker-border-style              | 边框类型               | `solid;`                         |

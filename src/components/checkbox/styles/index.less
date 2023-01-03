@@ -1,7 +1,6 @@
 @class-prefix: ~'aunt';
 
 :root{
-    --aunt-checker-margin: 0 0 var(--aunt-padding-xs) 0;
     --aunt-checker-size: var(--aunt-font-size-xxl);
     --aunt-checker-border-width: var(--aunt-border-width-base);
     --aunt-checker-border-style: solid;
@@ -10,14 +9,13 @@
     --aunt-checker-active-color: var(--aunt-brand-color);
     --aunt-checker-label-color: var(--aunt-text-color);
     --aunt-checker-label-font-size: var(--aunt-font-size-lg);
-    --aunt-checker-label-margin: 0 var(--aunt-padding-xs);
+    --aunt-checker-label-margin: 0 0 0 var(--aunt-padding-xs);
     --aunt-checker-disabled-color: var(--aunt-gray-4);
     --aunt-checker-disabled-background-color: var(--aunt-gray-3);
 }
 
 .@{class-prefix}-checker {
     display: flex;
-    margin: var(--aunt-checker-margin);
     cursor: pointer;
     user-select: none;
     align-items: center;
@@ -74,6 +72,7 @@
         }
         &--horizontal{
             flex-direction: row;
+            justify-content: space-between;
         }
     }
 }

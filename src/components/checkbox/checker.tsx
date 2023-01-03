@@ -63,6 +63,7 @@ const Checker: FunctionComponent<CheckerProps<{}>> = props => {
     );
   };
   const renderChildren = () => {
+    if (!props.children) return null;
     return <div className={joinTrim([ns.e('label')])}>{props.children}</div>;
   };
 
