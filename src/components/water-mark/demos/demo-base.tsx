@@ -11,15 +11,14 @@ const textProps = {
 
 const imageProps = {
   image: {
-    src:
-      'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/5910a23e-415a-4dec-bac3-b45e07478a57.png',
-    width: 130,
-    height: 36,
+    src: 'https://p1.xywm.ltd/2023/01/11/63be1d55a4c31.png',
+    width: 100,
+    height: 20,
   },
 };
 
 export default () => {
-  const [props, setProps] = useState<{ [key: string]: any }>(textProps);
+  const [props, setProps] = useState<{ [key: string]: any }>(imageProps);
   const [fullPage, setFullPage] = useState(true);
 
   return (
@@ -29,7 +28,7 @@ export default () => {
         <Button onClick={() => setProps(imageProps)}>图片水印</Button>
         <Button onClick={() => setFullPage(v => !v)}>{fullPage ? '局部区域' : '整个页面'}</Button>
       </Space>
-      <WaterMark {...props} fullPage={fullPage} gapY={10} />
+      <WaterMark {...props} fullPage={fullPage} gapX={0} gapY={0} />
     </div>
   );
 };

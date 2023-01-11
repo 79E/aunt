@@ -18,7 +18,7 @@ export default () => {
       >
         <Flex>
           <img
-            src='https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/3c637506-9024-4153-baa7-fa7b66c87f67.svg'
+            src='https://p0.meituan.net/travelcube/808204ae1b37659839c254d9682937ff17783.png'
             style={{
               width: 32,
               height: 32,

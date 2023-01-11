@@ -22,7 +22,7 @@ export default () => (
         width: '100%',
         height: 'auto',
       }}
-      src='https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/6298fa8f-d1c8-4ccd-a144-61e63b07cb5d.png'
+      src='https://p1.xywm.ltd/2023/01/11/63be1fc150f8c.jpg'
       alt=''
     />
   </div>

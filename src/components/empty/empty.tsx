@@ -5,14 +5,10 @@ import { useNamespace } from '../../hooks';
 import { EmptyProps, StatusOptions } from './types';
 
 const defaultStatus: StatusOptions = {
-  default:
-    'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/9cb89e7f-1d20-4337-9688-a94441d51730.png',
-  search:
-    'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/9cf3b34d-dfb1-474c-9800-85057ed00e14.png',
-  error:
-    'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/fda25f87-9406-44e9-8cd2-21596fad56df.png',
-  network:
-    'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/50a3f24b-4821-426c-ae91-7d9a96b57b16.png',
+  default: 'https://p0.meituan.net/travelcube/0bc9958ed5c89df9e4e55f8518f46ab88661.png',
+  search: 'https://p1.meituan.net/travelcube/75774dd6a2f0c76fd1b8ca8ba028f6e010943.png',
+  error: 'https://p0.meituan.net/travelcube/7c88c8a27ccf44777865cd3baaadb0568931.png',
+  network: 'https://p0.meituan.net/travelcube/696efbd749dbef2f525179de25f861918429.png',
 };
 
 export const Empty: FunctionComponent<Partial<EmptyProps>> = (props: EmptyProps) => {

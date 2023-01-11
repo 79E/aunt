@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="logo" width="120px" height="120px" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ad8d1200-2a6b-490b-8915-4f015cc6cc87/3c637506-9024-4153-baa7-fa7b66c87f67.svg" width="200" style="margin-bottom: 10px;">
+    <img alt="logo" width="120px" height="120px" src="https://p0.meituan.net/travelcube/808204ae1b37659839c254d9682937ff17783.png" width="200" style="margin-bottom: 10px;">
 </p>
 <h3 align="center">  Aunt</h3>
 
