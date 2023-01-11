@@ -44,7 +44,8 @@ import { Empty } from "aunt";
 | 属性名                               | 说明               | 默认值                       |
 | ------------------------------------ | ------------------ | ---------------------------- |
 | --aunt-empty-padding                 | 内边距             | `var(--aunt-padding-lg) 0`   |
-| --aunt-empty-image-size              | 图片大小           | `160px`                      |
+| --aunt-empty-image-width              | 图片宽度          | `160px`                      |
+| --aunt-empty-image-height              | 图片高度           | `auto`                      |
 | --aunt-empty-description-color       | 描述文字颜色       | `var(--aunt-gray-6)`         |
 | --aunt-empty-description-font-size   | 描述文字大小       | `var(--aunt-font-size-md)`   |
 | --aunt-empty-description-line-height | 描述文字行高       | `var(--aunt-line-height-md)` |

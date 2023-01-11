@@ -2,7 +2,8 @@
 
 :root {
   --aunt-empty-padding: var(--aunt-padding-lg) 0;
-  --aunt-empty-image-size: calc(160 * var(--aunt-hd));
+  --aunt-empty-image-width: calc(160 * var(--aunt-hd));
+  --aunt-empty-image-height: auto;
   --aunt-empty-description-color: var(--aunt-gray-6);
   --aunt-empty-description-font-size: var(--aunt-font-size-md);
   --aunt-empty-description-line-height: var(--aunt-line-height-md);
@@ -19,9 +20,9 @@
   box-sizing: border-box;
   padding: var(--aunt-empty-padding);
   &__image {
-    width: var(--aunt-empty-image-size);
-    height: var(--aunt-empty-image-size);
-
+    width: var(--aunt-empty-image-width);
+    height: var(--aunt-empty-image-height);
+    
     img {
       width: 100%;
       height: 100%;
