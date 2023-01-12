@@ -35,7 +35,7 @@ import { Toast } from 'aunt';
 | duration  | 展示时长(ms)，值为 0 时，toast 不会消失 | `number` | `3000` |
 | icon  | 自定义图标 | `React.ReactNode` | `-` |
 | iconSize  | 展示时长(ms)，值为 0 时，toast 不会消失 | `number \| string \| ((direction: ToastDirection) => number \| string)` | `-` |
-| loadingType  | 展示时长(ms)，值为 0 时，toast 不会消失 | `LoadingType` | `gap` |
+| loadingType  | 展示时长(ms)，值为 0 时，toast 不会消失 | `LoadingType` | `oval` |
 | direction  | 图标和文字的排列方式 | `'vertical' \| 'horizontal'` | `vertical` |
 | forbidClick  | 是否禁止背景点击 | `boolean` | `false` |
 | position  | 位置，可选值为 top bottom | `'top' \| 'center' \| 'bottom'` | `center` |
@@ -45,8 +45,8 @@ import { Toast } from 'aunt';
 
 ```tsx
 const iconSize = (direction: ToastDirection)=>{ 
-    if(direction === 'horizontal') return 20;
-    return 34;
+    if(direction === 'horizontal') return 24;
+    return 40;
 }
 ```
 
@@ -78,10 +78,11 @@ export type ToastReturnType = {
 | ---------------- | -------- | --------- |
 | --aunt-toast-z-index | 显示层级 | `var(--aunt-z-index-full-screen);` |
 | --aunt-toast-content-background-color | 背景颜色| `rgba(0,0,0,.8);` |
-| --aunt-toast-content-padding | 默认内边距| `var(--aunt-padding-base) var(--aunt-padding-s);` |
+| --aunt-toast-content-padding | 默认内边距| `var(--aunt-padding-xs) var(--aunt-padding-m);` |
 | --aunt-toast-content-border-radius | 默认圆角| `var(--aunt-border-radius-md);` |
 | --aunt-toast-content-color | 默认字体颜色| `var(--aunt-white-color);` |
 | --aunt-toast-content-top | 默认Top高度| `20%;` |
 | --aunt-toast-content-bottom | 默认Bottom高度| `20%;` |
-| --aunt-toast-content-text-size | 文字大小| `var(--aunt-font-size-sm);` |
+| --aunt-toast-content-text-size | 文字大小| `var(--aunt-font-size-lg);` |
 | --aunt-toast-content-text-margin-left | 横行排布的文字左外边距 | `var(--aunt-padding-base);` |
+| --aunt-toast-content-text-margin-top | 横行排布的文字左外边距 | `var(--aunt-padding-base);` |

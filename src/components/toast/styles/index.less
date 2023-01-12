@@ -10,6 +10,7 @@
     --aunt-toast-content-bottom: 20%;
     --aunt-toast-content-text-size: var(--aunt-font-size-lg);
     --aunt-toast-content-text-margin-left: var(--aunt-padding-base);
+    --aunt-toast-content-text-margin-top: var(--aunt-padding-base);
 }
 
 .@{class-prefix}-toast {
@@ -65,7 +66,7 @@
             }
         }
         &--margin{
-            margin-top:4px;
+            margin-top: var(--aunt-toast-content-text-margin-top);
         }
         &--text{
             white-space: pre-wrap;
