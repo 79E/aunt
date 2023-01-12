@@ -6,7 +6,7 @@ import { joinTrim } from '../../utils';
 import { OverlayProps } from './types';
 
 export const Overlay: FunctionComponent<OverlayProps> = props => {
-  const { visible = false, duration = 500, lockScroll = true } = props;
+  const { visible = false, duration = 500, lockScroll = true, ...rest } = props;
 
   const { prefix } = useContext(ConfigProviderContext);
   const ns = useNamespace('overlay', prefix);
@@ -41,7 +41,19 @@ export const Overlay: FunctionComponent<OverlayProps> = props => {
   };
 
   return (
-    <Transition in={visible} timeout={duration} nodeRef={nodeRef} mountOnEnter unmountOnExit>
+    <Transition
+      in={visible}
+      timeout={duration}
+      nodeRef={nodeRef}
+      mountOnEnter
+      unmountOnExit
+      onEnter={props.onEnter}
+      onEntered={props.onEntered}
+      onExit={props.onExit}
+      onExited={props.onExited}
+      transitionStyles={props.transitionStyles}
+      {...rest}
+    >
       {renderOverlay()}
     </Transition>
   );
