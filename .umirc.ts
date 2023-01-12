@@ -150,6 +150,7 @@ export default defineConfig({
           'components/back-top',
           'components/notify',
           'components/toast',
+          'components/dialog',
         ],
       },
       {
