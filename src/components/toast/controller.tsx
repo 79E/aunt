@@ -52,6 +52,7 @@ const show = (p: ToastProps | string) => {
     const destroy = useCallback(() => {
       setVisible(false);
       if (props.onClose) props.onClose();
+      setTimeout(internalOnClosed, 1000);
     }, []);
 
     const internalOnClosed = useCallback(() => {
@@ -61,7 +62,7 @@ const show = (p: ToastProps | string) => {
       }
     }, [container]);
 
-    update.clear = internalOnClosed;
+    update.clear = destroy;
 
     update.config = useCallback(
       nextState => {
@@ -76,8 +77,8 @@ const show = (p: ToastProps | string) => {
 
     useEffect(() => {
       setVisible(true);
-      syncClear();
-      toastArray.push(internalOnClosed);
+      !state.allowMultipleToast && syncClear();
+      toastArray.push(destroy);
 
       if (state.duration && +state.duration > 0) {
         timer = window.setTimeout(destroy, state.duration);
@@ -106,8 +107,9 @@ const defaultOptions: ToastOptions = {
   message: '',
   duration: 3000,
   direction: 'vertical',
-  loadingType: 'gap',
+  loadingType: 'oval',
   position: 'center',
+  allowMultipleToast: false,
 };
 
 ['info', 'loading', 'success', 'fail'].forEach(method => {

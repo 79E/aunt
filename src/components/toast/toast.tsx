@@ -10,14 +10,14 @@ export const Toast: FunctionComponent<ToastProps> = props => {
   const {
     type = 'info',
     direction = 'vertical',
-    iconSize = (direction: ToastDirection) => {
-      if (direction === 'horizontal') return 20;
-      return 34;
-    },
     icon,
-    loadingType = 'gap',
+    loadingType = 'oval',
     message,
     position = 'center',
+    iconSize = (direction: ToastDirection) => {
+      if (direction === 'horizontal' && message) return 24;
+      return 40;
+    },
   } = props;
 
   const { prefix } = useContext(ConfigProviderContext);
@@ -32,6 +32,7 @@ export const Toast: FunctionComponent<ToastProps> = props => {
       isFunction(iconSize) && typeof iconSize === 'function'
         ? iconSize(direction)
         : (iconSize as number | string);
+
     if (React.isValidElement(icon))
       return React.cloneElement(icon, {
         size: size,
@@ -61,7 +62,14 @@ export const Toast: FunctionComponent<ToastProps> = props => {
         style={props.style}
       >
         {renderIcon()}
-        <span className={joinTrim([ns.em('content', 'text')])}>{message}</span>
+        <span
+          className={joinTrim([
+            ns.em('content', 'text'),
+            renderIcon() && direction === 'vertical' ? ns.em('content', 'margin') : '',
+          ])}
+        >
+          {message}
+        </span>
       </div>
     );
   };

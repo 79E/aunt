@@ -31,6 +31,8 @@ export interface ToastProps extends BaseTypeProps {
   position?: ToastPosition;
   /** 轻提示弹出时的的父容器 */
   teleport?: HTMLElement | (() => HTMLElement);
+  /** 允许同时存在多个 Toast */
+  allowMultipleToast?: boolean;
   /** 关闭时的回调函数 */
   onClose?: () => void;
   /** 完全展示后的回调函数 */

@@ -3,12 +3,12 @@
 :root{
     --aunt-toast-z-index: var(--aunt-z-index-full-screen);
     --aunt-toast-content-background-color: rgba(0,0,0,.8);
-    --aunt-toast-content-padding: var(--aunt-padding-base) var(--aunt-padding-s);
+    --aunt-toast-content-padding: var(--aunt-padding-xs) var(--aunt-padding-m);
     --aunt-toast-content-border-radius: var(--aunt-border-radius-md);
     --aunt-toast-content-color: var(--aunt-white-color);
     --aunt-toast-content-top: 20%;
     --aunt-toast-content-bottom: 20%;
-    --aunt-toast-content-text-size: var(--aunt-font-size-sm);
+    --aunt-toast-content-text-size: var(--aunt-font-size-lg);
     --aunt-toast-content-text-margin-left: var(--aunt-padding-base);
 }
 
@@ -20,9 +20,12 @@
     bottom: 0;
     top: 0;
     box-sizing: border-box;
+
     &--pointer{
         pointer-events: none;
     }
+
+    &__icon{}
 
     &__content{
         position: absolute;
@@ -60,6 +63,9 @@
             .@{class-prefix}-toast__content--text{
                 margin-left: var(--aunt-toast-content-text-margin-left);
             }
+        }
+        &--margin{
+            margin-top:4px;
         }
         &--text{
             white-space: pre-wrap;
