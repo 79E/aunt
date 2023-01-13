@@ -62,20 +62,36 @@ import { Button } from "aunt";
 通过 color 属性可以自定义按钮的颜色。
 <code src="./demos/demo-color.tsx"></code>
 
+### 按钮组
+
+通过 Button.Group 包裹可以实现按钮组的概念。
+<code src="./demos/demo-group.tsx"></code>
+
 ## 参数
 
-| 参数     | 说明                                      | 类型                                                   | 默认值    |
-| -------- | ----------------------------------------- | ------------------------------------------------------ | --------- |
-| type     | 统一设置按钮类型                          | `'default'\|'primary'\|'success'\|'warning'\|'danger'` | `default` |
-| size     | 统一设置按钮尺寸                          | `'large'\|'normal'\|'small'\|'mini'`                   | `normal`  |
-| block    | 是否是块级元素                            | `boolean`                                              | `false`   |
+| 参数     | 说明   | 类型    | 默认值    |
+| -------- | ------ | ------- | --- |
+| type     | 统一设置按钮类型         | `'default'\|'primary'\|'success'\|'warning'\|'danger'` | `default` |
+| size     | 统一设置按钮尺寸   | `'large'\|'normal'\|'small'\|'mini'`  | `normal`  |
+| block    | 是否是块级元素   | `boolean`                                              | `false`   |
 | color    | 按钮颜色，支持传入 linear-gradient 渐变色 | `string`                                               | `-`       |
-| disabled | 是否禁用                                  | `boolean`                                              | `false`   |
-| shape    | 按钮的形状                                | `'default' \| 'square' \| 'round'`                     | `default` |
-| plain    | 是否为朴素按钮                            | `boolean`                                              | `false`   |
-| hairline | 是否使用 0.5px 边框                       | `boolean`                                              | `false`   |
+| disabled | 是否禁用 | `boolean`                                              | `false`   |
+| shape    | 按钮的形状 | `'default' \| 'square' \| 'round'` | `default` |
+| plain    | 是否为朴素按钮   | `boolean`                                              | `false`   |
+| hairline | 是否使用 0.5px 边框  | `boolean`                                              | `false`   |
 
-## 事件
+
+### Button.Group
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| type | 统一设置按钮类型 | `string` | `default` |
+| size | 统一设置按钮尺寸 | `string` | `normal` |
+| iconPosition | 统一设置按钮图标展示位置 | `string` | `left` |
+| block | 统一设置按钮为块级元素 | `boolean` | `false` |
+| plain | 是否为朴素按钮组 | `boolean` | `false` |
+| disabled | 是否禁用按钮组 | `boolean` | `false` |
+
+### 事件
 
 | 事件名  | 说明           | 类型                                                                                | 默认值 |
 | ------- | -------------- | ----------------------------------------------------------------------------------- | ------ |

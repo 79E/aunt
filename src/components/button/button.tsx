@@ -2,6 +2,7 @@ import React, { CSSProperties, FunctionComponent, useContext, useMemo } from 're
 import { ButtonProps } from './types';
 import Loading from '../loading';
 import ConfigProviderContext from '../config-provider/config-provider-context';
+import ButtonContext from './button-context';
 import { useNamespace } from '../../hooks';
 import { joinTrim } from '../../utils';
 
@@ -9,21 +10,44 @@ export const Button: FunctionComponent<Partial<ButtonProps>> = props => {
   const {
     color,
     shape = 'default',
-    plain = false,
+    iconPosition = 'left',
     hairline = false,
     loading = false,
-    disabled = false,
-    type = 'default',
-    size = 'normal',
-    block = false,
     children,
-    iconPosition = 'left',
     icon,
     className,
     style,
     loadingText,
+    block,
+    plain,
     ...rest
   } = props;
+
+  const { parent } = useContext(ButtonContext);
+
+  const currentSize = useMemo(() => props.size || parent?.size || 'normal', [
+    props.size,
+    parent?.size,
+  ]);
+
+  const currentType = useMemo(() => props.type || parent?.type || 'default', [
+    props.type,
+    parent?.type,
+  ]);
+
+  const currentPlain = useMemo(() => !!plain || !!parent?.plain, [plain, parent?.plain]);
+
+  const currentBlock = useMemo(() => !!block || !!parent?.block, [parent?.block, block]);
+
+  const currentIconPosition = useMemo(() => parent?.iconPosition || iconPosition, [
+    parent?.iconPosition,
+    iconPosition,
+  ]);
+
+  const currentDisabled = React.useMemo(() => props.disabled ?? parent?.disabled, [
+    parent?.disabled,
+    props.disabled,
+  ]);
 
   const { prefix } = useContext(ConfigProviderContext);
   const ns = useNamespace('button', prefix);
@@ -31,18 +55,29 @@ export const Button: FunctionComponent<Partial<ButtonProps>> = props => {
   const varClasses = useMemo(() => {
     return joinTrim([
       ns.b(),
-      type ? ns.m(type) : '',
-      size ? ns.m(size) : '',
+      ns.m(currentType),
+      ns.m(currentSize),
       shape ? ns.em('shape', shape) : '',
-      plain ? ns.m('plain') : '',
-      block ? ns.m('block') : '',
-      disabled ? ns.m('disabled') : '',
+      currentPlain ? ns.m('plain') : '',
+      currentBlock ? ns.m('block') : '',
+      currentDisabled ? ns.m('disabled') : '',
       hairline ? ns.m('hairline') : '',
       icon ? ns.e('icon') : '',
       loading ? ns.e('loading') : '',
       className,
     ]);
-  }, [type, size, shape, plain, block, disabled, hairline, icon, loading, className]);
+  }, [
+    currentBlock,
+    currentPlain,
+    currentDisabled,
+    currentType,
+    currentSize,
+    shape,
+    hairline,
+    icon,
+    loading,
+    className,
+  ]);
 
   const varStyles = useMemo(() => {
     const styles: CSSProperties = {};
@@ -59,7 +94,7 @@ export const Button: FunctionComponent<Partial<ButtonProps>> = props => {
   }, [plain, color, style]);
 
   const handleClick = (event: any) => {
-    if (!loading && !disabled && props.onClick) {
+    if (!loading && !currentDisabled && props.onClick) {
       props.onClick(event);
     }
   };
@@ -85,7 +120,7 @@ export const Button: FunctionComponent<Partial<ButtonProps>> = props => {
         <Loading
           size={loadingSize}
           type={loadingType}
-          color={type === 'default' ? undefined : ''}
+          color={currentType === 'default' ? undefined : ''}
           className={ns.em('icon', position)}
         />
       );
@@ -108,9 +143,9 @@ export const Button: FunctionComponent<Partial<ButtonProps>> = props => {
 
   return (
     <div className={varClasses} style={{ ...varStyles }} {...rest} onClick={handleClick}>
-      {iconPosition === 'left' && renderIcon('left')}
+      {currentIconPosition === 'left' && renderIcon('left')}
       {renderText()}
-      {iconPosition === 'right' && renderIcon('right')}
+      {currentIconPosition === 'right' && renderIcon('right')}
     </div>
   );
 };

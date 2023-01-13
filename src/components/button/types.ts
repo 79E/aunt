@@ -83,7 +83,7 @@ export interface ButtonProps extends BaseTypeProps {
    * @name 按钮图标位置
    * @default 'left'
    */
-  iconPosition: IconPosition;
+  iconPosition?: IconPosition;
   /**
    * @name 按钮文字
    * @default ''
@@ -96,5 +96,11 @@ export interface ButtonProps extends BaseTypeProps {
    * @param event React.MouseEvent<HTMLButtonElement, MouseEvent>
    * @return void | Promise<void>
    */
-  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
+
+export type ButtonGroupProps = BaseTypeProps &
+  Pick<
+    ButtonProps,
+    'size' | 'type' | 'shape' | 'plain' | 'block' | 'disabled' | 'iconPosition' | 'onClick'
+  >;

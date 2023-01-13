@@ -203,4 +203,77 @@
             display: none;
         }
     }
+
+    &__group{
+        display: inline-flex;
+        overflow: hidden;
+        border-width: var(--aunt-button-border-width);
+        border-style: solid;
+
+        .@{class-prefix}-button{
+            border-radius: 0;
+            border-width: 0;
+            border-right-width: var(--aunt-button-border-width);
+            flex: 1;
+            &__text{
+                white-space: nowrap;
+            }
+            &:last-child {
+                border-width: 0;
+            }
+        }
+
+        &--default{
+            border-color: var(--aunt-button-border-default-color);
+            .@{class-prefix}-button{
+                border-color: var(--aunt-button-border-default-color);
+            }
+        }
+
+        &--primary{
+            border-color: var(--aunt-button-border-primary-color);
+            .@{class-prefix}-button{
+                border-color: var(--aunt-button-border-primary-color);
+            }
+        }
+        &--success{
+            border-color: var(--aunt-button-border-success-color);
+            .@{class-prefix}-button{
+                border-color: var(--aunt-button-border-success-color);
+            }
+        }
+        &--warning{
+            border-color: var(--aunt-button-border-warning-color);
+            .@{class-prefix}-button{
+                border-color: var(--aunt-button-border-warning-color);
+            }
+        }
+        &--danger{
+            border-color: var(--aunt-button-border-danger-color);
+            .@{class-prefix}-button{
+                border-color: var(--aunt-button-border-danger-color);
+            }
+        }
+    
+        &__shape{
+            &--default{
+                border-radius: var(--aunt-button-border-radius);
+            }
+            &--square{
+                border-radius: 0;
+            }
+            &--round{
+                border-radius: var(--aunt-border-radius-max);
+            }
+        }
+
+        &--disabled {
+            cursor: not-allowed;
+            opacity: var(--aunt-button-disabled-opacity);
+      
+            .@{class-prefix}-button{
+                --aunt-button-disabled-opacity: 1;
+            }
+        }
+    }
 }
