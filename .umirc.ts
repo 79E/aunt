@@ -74,10 +74,10 @@ export default defineConfig({
         title: '设计变量',
         path: '/guide/token',
       },
-      // {
-      //   title: '定制主题',
-      //   path: '/guide/theme',
-      // },
+      {
+        title: '定制主题',
+        path: '/guide/theme',
+      },
       {
         title: '贡献指南',
         path: '/guide/contribution',
@@ -181,10 +181,10 @@ export default defineConfig({
         title: '其他组件',
         children: ['components/config-provider', 'components/transition'],
       },
-      // {
-      //   title: '业务组件',
-      //   children: [],
-      // },
+      {
+        title: '业务组件',
+        children: [],
+      },
     ],
   },
   themeConfig: {
