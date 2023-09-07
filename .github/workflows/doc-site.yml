@@ -23,7 +23,7 @@ jobs:
           yarn run build:docs
       - name: Page Url
         run: |
-          echo "aunt.design" > ./docs-dist/CNAME
+          echo "aunt.js.org" > ./docs-dist/CNAME
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
